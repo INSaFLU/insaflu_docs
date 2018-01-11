@@ -1,0 +1,30 @@
+Guide for pre-NGS steps
+=======================
+
+Suggested pre-NGS wet-lab protocol
+++++++++++++++++++++++++++++++++++
+
+NSaFLU is highly flexible and allows handling NGS data collected from any amplicon-based schema, provided that users fit the reference files to their amplicon 
+design (users just have to generate and upload a multi-fasta file containing reference sequences of the individual amplicons they use with the precise size of 
+the target sequence). 
+
+
+The default reference database of INSaFLU includes reference sequences of: i) post-pandemic (2009) vaccine/reference influenza A(H1N1)pdm2009, A(H3N2) 
+and B viruses (from both Northern and Southern hemispheres); and, ii) representative virus of multiple combinations of HA/NA subtypes (i.e., H1N1, H1N2, 
+H1N3, etc). All reference sequences at INSaFLU (link table website) are publicly available at NCBI. The reference files have been prepared to fit amplicon-based 
+schemas capturing the whole CDS of the main eight genes of influenza virus (PB2, PB1, PA, HA, NP, NA, M and NS).
+
+INSaFLU pipeline has been tested with NGS data collected after applying the wet-lab pre-NGS protocol (``here``) for influenza whole genome amplification adapted 
+from a RT-PCR assay described by Zhou and colleagues (Zhou et al, 2009, for Influenza A; and Zhou et al, 2014, for Influenza B; Zhou and Wentworth, 2012).
+This protocol can be applied to simultaneously amplify the eight genomic RNA segments, irrespective of influenza virus subtype or lineage.
+ 
+How to design a NGS run?
+++++++++++++++++++++++++
+
+We suggest you ask your NGS service provider to perform runs in order to yield a final output of about 300000 (2 x 150000) reads per sample. This will account 
+for issues arising from both the PCR reactions (e.g., fluctuations in the percentage of influenza-specific amplicons across samples and unbalanced relative 
+proportions of the in-sample amplicons) and the NGS run (e.g., low yield and unbalanced demultiplexing of the reads across the samples).  This approach will 
+allow you to end-up with more than 150000 (2 x 75000) reads per sample. This cut-off yielded a success (i.e., sample with 100% of the length of the 8 influenza
+CDS covered by ≥ 10-fold) of 92% on our pilot study using 2 x 150 paired-end reads (300 cycles). Examples of Illumina MiSeq runs that fit this suggestion are:
+i) run 96 samples using Illumina V2 Standard flow cells (30 M reads total; 300 cycles); 
+ii) run 24 samples using Illumina Micro flow cells (4 M reads total; 300 cycles).
