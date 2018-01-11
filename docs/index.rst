@@ -36,8 +36,8 @@ Contents:
    :maxdepth: 2
 
    guide_pre_ngs.rst
-   uploading_data.rst
    project_creation.rst
    data_analysis.rst
    output_visualization.rst
+   uploading_data.rst
 
