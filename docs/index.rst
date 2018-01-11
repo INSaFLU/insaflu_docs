@@ -1,6 +1,11 @@
-*******
-INSaFLU
-*******
+.. INSaFLU documentation master file, created by
+   sphinx-quickstart on Thu Jan 11 09:25:25 2018.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+***********************************
+Welcome to INSaFLU's documentation!
+***********************************
 
 INSaFLU is an influenza-specific bioinformatics free web-based suite that deals with primary data (reads) towards the automatic generation of the output 
 data that are actually the core first-line “genetic requests” for effective and timely influenza laboratory surveillance.
@@ -31,3 +36,10 @@ Contents:
    project_creation.rst
    data_analysis.rst
    output_visualization.rst
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

@@ -1,0 +1,25 @@
+
+# Created by https://www.gitignore.io/api/eclipse,python
+
+### Eclipse ###
+
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*.log
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# Eclipse Core
+.project
+
+
+# sphinx-quickstart
+_build/
+
