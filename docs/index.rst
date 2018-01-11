@@ -24,6 +24,10 @@ How to cite
 
 If you use INSaFLU in your work, please cite Borges V, Pinheiro M et al. 2018, bioRxiv
 
+Contact
++++++++
+If you have any questions, comments or suggestions, please contact us: <vitor.borges@insa.min-saude.pt> or <j.paulo.gomes@insa.min-saude.pt>
+
 *********
 Contents:
 *********
@@ -37,9 +41,3 @@ Contents:
    data_analysis.rst
    output_visualization.rst
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

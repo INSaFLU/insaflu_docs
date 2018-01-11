@@ -165,5 +165,13 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
+### add extra css
+def setup(app):
+    app.add_stylesheet('css/insaflu.css')
+
+
+
+
+
 
 
