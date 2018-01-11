@@ -8,7 +8,6 @@ NSaFLU is highly flexible and allows handling NGS data collected from any amplic
 design (users just have to generate and upload a multi-fasta file containing reference sequences of the individual amplicons they use with the precise size of 
 the target sequence). 
 
-
 The default reference database of INSaFLU includes reference sequences of: i) post-pandemic (2009) vaccine/reference influenza A(H1N1)pdm2009, A(H3N2) 
 and B viruses (from both Northern and Southern hemispheres); and, ii) representative virus of multiple combinations of HA/NA subtypes (i.e., H1N1, H1N2, 
 H1N3, etc). All reference sequences at INSaFLU (link table website) are publicly available at NCBI. The reference files have been prepared to fit amplicon-based 

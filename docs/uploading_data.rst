@@ -52,17 +52,14 @@ Zhou and Wentworth, 2012)
 
 
 .. note::
-    If you are using this wet-lab pre-NGS protocol and you want to compare your sequences against a reference available at INSaFLU database, 
-    no further actions are needed. 
+   If you are using this wet-lab pre-NGS protocol and you want to compare your sequences against a reference available at INSaFLU database, 
+   no further actions are needed. 
 
 Still, you may UPLOAD additional reference files (“.fasta” extension; maximum 20000 bp per file) to the user-restricted reference database. 
-If you use this option, you can upload::
-
-.. tip::
-    multi-FASTA files containing the set of reference sequences that constitute the influenza “whole-genome” sequence of a particular virus
-    (e.g, the combination of the traditional 8 amplicons targeting the 8 eight influenza RNA segments). Each individual sequence must have the 
-    precise size of each “intra-amplicon” target sequence that you capture by each one of the RT-PCR amplicons. INSaFLU automatically annotates
-    uploaded multi-FASTA sequences upon submission, but, if you prefer, you can also upload (optionally) the respective multi-GenBank file.
+If you use this option, you can upload multi-FASTA files containing the set of reference sequences that constitute the influenza “whole-genome”
+sequence of a particular virus (e.g, the combination of the traditional 8 amplicons targeting the 8 eight influenza RNA segments). Each individual 
+sequence must have the precise size of each “intra-amplicon” target sequence that you capture by each one of the RT-PCR amplicons. INSaFLU automatically annotates
+uploaded multi-FASTA sequences upon submission, but, if you prefer, you can also upload (optionally) the respective multi-GenBank file.
 
 
 IMPORTANT NOTES TO GENERATE ADDITIONAL REFERENCE SEQUENCES

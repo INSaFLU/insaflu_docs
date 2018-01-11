@@ -7,4 +7,4 @@ consensus sequences). Outputs are organized by the dynamic “expand-and-collaps
 visualization/download of all graphical, text and sequence output data. The following table provides an overview on all 
 INSaFLU outputs organized by bioinformatics module::
 
-   - download:: `INSaFLU_outputs.xlsx <INSaFLU_outputs.xlsx>`
+   - :download: `INSaFLU_outputs.xlsx <INSaFLU_outputs.xlsx>`
