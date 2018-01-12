@@ -65,7 +65,7 @@ iii. your viruses under study and also extra representative virus of specific ge
 1. Go to *Extra Alignment/Phylogeny* menu and choose *Create project* (AVAILABLE SOON)
 ......................................................................................
 
-Select the sequences to be included in the project. You may choose sequences from both the *reference database** and a *sequence repository* that includes 
+Select the sequences to be included in the project. You may choose sequences from both the *reference database* and a *sequence repository* that includes 
 all validated consensus sequences generated in the user-restricted “whole workflow” projects.
 
 
