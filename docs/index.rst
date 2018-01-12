@@ -14,7 +14,7 @@ Features
 ++++++++
 
 * open to all, free of charge, user-restricted accounts
-* aplicable to NGS data collected from any amplicon-based schema
+* applicable to NGS data collected from any amplicon-based schema
 * allows advanced, multi-step software intensive analyses in a user-friendly manner without previous training in bioinformatics
 * allows integrating data in a cumulative manner, thus fitting the analytical dynamics underlying the continuous epidemiological surveillance during flu epidemics
 * outputs are provided in nomenclature-stable and standardized formats and can be explored in situ or through multiple compatible downstream applications for fine-tune data analysis and visualization
