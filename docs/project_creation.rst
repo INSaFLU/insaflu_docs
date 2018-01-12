@@ -33,8 +33,7 @@ You are encouraged to create “umbrella” projects, such as projects enrolling
 3. Add the **samples** to be included in the **project**
 ........................................................
 
-Samples are processed immediately upon selection, so, at this time, users may start monitoring the Project progress by checking the number of samples 
-in the following status: Processed (P); Waiting (W) and Error (E).
+Samples are processed immediately upon selection, so, at this time, users may start monitoring the Project progress by checking the number of samples in the following status: Processed (P); Waiting (W) and Error (E).
 
 .. image:: _static/create_project_3_status.png
 
@@ -54,26 +53,23 @@ B. Creating a Extra Alignment/Phylogeny project (this module will be AVAILABLE S
 
 Within the *Extra Alignment/Phylogeny* menu, you can generate additional nucleotide alignments and phylogenetic trees over a set of user-selected sequences in an independent manner. This module provides a huge flexibility as you can evaluate and integrate the genetic diversity of circulating viruses according to your specific needs. For instance, you can perform extra gene- or whole-genome-scale alignment/phylogenetic analyses enrolling: 
 
-i. particular subsets of samples from a given project (e.g., subset of viruses from a specific genetic clade or subsets excluding samples flagged as 
-“putative mixed infection”)
-
-ii. viruses from different seasons processed in different projects
-
-iii. your viruses under study and also extra representative virus of specific genetic (sub)groups/clades/lineages as defined by supranational health authorities guidelines (e.g., ECDC) for each season (you may pre-uploaded these sequences using the Reference menu)
+	i. particular subsets of samples from a given project (e.g., subset of viruses from a specific genetic clade or subsets excluding samples flagged as “putative mixed infection”)
+	
+	ii. viruses from different seasons processed in different projects
+	
+	iii. your viruses under study and also extra representative virus of specific genetic (sub)groups/clades/lineages as defined by supranational health authorities guidelines (e.g., ECDC) for each season (you may pre-uploaded these sequences using the Reference menu)
  
 
 1. Go to *Extra Alignment/Phylogeny* menu and choose *Create project* (AVAILABLE SOON)
 ......................................................................................
 
-Select the sequences to be included in the project. You may choose sequences from both the *reference database* and a *sequence repository* that includes 
-all validated consensus sequences generated in the user-restricted “whole workflow” projects.
+Select the sequences to be included in the project. You may choose sequences from both the *reference database* and a *sequence repository* that includes all validated consensus sequences generated in the user-restricted “whole workflow” projects.
 
 
 Monitoring Projects' progress
 +++++++++++++++++++++++++++++
 
-INSaFLU projects are automatically run upon creation. So, at this time, users may start monitoring the Project progress by checking the number of samples
-in the following status: Processed (P); Waiting (W) and Error (E).
+INSaFLU projects are automatically run upon creation. So, at this time, users may start monitoring the Project progress by checking the number of samples in the following status: Processed (P); Waiting (W) and Error (E).
 
 
 .. image:: _static/monitoring_project_status.png
