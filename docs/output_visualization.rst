@@ -3,7 +3,7 @@ Output Visualization and Download
 
 Upon project's launching, you can start exploring the diverse INSaFLU outputs, which include **sample-specific outputs** (such as, mapping files, variants annotation and consensus sequences) or **project outputs** (such as, nucleotide/amino acid alignments and phylogenetic trees). Outputs are organized by the dynamic “expand-and-collapse” panels that allow you a user-friendly visualization/download of all graphical, text and sequence output data. The following table provides an overview on all INSaFLU outputs organized by bioinformatics module:
 
-   - :download: `INSaFLU_current_outputs_15_01_2018.xlsx <INSaFLU_current_outputs_15_01_2018.xlsx>`
+.. download:: _static/INSaFLU_current_outputs_15_01_2018.xlsx <INSaFLU_current_outputs_15_01_2018.xlsx>
    
 
 While navigating through INSaFLU menus, you will find which main software (including versions and settings) were used to generate outputs.  
@@ -60,7 +60,7 @@ In the table below the dynamic 'expand-and-collapse' panels (containing project-
 
 - **Putative mixed infection**
 
-- **Coverage report per sample per locus** (interactive color-coded statistics and plots of the depth of coverage throughout each locus sequence)
+- **Coverage report per locus** (interactive color-coded statistics and plots of the depth of coverage throughout each locus sequence)
 
 - **Consensus sequence for the pool of loci** 
 
@@ -94,7 +94,7 @@ By clicking on the 'More info' icon next to each sample, you can get an overview
 - **Annotated variants (SNPs and indels)**
 
 .. warning::
-   Validated variants falling within loci not fully covered with ≥10-fold (color-coded as yellow or red), are still included in the "validated_variants" list (these cases are labeled in the table column "VARIANTS in INCOMPLETE LOCUS" as YES), so that users can still retrieve valuable and reliable data (e.g., specific epitope and antiviral drug resistance mutations) from samples with borderline coverage.
+   Validated variants falling within loci not fully covered with ≥10-fold (color-coded as yellow or red) are still included in the "validated_variants" list (these cases are labeled in the table column "VARIANTS in INCOMPLETE LOCUS" as YES), so that users can still retrieve valuable and reliable data (e.g., specific epitope and antiviral drug resistance mutations) from samples with borderline coverage.
 
 .. image:: _static/sample_projects_extra_info.png
 
@@ -118,7 +118,7 @@ Click on **"See results"** to explore outputs of a given project
 The projects outputs are organized by dynamic 'expand-and-collapse' panels containing project-specific outputs (see how to explore each one below). At the bottom of these panels you can explore sample-specific outputs and download the current list of samples. 
 
 .. note::
-   The project samples' list ("Sample_list" file) is automatically re-build and cumulatively updated as more samples are added to the project. This file compiles all samples' metadata as well as sample-specific additional data by INSaFLU (type and subtype/lineage and "putative mixed infection" data
+   The project samples' list ("Sample_list" file) is automatically re-build and cumulatively updated as more samples are added to the project. This file compiles all samples' metadata as well as sample-specific additional data provided by INSaFLU ("type and subtype/lineage" and "putative mixed infection" data)
 
 The Sample_list" file can be uploaded, together with associated alignment or phylogenetic data, to visualization tools (see more details on the tab **Uploading data / Uploading Sample metadata and NGS data**)
 
