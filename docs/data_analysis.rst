@@ -22,7 +22,7 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 
 *Software version/settings*
 
-..note::
+.. software::
    	**FastQC** (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) (version 0.11.5; date 15.01.2018)
 
 		input: single- or paired-end reads (fastq.gz format) (e.g., sample_L001_R1_001.fastq.gz and sample_L001_R2_001.fastq.gz for Illumina technology reads)
