@@ -61,15 +61,15 @@ To take full advantage of particular platforms, such Microreact, which provides 
 B. Go to *Samples* menu and choose *Add Fastq Files*
 ....................................................
 
-.. image:: _static/upload_ngs_data_1.png
+.. image:: _static/upload_ngs_data_batch_1.png
 
 Navigate through your list of fastq.gz files and **simultaneously upload multiple fastq.gz files** (50MB maximum per file), which are automatically linked to the corresponding samples.
 
-.. image:: _static/upload_ngs_data_2.png
+.. image:: _static/upload_ngs_data_batch_2.png
 
 Just DRAG & DROP your fastq.gz files
 
-.. image:: _static/upload_ngs_data_3.png
+.. image:: _static/upload_ngs_data_batch_3.png
 
 
 
@@ -96,7 +96,7 @@ INSaFLU needs reference sequence files to be used for reference-based mapping (m
 i. post-pandemic (2009) vaccine/reference influenza A(H1N1)pdm2009, A(H3N2) and B viruses (from both Northern and Southern hemispheres);
 ii. representative virus of multiple combinations of HA/NA subtypes (i.e., H1N1, H2N2, H5N1, H7N9, etc)
 
-.. image:: _static/Reference_menu_1.png
+.. image:: _static/References_menu_1.png
 
 The current list of reference sequences, including loci size and NCBI accession numbers is provided here:
 
@@ -115,7 +115,7 @@ Zhou and Wentworth, 2012)
 .. warning::
    See below a guide to generate additional reference sequences
 
-.. image:: _static/Reference_menu_2.png
+.. image:: _static/References_menu_2.png
 
 .. note::
    You can upload:
