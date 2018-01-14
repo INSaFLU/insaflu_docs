@@ -22,7 +22,7 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 
 *Software version/settings*
 
-.. Software version/settings::
+..note::
    	**FastQC** (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) (version 0.11.5; date 15.01.2018)
 
 		input: single- or paired-end reads (fastq.gz format) (e.g., sample_L001_R1_001.fastq.gz and sample_L001_R2_001.fastq.gz for Illumina technology reads)
@@ -54,7 +54,7 @@ This module uses quality processed reads obtained through Trimmomatic analysis a
 
 *Software version/settings*
 
-.. tip::
+.. note::
 	**SPAdes** (http://cab.spbu.ru/software/spades/) (version 3.11.1; date 15.01.2018)
    
    		--pe1-1 and --pe1.2 (for paired-end) or -s (for single-end data): define the input files, i.e, quality processed reads (e.g., sample_1P.fastq.gz and sample_2P.fastq.gz)
@@ -79,7 +79,7 @@ This key module takes advantage of the multisoftware tool Snippy (please visit t
 
 *Software version/settings*
 
-.. tip::
+.. note::
 	**Prokka** (https://github.com/tseemann/prokka) (version 1.2; date 15.01.2018)
    
 		--kingdom: defines the Annotation mode (Viruses)
@@ -109,7 +109,7 @@ This module yields a deep analysis of the coverage for each per sample by provid
 
 *Software version/settings*
 
-.. tip::
+.. note::
    	**getCoverage.py** (https://github.com/monsanto-pinheiro/getCoverage) (version v1.1; date 15.01.2018)
    
   	 	-i: define the input files, i.e, the coverage files (.depth.gz) generated through Snippy 
@@ -127,7 +127,7 @@ This module uses filtered nucleotide consensus sequences and performs refined nu
 
 *Software version/settings*
 
-.. tip::
+.. note::
   	**MAUVE** (http://darlinglab.org/mauve/mauve.html) (version 2.4.0; date 15.01.2018)
    
    		progressiveMAUVE module (default settings): this algorithm is applied to perform primary draft alignments, and has the particular advantage of automatically concatenating multi-fasta input sequences during whole-genome alignments construction.
@@ -181,7 +181,7 @@ This module uses mapping data for the set of samples from each user-restricted I
 
 *Software version/settings*
 
-.. tip::
+.. note::
    **Freebayes** (https://github.com/ekg/freebayes) (version v1.1.0-54-g49413aa; date 15.01.2018)
    
    		--min-mapping-quality: excludes read alignments from analysis if they have a mapping quality less than Q (--min-mapping-quality 20)
