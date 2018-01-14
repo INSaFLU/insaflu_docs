@@ -1,8 +1,13 @@
 Uploading data
 ==============
 
-INSaFLU needs: **NGS data** (fastq reads) (mandatory), **Sample metadata** (to link each sample to the respective NGS data) (mandatory) and **Reference data** 
-(additional user-restricted reference sequences) (optional)
+INSaFLU needs: 
+
+**NGS data** (fastq reads) (mandatory)
+
+**Sample metadata** (to link each sample to the respective NGS data) (mandatory) 
+
+**Reference data** (additional user-restricted reference sequences) (optional)
 
 Uploading Sample metadata and NGS data
 ++++++++++++++++++++++++++++++++++++++

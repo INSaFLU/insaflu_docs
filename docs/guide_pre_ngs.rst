@@ -30,8 +30,7 @@ We suggest you ask your NGS service provider to perform runs in order to yield a
 This will account for issues arising from both the PCR reactions (e.g., fluctuations in the percentage of influenza-specific amplicons across samples and unbalanced relative 
 proportions of the in-sample amplicons) and the NGS run (e.g., low yield and unbalanced demultiplexing of the reads across the samples).  
 
-This approach will allow you to end-up with more than 150000 (2 x 75000) reads per sample. This cut-off yielded a success (i.e., sample with 100% of the length of the 8 influenza
-CDS covered by ≥ 10-fold) of 92% on our pilot study using 2 x 150 paired-end reads (300 cycles). 
+This approach will allow you to end-up with more than 150000 (2 x 75000) reads per sample. This cut-off yielded a success (i.e., sample with 100% of the length of the 8 influenza CDS covered by ≥ 10-fold) of 92% on our pilot study using 2 x 150 paired-end reads (300 cycles). 
 
 Examples of Illumina MiSeq runs that fit this suggestion are:
 i) run 96 samples using Illumina V2 Standard flow cells (30 M reads total; 300 cycles); 
