@@ -86,6 +86,8 @@ Here you can upload each sample at the time (including associated metadata and N
 .. image:: _static/upload_samplemetadata_individual_2.png
 
 
+
+
 Uploading Reference data
 ++++++++++++++++++++++++
 
@@ -108,11 +110,12 @@ adapted from a RT-PCR assay described by Zhou and colleagues (Zhou et al, 2009, 
 Zhou and Wentworth, 2012)
 
 .. warning::
-   If you are using the suggested wet-lab pre-NGS protocol and you want to compare your sequences against a reference available at INSaFLU database, no further actions are needed. 
+   If you are using the suggested wet-lab pre-NGS protocol and you want to compare your sequences against a reference available at INSaFLU database, **NO FURTHER ACTIONS ARE NEEDED**. 
    
-- **If you need to UPLOAD additional reference files** (FASTA format; maximum 20000 bp per file) to the user-restricted reference database, go to **References** menu and choose *Add Reference*
+   
+   
+- **If you need to UPLOAD additional reference files** (FASTA format; maximum 20000 bp per file) to the user-restricted reference database, GO TO **References** MENU and CHOOSE **Add Reference**
 
-.. warning::
    See below a guide to generate additional reference sequences
 
 .. image:: _static/References_menu_2.png
@@ -132,7 +135,9 @@ GUIDE TO GENERATE ADDITIONAL REFERENCE SEQUENCES
 
 Take this guide into account when generating additional reference sequences.
 
+
 1. multi-FASTA files to be upload typically contain the set of reference sequences that constitute the influenza “whole-genome” sequence of a particular virus (e.g, the combination of the traditional 8 amplicons targeting the 8 eight influenza RNA segments). Each individual sequence must have the precise size of each “intra-amplicon” target sequence that you capture by each one of the RT-PCR amplicons.
+
 
 
 2. (multi) FASTA format is widely applied to save either nucleotide sequences or peptide sequences. An easy way to handle/generate multi-FASTA files is by opening a text file (e.g., NOTEPAD) and paste individual sequences after each header line. The FASTA IDs (after the '>' character) represent the individual sequence names. For the sake of simplicity, you may designate each sequence as 1, 2, 3, 4, 5, 6 , 7 and 8 (see example), following the traditional influenza segments order (keeping this numerical order is advisable). At the end, you just have to save the multi-FASTA file as “.fasta” (please avoid symbols or blank spaces in the file names). 
@@ -140,7 +145,9 @@ Take this guide into account when generating additional reference sequences.
 			example:  -:download: `A_H3N2_A_Perth_16_2009.fasta <A_H3N2_A_Perth_16_2009.fasta>`
 
 
+
 3. you may generate your multi-FASTA files in order to fit your amplicon schema by simply adjusting the whole-genome sequences available for download at INSaFLU or at influenza-specific sequence repositories, such as the Influenza Research Database (https://www.fludb.org), NCBI Influenza Virus Resource (https://www.ncbi.nlm.nih.gov/genomes/FLU/Database/nph-select.cgi?go=database) and EpiFLU/GISAID (https://www.gisaid.org/).
+
 
 
 4. INSaFLU requires reference sequences exclusively composed by non-degenerate bases (i.e. A, T, C, or G). As such, please ensure that all degenerated bases (e.g., R, Y, M, K, S and W) are replaced by non-degenerate sequences before uploading. The choice of the base used in the replacement (e.g., “A” or “G” when replacing an “R”) has no impact on the analysis. It simply means that mutations falling in the replaced nucleotide position will be reported taking into account the reference base selected.
@@ -150,15 +157,18 @@ Take this guide into account when generating additional reference sequences.
 Explore your Sample and Reference databases
 +++++++++++++++++++++++++++++++++++++++++++
 
-*Samples* menu displays all information for all loaded samples (Samples’ names in your account must be unique). Upon submission, INSaFLU automatically 
-updates samples’ information with reads quality and typing data (automate bioinformatics pipeline modules “Read quality analysis and improvement” and 
-Type and sub-type detection”; see Data analysis in the Documentation). Just explore the “More info” icon next to each sample.
+*Samples* menu displays all information for all loaded samples (Samples’ names in your account must be unique). 
+
+Upon submission, INSaFLU automatically updates samples’ information with reads quality and typing data (automate bioinformatics pipeline modules “Read quality analysis and improvement” and Type and sub-type detection”; see Data analysis in the Documentation). 
+
+Just explore the “More info” icon next to each sample.
 
 .. image:: _static/Samples_menu.png
 
 
-*References* menu displays all information for all reference sequences available at your confidential session. Both FASTA and GenBank files can be downloaded
-by clicking on the displayed links.
+*References* menu displays all information for all reference sequences available at your confidential session. 
+
+Both FASTA and GenBank files can be downloaded by clicking on the displayed links.
 
 .. image:: _static/References_menu_1.png
 

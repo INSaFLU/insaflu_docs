@@ -6,9 +6,9 @@ One of the main goals of INSaFLU is to make data integration completely flexible
 Creating a new project
 ++++++++++++++++++++++
 
-You may create two types of projects at INSaFLU:``Projects`` (A) and ``Extra Alignment/Phylogeny`` (B) 
+You may create two types of projects at INSaFLU: **"Projects" (A)** and **"Extra Alignment/Phylogeny"** (B) 
 
-A. Creating and scaling-up a **whole workflow project**
+A. Creating and scaling-up a whole workflow Project
 -------------------------------------------------------
 
 Within the *Projects* menu, you run the whole INSaFLU bioinformatics pipeline:
@@ -35,9 +35,9 @@ You can designate the projects so that the name easily indicates the combination
 3. Add the **samples** to be included in the **project**
 ........................................................
 
-Samples are processed immediately upon selection, so, at this time, users may start monitoring the Project progress by checking the number of samples in the following status: Processed (P); Waiting (W) and Error (E).
-
 .. image:: _static/create_project_3_add_samples.png
+
+Samples are processed immediately upon selection, so, at this time, users may start monitoring the Project progress by checking the number of samples in the following status: Processed (P); Waiting (W) and Error (E).
 
 .. image:: _static/monitoring_project_status.png
 
