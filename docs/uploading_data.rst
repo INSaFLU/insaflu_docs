@@ -3,16 +3,16 @@ Uploading data
 
 INSaFLU needs: 
 
-**NGS data** (fastq reads) (mandatory)
+- **NGS data** (fastq reads) (**mandatory**)
 
-**Sample metadata** (to link each sample to the respective NGS data) (mandatory) 
+- **Sample metadata** (to link each sample to the respective NGS data) (**mandatory**) 
 
-**Reference data** (additional user-restricted reference sequences) (optional)
+- **Reference data** (additional user-restricted reference sequences) (*optional*)
 
 Uploading Sample metadata and NGS data
 ++++++++++++++++++++++++++++++++++++++
 
-Samples's information and respective NGS data (single-end or paired-end reads in fastq.gz format obtained through widely used technologies, such as Illumina or Ion Torrent) can be uploaded to INSaFLU as a batch (option 1) or individually (option 2):
+**Samples's metadata** and respective **NGS data** (single-end or paired-end reads in fastq.gz format obtained through widely used technologies, such as Illumina or Ion Torrent) can be uploaded to INSaFLU as a **batch (option 1)** or **individually (option 2)**:
 
 
 # Option 1 (Batch)
@@ -23,25 +23,23 @@ A. Go to *Samples* menu and choose *Add Samples from csv / tsv file*.
 
 .. image:: _static/upload_samplemetadata_batch_1.png
 
-Check templates and examples
+Check your list of "Samples metadata" tables and **Load a new file**:
 
 .. image:: _static/upload_samplemetadata_batch_2.png
 
-The Sample metadata should be a comma-separated value (.csv) or tab-separated value (.tsv) table containing the columns **“sample name”**, 
-**“fastq1”** and **“fastq2”** (**mandatory columns to fulfill**; NOTE: fastq2 is exceptionally not fulfilled only for single-end data) as well these 
-additional variables (that may not be fulfilled): **“data set”**, **”vaccine status”**, **”week”**, **”onset date”**, **”collection date”**, **”lab reception date”**, **”latitude”**,
-**”longitude”**. 
-
-Users are encouraged to include any other columns with metadata variables to be associated with samples (see advantages below).
+.. note::
+   Sample metadata should be a comma-separated value (.csv) or tab-separated value (.tsv) table containing the columns **“sample name”**, **“fastq1”** and **“fastq2”** (**mandatory columns to fulfill**; NOTE: fastq2 is exceptionally not fulfilled only for single-end data) as well these additional variables (that may not be fulfilled): **“data set”**, **”vaccine status”**, **”week”**, **”onset date”**, **”collection date”**, **”lab reception date”**, **”latitude”**, **”longitude”**.
+   
+   Users are encouraged to include any other columns with metadata variables to be associated with samples (see advantages below).
 
 Examples of template table files are provided in this menu. 
+
+.. image:: _static/upload_samplemetadata_batch_3.png
 
 .. warning::
    Samples names in your account must be unique and only numbers, letters and underscores are allowed.
    
    Fastq.gz file names must be complete (including extension) and match the ones from the files that you are going to upload later. 
-
-.. image:: _static/upload_samplemetadata_batch_3.png
 
 
 **Advantages of uploading enriched Sample metadata tables**
@@ -65,9 +63,11 @@ B. Go to *Samples* menu and choose *Add Fastq Files*
 
 .. image:: _static/upload_ngs_data_1.png
 
-Here you can simultaneously upload multiple paired-end fastq.gz files (50MB maximum per file), which are automatically linked to the corresponding samples.
+Navigate through your list of fastq.gz files and **simultaneously upload multiple fastq.gz files** (50MB maximum per file), which are automatically linked to the corresponding samples.
 
 .. image:: _static/upload_ngs_data_2.png
+
+Just DRAG & DROP your fastq.gz files
 
 .. image:: _static/upload_ngs_data_3.png
 
@@ -79,9 +79,9 @@ Here you can simultaneously upload multiple paired-end fastq.gz files (50MB maxi
 A. Go to *Samples* menu and choose *Add Sample metadata*
 ........................................................
 
-Here you can upload each sample at the time (including associated metadata and NGS data).
-
 .. image:: _static/upload_samplemetadata_individual_1.png
+
+Here you can upload each sample at the time (including associated metadata and NGS data).
 
 .. image:: _static/upload_samplemetadata_individual_2.png
 
@@ -91,12 +91,12 @@ Uploading Reference data
 
 INSaFLU needs reference sequence files to be used for reference-based mapping (mandatory) or for extra alignment/phylogeny analyses (optional). 
 
-In References menu, INSaFLU provides a set of ready-to-use reference sequences, all publicly available at NCBI, currently including:
+- In *References* menu, **INSaFLU provides a set of ready-to-use reference sequences**, all publicly available at NCBI, currently including:
 
 i. post-pandemic (2009) vaccine/reference influenza A(H1N1)pdm2009, A(H3N2) and B viruses (from both Northern and Southern hemispheres);
 ii. representative virus of multiple combinations of HA/NA subtypes (i.e., H1N1, H2N2, H5N1, H7N9, etc)
 
-.. image:: _static/Reference_menu.png
+.. image:: _static/Reference_menu_1.png
 
 The current list of reference sequences, including loci size and NCBI accession numbers is provided here:
 
@@ -107,7 +107,6 @@ genes of influenza virus (PB2, PB1, PA, HA, NP, NA, M and NS), such as the wet-l
 adapted from a RT-PCR assay described by Zhou and colleagues (Zhou et al, 2009, for Influenza A; and Zhou et al, 2014, for Influenza B; 
 Zhou and Wentworth, 2012)
 
-
 .. warning::
    If you are using the suggested wet-lab pre-NGS protocol and you want to compare your sequences against a reference available at INSaFLU database, no further actions are needed. 
    
@@ -116,7 +115,7 @@ Zhou and Wentworth, 2012)
 .. warning::
    See below a guide to generate additional reference sequences
 
-.. image:: _static/upload_add_reference_1.png
+.. image:: _static/Reference_menu_2.png
 
 .. note::
    You can upload:
@@ -125,7 +124,7 @@ Zhou and Wentworth, 2012)
    
    2. single FASTA files containing a particular complete or partial locus sequence (e.g., the traditionally used HA1 sequence of a virus representative of a particular clades/group). This can be used in “Extra Alignment/Phylogeny” projects.
 
-.. image:: _static/upload_add_reference_2.png
+.. image:: _static/upload_add_reference.png
 
 
 GUIDE TO GENERATE ADDITIONAL REFERENCE SEQUENCES
@@ -161,7 +160,7 @@ Type and sub-type detection”; see Data analysis in the Documentation). Just ex
 *References* menu displays all information for all reference sequences available at your confidential session. Both FASTA and GenBank files can be downloaded
 by clicking on the displayed links.
 
-.. image:: _static/Reference_menu.png
+.. image:: _static/Reference_menu_1.png
 
 
 References:

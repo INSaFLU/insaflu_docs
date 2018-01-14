@@ -29,7 +29,7 @@ You can designate the projects so that the name easily indicates the combination
 .. note::
    You should select a reference sequence (e.g., the vaccine strain from the current influenza season) that fits both your amplicon design (i.e., a multi-fasta file containing the set of reference sequences with the precise size of each “intra-amplicon” target sequence that you capture by each one of the RT-PCR amplicons) and the set of samples that will be compared (e.g., same sub-type viruses from the same season to be compared with the vaccine reference virus).
 
-.. image:: _static/create_project_2_anem_ref_ref.png
+.. image:: _static/create_project_2_name_ref.png
 
 
 3. Add the **samples** to be included in the **project**
@@ -37,7 +37,7 @@ You can designate the projects so that the name easily indicates the combination
 
 Samples are processed immediately upon selection, so, at this time, users may start monitoring the Project progress by checking the number of samples in the following status: Processed (P); Waiting (W) and Error (E).
 
-.. image:: _static/create_project_3_status.png
+.. image:: _static/create_project_3_add_samples.png
 
 .. image:: _static/monitoring_project_status.png
 
