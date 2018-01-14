@@ -1,7 +1,13 @@
 Output Visualization and Download
 =================================
 
-Upon project's launching, you can start exploring the diverse INSaFLU outputs, which include **sample-specific outputs** (such as, mapping files, variants annotation and consensus sequences) or **project outputs** (such as, nucleotide/amino acid alignments and phylogenetic trees). Outputs are organized by the dynamic “expand-and-collapse” panels that allow you a user-friendly visualization/download of all graphical, text and sequence output data. The following table provides an overview on all INSaFLU outputs organized by bioinformatics module:
+Upon project's launching, you can start exploring the diverse INSaFLU outputs, which include:
+
+- **sample-specific outputs** (such as, mapping files, variants annotation and consensus sequences)
+
+- **project outputs** (such as, nucleotide/amino acid alignments and phylogenetic trees). 
+
+Outputs are organized by the dynamic “expand-and-collapse” panels that allow you a user-friendly visualization/download of all graphical, text and sequence output data. The following table provides an overview on all INSaFLU outputs organized by bioinformatics module:
 
 -:download: `_static/INSaFLU_current_outputs_15_01_2018.xlsx <INSaFLU_current_outputs_15_01_2018.xlsx>`
    
@@ -22,7 +28,7 @@ A. Go to *Samples* menu and check the *reads' quality reports and typing data*
 
 Just after samples' metadata and NGS data submission, INSaFLU automatically updates samples' information with reads quality and typing data .
  
-.. image:: _static/samples_menu.png
+.. image:: _static/Samples_menu.png
 
 
 B. Go to *Samples* menu and explore the *'More info' icon next to each sample*.
@@ -34,11 +40,15 @@ By clicking on the 'More info' icon next to each sample, you can get an overview
 
 .. image:: _static/sample_metadata_FastQC_raw.png
 
+Click on ".html" files and explore each one of the FastQC "Analysis modules" - please consult https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3 Analysis  Modules for details]
+
 .. image:: _static/sample_FastQC_report.png
 
 - **FastQC graphical quality reports for quality processed read files** 
 
 .. image:: _static/sample_FastQC_processed.png
+
+Click on ".html" files and explore each one of the FastQC "Analysis modules" - please consult https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3 Analysis  Modules for details]
 
 - **Typing and subtyping data**
 
@@ -163,7 +173,7 @@ Within this panel you can explore the "whole-genome"-based ("All") and locus-spe
 .. warning::
    - Each locus-specific tree exclusively enrolls samples displaying 100% of that locus covered by ≥10-fold (color-coded as green in the coverage interactive report).
    
-   - The genome-based phylogenetic tree ("All")  exclusively enrolls samples displaying all loci all loci with 100% of its length covered by =10-fold (i.e., samples color-coded as green in the coverage interactive report for the all loci panel)
+   - The genome-based phylogenetic tree ("All") exclusively enrolls samples displaying all loci all loci with 100% of its length covered by ≥10-fold (i.e., samples color-coded as green in the coverage interactive report for the all loci panel)
 
 
 C. Navigate through **Nucleotide alignments by MSAViewer**
@@ -181,7 +191,7 @@ Within this panel you can explore the "whole-genome"-based ("All") and locus-spe
 .. warning::
    - Each locus-specific alignment exclusively enrolls samples displaying 100% of that locus covered by ≥10-fold (color-coded as green in the coverage interactive report).
    
-   - The genome-based nucleotide alignment ("All") exclusively enrolls samples displaying all loci all loci with 100% of its length covered by =10-fold (i.e., samples color-coded as green in the coverage interactive report for the all loci panel)
+   - The genome-based nucleotide alignment ("All") exclusively enrolls samples displaying all loci all loci with 100% of its length covered by ≥10-fold (i.e., samples color-coded as green in the coverage interactive report for the all loci panel)
 
 D. Navigate through **Amino acid alignments by MSAViewer**
 ..........................................................
@@ -196,7 +206,7 @@ Within this panel you can explore the amino acid alignments for the influenza pr
 .. image:: _static/projects_amino_acid_alignments.png
 
 .. warning::
-   - Each amino acid alignment exclusively enrolls samples displaying 100% of that locus covered by =10-fold (color-coded as green in the coverage interactive report).
+   - Each amino acid alignment exclusively enrolls samples displaying 100% of that locus covered by ≥10-fold (color-coded as green in the coverage interactive report).
    
 E. Explore the **Intra-host minor variants annotation (and uncovering of putative mixed infections)** panel
 ...........................................................................................................

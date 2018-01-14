@@ -160,7 +160,7 @@ Type and sub-type detection”; see Data analysis in the Documentation). Just ex
 *References* menu displays all information for all reference sequences available at your confidential session. Both FASTA and GenBank files can be downloaded
 by clicking on the displayed links.
 
-.. image:: _static/Reference_menu_1.png
+.. image:: _static/References_menu_1.png
 
 
 References:
