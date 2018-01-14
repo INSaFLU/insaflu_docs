@@ -41,7 +41,7 @@ Examples of template table files are provided in this menu.
    
    Fastq.gz file names must be complete (including extension) and match the ones from the files that you are going to upload later. 
 
-.. image:: _static/upload_samplemetadata_batch_2.png
+.. image:: _static/upload_samplemetadata_batch_3.png
 
 
 **Advantages of uploading enriched Sample metadata tables**
@@ -63,9 +63,13 @@ To take full advantage of particular platforms, such Microreact, which provides 
 B. Go to *Samples* menu and choose *Add Fastq Files*
 ....................................................
 
+.. image:: _static/upload_ngs_data_1.png
+
 Here you can simultaneously upload multiple paired-end fastq.gz files (50MB maximum per file), which are automatically linked to the corresponding samples.
 
-.. image:: _static/upload_sample_ngs_data.png
+.. image:: _static/upload_ngs_data_2.png
+
+.. image:: _static/upload_ngs_data_3.png
 
 
 
@@ -77,7 +81,9 @@ A. Go to *Samples* menu and choose *Add Sample metadata*
 
 Here you can upload each sample at the time (including associated metadata and NGS data).
 
-.. image:: _static/upload_samplemetadata_batch_1.png
+.. image:: _static/upload_samplemetadata_individual_1.png
+
+.. image:: _static/upload_samplemetadata_individual_2.png
 
 
 Uploading Reference data
@@ -89,6 +95,8 @@ In References menu, INSaFLU provides a set of ready-to-use reference sequences, 
 
 i. post-pandemic (2009) vaccine/reference influenza A(H1N1)pdm2009, A(H3N2) and B viruses (from both Northern and Southern hemispheres);
 ii. representative virus of multiple combinations of HA/NA subtypes (i.e., H1N1, H2N2, H5N1, H7N9, etc)
+
+.. image:: _static/Reference_menu.png
 
 The current list of reference sequences, including loci size and NCBI accession numbers is provided here:
 
@@ -103,20 +111,21 @@ Zhou and Wentworth, 2012)
 .. warning::
    If you are using the suggested wet-lab pre-NGS protocol and you want to compare your sequences against a reference available at INSaFLU database, no further actions are needed. 
    
-If you need to UPLOAD additional reference files (FASTA format; maximum 20000 bp per file) to the user-restricted reference database, go to **References** menu and choose *Add Reference*
-
-.. note::
-   You can upload:
-   
-   1. multi-FASTA files containing the set of reference sequences that constitute the influenza “whole-genome” sequence of a particular virus (e.g, the combination of the traditional 8 amplicons targeting the 8 eight influenza RNA segments).
-   Each individual sequence must have the precise size of each “intra-amplicon” target sequence that you capture by each one of the RT-PCR amplicons. INSaFLU automatically annotates uploaded multi-FASTA sequences upon submission, but, if you prefer, you can also upload (optionally) the respective multi-GenBank file.   
-   
-   2. single FASTA files containing a particular complete or partial locus sequence (e.g., the traditionally used HA1 sequence of a virus representative of a particular clades/group). This can be used in “Extra Alignment/Phylogeny” projects.
+- **If you need to UPLOAD additional reference files** (FASTA format; maximum 20000 bp per file) to the user-restricted reference database, go to **References** menu and choose *Add Reference*
 
 .. warning::
    See below a guide to generate additional reference sequences
 
-.. image:: _static/upload_samplemetadata_batch_1.png
+.. image:: _static/upload_add_reference_1.png
+
+.. note::
+   You can upload:
+   
+   1. multi-FASTA files containing the set of reference sequences that constitute the influenza “whole-genome” sequence of a particular virus (e.g, the combination of the traditional 8 amplicons targeting the 8 eight influenza RNA segments). Each individual sequence must have the precise size of each “intra-amplicon” target sequence that you capture by each one of the RT-PCR amplicons. INSaFLU automatically annotates uploaded multi-FASTA sequences upon submission, but, if you prefer, you can also upload (optionally) the respective multi-GenBank file.   
+   
+   2. single FASTA files containing a particular complete or partial locus sequence (e.g., the traditionally used HA1 sequence of a virus representative of a particular clades/group). This can be used in “Extra Alignment/Phylogeny” projects.
+
+.. image:: _static/upload_add_reference_2.png
 
 
 GUIDE TO GENERATE ADDITIONAL REFERENCE SEQUENCES
@@ -129,7 +138,7 @@ Take this guide into account when generating additional reference sequences.
 
 2. (multi) FASTA format is widely applied to save either nucleotide sequences or peptide sequences. An easy way to handle/generate multi-FASTA files is by opening a text file (e.g., NOTEPAD) and paste individual sequences after each header line. The FASTA IDs (after the '>' character) represent the individual sequence names. For the sake of simplicity, you may designate each sequence as 1, 2, 3, 4, 5, 6 , 7 and 8 (see example), following the traditional influenza segments order (keeping this numerical order is advisable). At the end, you just have to save the multi-FASTA file as “.fasta” (please avoid symbols or blank spaces in the file names). 
 
-			example:  - :download: `A_H3N2_A_Perth_16_2009.fasta <A_H3N2_A_Perth_16_2009.fasta>`
+			example:  -:download: `A_H3N2_A_Perth_16_2009.fasta <A_H3N2_A_Perth_16_2009.fasta>`
 
 
 3. you may generate your multi-FASTA files in order to fit your amplicon schema by simply adjusting the whole-genome sequences available for download at INSaFLU or at influenza-specific sequence repositories, such as the Influenza Research Database (https://www.fludb.org), NCBI Influenza Virus Resource (https://www.ncbi.nlm.nih.gov/genomes/FLU/Database/nph-select.cgi?go=database) and EpiFLU/GISAID (https://www.gisaid.org/).
