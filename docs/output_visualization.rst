@@ -40,7 +40,7 @@ By clicking on the 'More info' icon next to each sample, you can get an overview
 
 .. image:: _static/sample_metadata_FastQC_raw.png
 
-Click on ".html" files and explore each one of the FastQC "Analysis modules" - please consult https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3 Analysis  Modules for details]
+Click on ".html" files and explore each one of the FastQC "Analysis modules" - please consult https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/ for details]
 
 .. image:: _static/sample_FastQC_report.png
 
@@ -48,7 +48,7 @@ Click on ".html" files and explore each one of the FastQC "Analysis modules" - p
 
 .. image:: _static/sample_FastQC_processed.png
 
-Click on ".html" files and explore each one of the FastQC "Analysis modules" - please consult https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3 Analysis  Modules for details]
+Click on ".html" files and explore each one of the FastQC "Analysis modules" - please consult https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/ for details]
 
 - **Typing and subtyping data**
 
@@ -64,7 +64,7 @@ Multiple sample-specific outputs (see below) are generated when a given sample i
 A. Go to *Projects* menu, and click on **"See results"** to explore outputs of a given project
 ..............................................................................................
 
-In the table below the dynamic 'expand-and-collapse' panels (containing project-specific outputs; see below), you can explore multiple sample-specific outputs generated for each sample in a given project, including:
+Below the dynamic 'expand-and-collapse' panels, you can explore a table that contains multiple sample-specific outputs generated for each sample in a given project, including:
 
 - **Type and subtype/lineage** 
 

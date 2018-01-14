@@ -6,7 +6,7 @@ One of the main goals of INSaFLU is to make data integration completely flexible
 Creating a new project
 ++++++++++++++++++++++
 
-You may create two types of projects at INSaFLU: **"Projects" (A)** and **"Extra Alignment/Phylogeny"** (B) 
+You may create two types of projects at INSaFLU: **"Projects" (A)** and **"Extra Alignment/Phylogeny" (B)**
 
 A. Creating and scaling-up a whole workflow Project
 -------------------------------------------------------
