@@ -6,7 +6,7 @@ One of the main goals of INSaFLU is to make data integration completely flexible
 Creating a new project
 ++++++++++++++++++++++
 
-You may create two types of projects at INSaFLU:``Projects (A)`` and ``Extra Alignment/Phylogeny (B)`` 
+You may create two types of projects at INSaFLU:``Projects`` (A) and ``Extra Alignment/Phylogeny`` (B) 
 
 A. Creating and scaling-up a **whole workflow project**
 -------------------------------------------------------
@@ -16,12 +16,14 @@ Within the *Projects* menu, you run the whole INSaFLU bioinformatics pipeline:
 1. Go to *Projects* menu and choose *Create project*
 ....................................................
 
-You are encouraged to create “umbrella” projects, such as projects enrolling same sub-type viruses from the same season that will be compared with the vaccine reference virus for a given flu season. You can designate the projects so that the name easily indicates the combination “virus sub-type/season/reference” (e.g. **A_H3N2_2017_18_vaccine_ref**)
+You are encouraged to create “umbrella” projects, such as projects enrolling same sub-type viruses from the same season that will be compared with the vaccine reference virus for a given flu season. 
+
+You can designate the projects so that the name easily indicates the combination “virus sub-type/season/reference” (e.g. **A_H3N2_2017_18_vaccine_ref**)
 
 .. image:: _static/create_project_1_create.png
 
 
-2. Choose **Project Name**, select a **reference** sequence and *Save*
+2. Choose a *Project Name*, select a *Reference sequence* and *Save*
 ......................................................................
 
 .. note::
