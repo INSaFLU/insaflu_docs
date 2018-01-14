@@ -18,6 +18,7 @@ A. Go to *Samples* menu and choose *Add Samples from csv / tsv file*.
 
 .. image:: _static/upload_samplemetadata_batch_1.png
 
+Check templates and examples
 
 .. image:: _static/upload_samplemetadata_batch_2.png
 
