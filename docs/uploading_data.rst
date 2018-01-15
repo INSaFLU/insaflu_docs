@@ -27,7 +27,7 @@ Check your list of "Samples metadata" tables and **Load a new file**:
 
 .. image:: _static/upload_samplemetadata_batch_2.png
 
-.. note::
+.. important::
    Sample metadata should be a comma-separated value (.csv) or tab-separated value (.tsv) table containing the columns **“sample name”**, **“fastq1”** and **“fastq2”** (**mandatory columns to fulfill**; NOTE: fastq2 is exceptionally not fulfilled only for single-end data) as well these additional variables (that may not be fulfilled): **“data set”**, **”vaccine status”**, **”week”**, **”onset date”**, **”collection date”**, **”lab reception date”**, **”latitude”**, **”longitude”**.
    
    Users are encouraged to include any other columns with metadata variables to be associated with samples (see advantages below).
@@ -36,7 +36,7 @@ Examples of template table files are provided in this menu.
 
 .. image:: _static/upload_samplemetadata_batch_3.png
 
-.. warning::
+.. important::
    Samples names in your account must be unique and only numbers, letters and underscores are allowed.
    
    Fastq.gz file names must be complete (including extension) and match the ones from the files that you are going to upload later. 
@@ -102,10 +102,10 @@ ii. representative virus of multiple combinations of HA/NA subtypes (i.e., H1N1,
 
 The current list of reference sequences, including loci size and NCBI accession numbers is provided here:
 
- - :download: `INSaFLU_current_REFERENCE_DATABASE_15_01_2018.xlsx <INSaFLU_current_REFERENCE_DATABASE_15_01_2018.xlsx>`
+:download:`INSaFLU_current_REFERENCE_DATABASE_15_01_2018.xlsx <_static/INSaFLU_current_REFERENCE_DATABASE_15_01_2018.xlsx>`
 
 The default reference files (FASTA and GenBank formats) have been prepared to fit amplicon-based schemas capturing the whole CDS of the main eight 
-genes of influenza virus (PB2, PB1, PA, HA, NP, NA, M and NS), such as the wet-lab pre-NGS protocol (``here``) for influenza whole genome amplification 
+genes of influenza virus (PB2, PB1, PA, HA, NP, NA, M and NS), such as the wet-lab pre-NGS protocol (:download:`Suggested_RT_PCR_assay_for_influenza_WGS.pdf <_static/Suggested_RT_PCR_assay_for_influenza_WGS.pdf>`) for influenza whole genome amplification 
 adapted from a RT-PCR assay described by Zhou and colleagues (Zhou et al, 2009, for Influenza A; and Zhou et al, 2014, for Influenza B; 
 Zhou and Wentworth, 2012)
 
@@ -142,8 +142,8 @@ Take this guide into account when generating additional reference sequences.
 
 2. (multi) FASTA format is widely applied to save either nucleotide sequences or peptide sequences. An easy way to handle/generate multi-FASTA files is by opening a text file (e.g., NOTEPAD) and paste individual sequences after each header line. The FASTA IDs (after the '>' character) represent the individual sequence names. For the sake of simplicity, you may designate each sequence as 1, 2, 3, 4, 5, 6 , 7 and 8 (see example), following the traditional influenza segments order (keeping this numerical order is advisable). At the end, you just have to save the multi-FASTA file as “.fasta” (please avoid symbols or blank spaces in the file names). 
 
-			example:  -:download: `A_H3N2_A_Perth_16_2009.fasta <A_H3N2_A_Perth_16_2009.fasta>`
-
+			
+			example:  :download:`A_H3N2_A_Perth_16_2009.fasta <_Static/A_H3N2_A_Perth_16_2009.fasta>`
 
 
 3. you may generate your multi-FASTA files in order to fit your amplicon schema by simply adjusting the whole-genome sequences available for download at INSaFLU or at influenza-specific sequence repositories, such as the Influenza Research Database (https://www.fludb.org), NCBI Influenza Virus Resource (https://www.ncbi.nlm.nih.gov/genomes/FLU/Database/nph-select.cgi?go=database) and EpiFLU/GISAID (https://www.gisaid.org/).
