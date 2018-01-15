@@ -18,7 +18,7 @@ Navigate through sample-specific outputs
 ++++++++++++++++++++++++++++++++++++++++
    
 
-# Samples menu
+in Samples menu
 ---------------  
    
 This tab displays all information for all loaded samples.
@@ -54,8 +54,8 @@ Click on ".html" files and explore each one of the FastQC "Analysis modules" - p
 
 .. image:: _static/sample_Type_subtype.png
 
-# Projects menu
----------------  
+in Projects menu
+----------------  
 
 This tab lists all your projects.
 
@@ -118,7 +118,7 @@ Navigate through global *Projects* outputs
 ++++++++++++++++++++++++++++++++++++++++++
    
 
-# Projects menu ("See results" icon)
+in Projects menu ("See results" icon)
 ------------------------------------ 
 
 This tab lists all your projects. 
