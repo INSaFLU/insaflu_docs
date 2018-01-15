@@ -130,12 +130,13 @@ Click on **"See results"** to explore outputs of a given project
 
 The projects outputs are organized by dynamic 'expand-and-collapse' panels containing project-specific outputs (see how to explore each one below). At the bottom of these panels you can explore sample-specific outputs and download the current list of samples. 
 
+.. image:: _static/projects_panels.png
+
 .. note::
    The project samples' list ("Sample_list" file) is automatically re-build and cumulatively updated as more samples are added to the project. This file compiles all samples' metadata as well as sample-specific additional data provided by INSaFLU ("type and subtype/lineage" and "putative mixed infection" data)
 
 The Sample_list" file can be uploaded, together with associated alignment or phylogenetic data, to visualization tools (see more details on the tab **Uploading data / Uploading Sample metadata and NGS data**)
 
-.. image:: _static/projects_panels.png
 
 
 A. Click on the panel **Project 'Project_name'** to get an overview on the project

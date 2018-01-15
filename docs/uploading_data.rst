@@ -96,8 +96,8 @@ INSaFLU needs reference sequence files to be used for reference-based mapping (m
 
 - In *References* menu, **INSaFLU provides a set of ready-to-use reference sequences**, all publicly available at NCBI, currently including:
 
-i. post-pandemic (2009) vaccine/reference influenza A(H1N1)pdm2009, A(H3N2) and B viruses (from both Northern and Southern hemispheres);
-ii. representative virus of multiple combinations of HA/NA subtypes (i.e., H1N1, H2N2, H5N1, H7N9, etc)
+	i. post-pandemic (2009) vaccine/reference influenza A(H1N1)pdm2009, A(H3N2) and B viruses (from both Northern and Southern hemispheres);
+	ii. representative virus of multiple combinations of HA/NA subtypes (i.e., H1N1, H2N2, H5N1, H7N9, etc)
 
 .. image:: _static/References_menu_1.png
 
@@ -105,14 +105,15 @@ The current list of reference sequences, including loci size and NCBI accession 
 
 :download:`INSaFLU_current_REFERENCE_DATABASE_15_01_2018.xlsx <_static/INSaFLU_current_REFERENCE_DATABASE_15_01_2018.xlsx>`
 
-The default reference files (FASTA and GenBank formats) have been prepared to fit amplicon-based schemas capturing the whole CDS of the main eight genes of influenza virus (PB2, PB1, PA, HA, NP, NA, M and NS), such as the wet-lab pre-NGS protocol (:download:`Suggested_RT_PCR_assay_for_influenza_WGS.pdf <_static/Suggested_RT_PCR_assay_for_influenza_WGS.pdf>`) for influenza whole genome amplification adapted from a RT-PCR assay described by Zhou and colleagues (Zhou et al, 2009, for Influenza A; and Zhou et al, 2014, for Influenza B; Zhou and Wentworth, 2012)
+The default reference files (FASTA and GenBank formats) have been prepared to fit amplicon-based schemas capturing the whole CDS of the main eight genes of influenza virus (PB2, PB1, PA, HA, NP, NA, M and NS), such as the wet-lab pre-NGS protocol for influenza whole genome amplification adapted from a RT-PCR assay described by Zhou and colleagues (Zhou et al, 2009, for Influenza A; and Zhou et al, 2014, for Influenza B; Zhou and Wentworth, 2012).
+
+You can download the suggested protocol here: :download:`Suggested_RT_PCR_assay_for_influenza_WGS.pdf <_static/Suggested_RT_PCR_assay_for_influenza_WGS.pdf>`
 
 .. important::
-   If you are using the suggested wet-lab pre-NGS protocol and you want to compare your sequences against a reference available at INSaFLU database, **NO FURTHER ACTIONS ARE NEEDED**. 
+    **NO FURTHER ACTIONS ARE NEEDED** if you are using the suggested wet-lab pre-NGS protocol and you want to compare your sequences against a reference available at INSaFLU database. 
    
-   
-   
-- **If you need to UPLOAD additional reference files** (FASTA format; maximum 20000 bp per file) to the user-restricted reference database, GO TO **References** MENU and CHOOSE **Add Reference**
+    
+- **If you need to UPLOAD additional reference files** (FASTA format; maximum 20000 bp per file) to the user-restricted reference database, GO TO *References* MENU and CHOOSE **Add Reference**
 
    See below a guide to generate additional reference sequences
 

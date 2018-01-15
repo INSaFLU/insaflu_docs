@@ -4,7 +4,7 @@ Guide for pre-NGS steps
 Suggested pre-NGS wet-lab protocol
 --------------------------------------
 
-INSaFLU is highly flexible and allows handling NGS data collected from any amplicon-based schema, provided that users fit the reference files to their amplicon design (users just have to generate and upload a multi-fasta file containing reference sequences of the individual amplicons they use with the precise size of the target sequence).
+INSaFLU is highly flexible and **allows handling NGS data collected from any amplicon-based schema**, provided that users fit the reference files to their amplicon design (users just have to generate and upload a multi-fasta file containing reference sequences of the individual amplicons they use with the precise size of the target sequence).
 
 The default reference database of INSaFLU currently includes reference sequences of:
 
@@ -12,7 +12,7 @@ i) post-pandemic (2009) vaccine/reference influenza A(H1N1)pdm2009, A(H3N2) and 
 
 ii) representative virus of multiple combinations of HA/NA subtypes (i.e., H1N1, H2N2, H5N1, H7N9, etc)
 
-All reference sequences at INSaFLU (:download:`INSaFLU_current_REFERENCE_DATABASE_15_01_2018.xlsx <_static/INSaFLU_current_REFERENCE_DATABASE_15_01_2018.xlsx>`) are publicly available at NCBI. 
+All reference sequences at INSaFLU  are publicly available at NCBI. Download the current list here: :download:`INSaFLU_current_REFERENCE_DATABASE_15_01_2018.xlsx <_static/INSaFLU_current_REFERENCE_DATABASE_15_01_2018.xlsx>`) 
 
 The reference files have been prepared to fit amplicon-based schemas capturing the whole CDS of the main eight genes of influenza virus (PB2, PB1, PA, HA, NP, NA, M and NS).
 
