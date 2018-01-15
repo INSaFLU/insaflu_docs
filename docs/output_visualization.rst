@@ -46,9 +46,9 @@ Click on ".html" files and explore each one of the FastQC "Analysis modules" - p
 
 - **FastQC graphical quality reports for quality processed read files** 
 
-.. image:: _static/sample_FastQC_processed.png
-
 Click on ".html" files and explore each one of the FastQC "Analysis modules" - please consult https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/ for details]
+
+.. image:: _static/sample_FastQC_processed.png
 
 - **Typing and subtyping data**
 
@@ -119,7 +119,7 @@ Navigate through global *Projects* outputs
    
 
 in Projects menu ("See results" icon)
------------------------------------- 
+------------------------------------- 
 
 This tab lists all your projects. 
 
