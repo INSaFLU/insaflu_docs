@@ -16,8 +16,9 @@ All reference sequences at INSaFLU  are publicly available at NCBI. Download the
 
 The reference files have been prepared to fit amplicon-based schemas capturing the whole CDS of the main eight genes of influenza virus (PB2, PB1, PA, HA, NP, NA, M and NS).
 
-INSaFLU pipeline has been tested with NGS data collected after applying the wet-lab pre-NGS protocol (:download:`Suggested_RT_PCR_assay_for_influenza_WGS.pdf <_static/Suggested_RT_PCR_assay_for_influenza_WGS.pdf>`) for influenza whole genome amplification adapted from a RT-PCR assay described by Zhou and colleagues (Zhou et al, 2009, for Influenza A; and Zhou et al, 2014, for Influenza B; Zhou and Wentworth, 2012). This protocol can be applied to simultaneously amplify the eight genomic RNA segments, irrespective of influenza virus subtype or lineage.
+INSaFLU pipeline has been tested with NGS data collected after applying the wet-lab pre-NGS protocol for influenza whole genome amplification adapted from a RT-PCR assay described by Zhou and colleagues (Zhou et al, 2009, for Influenza A; and Zhou et al, 2014, for Influenza B; Zhou and Wentworth, 2012). This protocol can be applied to simultaneously amplify the eight genomic RNA segments, irrespective of influenza virus subtype or lineage.
 
+You can download the suggested protocol here: :download:`Suggested_RT_PCR_assay_for_influenza_WGS.pdf <_static/Suggested_RT_PCR_assay_for_influenza_WGS.pdf>`
 
 How to design a NGS run?
 --------------------------------------
