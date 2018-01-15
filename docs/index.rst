@@ -16,8 +16,8 @@ data that are actually the core first-line “genetic requests” for effective 
 https://www.insaflu.insa.pt
 
 
-Features
-++++++++
+Highlights
+++++++++++
 
 * open to all, free of charge, user-restricted accounts
 * applicable to NGS data collected from any amplicon-based schema

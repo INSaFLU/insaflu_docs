@@ -31,7 +31,7 @@ You can designate the projects so that the name easily indicates the combination
 2. Choose a *Project Name*, select a *Reference sequence* and *Save*
 ......................................................................
 
-.. note::
+.. important::
    You should select a reference sequence (e.g., the vaccine strain from the current influenza season) that fits both your amplicon design (i.e., a multi-fasta file containing the set of reference sequences with the precise size of each “intra-amplicon” target sequence that you capture by each one of the RT-PCR amplicons) and the set of samples that will be compared (e.g., same sub-type viruses from the same season to be compared with the vaccine reference virus).
 
 .. image:: _static/create_project_2_name_ref.png

@@ -76,12 +76,15 @@ Below the dynamic 'expand-and-collapse' panels, you can explore a table that con
 
 .. image:: _static/sample_table_projects.png 
 
-.. note::
-   GREEN: % of locus size covered by at least 1-fold = 100 % and % of locus size covered by at least 10-fold = 100% 
+.. important::
+
+   COVERAGE COLOR CODE:
+	
+   	GREEN: % of locus size covered by at least 1-fold = 100 % and % of locus size covered by at least 10-fold = 100% 
    
-   YELLOW: % of locus size covered by at least 1-fold = 100 % and % of locus size covered by at least 10-fold < 100%
+   	YELLOW: % of locus size covered by at least 1-fold = 100 % and % of locus size covered by at least 10-fold < 100%
    
-   RED: % of locus size covered by at least 1-fold < 100 % and % of locus size covered by at least 10-fold < 100%
+  	RED: % of locus size covered by at least 1-fold < 100 % and % of locus size covered by at least 10-fold < 100%
 
 By clicking on each one of the color-coded circles, you can explore locus-specific plots of the depth of coverage 
 
@@ -221,8 +224,8 @@ You may inspect this plot to uncover infections with influenza viruses presentin
 .. image:: _static/projects_graph_iSNVs.png
 
 
-.. note::
-   INSaFLU flags samples as 'putative mixed infections' if they fulfill the following cumulative criteria: the ratio of the number of iSNVs at frequency 1-50% (minor iSNVs) and 50-90% falls within the range 0,5-1,5 and the sum of the number of these two categories of iSNVs exceeds 20. Alternatively, to account for mixed infections involving extremely different viruses (e.g., A/H3N2 and A/H1N1), the flag is also displayed when the sum of the two categories of iSNVs exceeds 100, regardless of the first criterion.
+.. important::
+   - INSaFLU flags samples as 'putative mixed infections' if they fulfill the following cumulative criteria: the ratio of the number of iSNVs at frequency 1-50% (minor iSNVs) and 50-90% falls within the range 0,5-1,5 and the sum of the number of these two categories of iSNVs exceeds 20. Alternatively, to account for mixed infections involving extremely different viruses (e.g., A/H3N2 and A/H1N1), the flag is also displayed when the sum of the two categories of iSNVs exceeds 100, regardless of the first criterion.
 
 .. warning::
    - By default, samples flagged as "putative mixed infections" are depicted in both alignments and phylogenetic trees. Users are encouraged to inspect the flagged samples by exploring their mapping files (.bam files), "coverage" plots per locus and also the lists of variants. 
