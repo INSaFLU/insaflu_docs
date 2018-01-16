@@ -96,23 +96,24 @@ B. Go to *Projects* menu, click on **"See results"** and explore the **"More inf
 
 By clicking on the 'More info' icon next to each sample, you can get an overview on the specific sample metadata and additionally download/explore:
 
-- **FastQC graphical quality reports for raw read files**
 
-- **FastQC graphical quality reports for quality processed read files**
-	
 - **Type and subtype/lineage**
 
 - **Mapping file** 
+
+- **Consensus sequence for the pool of loci** 
 	
 - **Annotated variants (SNPs and indels)**
 
 .. warning::
-   Validated variants falling within loci not fully covered with ≥10-fold (color-coded as yellow or red) are still included in the "validated_variants" list (these cases are labeled in the table column "VARIANTS in INCOMPLETE LOCUS" as YES), so that users can still retrieve valuable and reliable data (e.g., specific epitope and antiviral drug resistance mutations) from samples with borderline coverage.
+   - Validated variants falling within loci not fully covered with ≥10-fold (color-coded as yellow or red) are still included in the "validated_variants" list (these cases are labeled in the table column "VARIANTS in INCOMPLETE LOCUS" as YES), so that users can still retrieve valuable and reliable data (e.g., specific epitope and antiviral drug resistance mutations) from samples with borderline coverage.
+   
+   - Consensus sequences are exclusively generated for individual locus with 100% of its length covered by at least 10-fold (GREEN code in the grapgical coverage report)
 
 .. image:: _static/sample_projects_extra_info.png
 
 
-By clicking on "Explore the sample.bam" file, you can finely inspect the mapped reads (and variants) using the Integrative Genomics Viewer (IGV)
+By clicking on "Mapping file by IGV (Explore 'sample.bam' file, you can finely inspect the mapped reads (and variants) using the Integrative Genomics Viewer (IGV)
 
 .. image:: _static/sample_projects_extra_info_IGV.png
 
@@ -124,7 +125,7 @@ Navigate through global *Projects* outputs
 Explore the *Projects menu ("See results" icon)*
 ------------------------------------------------ 
 
-This tab lists all your projects. 
+The *Projects* tab lists all your projects. 
 
 Click on **"See results"** to explore outputs of a given project 
 
@@ -135,7 +136,7 @@ The projects outputs are organized by dynamic 'expand-and-collapse' panels conta
 .. note::
    The project samples' list ("Sample_list" file) is automatically re-build and cumulatively updated as more samples are added to the project. This file compiles all samples' metadata as well as sample-specific additional data provided by INSaFLU ("type and subtype/lineage" and "putative mixed infection" data)
 
-The Sample_list" file can be uploaded, together with associated alignment or phylogenetic data, to visualization tools (see more details on the tab **Uploading data / Uploading Sample metadata and NGS data**)
+The "Sample_list" file can be uploaded, together with associated alignment or phylogenetic data, to visualization tools (see more details on the tab **Uploading data / Uploading Sample metadata and NGS data**)
 
 
 
