@@ -28,7 +28,7 @@ Highlights
 How to cite
 +++++++++++
 
-If you use INSaFLU in your work, please cite **Borges V, Pinheiro M et al. 2018, bioRxiv**
+If you use INSaFLU in your work, please cite **Borges V, Pinheiro M et al, 2018, bioRxiv**
 
 Contact
 +++++++
