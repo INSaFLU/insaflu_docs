@@ -113,7 +113,7 @@ By clicking on the 'More info' icon next to each sample, you can get an overview
 .. image:: _static/sample_projects_extra_info.png
 
 
-By clicking on "Mapping file by IGV (Explore 'sample.bam' file, you can finely inspect the mapped reads (and variants) using the Integrative Genomics Viewer (IGV)
+By clicking on "Mapping file by IGV (Explore 'sample.bam' file), you can finely inspect the mapped reads (and variants) using the Integrative Genomics Viewer (IGV)
 
 .. image:: _static/sample_projects_extra_info_IGV.png
 
