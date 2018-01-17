@@ -59,15 +59,17 @@ This module uses quality processed reads obtained through Trimmomatic analysis a
    
    		--pe1-1 and --pe1.2 (for paired-end) or -s (for single-end data): define the input files, i.e, quality processed reads (e.g., sample_1P.fastq.gz and sample_2P.fastq.gz)
 				
-		--meta: runs the metaSPades pipeline (for paired-end data only)
-		
 		--only-assembler: runs assembly module only and does not perform reads correction
+		
+				(contigs with k-mer coverage below '3' are discarded)
 	
 	**Abricate** (https://github.com/tseemann/abricate) (version 0.8-dev; date 15.01.2018)
 	
 		--db influeza_typing: the INsaFLU "influenza_tying" database includes a set of type- and sub-type/lineage-specific gene markers that ensure the discrimination of the influenza types A and B, all currently defined influenza A subtypes (18 hemagglutinin subtypes and 11 neuraminidase sub-types) and the two influenza B lineages (Yamagata and Victoria).
 	
 		--minid: minimum DNA %identity (--minid 70)
+		
+		--mincov: minimum DNA % coverage (--mincov 60)
 
 
 Variant detection and consensus generation
