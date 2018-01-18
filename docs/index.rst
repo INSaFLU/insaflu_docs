@@ -12,7 +12,7 @@ Welcome to INSaFLU's documentation!
 
 **INSaFLU ("INSide the FLU") is an influenza-specific bioinformatics free web-based suite that deals with primary data (reads) towards the automatic generation of the output data that are actually the core first-line “genetic requests” for effective and timely influenza laboratory surveillance.**
 
-https://www.insaflu.insa.pt
+https://insaflu-insa.min-saude.pt
 
 
 Highlights

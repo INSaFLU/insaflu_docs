@@ -118,7 +118,7 @@ This module yields a deep analysis of the coverage for each per sample by provid
    
   		-r: define the reference sequence selected by the users (.fasta format) 
    
-  		-o: defines the output file name (.tsv)
+  		-o: defines the output file name (tab-separated value)
 
 Alignment/Phylogeny
 -------------------
