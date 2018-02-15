@@ -171,6 +171,8 @@ Within this panel you can explore the "whole-genome"-based ("All") and locus-spe
    
    The Reference virus is included in each phylogenetic tree by default.
    
+   Trees are only built when projects have more than one sample.
+   
 
 .. image:: _static/projects_phylogenetic_trees.png
 
@@ -190,6 +192,8 @@ Within this panel you can explore the "whole-genome"-based ("All") and locus-spe
    Nucleotide alignments are automatically re-build and cumulatively updated as more samples are added to the project.
    
    The Reference sequence is included in each alignment. 
+   
+   Alignments are only built when projects have more than one sample.
 
 .. image:: _static/projects_nucleotide_alignments.png
 
@@ -207,6 +211,8 @@ Within this panel you can explore the amino acid alignments for the influenza pr
    Amino acid alignments are automatically re-build and cumulatively updated as more samples are added to the project.
    
    The Reference sequence is included in each alignment.
+   
+   Alignments are only built when projects have more than one sample.
 
 .. image:: _static/projects_amino_acid_alignments.png
 
