@@ -50,7 +50,7 @@ Type and sub-type identification
 
 *Description*
  
-This module uses quality processed reads obtained through Trimmomatic analysis and performs a draft de novo assembly using metaSPAdes. The assemblies are subsequently screened (using abricate) against a gene sequence database that allows the discrimination of the influenza types A and B, all currently defined influenza A subtypes (18 hemagglutinin subtypes and 11 neuraminidase sub-types) and the two influenza B lineages (Yamagata and Victoria). The detection of type and subtype/lineage is automatically provided upon reads upload (i.e., no user intervention is needed). 
+This module uses quality processed reads obtained through Trimmomatic analysis and performs a draft de novo assembly using SPAdes. The assemblies are subsequently screened (using abricate) against a gene sequence database that allows the discrimination of the influenza types A and B, all currently defined influenza A subtypes (18 hemagglutinin subtypes and 11 neuraminidase sub-types) and the two influenza B lineages (Yamagata and Victoria). The detection of type and subtype/lineage is automatically provided upon reads upload (i.e., no user intervention is needed). 
 
 *Software version/settings*
 
@@ -65,7 +65,7 @@ This module uses quality processed reads obtained through Trimmomatic analysis a
 	
 	**Abricate** (https://github.com/tseemann/abricate) (version 0.8-dev; date 15.01.2018)
 	
-		--db influeza_typing: the INsaFLU "influenza_tying" database includes a set of type- and sub-type/lineage-specific gene markers that ensure the discrimination of the influenza types A and B, all currently defined influenza A subtypes (18 hemagglutinin subtypes and 11 neuraminidase sub-types) and the two influenza B lineages (Yamagata and Victoria).
+		--db influeza_typing: the INSaFLU "influenza_tying" database includes a set of type- and sub-type/lineage-specific gene markers that ensure the discrimination of the influenza types A and B, all currently defined influenza A subtypes (18 hemagglutinin subtypes and 11 neuraminidase sub-types) and the two influenza B lineages (Yamagata and Victoria).
 	
 		--minid: minimum DNA %identity (--minid 70)
 		
