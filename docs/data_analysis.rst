@@ -88,7 +88,7 @@ The generated outputs (i.e., draft assemblies, the identified type and subtype/l
 		
 		--mincov: minimum DNA % coverage (--mincov 30)
 
-				Important note: Since the "influeza_assign_segments2contigs" database is naturally not as exhaustive as other databases (such as, NCBI, Fludb or EpiFLU/GISAID), users may need to run the draft assmblies in these databases (or associated tools, such as BLAST)for some purposes (e.g., to detect/confirm reassortments or to infer rhe closest reference sequence of each segment.
+				Important note: Since the "influeza_assign_segments2contigs" database is naturally not as exhaustive as other databases (such as, NCBI, Fludb or EpiFLU/GISAID), users may need to run the draft assmblies in these databases (or associated tools, such as BLAST)for some purposes (e.g., to detect/confirm reassortments or to infer the closest reference sequence of each segment).
 		
 		
 Variant detection and consensus generation
