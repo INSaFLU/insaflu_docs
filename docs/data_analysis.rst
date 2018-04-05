@@ -50,7 +50,13 @@ Type and sub-type identification
 
 *Description*
  
-This module uses quality processed reads obtained through Trimmomatic analysis and performs a draft de novo assembly using SPAdes. The assemblies are subsequently screened (using abricate) against a gene sequence database that allows the discrimination of the influenza types A and B, all currently defined influenza A subtypes (18 hemagglutinin subtypes and 11 neuraminidase sub-types) and the two influenza B lineages (Yamagata and Victoria). The detection of type and subtype/lineage is automatically provided upon reads upload (i.e., no user intervention is needed). INSaFLU flags samples as "putative mixed infections" if more than one type, HA or NA subtype or lineage is detected. In addition, specific alerts are generated if an incomplete type/subtype is assigned. 
+This module uses quality processed reads obtained through Trimmomatic analysis and performs a draft de novo assembly using SPAdes. The assemblies are subsequently screened (using ABRIcate) against two INSaFLU in house sequence markers databases: 
+
+i) "influenza_typing", which drives the discrimination of the influenza types A and B, all currently defined influenza A subtypes (18 hemagglutinin subtypes and 11 neuraminidase sub-types) and the two influenza B lineages (Yamagata and Victoria).
+
+ii) "influenza_assign_segments2contigs", which allows the automatic assignment of the assembled contigs to both the corresponding viral segments and to a related reference influenza virus. 
+
+The generated outputs (i.e., draft assemblies, the identified type and subtype/lineage and a table linking contigs to segments/refernces) are automatically provided upon reads upload (i.e., no user intervention is needed). INSaFLU flags samples as "putative mixed infections" if more than one type, HA or NA subtype or lineage is detected. In addition, specific alerts are generated if an incomplete type/subtype is assigned.
 
 *Software version/settings*
 
@@ -61,17 +67,30 @@ This module uses quality processed reads obtained through Trimmomatic analysis a
 				
 		--only-assembler: runs assembly module only and does not perform reads correction
 		
-				(contigs with k-mer coverage below '3' are discarded)
+				(contigs with k-mer coverage below '3' are discarded for ABRIcate analysis)
 	
-	**Abricate** (https://github.com/tseemann/abricate) (version 0.8-dev; date 15.01.2018)
+	**ABRIcate** (https://github.com/tseemann/abricate) (version 0.8-dev; date 15.01.2018)
+	
+		# For type and subtype/lineage identification:
 	
 		--db influeza_typing: the INSaFLU "influenza_tying" database includes a set of type- and sub-type/lineage-specific gene markers that ensure the discrimination of the influenza types A and B, all currently defined influenza A subtypes (18 hemagglutinin subtypes and 11 neuraminidase sub-types) and the two influenza B lineages (Yamagata and Victoria).
 	
 		--minid: minimum DNA %identity (--minid 70)
 		
 		--mincov: minimum DNA % coverage (--mincov 60)
+		
+		
+		# For segments/references assignment: 
+		
+		--db influeza_assign_segments2contigs: this database includes segment sequence markers of several seasonal human influenza virus [including: i) post-pandemic (2009) vaccine/reference influenza A(H1N1)pdm2009, A(H3N2) and B viruses (from both Northern and Southern hemispheres); ii) representative viruses of specific genetic groups/lineages/clades, as defined by International Health authorities for each influenza)], but also from avian influenza from several HA/NA subtypes (i.e., H1N1, H2N2, H5N1, H7N9, etc)
+	
+		--minid: minimum DNA %identity (--minid 70)
+		
+		--mincov: minimum DNA % coverage (--mincov 30)
 
-
+				Important note: Since the "influeza_assign_segments2contigs" database is naturally not as exhaustive as other databases (such as, NCBI, Fludb or EpiFLU/GISAID), users may need to run the draft assmblies in these databases (or associated tools, such as BLAST)for some purposes (e.g., to detect/confirm reassortments or to infer rhe closest reference sequence of each segment.
+		
+		
 Variant detection and consensus generation
 ------------------------------------------
 
