@@ -82,13 +82,13 @@ The generated outputs (i.e., draft assemblies, the identified type and subtype/l
 		
 		# For segments/references assignment: 
 		
-		--db influeza_assign_segments2contigs: this database includes segment sequence markers of several seasonal human influenza virus [including: i) post-pandemic (2009) vaccine/reference influenza A(H1N1)pdm2009, A(H3N2) and B viruses (from both Northern and Southern hemispheres); ii) representative viruses of specific genetic groups/lineages/clades, as defined by International Health authorities for each influenza)], but also from avian influenza from several HA/NA subtypes (i.e., H1N1, H2N2, H5N1, H7N9, etc)
+		--db influeza_assign_segments2contigs: this database includes segment sequence markers of several seasonal human influenza [including: i) post-pandemic (2009) vaccine/reference influenza A(H1N1)pdm2009, A(H3N2) and B viruses; ii) representative viruses of specific genetic groups/lineages/clades, as defined by International Health Authorities for each season)], as well as of avian influenza from several HA/NA subtypes (i.e., H1N1, H2N2, H5N1, H7N9, etc)
 	
 		--minid: minimum DNA %identity (--minid 70)
 		
 		--mincov: minimum DNA % coverage (--mincov 30)
 
-				Important note: Since the "influeza_assign_segments2contigs" database is naturally not as exhaustive as other databases (such as, NCBI, Fludb or EpiFLU/GISAID), users may need to run the draft assmblies in these databases (or associated tools, such as BLAST)for some purposes (e.g., to detect/confirm reassortments or to infer the closest reference sequence of each segment).
+				Important note: Since the "influeza_assign_segments2contigs" database is naturally not as exhaustive as other databases (such as, NCBI, Fludb or EpiFLU/GISAID), users may need to run the draft assemblies in these databases (or associated tools, such as BLAST) for some purposes (e.g., to detect/confirm reassortments or to infer the closest reference sequence of each segment).
 		
 		
 Variant detection and consensus generation
