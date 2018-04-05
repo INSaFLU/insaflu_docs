@@ -46,4 +46,5 @@ Contents:
    project_creation.rst
    data_analysis.rst
    output_visualization.rst
+   change_log.rst
 
