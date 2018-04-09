@@ -15,7 +15,7 @@ April 9, 2018
 
 	* IMPORTANT NOTE: Files between 50 - 300 MB will be downsized to ~50 MB before analysis by randomly sampling reads.
 
-- The draft assembly provided by INSaFLU (FASTA format) now also includes potential non-influenza specific contigs (i.e., contigs not assigned to any influenza segment / reference by INSaFLU). This feature allows users to better inspect the draft assemblies and reinforces the potential use of INSaFLU for other viruses.  
+- The draft assembly provided by INSaFLU (FASTA format) now additionally includes potential non-influenza specific contigs (i.e., contigs not assigned to any influenza segment / reference by INSaFLU). This feature allows users to better inspect the draft assemblies and reinforces the applicability of INSaFLU for other viruses.  
 
 
 March 9, 2018 
@@ -38,9 +38,8 @@ January 25, 2018
 	
 	INSaFLU ("INSide the FLU") is an bioinformatics free web-based suite that deals with primary NGS data (reads) towards the automatic generation of the output data that are actually the core first-line “genetic requests” for effective and timely influenza laboratory surveillance. While INSaFLU has indeed some influenza-specific features (e.g., automatic type/subtype identification), there is no restrictions to use it for other viruses. 
 
-Highlights
-++++++++++
-
+	Main highlights:
+    
 		* open to all, free of charge, user-restricted accounts
 		* applicable to NGS data collected from any amplicon-based schema
 		* allows advanced, multi-step software intensive analyses in a user-friendly manner without previous training in bioinformatics
