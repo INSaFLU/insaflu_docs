@@ -15,13 +15,13 @@ April 9, 2018
 
 	* IMPORTANT NOTE: Files between 50 - 300 MB will be downsized to ~50 MB before analysis by randomly sampling reads.
 
-- The draft assembly provided by INSaFLU (FASTA format) now also includes potential non-influenza specific contigs (i.e., contigs not assigned to any influenza segment / reference by INSaFLU). This feature    
+- The draft assembly provided by INSaFLU (FASTA format) now also includes potential non-influenza specific contigs (i.e., contigs not assigned to any influenza segment / reference by INSaFLU). This feature allows users to better inspect the draft assemblies and reinforces the potential use of INSaFLU for other viruses.  
 
 
 March 9, 2018 
 .............
 
-- INSaFLU now provides a draft genome assembly (FASTA format) of the influenza virus genome. Influenza-specific NODES/contigs are assigned both to the corresponding viral segments and to a related reference influenza virus (output is a table in .tsv format). Check these new outputs and guide to interpret them at the INSaFLU tab "Samples / Extra info / Type and subtype/lineage identification"
+- INSaFLU now provides a draft genome assembly (FASTA format) including influenza-specific NODES/contigs. These are identified by screening the SPAdes-derived draft assemblies against an in house database using ABRIcate (https://github.com/tseemann/abricate), which allows assigning NODES/contigs to the corresponding viral segments and to a related reference influenza virus (output is a table in .tsv format). Check these new outputs and guide to interpret them at the INSaFLU tab "Samples / Extra info / Type and subtype/lineage identification". Check software settings and parameters at the "Data analysis" tab of this Documentation. 
 
 	This new feature reinforces the application of INSaFLU to:
 	
@@ -38,8 +38,8 @@ January 25, 2018
 	
 	INSaFLU ("INSide the FLU") is an bioinformatics free web-based suite that deals with primary NGS data (reads) towards the automatic generation of the output data that are actually the core first-line “genetic requests” for effective and timely influenza laboratory surveillance. While INSaFLU has indeed some influenza-specific features (e.g., automatic type/subtype identification), there is no restrictions to use it for other viruses. 
 
-	Highlights
-	++++++++++
+Highlights
+++++++++++
 
 		* open to all, free of charge, user-restricted accounts
 		* applicable to NGS data collected from any amplicon-based schema
