@@ -21,7 +21,7 @@ April 9, 2018
 March 9, 2018 
 .............
 
-- INSaFLU now provides a draft genome assembly (FASTA format) including influenza-specific NODES/contigs. These are identified by screening the SPAdes-derived draft assemblies against an in house database using ABRIcate (https://github.com/tseemann/abricate), which allows assigning NODES/contigs to the corresponding viral segments and to a related reference influenza virus (output is a table in .tsv format). Check these new outputs and guide to interpret them at the INSaFLU tab "Samples / Extra info / Type and subtype/lineage identification". Check software settings and parameters at the "Data analysis" tab of this Documentation. 
+- INSaFLU now provides a draft genome assembly (FASTA format) including influenza-specific NODES/contigs. These are identified by screening the SPAdes-derived draft assemblies against an in house database using ABRIcate, which allows assigning NODES/contigs to the corresponding viral segments and to a related reference influenza virus (output: table in ".tsv" format). Please check these new outputs and guide to interpret them at the INSaFLU tab "Samples" / "Extra info" / "Type and subtype/lineage identification". Please also check software settings and parameters at the "Data analysis" tab of this Documentation. 
 
 	This new feature reinforces the application of INSaFLU to:
 	
