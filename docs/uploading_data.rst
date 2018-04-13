@@ -64,7 +64,7 @@ B. Go to *Samples* menu and choose *Add Fastq Files*
 
 .. image:: _static/upload_ngs_data_batch_1.png
 
-Navigate through your list of fastq.gz files and **simultaneously upload multiple fastq.gz files** (50MB maximum per file), which are automatically linked to the corresponding samples.
+Navigate through your list of fastq.gz files and **simultaneously upload multiple fastq.gz files** (300MB maximum per file; files between 50-300 MB are downsized to ~50 MB by randomly sampling reads), which are automatically linked to the corresponding samples.
 
 .. image:: _static/upload_ngs_data_batch_2.png
 
