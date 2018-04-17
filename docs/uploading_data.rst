@@ -92,9 +92,9 @@ Here you can upload each sample at the time (including associated metadata and N
 Uploading Reference data
 ++++++++++++++++++++++++
 
-INSaFLU needs reference sequence files to be used for reference-based mapping (mandatory) or for extra alignment/phylogeny analyses (optional). 
+INSaFLU needs reference sequence files to be used for reference-based mapping. 
 
-- In *References* menu, **INSaFLU provides a set of ready-to-use reference sequences**, all publicly available at NCBI, currently including:
+- In *References* menu, **INSaFLU provides a set of ready-to-use reference sequences**, all publicly available at NCBI (or made available under permission of authors), currently including:
 
 	i. post-pandemic (2009) vaccine/reference influenza A(H1N1)pdm2009, A(H3N2) and B viruses (from both Northern and Southern hemispheres);
 	ii. representative virus of multiple combinations of HA/NA subtypes (i.e., H1N1, H2N2, H5N1, H7N9, etc)
@@ -103,7 +103,7 @@ INSaFLU needs reference sequence files to be used for reference-based mapping (m
 
 The current list of reference sequences, including loci size and NCBI accession numbers is provided here:
 
-:download:`INSaFLU_current_REFERENCE_DATABASE_23_01_2018.xlsx <_static/INSaFLU_current_REFERENCE_DATABASE_23_01_2018.xlsx>`
+:download:`INSaFLU_current_REFERENCE_DATABASE_17_04_2018.xlsx <_static/INSaFLU_current_REFERENCE_DATABASE_17_04_2018.xlsx>`
 
 The default reference files (FASTA and GenBank formats) have been prepared to fit amplicon-based schemas capturing the whole CDS of the main eight genes of influenza virus (PB2, PB1, PA, HA, NP, NA, M and NS), such as the wet-lab pre-NGS protocol for influenza whole genome amplification adapted from a RT-PCR assay described by Zhou and colleagues (Zhou et al, 2009, for Influenza A; and Zhou et al, 2014, for Influenza B; Zhou and Wentworth, 2012).
 
@@ -115,7 +115,7 @@ You can download the suggested protocol here: :download:`Suggested_RT_PCR_assay_
     However, you may need to UPLOAD additional reference files to the user-restricted reference database. For instance, you may need to upload the A/H3N2 vaccine reference sequence for the season 2017/2018 (A/Hong Kong/4801/2014 virus), which is not freely available. 
        
     
-To upload additional references (FASTA format; maximum 20000 bp per file): GO TO *References* MENU and CHOOSE **Add Reference**
+To upload additional references (FASTA format; maximum 50000 bp per file): GO TO *References* MENU and CHOOSE **Add Reference**
     
 See below a guide to generate additional reference sequences
 
