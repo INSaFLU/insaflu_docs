@@ -20,7 +20,6 @@ Latest database can be downloaded here: :download:`INSaFLU_current_genetic_marke
 (the database before this update is also available here:  :download:`INSaFLU_genetic_markers_before_14_05_2018.xlsx <_static/INSaFLU_genetic_markers_before_14_05_2018.xlsx>`
 
 
-
 April 9, 2018 
 .............
 
