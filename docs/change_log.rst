@@ -8,6 +8,19 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 ----
 
 
+May 14, 2018 
+.............
+
+- The INSaFLU list of genetic markers "influenza_assign_segments2contigs" was upgraded (now includes 416 sequences), so analysis from now one can assign additional close references sequences to your viruses. 
+
+
+Latest database can be downloaded here: :download:`INSaFLU_current_genetic_markers_14_05_2018.xlsx <_static/INSaFLU_current_genetic_markers_14_05_2018.xlsx>`
+
+
+(the database before this update is also available here:  :download:`INSaFLU_genetic_markers_before_14_05_2018.xlsx <_static/INSaFLU_genetic_markers_before_14_05_2018.xlsx>`
+
+
+
 April 9, 2018 
 .............
 
