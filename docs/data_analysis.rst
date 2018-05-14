@@ -56,7 +56,7 @@ i) "influenza_typing", which drives the discrimination of the influenza types A 
 
 ii) "influenza_assign_segments2contigs", which allows the automatic assignment of the assembled contigs to both the corresponding viral segments and to a related reference influenza virus. 
 
-The generated outputs (i.e., draft assemblies, the identified type and subtype/lineage and a table linking contigs to segments/refernces) are automatically provided upon reads upload (i.e., no user intervention is needed). INSaFLU flags samples as "putative mixed infections" if more than one type, HA or NA subtype or lineage is detected. In addition, specific alerts are generated if an incomplete type/subtype is assigned.
+The generated outputs (i.e., draft assemblies, the identified type and subtype/lineage and a table linking contigs to segments/references) are automatically provided upon reads upload (i.e., no user intervention is needed). INSaFLU flags samples as "putative mixed infections" if more than one type, HA or NA subtype or lineage is detected. In addition, specific alerts are generated if an incomplete type/subtype is assigned.
 
 *Software version/settings*
 
@@ -79,7 +79,7 @@ The generated outputs (i.e., draft assemblies, the identified type and subtype/l
 		
 		--mincov: minimum DNA % coverage (--mincov 60)
 		
-		
+				
 		# For segments/references assignment: 
 		
 		--db influeza_assign_segments2contigs: this database includes segment sequence markers of several seasonal human influenza [including: i) post-pandemic (2009) vaccine/reference influenza A(H1N1)pdm2009, A(H3N2) and B viruses; ii) representative viruses of specific genetic groups/lineages/clades, as defined by International Health Authorities for each season)], as well as of avian influenza from several HA/NA subtypes (i.e., H1N1, H2N2, H5N1, H7N9, etc)
@@ -89,8 +89,11 @@ The generated outputs (i.e., draft assemblies, the identified type and subtype/l
 		--mincov: minimum DNA % coverage (--mincov 30)
 
 				Important note: Since the "influeza_assign_segments2contigs" database is naturally not as exhaustive as other databases (such as, NCBI, Fludb or EpiFLU/GISAID), users may need to run the draft assemblies in these databases (or associated tools, such as BLAST) for some purposes (e.g., to detect/confirm reassortments or to infer the closest reference sequence of each segment).
+
+Latest lists of genetic markers can be downloaded here: :download:`INSaFLU_current_genetic_markers_14_05_2018.xlsx <_static/INSaFLU_current_genetic_markers_14_05_2018.xlsx>`
+				
 		
-		
+
 Variant detection and consensus generation
 ------------------------------------------
 

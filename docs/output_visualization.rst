@@ -60,7 +60,14 @@ Click on ".html" files and explore each one of the FastQC "Analysis modules" - p
    - INSaFLU flags samples as "putative mixed infections" if more than one type, HA or NA subtype or lineage is detected. In addition, specific alerts are generated if an incomplete type/subtype is assigned.
 
 
-- **Typing and subtyping data**
+- Assignment of viral segments/references to draft contigs
+
+.. image:: _static/sample_Assign_segments2contigs.png
+
+.. note::
+   - INSaFLU performs automatic assignment of each assembled influenza-specific NODE (or contig) to both the corresponding viral segments and to a related reference influenza virus. 
+   
+ 	- Outputs of this module (i.e., draft assemblies, the identified type and subtype/lineage and a table linking contigs to segments/references) can be visualize or downloaded here.
 
 Explore the *Projects* menu
 ---------------------------  
