@@ -26,6 +26,12 @@ Highlights
 * outputs are provided in nomenclature-stable and standardized formats and can be explored in situ or through multiple compatible downstream applications for fine-tune data analysis and visualization
 
 
+How to cite
++++++++++++
+
+If you use INSaFLU in your work, please cite **Borges V, Pinheiro M et al, 2018, bioRxiv** (https://www.biorxiv.org/content/early/2018/01/24/253161)
+
+
 Contact
 +++++++
 If you have any questions, comments or suggestions, please contact us: <vitor.borges@insa.min-saude.pt> or <j.paulo.gomes@insa.min-saude.pt>
