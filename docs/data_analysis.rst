@@ -42,6 +42,11 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 		MINLEN: drop the read if it is below a specified length (MINLEN:35)
 	
 		TOPHRED33:  Convert quality scores to Phred-33
+		
+		
+		Files between 50 - 300 MB are downsized to ~50 MB before analysis by randomly sampling reads using fastq-sample from fastq-tools package https://github.com/dcjones/fastq-tools (developed by Daniel C. Jones dcjones@cs.washington.edu)
+
+
 
 
 
