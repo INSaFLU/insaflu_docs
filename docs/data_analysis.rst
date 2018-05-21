@@ -161,7 +161,7 @@ This module uses filtered nucleotide consensus sequences and performs refined nu
    
    		progressiveMAUVE module (default settings): this algorithm is applied to perform primary draft alignments, and has the particular advantage of automatically concatenating multi-fasta input sequences during whole-genome alignments construction.
 		
-		input file: filtered nucleotide consensus sequences for each sample, one per each amplicon target (which are , in general, influenza CDSs) and another for the whole-genome sequence (i.e., the set of sequence targeted by the amplicon-based NGS shema, which, in general, is the pool of main 8 influenza CDSs). The latter are converted from xmfa to fasta using "convertAlignment.pl" (https://github.com/lskatz/lyve-SET/blob/master/scripts/convertAlignment.pl
+		input file: filtered nucleotide consensus sequences for each sample, one per each amplicon target (which are , in general, influenza CDSs) and another for the whole-genome sequence (i.e., the set of sequence targeted by the amplicon-based NGS shema, which, in general, is the pool of main 8 influenza CDSs). xmfa to fasta conversion is carried out using "convertAlignment.pl" (https://github.com/lskatz/lyve-SET/blob/master/scripts/convertAlignment.pl
 		
 		(default settings)
 		
