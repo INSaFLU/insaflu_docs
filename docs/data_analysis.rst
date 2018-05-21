@@ -120,7 +120,7 @@ This key module takes advantage of the multisoftware tool Snippy (please visit t
 		
 		--minfrac: minumum proportion for variant evidence (--minfrac 0.51)
 		
-	**Integrative Genomics Viewer** (http://software.broadinstitute.org/software/igv/) (version 1.0.9; date 15.01.2018)
+	**Integrative Genomics Viewer** (http://software.broadinstitute.org/software/igv/) (version 2.3.98; date 15.01.2018)
 	
 		inputs: reference file (.fasta); mapping file (.bam; .bai)
 
