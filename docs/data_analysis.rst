@@ -1,7 +1,11 @@
 Data analysis
 =============
 
-INSaFLU relies on a multi-software bioinformatics pipeline that will be under continuous development and improvement not only to enrich it with new features, but also to continuously shape the protocol to the best methodological advances in the field. The current software settings, which were chosen upon intensive testing, are detailed below (more details for each software can be found in the official repositories; links are also provided below). The bioinformatics pipeline developed and implemented in the INSaFLU web platform currently consists of 6 core steps (see WorkFlow) yielding multiple graphical, and sequence outputs (see *Output visualization and download* menu for details)
+INSaFLU relies on a multi-software bioinformatics pipeline that will be under continuous development and improvement not only to enrich it with new features, but also to continuously shape the protocol to the best methodological advances in the field. 
+
+The current software settings, which were chosen upon intensive testing, are described below. For additional details about the bioinformatics pipeline, please visit the INSaFLU github account: https://github.com/INSaFLU/INSaFLU (more information for each software can also be found in the official repositories; links are also provided below). 
+
+The bioinformatics pipeline developed and implemented in the INSaFLU web platform currently consists of 6 core steps (see WorkFlow) yielding multiple graphical, and sequence outputs (see *Output visualization and download* menu for details)
 
 .. image:: _static/workflow.png
 
@@ -113,7 +117,7 @@ This key module takes advantage of the multisoftware tool Snippy (please visit t
    
 		--kingdom: defines the Annotation mode (Viruses)
 		
-	**Snippy** (https://github.com/tseemann/snippy) (version 3.2-dev; date 15.01.2018)
+	**Snippy** (https://github.com/tseemann/snippy) (version 3.2-dev - sligthly modified (details in https://github.com/INSaFLU/INSaFLU); date 15.01.2018)
 	
 		--R1 (and --R2): define the reads files used as input, i.e, quality processed reads (e.g., sample_1P.fastq.gz and sample_2P.fastq.gz) obtained after Trimmomatic analysis
 		
