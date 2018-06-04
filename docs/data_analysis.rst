@@ -76,7 +76,7 @@ The generated outputs (i.e., draft assemblies, the identified type and subtype/l
 				
 		--only-assembler: runs assembly module only and does not perform reads correction
 		
-				(contigs with k-mer coverage below '3' are discarded for ABRIcate analysis)
+				(contigs with k-mer coverage below '3' are discarded for ABRIcate analysis to avoid the classification of sequencer-derived contaminating sequences)
 	
 	**ABRIcate** (https://github.com/tseemann/abricate) (version 0.8-dev; date 15.01.2018)
 	
