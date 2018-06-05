@@ -99,7 +99,7 @@ The generated outputs (i.e., draft assemblies, the identified type and subtype/l
 
 				Important note: Since the "influeza_assign_segments2contigs" database is naturally not as exhaustive as other databases (such as, NCBI, Fludb or EpiFLU/GISAID), users may need to run the draft assemblies in these databases (or associated tools, such as BLAST) for some purposes (e.g., to detect/confirm reassortments or to infer the closest reference sequence of each segment).
 
-Latest lists of genetic markers can be downloaded here: :download:`INSaFLU_current_genetic_markers_14_05_2018.xlsx <_static/INSaFLU_current_genetic_markers_14_05_2018.xlsx>`
+Latest lists of genetic markers can be downloaded here: :download:`INSaFLU_current_genetic_markers_05_06_2018.xlsx <_static/INSaFLU_current_genetic_markers_05_06_2018.xlsx>`
 				
 		
 

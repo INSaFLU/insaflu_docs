@@ -11,10 +11,10 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 May 14, 2018 
 .............
 
-- The INSaFLU list of genetic markers "influenza_assign_segments2contigs" was upgraded (now includes 416 sequences), so, from now one, INSaFLU can assign additional close references sequences to your viruses, such as representative virus of distinct genetic sub-groups or seasonal a(H3N2) viruses or  representative A(H5N1) sequences of distinct H5 genetic clades.
+- The INSaFLU list of genetic markers "influenza_assign_segments2contigs" was upgraded (now includes 416 sequences), so, from now one, INSaFLU can assign additional close references sequences to your viruses, such as representative virus of distinct genetic sub-groups or seasonal A(H3N2) viruses or  representative A(H5N1) sequences of distinct H5 genetic clades.
 
 
-Latest database can be downloaded here: :download:`INSaFLU_current_genetic_markers_14_05_2018.xlsx <_static/INSaFLU_current_genetic_markers_14_05_2018.xlsx>`
+Latest database can be downloaded here: :download:`INSaFLU_current_genetic_markers_05_06_2018.xlsx <_static/INSaFLU_current_genetic_markers_05_06_2018.xlsx>`
 
 
 (the database before this update is also available here:  :download:`INSaFLU_genetic_markers_before_14_05_2018.xlsx <_static/INSaFLU_genetic_markers_before_14_05_2018.xlsx>`
