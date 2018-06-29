@@ -27,6 +27,16 @@ Highlights
 
 
 
+How to Cite
++++++++++++
+
+If you use INSaFLU in your work, please cite this publication:
+
+Borges V, Pinheiro M et al. Genome Medicine (2018) 10:46
+
+https://doi.org/10.1186/s13073-018-0555-0
+
+
 Contact
 +++++++
 If you have any questions, comments or suggestions, please contact us: <vitor.borges@insa.min-saude.pt> or <j.paulo.gomes@insa.min-saude.pt>

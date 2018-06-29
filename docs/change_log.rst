@@ -8,6 +8,16 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 ----
 
 
+June 29, 2018 
+.............
+
+INSaFLU now published in Genome Medicine.
+
+Borges V, Pinheiro M et al. Genome Medicine (2018) 10:46
+
+https://doi.org/10.1186/s13073-018-0555-0
+
+
 May 14, 2018 
 .............
 
