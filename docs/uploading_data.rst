@@ -129,9 +129,9 @@ You can download the suggested protocol here: :download:`Suggested_RT_PCR_assay_
    
    2. Each individual sequence of the multi-FASTA file must have the precise size of each “intra-amplicon” target sequence that you capture by each one of the RT-PCR amplicons. 
    
-   2. INSaFLU automatically annotates the uploaded multi-FASTA sequences upon submission, but, if you prefer, you can also upload (optionally) the respective multi-GenBank file.   
+   3. INSaFLU automatically annotates the uploaded multi-FASTA sequences upon submission, but, if you prefer, you can also upload (optionally) the respective multi-GenBank file.   
    
-   ## See below a guide to generate additional reference sequences
+   ## See below a GUIDE to generate additional reference sequences
    
    
 .. image:: _static/upload_add_reference.png
@@ -149,7 +149,7 @@ Please take this guide into account when generating additional reference sequenc
 2. You may generate your multi-FASTA files in order to fit your amplicon schema by simply adjusting the whole-genome sequences available for download at INSaFLU or at influenza-specific sequence repositories, such as the Influenza Research Database (https://www.fludb.org), NCBI Influenza Virus Resource (https://www.ncbi.nlm.nih.gov/genomes/FLU/Database/nph-select.cgi?go=database) and EpiFLU/GISAID (https://www.gisaid.org/).
 
 
-3. (multi) FASTA format is widely applied to save either nucleotide sequences or peptide sequences. An easy way to handle/generate multi-FASTA files is by opening a text file (e.g., NOTEPAD) and paste individual sequences after each header line. The FASTA IDs (after the '>' character) represent the individual sequence names. For the sake of simplicity, you may designate each sequence as 1, 2, 3, 4, 5, 6 , 7 and 8 (see example), following the traditional influenza segments order (keeping this numerical order is advisable). At the end, you just have to save the multi-FASTA file as “.fasta” (please avoid symbols or blank spaces in the file names). 
+3. An easy way to handle/generate multi-FASTA files is by opening a text file (e.g., NOTEPAD) and paste individual sequences after each header line. The FASTA IDs (after the '>' character) represent the individual sequence names. For the sake of simplicity, you may designate each sequence as 1, 2, 3, 4, 5, 6 , 7 and 8 (see example), following the traditional influenza segments order (keeping this numerical order is advisable). At the end, you just have to save the multi-FASTA file as “.fasta”. **Please avoid symbols or blank spaces in the file names**. 
 			
 			example:  :download:`A_H3N2_A_Perth_16_2009.fasta <_static/A_H3N2_A_Perth_16_2009.fasta>`
 
