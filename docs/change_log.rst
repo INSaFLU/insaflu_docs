@@ -7,6 +7,11 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2018
 ----
 
+October 30, 2018 
+.............
+
+- Original reads (i.e., reads uploaded) will now be deleted after 10 days of their upload. In fact, after quality analysis and improvement, the INSaFLU pipeline does not use those original reads for any other downstream analysis (quality reports and derived quality processed reads will remain available for download).
+
 
 June 29, 2018 
 .............
