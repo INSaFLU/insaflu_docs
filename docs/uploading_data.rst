@@ -87,6 +87,9 @@ Here you can upload each sample at the time (including associated metadata and N
 .. image:: _static/upload_samplemetadata_individual_2.png
 
 
+.. important::
+   Original reads (i.e., the fastq.gz files uploaded) will be deleted after 10 days of their upload. In fact, after quality analysis and improvement, the INSaFLU pipeline does not use those original reads for any other downstream analysis (all quality reports and derived quality processed reads are kept available for download).
+
 
 
 Uploading Reference data
