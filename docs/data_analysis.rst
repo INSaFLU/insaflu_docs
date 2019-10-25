@@ -119,7 +119,7 @@ This key module takes advantage of the multisoftware tool Snippy (please visit t
 *Software version/settings*
 
 .. note::
-	**Prokka** (https://github.com/tseemann/prokka) (version 1.2; date 15.01.2018)
+	**Prokka** (https://github.com/tseemann/prokka) (version 1.12; date 15.01.2018)
    
 		--kingdom: defines the Annotation mode (Viruses)
 		
