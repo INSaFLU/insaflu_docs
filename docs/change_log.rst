@@ -3,6 +3,26 @@ Change log
 
 This tab includes a list (chronologically ordered) of notable changes in INSaFLU.
 
+2020
+----
+
+January 10, 2019
+................
+
+- The INSaFLU list of genetic markers "influenza_assign_segments2contigs" was upgraded (now includes 544 sequences). This update allows the rapid assignment of additional representative virus of distinct genetic clades, which, for instance, can facilitate the sub-group HA classification and potentiate the detection of (intra-subtype) reassortments.
+
+
+Latest database can be downloaded here: :download:`INSaFLU_current_genetic_markers_v5_after_10_01_2020.xlsx <_static/INSaFLU_current_genetic_markers_v5_after_10_01_2020.xlsx>`
+
+All database versions can be found here: https://insaflu.readthedocs.io/en/latest/data_analysis.html?highlight=genetic_markers#type-and-sub-type-identification 
+
+
+- The default reference database of INSaFLU was also updated. All reference sequences at INSaFLU are publicly available at NCBI (or are made available under permission of the authors). 
+
+Download the current list here: :download:`INSaFLU_current_REFERENCE_DATABASE_10_01_2020.xlsx <_static/INSaFLU_current_REFERENCE_DATABASE_10_01_2020.xlsx>`) 
+
+Instructions to upload additional reference sequences (e.g., "vaccine-like" sequences available in GISAID) to your confidential account can be found here: https://insaflu.readthedocs.io/en/latest/uploading_data.html#uploading-reference-data
+
 
 2019
 ----
