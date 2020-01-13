@@ -164,7 +164,7 @@ Alignment/Phylogeny
 
 *Description*
  
-This module uses filtered nucleotide consensus sequences and performs refined nucleotide/protein sequence alignments and phylogenetic inferences. These outputs are automatically re-build and updated as more samples are added to user-restricted INSaFLU projects, making continuous data integration completely flexible and scalable. This module can also be run independently over a set of user-selected sequences (e.g., circulating virus plus sequences of representative virus of specific genetic groups/clades/lineages), so that phylogenetic diversity of circulating viruses can be better evaluated and integrated in the frame of guidelines defined by supranational health authorities. 
+This module uses filtered nucleotide consensus sequences and performs refined nucleotide/protein sequence alignments and phylogenetic inferences. These outputs are automatically re-build and updated as more samples are added to user-restricted INSaFLU projects, making continuous data integration completely flexible and scalable. 
 
 *Software version/settings*
 
