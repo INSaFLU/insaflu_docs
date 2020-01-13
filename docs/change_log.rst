@@ -6,7 +6,7 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2020
 ----
 
-January 10, 2019
+January 10, 2020
 ................
 
 - The INSaFLU list of genetic markers "influenza_assign_segments2contigs" was upgraded (now includes 544 sequences). This update allows the rapid assignment of additional representative virus of distinct genetic clades, which, for instance, can facilitate the sub-group HA classification and potentiate the detection of (intra-subtype) reassortments.
