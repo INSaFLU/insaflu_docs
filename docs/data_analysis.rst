@@ -213,6 +213,8 @@ Users can also easily color the phylogenetic tree nodes and/or display colored m
 	
 		input files: phylogenetic tree obtained from each locus-specific nucleotide alignment and from the alignment of the 'whole-genome' sequences (upon concatenation of all individual locus)
 
+		Metadata visualization tools were built with great contribution from Luís Rita: https://github.com/warcraft12321
+
 Intra-host minor variant detection (and uncovering of putative mixed infections)
 --------------------------------------------------------------------------------
 

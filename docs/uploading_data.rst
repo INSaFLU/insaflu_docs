@@ -1,5 +1,5 @@
-Uploading data
-==============
+Uploading or Updating data
+==========================
 
 INSaFLU needs: 
 
@@ -98,7 +98,7 @@ Updating Sample metadata
 
 You can add/update the **Samples's metadata** at any time by simply uploading a table comma-separated (.csv) or tab-separated (.tsv or .txt) table with the updated data (a template file is provided), as follows:
 
--	Go to *Samples* menu and choose *Update metadata*, then Load a new file, using one of the provided template file. 
+-	Go to *Samples* menu and choose *Update metadata*, then Load a new file, using one of the provided template files. 
 
 
 .. important::
