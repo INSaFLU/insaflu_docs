@@ -45,9 +45,11 @@ Examples of template table files are provided in this menu.
 
 **Advantages of uploading enriched Sample metadata tables**
 
-The template file contains the following additional variables, which commonly constitute the minimal metadata collected during seasonal influenza surveillance: “data set”, ”vaccine status”, ”week”, ”onset date”, ”collection date”, ”lab reception date”, ”latitude” and ”longitude”. (The "data set" column will help you to organize samples by specific groups, e.g., "early_season", "peak", etc) 
+The template file contains the following additional variables, which commonly constitute the minimal metadata collected during seasonal influenza surveillance: “data set”, ”vaccine status”, ”week”, ”onset date”, ”collection date”, ”lab reception date”, ”latitude” and ”longitude”. (The "data set" column will help you to organize samples by specific groups, e.g., "early_season", "peak", etc). Still, users are encouraged to include any other columns with metadata variables to be associated with samples. 
 
-The option to upload tables enriched with multiple metadata variables has the clear advantage of allowing the subsequent upload of the samples list of each project (output: "Sample_list.csv" or "Sample_list.tsv") along to the standardized and multi-format outputs of INSaFLU projects (alignments/trees) to downstream platforms for phylogenetic data visualization and/or phylogeographical analysis, such as:
+Uploading tables enriched with multiple metadata variables will allow you to easily color the phylogenetic tree nodes (and/or add colored metadata blocks to the tree) according to any combination of metadata variables, which largely facilitates the visualization and exploration of your data.
+
+Also, it has the clear advantage of allowing the subsequent upload of the samples list of each project (output: "Sample_list.csv" or "Sample_list.tsv") along to the standardized and multi-format outputs of INSaFLU projects (alignments/trees) to other platforms for phylogenetic data visualization and/or phylogeographical analysis, such as:
 
 -	PHYLOViZ (http://www.phyloviz.net/), which accepts sample metadata (tab-separated format) plus alignments (FASTA format), among other formats;
 -	Phandango (https://jameshadfield.github.io/phandango/#/), which runs sample metadata (csv-separated format) plus a phylogenetic tree (".tree" format);
@@ -90,6 +92,22 @@ Here you can upload each sample at the time (including associated metadata and N
 .. important::
    Original reads (i.e., the fastq.gz files uploaded) will be deleted after 10 days of their upload. In fact, after quality analysis and improvement, the INSaFLU pipeline does not use those original reads for any other downstream analysis (all quality reports and derived quality processed reads are kept available for download).
 
+
+Updating Sample metadata
+++++++++++++++++++++++++
+
+You can add/update the **Samples's metadata** at any time by simply uploading a table comma-separated (.csv) or tab-separated (.tsv or .txt) table with the updated data (a template file is provided), as follows:
+
+-	Go to *Samples* menu and choose *Update metadata*, then Load a new file, using one of the provided template file. 
+
+
+.. important::
+	The table for Sample metadata update should contain the columns “sample name” (exactly corresponding to the samples to be updated), as well these additional variables (that may not be fulfilled): “data set”, ”vaccine status”, ”week”, ”onset date”, ”collection date”, ”lab reception date”, ”latitude”, ”longitude”. Users are encouraged to include any other columns with metadata variables to be associated with samples (see advantages above).
+
+.. note::
+	You cannot update the fastq files. To replace the fastq files associated with a given sample, you need to delete the respective sample and upload all data (metadata plus fastq) again, i.e., create a new sample.  You must ensure that the sample to be deleted is not inserted in any Project before deleting it.
+	
+	Samples names in your account must be unique and only numbers, letters and underscores are allowed.
 
 
 Uploading Reference data

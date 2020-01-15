@@ -6,6 +6,20 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2020
 ----
 
+
+January 15, 2020
+................
+
+- INSaFLU now allows you to easily color tree nodes and to display colored metadata blocks near to the phylogenetic trees
+
+This update largely facilitates the visualization, exploration and interpretation of your phylogenetic data, while potentiating the association/integration of relevant epidemiological and/or clinical data and pathogen genomic data towards an enhanced laboratory surveillance. See how to do it here: https://insaflu.readthedocs.io/en/latest/output_visualization.html#b-navigate-through-phylogenetic-trees-and-explore-your-metadata
+
+- INSaFLU also allows you to “Add/update Sample metadata” at any time
+
+To take advantage of the novel metadata visualization tools, you can now add/update the samples descriptive data by simply uploading a comma-separated (.csv) or tab-separated (.tsv or .txt) table with the updated data (a template file is provided in Samples menu / Add or Update Samples from csv / tsv file). Specific documentation can be found here:
+https://insaflu.readthedocs.io/en/latest/uploading_data.html#updating-sample-metadata
+
+
 January 10, 2020
 ................
 

@@ -166,6 +166,8 @@ Alignment/Phylogeny
  
 This module uses filtered nucleotide consensus sequences and performs refined nucleotide/protein sequence alignments and phylogenetic inferences. These outputs are automatically re-build and updated as more samples are added to user-restricted INSaFLU projects, making continuous data integration completely flexible and scalable. 
 
+Users can also easily color the phylogenetic tree nodes and/or display colored metadata blocks next to the tree according to any combination of metadata variables, which facilitates the integration of relevant epidemiological and/or clinical data towards an enhanced genome-based pathogen surveillance. 
+
 *Software version/settings*
 
 .. note::
@@ -209,7 +211,7 @@ This module uses filtered nucleotide consensus sequences and performs refined nu
 		
 	**Phylocanvas** (http://phylocanvas.org/) (version 2.8.1; date 15.01.2018)
 	
-		input files: phylogenetic tree for each locus-specific nucleotide alignment and for the alignments of the 'whole-genome' sequences (upon concatenation of all individual locus)
+		input files: phylogenetic tree obtained from each locus-specific nucleotide alignment and from the alignment of the 'whole-genome' sequences (upon concatenation of all individual locus)
 
 Intra-host minor variant detection (and uncovering of putative mixed infections)
 --------------------------------------------------------------------------------

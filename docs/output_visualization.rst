@@ -176,10 +176,10 @@ Within this panel you can get an overview on the project (e.g., number of sample
    Validated variants falling within loci not fully covered with ≥10-fold (color-coded as yellow or red) are still included in the "validated_variants" list (these cases are labeled in the column "VARIANTS in INCOMPLETE LOCUS" as YES), so that users can still retrieve valuable and reliable data (e.g., specific epitope and antiviral drug resistance mutations) from samples with borderline coverage.
 
 
-B. Navigate through **Phylogenetic trees by Phylocanvas**
-.........................................................
+B. Navigate through **Phylogenetic trees** and Explore your metadata
+....................................................................
 
-Within this panel you can explore the "whole-genome"-based ("All") and locus-specific phylogenetic trees 
+Within this panel you can explore the "whole-genome"-based ("All") and locus-specific phylogenetic trees
 
 .. note::
    Phylogenetic trees are automatically re-build and cumulatively updated as more samples are added to the project.
@@ -196,6 +196,21 @@ Within this panel you can explore the "whole-genome"-based ("All") and locus-spe
    - Each locus-specific tree exclusively enrolls samples displaying 100% of that locus covered by ≥10-fold (color-coded as green in the coverage interactive report).
    
    - The genome-based phylogenetic tree ("All") exclusively enrolls samples displaying all loci all loci with 100% of its length covered by ≥10-fold (i.e., samples color-coded as green in the coverage interactive report for the all loci panel)
+
+
+
+If you have uploaded rich sample metadata, you can now easily color tree nodes and/or display colored metadata blocks next to the tree according to any combination of metadata variables. This largely facilitates the visualization, exploration and interpretation of your phylogenetic data, while potentiating the association/integration of relevant epidemiological and/or clinical data and pathogen genomic data towards an enhanced laboratory surveillance.
+
+Instructions:
+
+.. image:: _static/insaphylogeo_instructions_1.png
+
+
+Examples:
+
+.. image:: _static/insaphylogeo_1.png
+
+.. image:: _static/insaphylogeo_2.png
 
 
 C. Navigate through **Nucleotide alignments by MSAViewer**
