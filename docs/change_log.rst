@@ -13,7 +13,7 @@ The following updates have been performed so that INSaFLU can better accommodate
 
 - INSaFLU now performs rapid assignment of Human Betacoronavirus (BetaCoV), including the novel coronavirus (SARS-CoV-2 / hCoV-19). Details about the rationale behind this classification and outputs can be found in https://insaflu.readthedocs.io/en/latest/data_analysis.html#type-and-sub-type-identification
 
-- The publicly available SARS-CoV-2 reference genome sequence (NCBI accession number MN908947) is available in the default INSaFLU reference database (several sequence versions with differential trimming of the sequence boundaries are available, as these regions might not be captured by your wet-lab NGS strategy). As before, the users can still insert their own reference sequences.  
+- The publicly available SARS-CoV-2 reference genome sequence (NCBI accession number MN908947 https://www.ncbi.nlm.nih.gov/nuccore/MN908947) is available in the default INSaFLU reference database (several sequence versions with differential trimming of the sequence boundaries are available, as these regions might not be captured by your wet-lab NGS strategy). As before, the users can still insert their own reference sequences.  
 
 - Maximum size per fastq.gz file remains 300 MB, but files will be downsized to ~150 MB before analysis (and not ~50 MB, as previously). This change minimizes the risk of losing considerable depth of coverage in your analysis, specially for SARS-CoV-2 genome analysis.
 
