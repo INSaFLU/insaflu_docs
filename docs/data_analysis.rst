@@ -108,11 +108,11 @@ Similarly to influenza classification, alerts are generated if, for instance, no
 		--minid: minimum DNA %identity (--minid 70)
 		
 		--mincov: minimum DNA % coverage (--mincov 30)
-
-Important note: Since the "influeza_assign_segments2contigs" database is naturally not as exhaustive as other databases (such as, NCBI, Fludb or EpiFLU/GISAID), users may need to run the draft assemblies in these databases (or associated tools, such as BLAST) for some purposes (e.g., to detect/confirm reassortments or to infer the closest reference sequence of each segment).
-
-
+		
 		**As of March 10th, 2020,** contigs contigs are labeled with the closest match among the five human BetaCoV (see above) if they have ≥70% Identity and ≥30% coverage to one of the five BetaCoV full-genome sequences in the database.
+		
+		Important note: Since the "influeza_assign_segments2contigs" database is naturally not as exhaustive as other databases (such as, NCBI, Fludb or EpiFLU/GISAID), users may need to run the draft assemblies in these databases (or associated tools, such as BLAST) for some purposes (e.g., to detect/confirm reassortments or to infer the closest reference sequence of each segment / genome).
+		
 
 
 Latest list of genetic markers (version 6; 10.03.2020) can be downloaded here: :download:`INSaFLU_current_genetic_markers_v6_after_10_01_2020.xlsx <_static/INSaFLU_current_genetic_markers_v6_after_10_03_2020.xlsx>`
