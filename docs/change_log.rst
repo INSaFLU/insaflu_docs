@@ -11,7 +11,7 @@ March 10, 2020
 
 The following updates have been performed so that INSaFLU can better accommodate genome-based analyses of the novel coronavirus (SARS-CoV-2 / hCoV-19):
 
-- INSaFLU now performs rapid assignment of Human Betacoronavirus (BetaCoV), including the novel coronavirus (SARS-CoV-2 / hCoV-19). Details about the rationale behind this classification and outputs can be found in https://insaflu.readthedocs.io/en/latest/data_analysis.html#influenza-type-and-sub-type-identification-and-human-betacoronavirus-classification-as-of-march-2020 (see also list of current genetic markers for classification).
+- INSaFLU now performs rapid assignment of Human Betacoronavirus (BetaCoV), including the novel coronavirus (SARS-CoV-2 / hCoV-19). Details about the rationale behind this classification and outputs can be found in https://insaflu.readthedocs.io/en/latest/data_analysis.html#influenza-type-and-sub-type-identification-and-human-betacoronavirus-classification-as-of-march-2020 (see also the list of current genetic markers used for classification).
 
 - The publicly available SARS-CoV-2 reference genome sequence (NCBI accession number MN908947 https://www.ncbi.nlm.nih.gov/nuccore/MN908947) is available in the default INSaFLU reference database (several sequence versions with differential trimming of the sequence boundaries are available, as these regions might not be captured by your wet-lab NGS strategy). As before, the users can still insert their own reference sequences.  
 
