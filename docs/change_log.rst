@@ -6,6 +6,19 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2020
 ----
 
+
+May 06, 2020
+..............
+
+- INSaFLU local installation: a Docker version of INSaFLU, which eases the manual installation process, is now available here: https://github.com/INSaFLU/docker
+
+- Multitasking configurations were changed, which considerably speeds up the analyses. 
+
+- A new tab “Settings” was created, so that the user can change some software parameters.
+
+All updates are available at both INSaFLU docker version and original free website (https://insaflu.insa.pt/)
+
+
 March 10, 2020
 ..............
 
