@@ -14,7 +14,7 @@ May 06, 2020
 
 - Multitasking configurations were changed, considerably speeding up the analyses. 
 
-- A new tab “Settings” was created, so that the user can change some software parameters.
+- A new tab “Settings” was created so that the user can change some software parameters.
 
 All updates are available at both INSaFLU docker version and original free website (https://insaflu.insa.pt/)
 
