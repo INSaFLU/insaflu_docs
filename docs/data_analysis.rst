@@ -149,11 +149,11 @@ This key module takes advantage of the multisoftware tool Snippy (please visit t
 		
 		--ref: define the reference sequence selected by the users (.fasta or gbk format) 
 		
-		--mapqual: minimum mapping quality to allow (--mapqual 20) 
+		--mapqual: minimum mapping quality to accept in variant calling(--mapqual 20) 
 		
 		--mincov: minimum coverage of variant site (--mincov 10)
 		
-		--minfrac: minumum proportion for variant evidence (--minfrac 0.51)
+		--minfrac: minimum proportion for variant evidence (--minfrac 0.51)
 		
 	**Integrative Genomics Viewer** (http://software.broadinstitute.org/software/igv/) (version 2.3.98; date 15.01.2018)
 	
@@ -256,5 +256,4 @@ This module uses mapping data for the set of samples from each user-restricted I
    		--min-alternate-count: require at least 10 reads supporting an alternate allele within a single individual in order to evaluate the position (--min-alternate-count 10)
    		
    		--min-alternate-fraction: defines the minimum intra-host frequency of the alternate allele to be assumed (--min-alternate-fraction 0.01). This frequency is contingent on the depth of coverage of each processed site since min-alternate-count is set to 10, i.e., the identification of iSNV sites at frequencies of 10%, 2% and 1% is only allowed for sites with depth of coverage of at least 100-fold, 500-fold and 1000-fold, respectively.
-
 
