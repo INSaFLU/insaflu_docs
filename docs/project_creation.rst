@@ -30,9 +30,9 @@ You can designate the projects so that the name easily indicates the combination
 3. Choose the software parameters to be applied to the project.
 .................................................................
 
-The selected parameters will be applied by default to every sample added to the project, so please set the parameters before assigning the first sample to the project.
+After creating a project, and before adding the first sample, you can clicking in the "Magic wand" to select the parameters to be applied by default to every sample added to the project. 
 
-Note: After project creation, you are still allowed to change the parameters for individual samples within the Project. The sample is automatically re-analysed using the novel parameters and re-inserted in the Project. 
+Note: Please set the parameters before assigning the first sample to the project. After that, you are still allowed to change the parameters for individual samples within the Project. Updated samples are automatically re-analysed using the novel parameters and re-inserted in the Project. 
 
 
 4. Add the **samples** to be included in the **project**
