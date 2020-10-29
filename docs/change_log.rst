@@ -7,6 +7,37 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 ----
 
 
+October 30, 2020
+.......................
+
+This main update is available in both INSaFLU free online (https://insaflu.insa.pt) and locally installable (https://github.com/INSaFLU/docker) versions.
+
+**Main changes:**
+
+-  INSaFLU now allows users to configure key parameters for reads quality analysis, mapping and consensus generation. Settings can be user-defined for the whole user account (tab “Settings”), for each project (after project creation) or for individual samples within a project (novel “Magic wand” icon). 
+
+- INSaFLU now generates consensus sequences for incomplete locus, i.e., undefined nucleotides (“N”) are automatically introduced in low coverage regions at a user-selected coverage thresholds. Users can select the minimum “vertical” coverage (depth) threshold per site (mincov; default = 10) and the minimum percentage of “horizontal” coverage to generate the consensus sequence (default = 70%). 
+
+- To better accommodate these novel features, the interactive color-coded coverage report by locus was updated to:
+
+GREEN: % of locus size covered by at least X-fold = 100%
+YELLOW: % of locus size covered by at least X-fold is ≥Y% and < 100%
+RED: % of locus size covered by at least X-fold is <Y%
+
+X is the user-defined "mincov" value (i.e., the minimum number of reads covering a site to be considered for variant calling) selected for each project or sample (within a project) (default = 10)
+
+Y is the user-defined "Minimum percentage of locus horizontal coverage (with depth of coverage equal or above X) to generate consensus sequence" value selected for each project or sample (within a project) (default = 70);
+
+**IMPORTANT NOTE:** These novel criteria will be applied to all Projects and Samples run from now on. Old projects (and samples within old projects) will remain unchanged, unless the users re-run samples with user-selected parameters. All updated samples will be flagged accordingly.
+
+**Minor changes:**
+
+- Consensus sequences can now be downloaded as a batch.
+
+- Tabular coverage reports per sample are also provided for download.
+
+
+
 May 06, 2020
 ..............
 
