@@ -9,11 +9,12 @@ Upon project's launching, you can start exploring the diverse INSaFLU outputs, w
 
 Outputs are organized by the dynamic “expand-and-collapse” panels that allow you a user-friendly visualization/download of all graphical, text and sequence output data. The following table provides an overview on all INSaFLU outputs organized by bioinformatics module:
 
-:download:`INSaFLU_current_outputs_10_03_2020.xlsx <_static/INSaFLU_current_outputs_10_03_2020.xlsx>`
+:download:`INSaFLU_current_outputs_30_10_2020.xlsx <_static/INSaFLU_current_outputs_30_10_2020.xlsx>`
    
 
 While navigating through INSaFLU menus, you will find which main software (including versions and settings) were used to generate outputs.  
  
+
 Navigate through sample-specific outputs
 ++++++++++++++++++++++++++++++++++++++++
    
@@ -95,13 +96,23 @@ Below the dynamic 'expand-and-collapse' panels, you can explore a table that con
 
    COVERAGE COLOR CODE:
 	
-   	GREEN: % of locus size covered by at least 1-fold = 100 % and % of locus size covered by at least 10-fold = 100% 
+   	GREEN: % of locus size covered by at least X-fold = 100%
    
-   	YELLOW: % of locus size covered by at least 1-fold = 100 % and % of locus size covered by at least 10-fold < 100%
+   	YELLOW: % of locus size covered by at least X-fold is ≥ Y% and < 100%
    
-  	RED: % of locus size covered by at least 1-fold < 100 % and % of locus size covered by at least 10-fold < 100%
+  	RED: % of locus size covered by at least X-fold is < Y%
+	
+		
+	X is the user-defined "mincov" value (i.e., the minimum number of reads covering a site to be considered for variant calling) selected for each project or sample (within a project) (default = 10)
 
-By clicking on each one of the color-coded circles, you can explore locus-specific plots of the depth of coverage 
+	Y is the user-defined "Minimum percentage of locus horizontal coverage (with depth of coverage equal or above X) to generate consensus sequence" value selected for each project or sample (within a project) (default = 70);
+
+	(more details in **User-defined software parameterization**)
+
+NOTE: If the users re-run samples (with user-selected parameters) included in projects created before the 30 Oct 2020 update (see "Change log"), these samples will follow this novel criteria and will be flagged accordingly. Old samples will retain the old criteria for color-code, as described in the original publication.
+
+
+By clicking on each one of the color-coded circles, you can explore locus-specific plots of the depth of coverage. 
 
 .. image:: _static/sample_table_coverage_plot.png
 
@@ -121,9 +132,17 @@ By clicking on the 'More info' icon next to each sample, you can get an overview
 - **Annotated variants (SNPs and indels)**
 
 .. warning::
-   - Validated variants falling within loci not fully covered with ≥10-fold (color-coded as yellow or red) are still included in the "validated_variants" list (these cases are labeled in the table column "VARIANTS in INCOMPLETE LOCUS" as YES), so that users can still retrieve valuable and reliable data (e.g., specific epitope and antiviral drug resistance mutations) from samples with borderline coverage.
-   
-   - Consensus sequences are exclusively generated for individual locus with 100% of its length covered by at least 10-fold (GREEN code in the grapgical coverage report)
+
+  - Validated variants falling within loci not fully covered with ≥ ”mincov”-fold (color-coded as yellow or red) are still included in the "validated_variants" list (these cases are labeled in the table column "VARIANTS in INCOMPLETE LOCUS" as YES), so that users can still retrieve valuable and reliable data (e.g., specific epitope and antiviral drug resistance mutations) from samples with borderline coverage.
+  
+- Consensus sequences are exclusively generated for individual locus with 100% of its length covered by at least X-fold (GREEN code in the graphical coverage report) or when the % of locus size covered by at least X-fold is ≥ Y% and < 100% (YELLOW code in the graphical coverage report).
+
+	X is the user-defined "mincov" value (i.e., the minimum number of reads covering a site to be considered for variant calling) selected for each project or sample (within a project) (default = 10)
+
+	Y is the user-defined "Minimum percentage of locus horizontal coverage (with depth of coverage equal or above X) to generate consensus sequence" value selected for each project or sample (within a project) (default = 70);
+
+	(more details in **User-defined software parameterization**)
+
 
 .. image:: _static/sample_projects_extra_info.png
 
@@ -173,7 +192,7 @@ Within this panel you can get an overview on the project (e.g., number of sample
 .. image:: _static/projects_overview.png
 
 .. warning::
-   Validated variants falling within loci not fully covered with ≥10-fold (color-coded as yellow or red) are still included in the "validated_variants" list (these cases are labeled in the column "VARIANTS in INCOMPLETE LOCUS" as YES), so that users can still retrieve valuable and reliable data (e.g., specific epitope and antiviral drug resistance mutations) from samples with borderline coverage.
+   - Validated variants falling within loci not fully covered with ≥ ”mincov”-fold (color-coded as yellow or red) are still included in the "validated_variants" list (these cases are labeled in the table column "VARIANTS in INCOMPLETE LOCUS" as YES), so that users can still retrieve valuable and reliable data (e.g., specific epitope and antiviral drug resistance mutations) from samples with borderline coverage.
 
 
 B. Navigate through **Phylogenetic trees** and Explore your metadata
@@ -193,10 +212,10 @@ Within this panel you can explore the "whole-genome"-based ("All") and locus-spe
 
 
 .. warning::
-   - Each locus-specific tree exclusively enrolls samples displaying 100% of that locus covered by ≥10-fold (color-coded as green in the coverage interactive report).
-   
-   - The genome-based phylogenetic tree ("All") exclusively enrolls samples displaying all loci all loci with 100% of its length covered by ≥10-fold (i.e., samples color-coded as green in the coverage interactive report for the all loci panel)
 
+- Each locus-specific tree exclusively enrolls samples color-coded as GREEN or YELLOW for the respective locus in the coverage interactive report (see meaning above).
+
+- The genome-based phylogenetic tree ("All") exclusively enrolls samples having all loci color-coded as GREEN or YELLOW in the coverage interactive report.
 
 
 If you have uploaded rich sample metadata, you can now easily color tree nodes and/or display colored metadata blocks next to the tree according to any combination of metadata variables. This largely facilitates the visualization, exploration and interpretation of your phylogenetic data, while potentiating the association/integration of relevant epidemiological and/or clinical data and pathogen genomic data towards an enhanced laboratory surveillance.
@@ -228,9 +247,11 @@ Within this panel you can explore the "whole-genome"-based ("All") and locus-spe
 .. image:: _static/projects_nucleotide_alignments.png
 
 .. warning::
-   - Each locus-specific alignment exclusively enrolls samples displaying 100% of that locus covered by ≥10-fold (color-coded as green in the coverage interactive report).
    
-   - The genome-based nucleotide alignment ("All") exclusively enrolls samples displaying all loci all loci with 100% of its length covered by ≥10-fold (i.e., samples color-coded as green in the coverage interactive report for the all loci panel)
+   - Each locus-specific alignment exclusively enrolls samples color-coded as GREEN or YELLOW for the respective locus in the coverage interactive report (see meaning above).   
+   
+   - The genome-based nucleotide alignment ("All") exclusively enrolls samples having all loci color-coded as GREEN or YELLOW in the coverage interactive report.
+
 
 D. Navigate through **Amino acid alignments by MSAViewer**
 ..........................................................
