@@ -51,7 +51,12 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 		Files between 50 - 300 MB are downsized to ~50 MB before analysis by randomly sampling reads using fastq-sample from fastq-tools package https://github.com/dcjones/fastq-tools (developed by Daniel C. Jones dcjones@cs.washington.edu)
 
 
+.. important::
 
+INSaFLU allows users to configure key parameters for reads quality analysis in the tab “Settings”. 
+Please check your settings before uploading new samples to your account.
+
+See details in https://insaflu.readthedocs.io/en/latest/data_analysis.html#user-defined-parameters
 
 
 Influenza type and sub-type identification (and Human Betacoronavirus classification, as of March 2020)
@@ -158,24 +163,69 @@ This key module takes advantage of the multisoftware tool Snippy (please visit t
 	**Integrative Genomics Viewer** (http://software.broadinstitute.org/software/igv/) (version 2.3.98; date 15.01.2018)
 	
 		inputs: reference file (.fasta); mapping file (.bam; .bai)
+		
+	
+	**Script used to mask low coverage regions**
+
+	**msa_masker.py** (https://github.com/rfm-targa/BioinfUtils/blob/master/msa_masker.py)
+	
+	This script substitutes positions with a low depth of coverage in a Multiple Sequence Alignment (MSA) with 'N'. The depth of coverage value below which the process masks positions is user-selected (“mincov” parameter of Snippy; see  “User-defined parameters”). It will not mask gaps/indels contained in the aligned sequences.
+	
+	-i: input FASTA file that contains a MAFFT nucleotide alignment enrolling the reference sequence (first sequence of the alignment) and Snippy-derived consensus sequence(s) to be masked.
+	
+	-df: the coverage files (.depth) generated through Snippy
+	
+	-r: define the reference sequence selected by the users (.fasta format) 
+	
+	-c: Positions with a depth value equal or below the value of this argument will be substituted by N (default= “mincov” - 1).
+
+.. important::
+
+INSaFLU allows users to configure key parameters for variant detection and consensus generation. Settings can be user-defined for the whole user account (tab “Settings”), for each project (after project creation) or for a given sample within a project. 
+When parameters are changed for a given sample within a Project, the sample is automatically re-analysed using the novel parameters and re-inserted in the Project.
+
+See details in 
+https://insaflu.readthedocs.io/en/latest/data_analysis.html#user-defined-parameters
+
+
 
 Coverage analysis
 -----------------
 
 *Description*
 
-This module yields a deep analysis of the coverage for each per sample by providing the following data: mean depth of coverage per locus, % of locus size covered by at least 1-fold and % of locus size covered by at least 10-fold. The latter fits the minimum depth of coverage for variant calling applied by INSaFLU pipeline and constitutes the guide for consensus generation, i.e., consensus sequences (see Module “Variant detection and consensus generation”) are exclusively provided for locus fulfilling the criteria of having 100% of their size covered by at least 10-fold. Depth of coverage plots are additionally generated and can be interactively viewed at INSaFLU.
+This module yields a deep analysis of the coverage for each per sample by providing the following data: depth of coverage per nucleotide site, mean depth of coverage per locus, % of locus size covered by at least 1-fold and % of locus size covered by at least a user-defined "mincov" threshold (this parameter is user-selected for a Project or for a given sample within a Project). The latter constitutes the guide for consensus generation, i.e., consensus sequences are exclusively provided for locus fulfilling the criteria of having Y% of their size covered by at least X-fold (X = mincov; Y = minimum horizontal coverage) (see sections “Variant detection and consensus generation” and “User-defined parameters”). Coverage data is provided both in tabular format and interactive plots.
 
 *Software version/settings*
 
 .. note::
-   	**getCoverage.py** (https://github.com/monsanto-pinheiro/getCoverage) (version v1.1; date 15.01.2018)
+   	
+	**Script used to generate Coverage statistics:**
+	
+	**getCoverage.py** (https://github.com/monsanto-pinheiro/getCoverage) (version v1.1; date 15.01.2018)
    
   	 	-i: define the input files, i.e, the coverage files (.depth.gz) generated through Snippy 
    
   		-r: define the reference sequence selected by the users (.fasta format) 
    
   		-o: defines the output file name (tab-separated value)
+		
+		
+	**Script used to mask low coverage regions**
+
+	**msa_masker.py** (https://github.com/rfm-targa/BioinfUtils/blob/master/msa_masker.py)
+	
+	This script substitutes positions with a low depth of coverage in a Multiple Sequence Alignment (MSA) with 'N'. The depth of coverage value below which the process masks positions is user-selected (“mincov” parameter of Snippy; see  “User-defined parameters”). It will not mask gaps/indels contained in the aligned sequences.
+	
+	-i: input FASTA file that contains a MAFFT nucleotide alignment enrolling the reference sequence (first sequence of the alignment) and Snippy-derived consensus sequence(s) to be masked.
+	
+	-df: the coverage files (.depth) generated through Snippy
+	
+	-r: define the reference sequence selected by the users (.fasta format) 
+	
+	-c: Positions with a depth value equal or below the value of this argument will be substituted by N (default= “mincov” - 1).
+
+		
 
 Alignment/Phylogeny
 -------------------
@@ -256,4 +306,51 @@ This module uses mapping data for the set of samples from each user-restricted I
    		--min-alternate-count: require at least 10 reads supporting an alternate allele within a single individual in order to evaluate the position (--min-alternate-count 10)
    		
    		--min-alternate-fraction: defines the minimum intra-host frequency of the alternate allele to be assumed (--min-alternate-fraction 0.01). This frequency is contingent on the depth of coverage of each processed site since min-alternate-count is set to 10, i.e., the identification of iSNV sites at frequencies of 10%, 2% and 1% is only allowed for sites with depth of coverage of at least 100-fold, 500-fold and 1000-fold, respectively.
+
+
+
+User-defined parameters
++++++++++++++++++++++++++
+
+INSaFLU allows user-defined configuration of key parameters for reads quality analysis and mapping. Settings can be user-defined for the whole user account (tab “Settings”), for each project (just after project creation) or for individual samples within a project.
+
+Read quality control (QC)
+-------------------------
+Users can change the following **Trimmomatic** settings (see http://www.usadellab.org/cms/index.php?page=trimmomatic):
+
+Please check choose your settings before uploading new samples to your account.
+**HEADCROP**: <length> Cut the specified number of bases from the start of the read. Range: [0:100]. If value equal to 0 this parameter is excluded. (default = 0)
+
+**CROP**:<length> Cut the read to a specified length. Range: [0:400]. If value equal to 0 this parameter is excluded. (default = 0)
+
+**SLIDINGWINDOW**:<windowSize> specifies the number of bases to average across Range: [3:50]. (default = 5)
+
+**SLIDINGWINDOW**:<requiredQuality> specifies the average quality required Range: [10:100]. (default = 20)
+
+**LEADING**:<quality> Remove low quality bases from the beginning. Range: [0:100]. If value equal to 0 this parameter is excluded. (default = 3)
+
+**TRAILING**:<quality> Remove low quality bases from the end. Range: [0:100]. If value equal to 0 this parameter is excluded. (default = 3)
+
+**MINLEN**:<length> This module removes reads that fall below the specified minimal length. Range: [5:500]. (default = 35)
+
+NOTE: "Trimming occurs in the order which the parameters are listed"
+
+
+Mapping
+-------------------------
+Users can change the following **Snippy** settings (see also https://github.com/tseemann/snippy):
+
+**--mapqual**: minimum mapping quality to accept in variant calling (default = 20)
+
+**--mincov**: minimum number of reads covering a site to be considered (default = 10)
+
+**--minfrac**: minimum proportion of reads which must differ from the reference, so that the variant is assumed in the consensus sequence (default = 0.51)
+
+Consensus generation
+--------------------------------
+Users can select the **Minimum percentage of horizontal coverage to generate consensus**.
+
+This threshold indicates the **Minimum percentage of locus horizontal coverage** with depth of coverage equal or above –mincov (see Mapping settings) to generate a consensus sequence for a given locus. Range: [50:100] (default = 70)
+
+
 
