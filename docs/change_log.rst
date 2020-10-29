@@ -10,7 +10,7 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 October 30, 2020
 .......................
 
-This main update is available in both INSaFLU free online (https://insaflu.insa.pt) and locally installable (https://github.com/INSaFLU/docker) versions.
+This important update is available in both INSaFLU free online (https://insaflu.insa.pt) and locally installable (https://github.com/INSaFLU/docker) versions.
 
 **Main changes:**
 
@@ -21,14 +21,16 @@ This main update is available in both INSaFLU free online (https://insaflu.insa.
 - To better accommodate these novel features, the interactive color-coded coverage report by locus was updated to:
 
 GREEN: % of locus size covered by at least X-fold = 100%
+
 YELLOW: % of locus size covered by at least X-fold is ≥Y% and < 100%
+
 RED: % of locus size covered by at least X-fold is <Y%
 
-X is the user-defined "mincov" value (i.e., the minimum number of reads covering a site to be considered for variant calling) selected for each project or sample (within a project) (default = 10)
+	X is the user-defined "mincov" value (i.e., the minimum number of reads covering a site to be considered for variant calling) selected for each project or sample (within a project) (default = 10)
 
-Y is the user-defined "Minimum percentage of locus horizontal coverage (with depth of coverage equal or above X) to generate consensus sequence" value selected for each project or sample (within a project) (default = 70);
+	Y is the user-defined "Minimum percentage of locus horizontal coverage (with depth of coverage equal or above X) to generate consensus sequence" value selected for each project or sample (within a project) (default = 70);
 
-**IMPORTANT NOTE:** These novel criteria will be applied to all Projects and Samples run from now on. Old projects (and samples within old projects) will remain unchanged, unless the users re-run samples with user-selected parameters. All updated samples will be flagged accordingly.
+**IMPORTANT NOTE:** These novel criteria will be applied to all Projects and Samples run from now on. Old projects (and samples within old projects) will remain unchanged, unless the users re-run samples with novel user-selected parameters. All updated samples will be flagged, accordingly.
 
 **Minor changes:**
 
