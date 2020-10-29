@@ -27,7 +27,15 @@ You can designate the projects so that the name easily indicates the combination
 .. image:: _static/create_project_2_name_ref.png
 
 
-3. Add the **samples** to be included in the **project**
+3. Choose the software parameters to be applied to the project.
+.................................................................
+
+The selected parameters will be applied by default to every sample added to the project, so please set the parameters before assigning the first sample to the project.
+
+Note: After project creation, you are still allowed to change the parameters for individual samples within the Project. The sample is automatically re-analysed using the novel parameters and re-inserted in the Project. 
+
+
+4. Add the **samples** to be included in the **project**
 ........................................................
 
 .. image:: _static/create_project_3_add_samples.png
@@ -37,7 +45,7 @@ Samples are processed immediately upon selection, so, at this time, users may st
 .. image:: _static/monitoring_project_status.png
 
 
-4. Scale-up your **project**. 
+5. Scale-up your **project**. 
 .............................
 
 You may add more samples to your **Project** project at any time.
@@ -45,7 +53,16 @@ You may add more samples to your **Project** project at any time.
 .. image:: _static/create_project_4_scale_up.png
 
 
-5. Remove samples from your **project**. 
+6. Modify software parameters for a given sample within a Project
+..................................................................
+
+Users can change the mapping parameters for individual samples within a Project. The sample is automatically re-analysed using the novel parameters and re-inserted in the Project (outputs are automatically re-calculated to integrate the “updated” sample). For instance, if the updated sample fulfill the criteria for consensus generation with the novel settings, it will be automatically integrated in the alignments and trees.
+
+NOTE: Users can also re-run samples (with user-selected parameters) included in projects created before the 30 Oct 2020 update (see "Change log"). The updated samples will be flagged accordingly. 
+
+
+
+7. Remove samples from your **project**. 
 ........................................
 
 You may want to remove some samples from your project (e.g., for exclusively keeping samples with success for all 8 locus) 
