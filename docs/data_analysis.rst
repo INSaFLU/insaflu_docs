@@ -165,11 +165,11 @@ This key module takes advantage of the multisoftware tool Snippy (please visit t
 		inputs: reference file (.fasta); mapping file (.bam; .bai)
 		
 	
-	**Script used to mask low coverage regions**
+	**Script used to mask low coverage regions:**
 
-	**msa_masker.py** (https://github.com/rfm-targa/BioinfUtils/blob/master/msa_masker.py)
+	**msa_masker.py** (https://github.com/rfm-targa/BioinfUtils/blob/master/msa_masker.py; kind contribution of Rafael Mamede).
 	
-	This script substitutes positions with a low depth of coverage in a Multiple Sequence Alignment (MSA) with 'N'. The depth of coverage value below which the process masks positions is user-selected (“mincov” parameter of Snippy; see  “User-defined parameters”). It will not mask gaps/indels contained in the aligned sequences.
+	This script substitutes positions with a low depth of coverage in a Multiple Sequence Alignment (MSA) with 'N'. The depth of coverage value below which the process masks positions is user-selected (see  “User-defined parameters”). It will not mask gaps/indels contained in the aligned sequences.
 	
 	-i: input FASTA file that contains a MAFFT nucleotide alignment enrolling the reference sequence (first sequence of the alignment) and Snippy-derived consensus sequence(s) to be masked.
 	
@@ -199,7 +199,7 @@ This module yields a deep analysis of the coverage for each per sample by provid
    	
 	**Script used to generate Coverage statistics:**
 	
-	**getCoverage.py** (https://github.com/monsanto-pinheiro/getCoverage) (version v1.1; date 15.01.2018)
+	**getCoverage.py** (https://github.com/monsanto-pinheiro/getCoverage, by Miguel Pinheiro) (version v1.1; date 15.01.2018)
    
   	 	-i: define the input files, i.e, the coverage files (.depth.gz) generated through Snippy 
    
@@ -210,9 +210,9 @@ This module yields a deep analysis of the coverage for each per sample by provid
 		
 	**Script used to mask low coverage regions**
 
-	**msa_masker.py** (https://github.com/rfm-targa/BioinfUtils/blob/master/msa_masker.py)
+	**msa_masker.py** (https://github.com/rfm-targa/BioinfUtils/blob/master/msa_masker.py; kind contribution of Rafael Mamede)
 	
-	This script substitutes positions with a low depth of coverage in a Multiple Sequence Alignment (MSA) with 'N'. The depth of coverage value below which the process masks positions is user-selected (“mincov” parameter of Snippy; see  “User-defined parameters”). It will not mask gaps/indels contained in the aligned sequences.
+	This script substitutes positions with a low depth of coverage in a Multiple Sequence Alignment (MSA) with 'N'. The depth of coverage value below which the process masks positions is user-selected (see  “User-defined parameters”). It will not mask gaps/indels contained in the aligned sequences.
 	
 	-i: input FASTA file that contains a MAFFT nucleotide alignment enrolling the reference sequence (first sequence of the alignment) and Snippy-derived consensus sequence(s) to be masked.
 	
