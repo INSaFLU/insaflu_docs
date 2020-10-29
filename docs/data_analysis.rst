@@ -52,11 +52,11 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 
 
 .. important::
-
-INSaFLU allows users to configure key parameters for reads quality analysis in the tab “Settings”. 
-Please check your settings before uploading new samples to your account.
-
-See details in https://insaflu.readthedocs.io/en/latest/data_analysis.html#user-defined-parameters
+	INSaFLU allows users to configure key parameters for reads quality analysis in the tab **“Settings”**. 
+	
+	**Please check your settings before uploading new samples to your account.**
+	
+	See details in https://insaflu.readthedocs.io/en/latest/data_analysis.html#user-defined-parameters
 
 
 Influenza type and sub-type identification (and Human Betacoronavirus classification, as of March 2020)
@@ -180,12 +180,9 @@ This key module takes advantage of the multisoftware tool Snippy (please visit t
 	-c: Positions with a depth value equal or below the value of this argument will be substituted by N (default= “mincov” - 1).
 
 .. important::
-
-INSaFLU allows users to configure key parameters for variant detection and consensus generation. Settings can be user-defined for the whole user account (tab “Settings”), for each project (after project creation) or for a given sample within a project. 
-When parameters are changed for a given sample within a Project, the sample is automatically re-analysed using the novel parameters and re-inserted in the Project.
-
-See details in 
-https://insaflu.readthedocs.io/en/latest/data_analysis.html#user-defined-parameters
+	INSaFLU allows users to configure key parameters for variant detection and consensus generation. **Settings** can be user-defined for the whole user account (tab “Settings”), for each project (after project creation) or for individuals samples within a project. 
+	When parameters are changed for a given sample within a Project, the sample is automatically re-analysed using the novel parameters and re-inserted in the Project.
+	See details in https://insaflu.readthedocs.io/en/latest/data_analysis.html#user-defined-parameters
 
 
 
