@@ -309,13 +309,14 @@ This module uses mapping data for the set of samples from each user-restricted I
 User-defined parameters
 +++++++++++++++++++++++++
 
-INSaFLU allows user-defined configuration of key parameters for reads quality analysis and mapping. Settings can be user-defined for the whole user account (tab “Settings”), for each project (just after project creation) or for individual samples within a project.
+INSaFLU allows user-defined configuration of key parameters for reads quality analysis and mapping. Settings can be user-defined for the whole user account (tab “Settings”), for each project (just after project creation) or for individual samples within a project (click in the "Magic wand" icon).
 
 Read quality control (QC)
 -------------------------
 Users can change the following **Trimmomatic** settings (see http://www.usadellab.org/cms/index.php?page=trimmomatic):
 
 Please check choose your settings before uploading new samples to your account.
+
 **HEADCROP**: <length> Cut the specified number of bases from the start of the read. Range: [0:100]. If value equal to 0 this parameter is excluded. (default = 0)
 
 **CROP**:<length> Cut the read to a specified length. Range: [0:400]. If value equal to 0 this parameter is excluded. (default = 0)
