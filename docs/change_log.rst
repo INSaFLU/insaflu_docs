@@ -30,7 +30,7 @@ RED: % of locus size covered by at least X-fold is <Y%
 
 	Y is the user-defined "Minimum percentage of locus horizontal coverage (with depth of coverage equal or above X) to generate consensus sequence" value selected for each project or sample (within a project) (default = 70);
 
-**IMPORTANT NOTE:** These novel criteria will be applied to all Projects and Samples run from now on. Old projects (and samples within old projects) will remain unchanged, unless the users re-run samples with novel user-selected parameters. All updated samples will be flagged, accordingly.
+**IMPORTANT NOTE:** These novel criteria will be applied to all Projects and Samples. Samples within old projects (before this update) will remain unchanged, unless the users re-run them with novel user-selected parameters. All updated samples and novel samples run from now on will be flagged ("Notepad" icon).
 
 **Minor changes:**
 
