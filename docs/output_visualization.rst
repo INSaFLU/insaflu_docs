@@ -109,10 +109,7 @@ Below the dynamic 'expand-and-collapse' panels, you can explore a table that con
 
 	(more details in **User-defined parameters** - https://insaflu.readthedocs.io/en/latest/data_analysis.html#user-defined-parameters)
 
-NOTE: These novel color-code criteria (since 30 Oct 2020 update; "Change log") are applied to all Projects and Samples, including samples within old projects (created before this update). These old samples will remain unchanged (i.e., not masked in low coverage regions) after the update, unless the users re-run them with novel user-selected parameters. All updated samples will be flagged ("Calendar" icon).
-
-If the users re-run samples (with user-selected parameters) included in projects created before the 30 Oct 2020 update (see "Change log"), these samples will follow this novel criteria and will be flagged accordingly. Old samples will retain the old criteria for color-code, as described in the original publication.
-
+NOTE: These novel color-code criteria (since 30 Oct 2020 update; see "Change log") are applied to all Projects and Samples, including samples within old projects (created before that update). Those old samples will remain unchanged (i.e., not masked in low coverage regions), unless the users re-run them with novel user-selected parameters. All updated samples will be flagged ("Calendar" icon) so that they can be differentiated from those keeping originally applied parameters (exactly as described in the original publication).
 
 By clicking on each one of the color-coded circles, you can explore locus-specific plots of the depth of coverage. 
 
