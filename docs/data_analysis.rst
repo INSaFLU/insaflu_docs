@@ -315,7 +315,8 @@ Read quality control (QC)
 -------------------------
 Users can change the following **Trimmomatic** settings (see http://www.usadellab.org/cms/index.php?page=trimmomatic):
 
-Please check choose your settings before uploading new samples to your account.
+**Please choose your settings before uploading new samples to your account.**
+
 
 **HEADCROP**: <length> Cut the specified number of bases from the start of the read. Range: [0:100]. If value equal to 0 this parameter is excluded. (default = 0)
 
