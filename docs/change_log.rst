@@ -6,6 +6,15 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2020
 ----
 
+November 24, 2020
+.......................
+
+This update is available in both INSaFLU free online (https://insaflu.insa.pt) and locally installable (https://github.com/INSaFLU/docker) versions.
+
+- Add a new button to delete fastq.gz files that are not attached to any sample ("Remove not processed files") 
+- Add a new button to unlock sample metadata tables ("Unlock last file").
+- As for nucleotide alignments (see update 30 Oct 2020), amino acid alignments now also include samples with incomplete locus, i.e., undefined amino acids (“X”) are automatically introduced in low coverage regions at a user-selected coverage thresholds.
+
 
 October 30, 2020
 .......................
