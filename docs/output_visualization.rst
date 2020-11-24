@@ -267,7 +267,8 @@ Within this panel you can explore the amino acid alignments for the influenza pr
 .. image:: _static/projects_amino_acid_alignments.png
 
 .. warning::
-   - Each amino acid alignment exclusively enrolls samples displaying 100% of that locus covered by ≥10-fold (color-coded as green in the coverage interactive report).
+  
+  - Each locus-specific amino acid alignment exclusively enrolls samples color-coded as GREEN or YELLOW for the respective locus in the coverage interactive report (see meaning above).
    
 E. Explore the **Intra-host minor variants annotation (and uncovering of putative mixed infections)** panel
 ...........................................................................................................
