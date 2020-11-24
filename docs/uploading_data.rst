@@ -23,7 +23,9 @@ A. Go to *Samples* menu and choose *Add Samples from csv / tsv file*.
 
 .. image:: _static/upload_samplemetadata_batch_1.png
 
-Check your list of "Samples metadata" tables and **Load a new file**:
+Check your list of "Samples metadata" tables and **Load a new file**.
+
+The table will be locked until you submit the NGS reads corresponding to the new samples. In case you decide not to proceed with the upload, the table can be unlocked by clicking in "Unlock last file". 
 
 .. image:: _static/upload_samplemetadata_batch_2.png
 
@@ -70,11 +72,11 @@ Navigate through your list of fastq.gz files and **simultaneously upload multipl
 
 .. image:: _static/upload_ngs_data_batch_2.png
 
-Just DRAG & DROP your fastq.gz files
+Just DRAG & DROP your fastq.gz files.
 
 .. image:: _static/upload_ngs_data_batch_3.png
 
-
+Fastq.gz files that are not attached to any sample can be deleted by clicking in "Remove all files not processed".
 
 # Option 2 (Individual)
 -----------------------
