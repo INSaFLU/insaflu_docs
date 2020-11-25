@@ -13,7 +13,7 @@ This update is available in both INSaFLU free online (https://insaflu.insa.pt) a
 
 - Add a new button to delete fastq.gz files that are not attached to any sample ("Remove not processed files") 
 - Add a new button to unlock sample metadata tables ("Unlock last file").
-- As for nucleotide alignments (see update 30 Oct 2020), amino acid alignments now also include samples with incomplete locus, i.e., undefined amino acids (“X”) are automatically introduced in low coverage regions at a user-selected coverage thresholds.
+- As for nucleotide alignments (see update 30 Oct 2020), amino acid alignments now also include samples with incomplete locus, i.e., undefined amino acids (“X”) are automatically introduced in low coverage regions at a user-selected coverage thresholds. This update will be applied to all novel Projects. Samples within old projects (before this update) will remain unchanged unless any parameter is altered. In that case, the sample will be included in the amino acid alignments following the new criteria.
 
 
 October 30, 2020
