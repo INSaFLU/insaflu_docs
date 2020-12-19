@@ -6,6 +6,15 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2020
 ----
 
+
+December 19, 2020
+.......................
+
+- Corrected an issue in “AllConsensus.fasta” file creation. We detected a bug where “red” flagged samples (not fulfilling user-selected coverage thresholds) were mistakenly included in this file (other outputs, such individual consensus sequences, variants list, alignments and trees were not affected by this bug). The issue is now solved and "AllConsensus.fasta" files were corrected by excluding “red” flagged samples. 
+
+NOTE: If you already used individual consensus sequences (downloaded for each sample) or the alignments combining all validated locus/genome consensus sequences (Alignment_nt_locus.fasta), this bug was not a problem. If you had already downloaded the combined "AllConsensus.fasta" file,  please confirm that you exclude “red” flagged samples from your downstream analyses or, instead, please re-use the novel corrected file.
+
+
 November 24, 2020
 .......................
 
