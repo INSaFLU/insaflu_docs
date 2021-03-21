@@ -46,7 +46,7 @@ Contact
 If you have any questions, comments or suggestions, please contact us: <vitor.borges@insa.min-saude.pt> or <j.paulo.gomes@insa.min-saude.pt>
 
 *********
-Contents:
+Contents
 *********
 
 .. toctree::
