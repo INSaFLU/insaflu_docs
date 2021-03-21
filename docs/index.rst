@@ -42,6 +42,7 @@ https://doi.org/10.1186/s13073-018-0555-0
 
 Contact
 +++++++
+
 If you have any questions, comments or suggestions, please contact us: <vitor.borges@insa.min-saude.pt> or <j.paulo.gomes@insa.min-saude.pt>
 
 *********
