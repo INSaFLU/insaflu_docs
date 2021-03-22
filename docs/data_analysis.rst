@@ -128,7 +128,6 @@ Similarly to influenza classification, alerts are generated if, for instance, no
 
 		- "SARS_CoV_2”, “MERS_CoV”, “SARS_CoV”, “HCoV_HKU1” or “HCoV_OC43” if the draft assembly contains a “S gene” with ≥70% Identity and ≥60% coverage to one of the S gene sequences of the five representative Human BetaCoronavirus (the classification reflects the closest match among the five human BetaCoV listed above).
 
-
 				
 		# For segments/references assignment: 
 		
@@ -176,7 +175,7 @@ This key module takes enables reference-based mapping, followed by SNP/indel cal
 		--kingdom: defines the Annotation mode (Viruses)
 	
 	
-	**##ILLUMINA /Ion Torrent data##**
+	**##ILLUMINA / Ion Torrent data##**
 	
 	**Snippy** (https://github.com/tseemann/snippy) (version 3.2-dev - sligthly modified (details in https://github.com/INSaFLU/INSaFLU); date 15.01.2018)
 	
@@ -410,7 +409,7 @@ Users can change the following **NanoFilt** settings (see: https://github.com/wd
 Mapping and Variant Calling
 ----------------------------
 
-**##ILLUMINA /Ion Torrent data##**
+**##ILLUMINA / Ion Torrent data##**
 
 Users can change the following **Snippy** settings (see also https://github.com/tseemann/snippy):
 
