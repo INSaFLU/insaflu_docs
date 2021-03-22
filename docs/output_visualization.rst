@@ -12,7 +12,7 @@ Outputs are organized by the dynamic “expand-and-collapse” panels that allow
 :download:`INSaFLU_current_outputs_30_10_2020.xlsx <_static/INSaFLU_current_outputs_30_10_2020.xlsx>`
    
 
-While navigating through INSaFLU menus, you will find which main software (including versions and settings) were used to generate outputs.  
+While navigating through INSaFLU menus, you will find which main software (including versions and settings) were used to generate outputs. The Sample list of each Project also also summarizes the software settings and user-defined cut-offs applied for each sample. 
  
 
 Navigate through sample-specific outputs
@@ -37,17 +37,17 @@ B. Go to *Samples* menu and explore the *'More info' icon next to each sample*.
 
 By clicking on the 'More info' icon next to each sample, you can get an overview on the specific sample metadata and explore:
 
-- **FastQC graphical quality reports for raw read files** 
+- **Graphical quality reports for raw read files** 
 
 .. image:: _static/sample_metadata_FastQC_raw.png
 
-Click on ".html" files and explore each one of the FastQC "Analysis modules" - please consult https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/ for details]
+Click on ".html" files and explore each one of the FastQC (for Illumina/Ion Torrent data) or RabbitQC (for ONT data) "Analysis modules" - please consult https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/ and https://github.com/ZekunYin/RabbitQC for details]
 
 .. image:: _static/sample_FastQC_report.png
 
-- **FastQC graphical quality reports for quality processed read files** 
+- **Graphical quality reports for quality processed read files** 
 
-Click on ".html" files and explore each one of the FastQC "Analysis modules" - please consult https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/ for details]
+Click on ".html" files and explore each one of the FastQC (for Illumina/Ion Torrent data) or RabbitQC (for ONT data) "Analysis modules" - please consult https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/ and https://github.com/ZekunYin/RabbitQC for details]
 
 .. image:: _static/sample_FastQC_processed.png
 
@@ -59,6 +59,8 @@ Click on ".html" files and explore each one of the FastQC "Analysis modules" - p
    - INSaFLU allows the discrimination of the influenza types A and B, all currently defined influenza A subtypes (18 hemagglutinin subtypes and 11 neuraminidase sub-types) and the two influenza B lineages (Yamagata and Victoria). 
    
    - INSaFLU flags samples as "putative mixed infections" if more than one type, HA or NA subtype or lineage is detected. In addition, specific alerts are generated if an incomplete type/subtype is assigned.
+   
+   As of March 10, 2020, INSaFLU was also upgraded for rapid classification and contigs assignment of Human Betacoronavirus (BetaCoV). 
 
 
 - Assignment of viral segments/references to draft contigs
@@ -191,7 +193,7 @@ Within this panel you can get an overview on the project (e.g., number of sample
 .. image:: _static/projects_overview.png
 
 .. warning::
-   - Validated variants falling within loci not fully covered with ≥ ”mincov”-fold (color-coded as yellow or red) are still included in the "validated_variants" list (these cases are labeled in the table column "VARIANTS in INCOMPLETE LOCUS" as YES), so that users can still retrieve valuable and reliable data (e.g., specific epitope and antiviral drug resistance mutations) from samples with low or borderline coverage.
+   - Validated mutations falling within loci not fully covered with ≥ ”mincov”-fold (color-coded as yellow or red) are still included in the "validated_variants" list (these cases are labeled in the table column "VARIANTS in INCOMPLETE LOCUS" as YES), so that users can still retrieve valuable and reliable data (e.g., specific epitope and antiviral drug resistance mutations) from samples with low coverage in some regions or even borderline coverage .
 
 
 B. Navigate through **Phylogenetic trees** and Explore your metadata
@@ -231,7 +233,13 @@ Examples:
 .. image:: _static/insaphylogeo_2.png
 
 
-C. Navigate through **Nucleotide alignments by MSAViewer**
+C. Navigate through **Mutation list** 
+....................................................................
+
+Within this panel you can explore, filter and download the list of all validated mutations (SNPs and indels) assumed in the consensus sequences of all samples within the project. 
+
+
+D. Navigate through **Nucleotide alignments by MSAViewer**
 ..........................................................
 
 Within this panel you can explore the "whole-genome"-based ("All") and locus-specific nucleotide alignments 
@@ -252,7 +260,7 @@ Within this panel you can explore the "whole-genome"-based ("All") and locus-spe
    - The genome-based nucleotide alignment ("All") exclusively enrolls samples having all loci color-coded as GREEN or YELLOW in the coverage interactive report.
 
 
-D. Navigate through **Amino acid alignments by MSAViewer**
+E. Navigate through **Amino acid alignments by MSAViewer**
 ..........................................................
 
 Within this panel you can explore the amino acid alignments for the influenza protein 
@@ -270,7 +278,7 @@ Within this panel you can explore the amino acid alignments for the influenza pr
   
   - Each locus-specific amino acid alignment exclusively enrolls samples color-coded as GREEN or YELLOW for the respective locus in the coverage interactive report (see meaning above). For YELLOW cases (i.e. incomplete locus), undefined amino acids (“X”) are automatically introduced in low coverage regions at a user-selected coverage thresholds.
    
-E. Explore the **Intra-host minor variants annotation (and uncovering of putative mixed infections)** panel
+F. Explore the **Intra-host minor variants annotation (and uncovering of putative mixed infections)** panel
 ...........................................................................................................
 
 Within this panel you can explore a graph plotting the proportion of iSNV at frequency at 1-50%  (minor iSNVs) and at frequency 50-90%, and download the list of all detected and annotated minor iSNVs (i.e., SNV displaying intra-sample variation at frequency between 1 and 50% - minor variants) for the project.
@@ -295,8 +303,29 @@ You may inspect this plot to uncover infections with influenza viruses presentin
 
 
 
+F. Explore the **Coverage for all samples** panel
+...........................................................................................................
 
+This panel provides an additional interactive color-coded coverage report, summarizing the mean depth of coverage and horizontal coverage per locus for all samples within a project.
 
+COVERAGE COLOR CODE:
+	
+   	GREEN: % of locus size covered by at least X-fold = 100%
+   
+   	YELLOW: % of locus size covered by at least X-fold is ≥ Y% and < 100%
+   
+  	RED: % of locus size covered by at least X-fold is < Y%
+	
+		
+	X is the user-defined "mincov" value (i.e., the minimum number of reads covering a site to be considered for variant calling) selected for each project or sample (within a project) (default = 10)
+
+	Y is the user-defined "Minimum percentage of locus horizontal coverage (with depth of coverage equal or above X) to generate consensus sequence" selected for each project or sample (within a project) (default = 70);
+
+	(more details in **User-defined parameters** - https://insaflu.readthedocs.io/en/latest/data_analysis.html#user-defined-parameters)
+
+NOTE: These novel color-code criteria (since 30 Oct 2020 update; see "Change log") are applied to all Projects and Samples, including samples within old projects (created before that update). Those old samples will remain unchanged (i.e., not masked in low coverage regions), unless the users re-run them with novel user-selected parameters. All updated samples will be flagged ("Calendar" icon) so that they can be differentiated from those keeping originally applied parameters (exactly as described in the original publication).
+
+By clicking on each one of the color-coded rectangle, you can explore locus-specific plots of the depth of coverage. 
 
 
 
