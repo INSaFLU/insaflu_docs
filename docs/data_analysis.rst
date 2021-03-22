@@ -59,15 +59,21 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 
 	**NanoFilt** (https://github.com/wdecoster/nanofilt) (version 2.6.0)
 	
+
 		**-q (QUALITY)**: Filter on a minimum average read quality score. Range: [5:30] (default: 10)
+		
 		**-l (LENGTH)**: Filter on a minimum read length. Range: [50:1000]. (default: 50)
+		
 		**--headcrop**: Trim n nucleotides from start of read. Range: [1:1000]. If value equal to 0 this parameter is excluded. (default: 70)
+		
 		**--tailcrop**: Trim n nucleotides from end of read. Range: [1:1000]. If value equal to 0 this parameter is excluded. (default: 70)
+		
 		**--maxlength**: Set a maximum read length. Range: [100:50000]. If value equal to 0 this parameter is excluded. (default: 0)
+		
 
 	**RabbitQC** (https://github.com/ZekunYin/RabbitQC)  (version 0.0.1)**
 		
-		input: ONT reads (fastq.gz format) pre- and post- quality improvement with nanoFilt
+		input: ONT reads (fastq.gz format) pre- and post- quality improvement with NanoFilt
 		
 		Files between 50 - 300 MB are downsized to ~50 MB before analysis by randomly sampling reads using fastq-sample from fastq-tools package https://github.com/dcjones/fastq-tools (developed by Daniel C. Jones dcjones@cs.washington.edu)
 
@@ -197,14 +203,19 @@ This key module takes enables reference-based mapping, followed by SNP/indel cal
 	**Medaka** (https://nanoporetech.github.io/medaka/ (version 1.2.1)
 		
 		input: ONT quality processed reads obtained after NanoFilt analysis.
+		
 		medaka consensus -m model (default: r941_min_high_g360)
+		
 		medaka variant
 		
 	_VCF filtering:
 	
 		Mutations are filtered out based on the following user-defined criteria:
-			**Minimum depth of coverage  per site** (equivalent to --mincov in Illumina pipeline) (default: 30) 
+		
+			**Minimum depth of coverage  per site** (equivalent to --mincov in Illumina pipeline) (default: 30)
+			
 			**Minimum proportion  for variant evidence** (equivalent to --minfrac in Illumina pipeline) (default: 0.8)
+			
 			
 	For each mutation, two COVERAGE values are provided in final table output: the depth of unambiguous reads spanning pos +-25 (as provided by medaka variant module) and depth per site as provided by samtools (depth -aa). Values are separated by “/”. 
 	
@@ -213,26 +224,28 @@ This key module takes enables reference-based mapping, followed by SNP/indel cal
 	Consensus sequences are generated using bcftools (consensus -s sample.filtered.vcf.gz -f reference.fasta > sample.consensus.fasta) based on the vcf file containing the validated mutations. As for the Illumina pipeline, variant annotation is performed using snpEff 4.1l available with Snippy (see above).
 
 	
-	**MAPPING VISUALIZATION**
-					
-	**Integrative Genomics Viewer** (http://software.broadinstitute.org/software/igv/) (version 2.3.98; date 15.01.2018)
-	
-		inputs: reference file (.fasta); mapping file (.bam; .bai)
 		
-	
-	**Script used to mask low coverage regions:**
+	**Masking low coverage regions:**
 
 	**msa_masker.py** (https://github.com/rfm-targa/BioinfUtils/blob/master/msa_masker.py; kind contribution of Rafael Mamede).
 	
 	This script substitutes positions with a low depth of coverage in a Multiple Sequence Alignment (MSA) with 'N'. The depth of coverage value below which the process masks positions is user-selected (see  “User-defined parameters”). It will not mask gaps/indels contained in the aligned sequences.
 	
-	-i: input FASTA file that contains a MAFFT nucleotide alignment enrolling the reference sequence (first sequence of the alignment) and Snippy-derived consensus sequence(s) to be masked.
+	-i: input FASTA file that contains a MAFFT nucleotide alignment enrolling the reference sequence (first sequence of the alignment) and consensus sequence(s) to be masked.
 	
-	-df: the coverage files (.depth) generated through Snippy
+	-df: the coverage files (.depth)
 	
 	-r: define the reference sequence selected by the users (.fasta format) 
 	
 	-c: Positions with a depth value equal or below the value of this argument will be substituted by N (default= “mincov” - 1).
+	
+	
+	**MAPPING VISUALIZATION**
+					
+	**Integrative Genomics Viewer** (http://software.broadinstitute.org/software/igv/)
+	
+		inputs: reference file (.fasta); mapping file (.bam; .bai)
+		
 
 .. important::
 	INSaFLU allows users to configure key parameters for variant detection and consensus generation. **Settings** can be user-defined for the whole user account (tab “Settings”), for each project (after project creation) or for individuals samples within a project. 
@@ -256,7 +269,7 @@ This module yields a deep analysis of the coverage for each per sample by provid
 	
 	**getCoverage.py** (https://github.com/monsanto-pinheiro/getCoverage, by Miguel Pinheiro) (version v1.1; date 15.01.2018)
    
-  	 	-i: define the input files, i.e, the coverage files (.depth.gz) generated through Snippy 
+  	 	-i: define the input files, i.e, the coverage files (.depth.gz)
    
   		-r: define the reference sequence selected by the users (.fasta format) 
    
@@ -271,7 +284,7 @@ This module yields a deep analysis of the coverage for each per sample by provid
 	
 	-i: input FASTA file that contains a MAFFT nucleotide alignment enrolling the reference sequence (first sequence of the alignment) and consensus sequence(s) to be masked.
 	
-	-df: the coverage files (.depth) generated through Snippy
+	-df: the coverage files (.depth) 
 	
 	-r: define the reference sequence selected by the users (.fasta format) 
 	
