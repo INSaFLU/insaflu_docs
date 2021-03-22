@@ -20,13 +20,17 @@ Bioinformatics pipeline
 Read quality analysis and improvement
 --------------------------------------
 
+
 *Description*
 
-This step takes the input single- or paired-end reads (fastq.gz format) and produces Trimmomatic-derived quality processed reads, as well as FastQC quality control reports for each file, before and after quality improvement. This module is automatically run upon reads upload (i.e., no user intervention is needed). 
+This step takes the input single- or paired-end reads (fastq.gz format) and produces quality processed reads, as well as quality control reports for each file, before and after quality improvement. This module is automatically run upon reads upload (i.e., no user intervention is needed). 
 
 *Software version/settings*
 
 .. note::
+
+	**## ILLUMINA / Ion Torrent data ##**
+	
    	**FastQC** (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) (version 0.11.5; date 15.01.2018)
 
 		input: single- or paired-end reads (fastq.gz format) (e.g., sample_L001_R1_001.fastq.gz and sample_L001_R2_001.fastq.gz for Illumina technology reads)
@@ -37,16 +41,33 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 	
 		input: single- or paired-end reads (fastq.gz format) (e.g., sample_L001_R1_001.fastq.gz and sample_L001_R2_001.fastq.gz for Illumina paired-end reads)
 	
-		SLIDINGWINDOW: perform a sliding window trimming, cutting once the average quality within the window falls below a threshold (SLIDINGWINDOW:5:20, where 5 refers to window and 20 to the minimum average quality)
+		SLIDINGWINDOW: perform a sliding window trimming, cutting once the average quality within the window falls below a threshold (default: SLIDINGWINDOW:5:20, where 5 refers to window and 20 to the minimum average quality)
 	
-		LEADING: cut bases off the start of a read, if below a threshold quality (LEADING:3). This will allow discarding bases with very quality or N bases (quality score of 2 or less).
+		LEADING: cut bases off the start of a read, if below a threshold quality (default: LEADING:3). This will allow discarding bases with very quality or N bases (quality score of 2 or less).
 	
-		TRAILING: cut bases off the end of a read, if below a threshold quality (TRAILING:3). This will allow discarding bases with very quality or N bases (quality score of 2 or less).
+		TRAILING: cut bases off the end of a read, if below a threshold quality (default: TRAILING:3). This will allow discarding bases with very quality or N bases (quality score of 2 or less).
 	
 		MINLEN: drop the read if it is below a specified length (MINLEN:35)
 	
 		TOPHRED33:  Convert quality scores to Phred-33
 		
+	**## Oxford Nanopore Technologies (ONT) data ##**
+		
+	**NanoStat** (https://github.com/wdecoster/nanostat) (version 1.4.0)
+		
+		input: ONT reads (fastq.gz format) 
+
+	**NanoFilt** (https://github.com/wdecoster/nanofilt) (version 2.6.0)
+	
+		**-q (QUALITY)**: Filter on a minimum average read quality score. Range: [5:30] (default: 10)
+		**-l (LENGTH)**: Filter on a minimum read length. Range: [50:1000]. (default: 50)
+		**--headcrop**: Trim n nucleotides from start of read. Range: [1:1000]. If value equal to 0 this parameter is excluded. (default: 70)
+		**--tailcrop**: Trim n nucleotides from end of read. Range: [1:1000]. If value equal to 0 this parameter is excluded. (default: 70)
+		**--maxlength**: Set a maximum read length. Range: [100:50000]. If value equal to 0 this parameter is excluded. (default: 0)
+
+	**RabbitQC** (https://github.com/ZekunYin/RabbitQC)  (version 0.0.1)**
+		
+		input: ONT reads (fastq.gz format) pre- and post- quality improvement with nanoFilt
 		
 		Files between 50 - 300 MB are downsized to ~50 MB before analysis by randomly sampling reads using fastq-sample from fastq-tools package https://github.com/dcjones/fastq-tools (developed by Daniel C. Jones dcjones@cs.washington.edu)
 
@@ -79,6 +100,9 @@ Similarly to influenza classification, alerts are generated if, for instance, no
 *Software version/settings*
 
 .. note::
+
+	**## ILLUMINA data only ##** (under development for ONT data)
+	
 	**SPAdes** (http://cab.spbu.ru/software/spades/) (version 3.11.1; date 15.01.2018)
    
    		--pe1-1 and --pe1.2 (for paired-end) or -s (for single-end data): define the input files, i.e, quality processed reads (e.g., sample_1P.fastq.gz and sample_2P.fastq.gz)
@@ -139,27 +163,59 @@ Variant detection and consensus generation
 
 *Description*
 
-This key module takes advantage of the multisoftware tool Snippy (please visit the official repository to get details about each component; https://github.com/tseemann/snippy) to perform reference-based mapping, followed by SNP/indel calling and annotation and generation of consensus sequences (quality processed reads obtained through Trimmomatic analysis are used as input).  A reference sequence is selected for each project after uploading it or from the INSaFLU default reference database. Uploaded “.fasta” files are annotated using Prokka upon submission and automatically become available at the user-restricted reference database. Each project should ideally include viruses from the same type and sub-type/lineage (this typing data is automatically determined upon reads submission to INSaFLU).
+This key module takes enables reference-based mapping, followed by SNP/indel calling and annotation and generation of consensus sequences (quality processed reads obtained through Trimmomatic analysis are used as input). Quality processed reads obtained through Trimmomatic (Illumina/IonTorrent data) NanoFilt (ONT data) are used as input. A reference sequence must be selected for each project (select one from INSaFLU default reference database or upload one of your choice).  Uploaded “.fasta” files are annotated upon submission and automatically become available at the user-restricted reference database. For influenza, each project should ideally include viruses from the same type and sub-type/lineage (this typing data is automatically determined upon reads submission to INSaFLU).
 
 *Software version/settings*
 
 .. note::
+
+	**##REFERENCE ANNOTATION##**
+	
 	**Prokka** (https://github.com/tseemann/prokka) (version 1.12; date 15.01.2018)
    
 		--kingdom: defines the Annotation mode (Viruses)
-		
+	
+	
+	**##ILLUMINA /Ion Torrent data##**
+	
 	**Snippy** (https://github.com/tseemann/snippy) (version 3.2-dev - sligthly modified (details in https://github.com/INSaFLU/INSaFLU); date 15.01.2018)
 	
 		--R1 (and --R2): define the reads files used as input, i.e, quality processed reads (e.g., sample_1P.fastq.gz and sample_2P.fastq.gz) obtained after Trimmomatic analysis
 		
 		--ref: define the reference sequence selected by the users (.fasta or gbk format) 
 		
-		--mapqual: minimum mapping quality to accept in variant calling(--mapqual 20) 
+		--mapqual: minimum mapping quality to accept in variant calling(default: --mapqual 20) 
 		
-		--mincov: minimum coverage of variant site (--mincov 10)
+		--mincov: minimum coverage of variant site (default: --mincov 10)
 		
-		--minfrac: minimum proportion for variant evidence (--minfrac 0.51)
+		--minfrac: minimum proportion for variant evidence (default: --minfrac 0.51)
 		
+		
+	**## Oxford Nanopore Technologies (ONT) data ##**
+	
+	_Mapping:
+	
+	**Medaka** (https://nanoporetech.github.io/medaka/ (version 1.2.1)
+		
+		input: ONT quality processed reads obtained after NanoFilt analysis.
+		medaka consensus -m model (default: r941_min_high_g360)
+		medaka variant
+		
+	_VCF filtering:
+	
+		Mutations are filtered out based on the following user-defined criteria:
+			**Minimum depth of coverage  per site** (equivalent to --mincov in Illumina pipeline) (default: 30) 
+			**Minimum proportion  for variant evidence** (equivalent to --minfrac in Illumina pipeline) (default: 0.8)
+			
+	For each mutation, two COVERAGE values are provided in final table output: the depth of unambiguous reads spanning pos +-25 (as provided by medaka variant module) and depth per site as provided by samtools (depth -aa). Values are separated by “/”. 
+	
+	_Consensus generation and mutation annotation (i.e., impact at protein level):
+	
+	Consensus sequences are generated using bcftools (consensus -s sample.filtered.vcf.gz -f reference.fasta > sample.consensus.fasta) based on the vcf file containing the validated mutations. As for the Illumina pipeline, variant annotation is performed using snpEff 4.1l available with Snippy (see above).
+
+	
+	**MAPPING VISUALIZATION**
+					
 	**Integrative Genomics Viewer** (http://software.broadinstitute.org/software/igv/) (version 2.3.98; date 15.01.2018)
 	
 		inputs: reference file (.fasta); mapping file (.bam; .bai)
@@ -214,7 +270,7 @@ This module yields a deep analysis of the coverage for each per sample by provid
 	
 	This script substitutes positions with a low depth of coverage in a Multiple Sequence Alignment (MSA) with 'N'. The depth of coverage value below which the process masks positions is user-selected (see  “User-defined parameters”). It will not mask gaps/indels contained in the aligned sequences.
 	
-	-i: input FASTA file that contains a MAFFT nucleotide alignment enrolling the reference sequence (first sequence of the alignment) and Snippy-derived consensus sequence(s) to be masked.
+	-i: input FASTA file that contains a MAFFT nucleotide alignment enrolling the reference sequence (first sequence of the alignment) and consensus sequence(s) to be masked.
 	
 	-df: the coverage files (.depth) generated through Snippy
 	
@@ -313,10 +369,12 @@ INSaFLU allows user-defined configuration of key parameters for reads quality an
 
 Read quality control (QC)
 -------------------------
-Users can change the following **Trimmomatic** settings (see http://www.usadellab.org/cms/index.php?page=trimmomatic):
-
 **Please choose your settings before uploading new samples to your account.**
 
+
+**##ILLUMINA / Ion Torrent data##**
+
+Users can change the following **Trimmomatic** settings (see http://www.usadellab.org/cms/index.php?page=trimmomatic):
 
 **HEADCROP**: <length> Cut the specified number of bases from the start of the read. Range: [0:100]. If value equal to 0 this parameter is excluded. (default = 0)
 
@@ -334,9 +392,26 @@ Users can change the following **Trimmomatic** settings (see http://www.usadella
 
 NOTE: "Trimming occurs in the order which the parameters are listed"
 
+**## Oxford Nanopore Technologies (ONT) data ##**
 
-Mapping
--------------------------
+Users can change the following **NanoFilt** settings (see: https://github.com/wdecoster/nanofilt)
+
+**QUALITY**: Filter on a minimum average read quality score. Range: [5:30] (default: 10)
+
+**LENGTH**: Filter on a minimum read length. Range: [50:1000]. (default: 50)
+
+**HEADCROP**:  Trim n nucleotides from start of read. Range: [1:1000]. If value equal to 0 this parameter is excluded. (default: 70)
+
+**TAILCROP**: Trim n nucleotides from end of read. Range: [1:1000]. If value equal to 0 this parameter is excluded. (default: 70)
+
+**MAXLENGTH:** Set a maximum read length. Range: [100:50000]. If value equal to 0 this parameter is excluded. (default: 0)
+
+
+Mapping and Variant Calling
+----------------------------
+
+**##ILLUMINA /Ion Torrent data##**
+
 Users can change the following **Snippy** settings (see also https://github.com/tseemann/snippy):
 
 **--mapqual**: minimum mapping quality to accept in variant calling (default = 20)
@@ -344,6 +419,18 @@ Users can change the following **Snippy** settings (see also https://github.com/
 **--mincov**: minimum number of reads covering a site to be considered (default = 10)
 
 **--minfrac**: minimum proportion of reads which must differ from the reference, so that the variant is assumed in the consensus sequence (default = 0.51)
+
+
+**## Oxford Nanopore Technologies (ONT) data ##**
+
+Users can change the following settings:
+
+**Medaka model** (default: r941_min_high_g360) (see: https://nanoporetech.github.io/medaka/)
+
+**Minimum depth of coverage per site** (equivalent to --mincov in Illumina pipeline) (default: 30) 
+
+**Minimum proportion for variant evidence** (equivalent to --minfrac in Illumina pipeline) (default: 0.8)
+
 
 Consensus generation
 --------------------------------
