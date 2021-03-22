@@ -236,7 +236,8 @@ Examples:
 C. Navigate through **Mutation list** 
 ....................................................................
 
-Within this panel you can explore, filter and download the list of all validated mutations (SNPs and indels) assumed in the consensus sequences of all samples within the project. 
+Within this panel you can explore the list of all validated mutations (SNPs and indels) assumed in the consensus sequences of all samples within the project. It can filter by any item (e.g., sample, aa change, etc) and download the sub-table with the filtered rows.
+
 
 
 D. Navigate through **Nucleotide alignments by MSAViewer**
