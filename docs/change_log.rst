@@ -3,6 +3,42 @@ Change log
 
 This tab includes a list (chronologically ordered) of notable changes in INSaFLU.
 
+2021
+-------
+
+March 25, 2021
+..........................
+
+**MAJOR UPGRADE – INSaFLU now also handles Oxford Nanopore Technologies (ONT) data**
+
+Available both in INSaFLU free online (https://insaflu.insa.pt) and locally installable (https://github.com/INSaFLU/docker) versions.
+In this update, we added these new main features to INSaFLU: 
+
+- **an automate pipeline for ONT data analysis**, from raw reads to quality analysis, reference-based generation/curation of consensus sequences, mutation annotation, gene/protein/genome alignments, phylogenetic tree, metadata visualization… (details about the pipeline, including software version, default settings, etc, can be found in: https://insaflu.readthedocs.io/en/latest/data_analysis.html# ) 
+
+- **Samples generated from different technologies (Illumina/Ion Torrent / ONT) can be analysed within the same Project.**
+
+- For enhanced data navigation, **two new interactive and dynamic “expand-and-collapse” panels were added to the Projects: “Mutations list” (lists all validated mutations, i.e., those inserted in the consensus sequences, for all samples); “Coverage for all samples” (provides an additional interactive color-coded coverage report, summarizing the mean depth of coverage and horizontal coverage per locus for all samples within a project)**
+
+- As for the Illumina/IonTorrent data analysis, **INSaFLU allows users to configure key parameters for ONT reads quality analysis, mapping and consensus generation/curation**. Settings can be user-defined for the whole user account (tab “Settings”), for each project (after project creation) or for individual samples within a project (novel “Magic wand” icon) (more info in: https://insaflu.readthedocs.io/en/latest/data_analysis.html#user-defined-parameters) 
+
+- **Mutation annotation (i.e., impact at protein level) and amino acid alignments were improved** (for SARS-CoV-2 analysis, please use the reference sequences “SARS_CoV_2_Wuhan_Hu_1_MN908947” available at the default reference database).
+
+- A new “Magic wand” icon was added to the Samples menu. It allows re-running reads’s QC for samples that are not inserted in any project (and for which the original reads have not been deleted). This feature overcomes the previous need of uploading the original fastq files to re-run the quality analysis. 
+
+An updated summary of the main INSaFLU outputs is available here: https://insaflu.readthedocs.io/en/latest/output_visualization.html#
+
+:download:`INSaFLU_current_outputs_25_03_2021.xlsx <_static/INSaFLU_current_outputs_25_03_2021.xlsx>`
+
+Other minor changes include:
+
+- The csv/tsv file with the list of samples in a project (which compiles all samples' metadata and additional INSaFLU outputs) now also **summarizes the software settings and user-defined cut-offs applied for each sample.**
+
+- Analysis of minor variants (Illumina data only): besides the report of a “validated_minor_iSNVs.tab” table per sample/project (listing SNV displaying intra-sample variation at frequency between 1 and 50% - minor variants), INSafLU now also reports an additional minor variants table “minor_variants_inc_indels.tab” per sample, which includes minor “indels”
+
+- The “coverage.tsv” file was also improved.
+
+
 2020
 ----
 
