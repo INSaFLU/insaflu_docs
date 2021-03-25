@@ -12,11 +12,10 @@ March 25, 2021
 **MAJOR UPGRADE – INSaFLU now also handles Oxford Nanopore Technologies (ONT) data**
 
 Available both in INSaFLU free online (https://insaflu.insa.pt) and locally installable (https://github.com/INSaFLU/docker) versions.
+
 In this update, we added these new main features to INSaFLU: 
 
 - **an automate pipeline for ONT data analysis**, from raw reads to quality analysis, reference-based generation/curation of consensus sequences, mutation annotation, gene/protein/genome alignments, phylogenetic tree, metadata visualization… (details about the pipeline, including software version, default settings, etc, can be found in: https://insaflu.readthedocs.io/en/latest/data_analysis.html# ) 
-
-- **Samples generated from different technologies (Illumina/Ion Torrent / ONT) can be analysed within the same Project.**
 
 - For enhanced data navigation, **two new interactive and dynamic “expand-and-collapse” panels were added to the Projects: “Mutations list” (lists all validated mutations, i.e., those inserted in the consensus sequences, for all samples); “Coverage for all samples” (provides an additional interactive color-coded coverage report, summarizing the mean depth of coverage and horizontal coverage per locus for all samples within a project)**
 
@@ -26,11 +25,12 @@ In this update, we added these new main features to INSaFLU:
 
 - A new “Magic wand” icon was added to the Samples menu. It allows re-running reads’s QC for samples that are not inserted in any project (and for which the original reads have not been deleted). This feature overcomes the previous need of uploading the original fastq files to re-run the quality analysis. 
 
-An updated summary of the main INSaFLU outputs is available here: https://insaflu.readthedocs.io/en/latest/output_visualization.html#
-
+An updated summary of the main INSaFLU outputs is available here:
 :download:`INSaFLU_current_outputs_25_03_2021.xlsx <_static/INSaFLU_current_outputs_25_03_2021.xlsx>`
 
 Other minor changes include:
+
+- Samples generated from different technologies (Illumina/Ion Torrent/ONT) can be analysed within the same Project.
 
 - The csv/tsv file with the list of samples in a project (which compiles all samples' metadata and additional INSaFLU outputs) now also **summarizes the software settings and user-defined cut-offs applied for each sample.**
 
