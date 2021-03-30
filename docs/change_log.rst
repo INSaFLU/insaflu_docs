@@ -21,7 +21,7 @@ In this update, we added these new main features to INSaFLU:
 
 - As for the Illumina/IonTorrent data analysis, **INSaFLU allows users to configure key parameters for ONT reads quality analysis, mapping and consensus generation/curation**. Settings can be user-defined for the whole user account (tab “Settings”), for each project (after project creation) or for individual samples within a project (novel “Magic wand” icon) (more info in: https://insaflu.readthedocs.io/en/latest/data_analysis.html#user-defined-parameters) 
 
-- **Mutation annotation (i.e., impact at protein level) and amino acid alignments were improved** (for SARS-CoV-2 analysis, please use the reference sequences “SARS_CoV_2_Wuhan_Hu_1_MN908947” available at the default reference database).
+- **Mutation annotation (i.e., impact at protein level) and amino acid alignments were improved** (for SARS-CoV-2 analysis, please use the reference sequences “SARS_CoV_2_Wuhan_Hu_1_MN908947” available at the default reference database). NOTE: Protein alignments only include samples with < 10% of undefined amino acids (X).
 
 - A new “Magic wand” icon was added to the Samples menu. It allows re-running reads’s QC for samples that are not inserted in any project (and for which the original reads have not been deleted). This feature overcomes the previous need of uploading the original fastq files to re-run the quality analysis. 
 
