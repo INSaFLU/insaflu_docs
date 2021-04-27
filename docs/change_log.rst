@@ -6,6 +6,27 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2021
 -------
 
+April 27, 2021
+..........................
+
+**INSaFLU now automatically assigns SARS-CoV-2 Pango lineages (https://pangolin.cog-uk.io/)** using Pangolin (https://github.com/cov-lineages/pangolin), as described by Rambaut and colleagues (Nat Microbiol; 5:1403-1407).**
+
+This novel feature works as follows:
+
+- Everytime a new sample is added to a Project, the latest pangolin and pangoLEARN versions are automatically run for all samples within the Project.
+- Whenever a new Pangolin / Pangolearn version is released*, a button **"Update Pango lineage"** will be automatically made available at the bottom of “Projects” tab, so that users can re-assign all samples in the project using the latest software/database versions (*INSaFLU will check every day whether a novel pangolin/pangoLearn version is available);
+- Results (and software versions) are provided in the “Sample_list” and are automatically available for coloring tree nodes (and/or display colored metadata blocks next to the tree) according to the Pango lineage
+
+Other minor changes:
+
+- Trimmomatic version was upgraded, and ILLUMINACILP was made available for user-defined configuration;
+- Downsized samples will be flagged in the “Sample_list.tsv”.
+
+NOTE:  Users might need to do CTRL+F5 to activate this new feature.
+
+This upgrade is already available in both INSaFLU free online platform (https://insaflu.insa.pt) and locally instable version https://github.com/INSaFLU/docker. 
+
+
 March 25, 2021
 ..........................
 
