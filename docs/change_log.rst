@@ -9,7 +9,7 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 April 27, 2021
 ..........................
 
-**INSaFLU now automatically assigns SARS-CoV-2 Pango lineages (https://pangolin.cog-uk.io/)** using Pangolin (https://github.com/cov-lineages/pangolin), as described by Rambaut and colleagues (Nat Microbiol; 5:1403-1407).**
+**INSaFLU now automatically assigns SARS-CoV-2 Pango lineages (https://pangolin.cog-uk.io/)** using Pangolin (https://github.com/cov-lineages/pangolin), as described by Rambaut and colleagues (Nat Microbiol; 5:1403-1407).
 
 This novel feature works as follows:
 
