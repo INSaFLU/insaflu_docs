@@ -6,6 +6,20 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2021
 -------
 
+July 27, 2021
+..........................
+
+- INSaFLU online now provides **direct links for consensus sequences analysis using Nextclade (https://clades.nextstrain.org/)**. For SARS-CoV-2 projects, users just need to click in the "Nextclade" icon available next to the link for downloading individual or AllConsensus (by project) sequences. This option is not yet available in the locally instalable version (docker).
+
+- **INSaFLU now also performs influenza type and subtype/lineage identification, as well as Human Betacoronavirus (BetaCov) identification using Oxford Nanopore Technologies (ONT) read data**. Until this update, this rapid classification (which is automatically performed after reads upload) was only available for Illumina / Ion Torrent reads. 
+
+Other minor changes:
+
+- Sequences markers for Human BetaCoV classification were shortened to better accomodate the classification directly from ONT reads. 
+
+Details about the rationale behind this classification and outputs can be found in https://insaflu.readthedocs.io/en/latest/data_analysis.html#influenza-type-and-sub-type-identification-and-human-betacoronavirus-classification-as-of-march-2020 (see also the list of current genetic markers used for classification).
+
+
 April 27, 2021
 ..........................
 
