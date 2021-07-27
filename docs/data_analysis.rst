@@ -97,7 +97,7 @@ Influenza type and sub-type identification (and Human Betacoronavirus classifica
 
 *Description*
  
-This module uses quality processed reads obtained through Trimmomatic analysis and performs a draft de novo assembly using SPAdes. The assemblies are subsequently screened (using ABRIcate) against two INSaFLU in house sequence markers databases: 
+In this module, post-QC reads (ONT data) or draft assemblies derived from post-QC reads (Illumina / Ion Torrent data) are screened (using ABRIcate) against two INSaFLU in house sequence markers databases: 
 
 i) "influenza_typing", which drives the discrimination of the influenza types A and B, all currently defined influenza A subtypes (18 hemagglutinin subtypes and 11 neuraminidase sub-types) and the two influenza B lineages (Yamagata and Victoria).
 
@@ -105,7 +105,7 @@ ii) "influenza_assign_segments2contigs", which allows the automatic assignment o
 
 The generated outputs (i.e., draft assemblies, the identified type and subtype/lineage and a table linking contigs to segments/references) are automatically provided upon reads upload (i.e., no user intervention is needed). INSaFLU flags samples as "putative mixed infections" if more than one type, HA or NA subtype or lineage is detected. In addition, specific alerts are generated if an incomplete type/subtype is assigned. 
 
-**As of March 10, 2020, these two databases were upgraded for rapid classification and contigs assignment of Human Betacoronavirus (BetaCoV).** Details about the rationale behind this classification and outputs can be found here: :download:`INSaFLU_current_genetic_markers_v6_after_10_01_2020.xlsx <_static/INSaFLU_current_genetic_markers_v6_after_10_03_2020.xlsx>`
+**As of March 10, 2020, these two databases were upgraded for rapid classification and/or contigs assignment of Human Betacoronavirus (BetaCoV).** Details about the rationale behind this classification and outputs can be found here: :download:`INSaFLU_current_genetic_markers_v7_after_27_07_2021.xlsx <_static/INSaFLU_current_genetic_markers_v7_after_27_07_2021.xlsx>`
 
 Similarly to influenza classification, alerts are generated if, for instance, no BetaCoV virus is assigned or an incomplete human BetaCoV classification is obtained (for instance, due to the presence of a low number of human BetaCoV reads, etc)
 
@@ -136,9 +136,9 @@ Similarly to influenza classification, alerts are generated if, for instance, no
 
 		***As of March 10th, 2020**, samples can be classified as: 
 
-		- "BetaCoV” if the draft assembly contains an “M gene” with ≥70% identity and ≥60% coverage to one of the M gene sequences of the five representative Human BetaCoronavirus genomes in the database)
-
-		- "SARS_CoV_2”, “MERS_CoV”, “SARS_CoV”, “HCoV_HKU1” or “HCoV_OC43” if the draft assembly contains a “S gene” with ≥70% Identity and ≥60% coverage to one of the S gene sequences of the five representative Human BetaCoronavirus (the classification reflects the closest match among the five human BetaCoV listed above).
+		- "BetaCoV” if the draft assemblies (Illumina/Ion Torrent data) or post-QC reads (ONT data) contain an “M gene” with ≥70% identity and ≥60% coverage to one of the M (partial) gene marker sequences of the five representative Human BetaCoronavirus genomes in the database)
+		
+		- “SARS_CoV_2”, “MERS_CoV”, “SARS_CoV”, “HCoV_HKU1” or “HCoV_OC43” if the draft assemblies (Illumina/Ion Torrent data) or post-QC reads (ONT data) contain a “S gene” with ≥70% Identity and ≥60% coverage to one of the S (partial) gene marker sequences of the five representative Human BetaCoronavirus (the classification reflects the closest match among the five human BetaCoV listed above).
 
 				
 		# For segments/references assignment: 
@@ -149,15 +149,17 @@ Similarly to influenza classification, alerts are generated if, for instance, no
 		
 		--mincov: minimum DNA % coverage (--mincov 30)
 		
-		**As of March 10th, 2020,** contigs contigs are labeled with the closest match among the five human BetaCoV (see above) if they have ≥70% Identity and ≥30% coverage to one of the five BetaCoV full-genome sequences in the database.
+		**As of March 10th, 2020,** draft assemblies (Illumina/Ion Torrent data) or post-QC reads (ONT data) are labeled with the closest match among the five human BetaCoV (see above) if they have ≥70% Identity and ≥30% coverage to one of the five BetaCoV full-genome sequences (for assemblies) or partial S/M genes (for ONT reads) in the database.
 		
 		Important note: Since the "influeza_assign_segments2contigs" database is naturally not as exhaustive as other databases (such as, NCBI, Fludb or EpiFLU/GISAID), users may need to run the draft assemblies in these databases (or associated tools, such as BLAST) for some purposes (e.g., to detect/confirm reassortments or to infer the closest reference sequence of each segment / genome).
 		
 
 
-Latest list of genetic markers (version 6; 10.03.2020) can be downloaded here: :download:`INSaFLU_current_genetic_markers_v6_after_10_03_2020.xlsx <_static/INSaFLU_current_genetic_markers_v6_after_10_03_2020.xlsx>`
+Latest list of genetic markers (version 6; 10.03.2020) can be downloaded here: :download:`INSaFLU_current_genetic_markers_v7_after_27_07_2021.xlsx <_static/INSaFLU_current_genetic_markers_v6_after_10_03_2020.xlsx>`
 				
 Previous database versions can be downloaded here:
+
+version 6 (until 27.07.2021) :download:`INSaFLU_genetic_markers_v6_before_27_07_2021.xlsx <_static/INSaFLU_genetic_markers_v6_before_27_07_2021.xlsx>`
 
 version 5 (until 10.03.2020) :download:`INSaFLU_genetic_markers_v5_before_10_03_2020.xlsx <_static/INSaFLU_genetic_markers_v5_before_10_03_2020.xlsx>`
 
