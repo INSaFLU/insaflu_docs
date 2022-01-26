@@ -3,8 +3,46 @@ Change log
 
 This tab includes a list (chronologically ordered) of notable changes in INSaFLU.
 
+2022
+-------
+
+January 26, 2021
+..........................
+
+
+**Main changes:**
+
+**- Settings**:
+
+- This tab is now organized by **Sequencing technology** (ONT or Illumina/IonTorrent) and **Module** (e.g., Reads Quality Analysis and Improvement, Classification, Minor variant detection, etc)
+- It is now possible to **turn ON/OFF** specific modules.
+ Note: Users should turn ON/OFF specific modules and select the software settings before uploading new samples. Still, changes can always be done for specific samples afterwards
+ 
+**- Masking consensus**
+
+- Users can now **mask (i.e., put NNs) specific regions (or sites) of the consensus sequences for all (or individual) samples within a given Project** (check all the possibilities in the updated Project Settings button). This new feature is especially useful for masking the start/end of the sequences or known error-prone nucleotide sites. For ONT data, medaka-derived mutations with frequencies below the user-defined “minfrac” (i.e. Minimum proportion for variant evidence) are now automatically masked with an “N”. 
+ Note: All user-defined masked regions are reported in the new Sample_list_settings.tsv table; As before, “Ns” are automatically introduced in low coverage regions at a user-selected coverage cut-off
+
+**Minor changes:**
+
+- Available hyperlinks to Nextclade (https://clades.nextstrain.org/) were updated to automatically link to specific SARS-CoV-2 or influenza (A/H3N2, A/H1N1,B/Yam or B/Vic) analysis. 
+- Available options to **add new Samples (metadata and reads)** were now collapsed in a single new Button **“Add Sample”** in Samples menu.
+- Tables (.tsv) listing all Samples (and respective metadata and QC statistics) and Projects in the user account can be downloaded using the **new “Download” buttons** added to the respective tabs.
+- The former “Sample_list.tsv” provided for each Project is now divided in two tables: **“Sample_list.tsv”** (including metadata, Classification, etc) and  **“ Sample_list_settings.tsv” (including the software settings and user-defined cut-offs applied for each sample.). These and other Project tables can now be download using the **new “Download” button**
+- A few sequences of WHO recommended vaccine influenza for the 2021-22 season were made available in the Reference menu.
+
+This upgrade is already available in both INSaFLU free online platform (https://insaflu.insa.pt) and locally instable version https://github.com/INSaFLU/docker.
+To update your local docker installation, you need to XXXX
+
+
+
 2021
 -------
+
+December 11, 2021
+..........................
+
+**Updated Classification**: INSaFLU now detects Omicron-like Spike sequences just after reads upload (the classification is provided as “SCoV2_potential_Omicron” (this update was performed on 11 Dec 2021; more details in  https://insaflu.readthedocs.io/en/latest/data_analysis.html#influenza-type-and-sub-type-identification-and-human-betacoronavirus-classification-as-of-march-2020)
 
 July 27, 2021
 ..........................
