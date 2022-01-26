@@ -105,7 +105,7 @@ ii) "influenza_assign_segments2contigs", which allows the automatic assignment o
 
 The generated outputs (i.e., draft assemblies, the identified type and subtype/lineage and a table linking contigs to segments/references) are automatically provided upon reads upload (i.e., no user intervention is needed). INSaFLU flags samples as "putative mixed infections" if more than one type, HA or NA subtype or lineage is detected. In addition, specific alerts are generated if an incomplete type/subtype is assigned. 
 
-**As of March 10, 2020, these two databases were upgraded for rapid classification and/or contigs assignment of Human Betacoronavirus (BetaCoV).** Details about the rationale behind this classification and outputs can be found here: :download:`INSaFLU_current_genetic_markers_v7_after_27_07_2021.xlsx <_static/INSaFLU_current_genetic_markers_v7_after_27_07_2021.xlsx>`
+**As of March 10, 2020, these two databases were upgraded for rapid classification and/or contigs assignment of Human Betacoronavirus (BetaCoV).** Details about the rationale behind this classification and outputs can be found here: :download:`INSaFLU_current_genetic_markers_v8_after_11_12_2021.xlsx <_static/INSaFLU_current_genetic_markers_v8_after_11_12_2021.xlsx>`
 
 Similarly to influenza classification, alerts are generated if, for instance, no BetaCoV virus is assigned or an incomplete human BetaCoV classification is obtained (for instance, due to the presence of a low number of human BetaCoV reads, etc)
 
@@ -138,7 +138,7 @@ Similarly to influenza classification, alerts are generated if, for instance, no
 
 		- "BetaCoV” if the draft assemblies (Illumina/Ion Torrent data) or post-QC reads (ONT data) contain an “M gene” with ≥70% identity and ≥60% coverage to one of the M (partial) gene marker sequences of the five representative Human BetaCoronavirus genomes in the database)
 		
-		- “SARS_CoV_2”, “MERS_CoV”, “SARS_CoV”, “HCoV_HKU1” or “HCoV_OC43” if the draft assemblies (Illumina/Ion Torrent data) or post-QC reads (ONT data) contain a “S gene” with ≥70% Identity and ≥60% coverage to one of the S (partial) gene marker sequences of the five representative Human BetaCoronavirus (the classification reflects the closest match among the five human BetaCoV listed above).
+		- “SARS_CoV_2”, "SCoV2_potential_Omicron", “MERS_CoV”, “SARS_CoV”, “HCoV_HKU1” or “HCoV_OC43” if the draft assemblies (Illumina/Ion Torrent data) or post-QC reads (ONT data) contain a “S gene” with ≥70% Identity and ≥60% coverage to one of the S (partial) gene marker sequences of the five representative Human BetaCoronavirus (the classification reflects the closest match among the five human BetaCoV listed above).
 
 				
 		# For segments/references assignment: 
@@ -155,9 +155,11 @@ Similarly to influenza classification, alerts are generated if, for instance, no
 		
 
 
-Latest list of genetic markers (version 7; 27.07.2021) can be downloaded here: :download:`INSaFLU_current_genetic_markers_v7_after_27_07_2021.xlsx <_static/INSaFLU_current_genetic_markers_v7_after_27_07_2021.xlsx>`
+Latest list of genetic markers (version 8; 11.12.2021) can be downloaded here: :download:`INSaFLU_current_genetic_markers_v8_after_11_12_2021.xlsx <_static/INSaFLU_current_genetic_markers_v8_after_11_02_2021.xlsx>`
 				
 Previous database versions can be downloaded here:
+
+version 7 (until 11.12.2021) :download:`INSaFLU_genetic_markers_v6_before_27_07_2021.xlsx <_static/INSaFLU_genetic_markers_v7_before_11_12_2021.xlsx>`
 
 version 6 (until 27.07.2021) :download:`INSaFLU_genetic_markers_v6_before_27_07_2021.xlsx <_static/INSaFLU_genetic_markers_v6_before_27_07_2021.xlsx>`
 
@@ -385,10 +387,12 @@ This module uses mapping data for the set of samples from each user-restricted I
 User-defined parameters
 +++++++++++++++++++++++++
 
-INSaFLU allows user-defined configuration of key parameters for reads quality analysis and mapping. Settings can be user-defined for the whole user account (tab “Settings”), for each project (just after project creation) or for individual samples within a project (click in the "Magic wand" icon).
+INSaFLU allows turning ON/OFF specific modules and user-defined configuration of key parameters for reads quality analysis and mapping. Settings can be user-defined for the whole user account (tab “Settings”), for each project (just after project creation) or for individual samples within a project (click in the "Magic wand" icon).
 
-Read quality control (QC)
--------------------------
+.. image:: _static/settings_modules.png
+
+Read quality analysis and improvement control (QC)
+--------------------------------------------------
 **Please choose your settings before uploading new samples to your account.**
 
 
@@ -429,8 +433,8 @@ Users can change the following **NanoFilt** settings (see: https://github.com/wd
 **MAXLENGTH:** Set a maximum read length. Range: [100:50000]. If value equal to 0 this parameter is excluded. (default: 0)
 
 
-Mapping and Variant Calling
-----------------------------
+Mapping, Variant Calling
+-------------------------
 
 **##ILLUMINA / Ion Torrent data##**
 
@@ -451,14 +455,23 @@ Users can change the following settings:
 
 **Minimum depth of coverage per site** (equivalent to --mincov in Illumina pipeline) (default: 30) 
 
-**Minimum proportion for variant evidence** (equivalent to --minfrac in Illumina pipeline) (default: 0.8)
+**Minimum proportion for variant evidence** (equivalent to --minfrac in Illumina pipeline) (default: 0.8). Note: medaka-derived mutations with frequencies below the user-defined “minfrac” will be masked with an “N”. 
 
 
-Consensus generation
---------------------------------
-Users can select the **Minimum percentage of horizontal coverage to generate consensus**.
+Consensus generation (horizontal coverage cut-off) and Masking
+--------------------------------------------------------------
+Users can select the **Minimum percentage of horizontal coverage to generate consensus**. This threshold indicates the **Minimum percentage of locus horizontal coverage** with depth of coverage equal or above –mincov (see Mapping settings) to generate a consensus sequence for a given locus. Range: [50:100] (default = 70)
 
-This threshold indicates the **Minimum percentage of locus horizontal coverage** with depth of coverage equal or above –mincov (see Mapping settings) to generate a consensus sequence for a given locus. Range: [50:100] (default = 70)
+In Projects setting, users can also **mask (i.e., put Ns) specific regions (or sites)** of the consensus sequences for all (or individual) samples within a given Project. This feature is especially useful for masking the start/end of the sequences or known error-prone nucleotide sites. 
 
+
+.. image:: _static/masking_consensus_projects.png
+
+**Masking summary:**
+
+Undefined nucleotides (NNN) are automatically placed in: 
+i) low coverage regions (i.e., regions with coverage below --mincov); 
+ii) regions (or sites) selected to be masked by the user (in Projects settings); 
+iii) for ONT data, medaka-derived mutations with frequencies below the user-defined “minfrac” (i.e. Minimum proportion for variant evidence).
 
 
