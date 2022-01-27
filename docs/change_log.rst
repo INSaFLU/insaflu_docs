@@ -32,8 +32,13 @@ January 26, 2021
 - A few sequences of WHO recommended vaccine influenza for the 2021-22 season were made available in the Reference menu.
 
 This upgrade is already available in both INSaFLU free online platform (https://insaflu.insa.pt) and locally instable version https://github.com/INSaFLU/docker.
-To update your local docker installation, please follow the instructions in https://github.com/INSaFLU/docker
 
+To update the local docker installation, please follow the instructions in https://github.com/INSaFLU/docker
+
+	Note: After this update (i.e., INSaFLU versions **equal or higher 1.5.0**) users will be able to update their local installation to the latest version with a single command:
+	```
+	$ docker exec -it insaflu-server update-insaflu
+	```
 
 
 2021
