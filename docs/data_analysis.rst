@@ -7,7 +7,7 @@ The current software settings, which were chosen upon intensive testing, are des
 
 The bioinformatics pipeline developed and implemented in the INSaFLU web platform currently consists of 6 core steps (see WorkFlow) yielding multiple graphical, and sequence outputs (see *Output visualization and download* menu for details)
 
-.. image:: _static/workflow.png
+.. image:: _static/workflow_update.png
 
 INSaFLU bioinformatics pipeline workflow
 
