@@ -161,7 +161,7 @@ Latest list of genetic markers (version 8; 11.12.2021) can be downloaded here:
 				
 Previous database versions can be downloaded here:
 
-version 7 (until 11.12.2021) :download:`INSaFLU_genetic_markers_v7_before_11_02_2022.xlsx <_static/INSaFLU_genetic_markers_v7_before_11_12_2021.xlsx>`
+version 7 (until 11.12.2021) :download:`INSaFLU_genetic_markers_v7_before_11_12_2021.xlsx <_static/INSaFLU_genetic_markers_v7_before_11_12_2021.xlsx>`
 
 version 6 (until 27.07.2021) :download:`INSaFLU_genetic_markers_v6_before_27_07_2021.xlsx <_static/INSaFLU_genetic_markers_v6_before_27_07_2021.xlsx>`
 
