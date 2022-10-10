@@ -41,7 +41,7 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 	
 		input: single- or paired-end reads (fastq.gz format) (e.g., sample_L001_R1_001.fastq.gz and sample_L001_R2_001.fastq.gz for Illumina paired-end reads)
 	
-		ILLUMINACLIP: To clip the Illumina adapters from the input file using the adapter sequences. ILLUMINACLIP:<ADAPTER_FILE>:3:30:10:6:true
+		ILLUMINACLIP: To clip adapters from the input file using user-specified adapter sequences. ILLUMINACLIP:<ADAPTER_FILE>:3:30:10:6:true
 		
 		HEADCROP: Cut the specified number of bases from the start of the read. Range: [0:100]. If value equal to 0 this parameter is excluded.
 		
@@ -82,6 +82,19 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 		input: ONT reads (fastq.gz format) pre- and post- quality improvement with NanoFilt
 		
 		Files between 50 - 300 MB are downsized to ~50 MB before analysis by randomly sampling reads using fastq-sample from fastq-tools package https://github.com/dcjones/fastq-tools (developed by Daniel C. Jones dcjones@cs.washington.edu)
+
+
+.. note::
+
+	**## ILLUMINA data only ##**
+	
+		***As of October 10th, 2022**, users can use trimmomatic to perform trimming of primer sequences of several predefined Primer pool sets:
+		
+			-- [SARS-CoV-2 Primal Scheme V3](https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V3/nCoV-2019.tsv)
+			-- [SARS-CoV-2 Primal Scheme V4.1](https://github.com/artic-network/artic-ncov2019/tree/master/primer_schemes/nCoV-2019/V4.1)
+			-- [Monkeypox Primal Scheme from Welkers, Jonges and van den Ouden](https://www.protocols.io/view/monkeypox-virus-whole-genome-sequencing-using-comb-n2bvj6155lk5/v1)
+			-- [Monkeypox Primal Scheme from Chen et al.](https://www.protocols.io/view/monkeypox-virus-multiplexed-pcr-amplicon-sequencin-5qpvob1nbl4o/v2)
+			
 
 
 .. important::
