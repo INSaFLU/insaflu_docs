@@ -90,15 +90,15 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 	
 		***As of October 10th, 2022**, users can use trimmomatic to perform trimming of primer sequences of several predefined Primer pool sets:
 		
-			-- [SARS-CoV-2 Primal Scheme V3](https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V3/nCoV-2019.tsv)
+			-- SARS-CoV-2 Primal Scheme V3 (https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V3/nCoV-2019.tsv)
 			
-			-- [SARS-CoV-2 Primal Scheme V4.1](https://github.com/artic-network/artic-ncov2019/tree/master/primer_schemes/nCoV-2019/V4.1)
+			-- SARS-CoV-2 Primal Scheme V4.1 (https://github.com/artic-network/artic-ncov2019/tree/master/primer_schemes/nCoV-2019/V4.1)
 			
-			-- [Monkeypox Primal Scheme from Welkers, Jonges and van den Ouden](https://www.protocols.io/view/monkeypox-virus-whole-genome-sequencing-using-comb-n2bvj6155lk5/v1)
+			-- Monkeypox Primal Scheme from Welkers, Jonges and van den Ouden (https://www.protocols.io/view/monkeypox-virus-whole-genome-sequencing-using-comb-n2bvj6155lk5/v1)
 			
-			-- [Monkeypox Primal Scheme from Chen et al.](https://www.protocols.io/view/monkeypox-virus-multiplexed-pcr-amplicon-sequencin-5qpvob1nbl4o/v2)
+			-- Monkeypox Primal Scheme from Chen et al. (https://www.protocols.io/view/monkeypox-virus-multiplexed-pcr-amplicon-sequencin-5qpvob1nbl4o/v2)
 			
-
+		Please contact us if you want to add new Primer pools to the online tool
 
 .. important::
 	INSaFLU allows users to configure key parameters for reads quality analysis in the tab **“Settings”**. 
