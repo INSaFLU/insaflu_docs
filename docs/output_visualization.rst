@@ -304,7 +304,7 @@ You may inspect this plot to uncover infections with influenza viruses presentin
 
 
 
-F. Explore the **Coverage for all samples** panel
+G. Explore the **Coverage for all samples** panel
 ...........................................................................................................
 
 This panel provides an additional interactive color-coded coverage report, summarizing the mean depth of coverage and horizontal coverage per locus for all samples within a project.
