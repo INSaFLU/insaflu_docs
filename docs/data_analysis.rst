@@ -429,6 +429,56 @@ Description: Database of Spike amino acid mutations adapted from the COG-UK Anti
 
 Source: https://sars2.cvr.gla.ac.uk/cog-uk/
 
+Nextstrain Datasets
+--------------------------------------
+
+*Description*
+
+This module allows the creation of datasets for further in-depth phylogenetic analysis using Nextstrain. This provides an advanced vizualization and exploration of phylogenetic and genomic data, allowing the integration of geographic and temporal data and further user-provided metadata.
+
+Currently, INSaFLU allows the creation of Datasets using virus-specific Nextstrain builds (seasonal Influenza, SARS-CoV-2 and Monkeypox) as well as a "generic" build that can be used for any pathogen.
+
+*Builds*
+
+**Influenza**
+
+This build is a simplified version of the Influenza Nextstrain build available at https://github.com/nextstrain/seasonal-flu
+
+It is available using the following reference genomes:
+
+- H1N1PDM: A/California/07/2009(H1N1) (https://www.ncbi.nlm.nih.gov/nuccore/CY121680.1/)
+- H3N2: A/Beijing/32/1992 (https://www.ncbi.nlm.nih.gov/nuccore/U26830.1/)
+- VIC: Influenza B virus (B/Hong Kong/02/1993) (https://www.ncbi.nlm.nih.gov/nuccore/CY018813.1/)
+- YAM: Influenza B virus (B/Singapore/11/1994) (https://www.ncbi.nlm.nih.gov/nuccore/CY019707.1/)
+
+**SARS-CoV-2**
+
+This build is a simplified version of the SARS-CoV-2 Nextstrain build available at https://github.com/nextstrain/ncov
+
+It is available using the following reference genome:
+
+- Wuhan-Hu-1/2019 (https://www.ncbi.nlm.nih.gov/nuccore/MN908947)
+
+
+**Monkeypox virus**
+
+This build is a simplified version of the Monkeypox virus Nextstrain build available at https://github.com/nextstrain/monkeypox
+
+It is available using the following reference genome:
+
+- MPXV-M5312_HM12_Rivers (https://www.ncbi.nlm.nih.gov/nuccore/NC_063383)
+
+
+**Generic**
+
+This build is a simplified version of the Nextstrain build available at https://github.com/nextstrain/zika-tutorial
+
+This generic build uses as reference sequence (as tree root and for mutation annotation) one of the reference sequences of the projects included in the dataset.
+
+Currently, the generic build does not generate a Time-Resolved Tree (unlike the virus-specific builds).
+   
+  
+   
 
 User-defined parameters
 +++++++++++++++++++++++++
