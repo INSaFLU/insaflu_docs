@@ -329,9 +329,25 @@ NOTE: These novel color-code criteria (since 30 Oct 2020 update; see "Change log
 By clicking on each one of the color-coded rectangle, you can explore locus-specific plots of the depth of coverage. 
 
 
+H. Explore the **Algn2pheno report** panel and results
+...........................................................................................................
+
+Within this panel you can explore the results of the Algn2pheno module that screens mutations of interest in the Spike amino acid sequences of samples in projects that have a SARS-CoV-2 reference sequence.
+
+Algn2pheno uses two databases for screening: Pokay database and COG-UK Antigenic Mutations database. By default, the Algn2pheno report panel shows the screening results (corresponding to the output file "_final_report.tsv" described below) obtained using the COG-UK Antigenic Mutations database.
+
+This interactive table can be filtered by any item (e.g., sample, aa change, etc.) and the filtered rows can be downloaded as a sub-table.
+
+By clicking on the "Download" button in the Project results page, it is possible to download the full set of Algn2pheno outputs:
 
 
+- **_final_report.tsv**: provides the list of samples analysed, their repertoire of "Flagged mutations" (i.e., database mutations that were detected in the alignment), the "phenotypes" that are supported by those mutations of interest and the list of "All mutations" detected for each sequence. This report is provided for the two default databases used (Pokay and COG-UK Antigenic Mutations).
 
+
+- **_flagged_mutation_report.tsv**: "Flagged mutation" binary matrix for all sequences and the "associated" phenotypes. This report is provided for the two default databases used (Pokay and COG-UK Antigenic Mutations).
+
+
+- **algn2pheno.log**: alg2pheno log file with tool version and useful links, description of databases used and respective sources, as well as description of outputs.
 
 
 
