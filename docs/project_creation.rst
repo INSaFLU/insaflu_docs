@@ -11,8 +11,8 @@ INSaFLU allows running:
 
 
 
-**Project** - Creation and scale-up
-+++++++++++++++++++++++++++++++++++++
+**Project** - How to create and scale-up
+++++++++++++++++++++++++++++++++++++++++++
 
 **Projects** - From reads to reference-based generation of consensus sequences and mutations annotation, followed by gene- and genome-based alignments, amino acid alignments, Pango classification, NextClade linkage, etc.
 
@@ -88,9 +88,8 @@ You may want to remove some samples from your project (e.g., for exclusively kee
 .. image:: _static/create_project_5_remove_samples.png
 
  
- 
-**Datasets** - Creation and scale-up
-++++++++++++++++++++++++++++++++++++++
+**Datasets** - How to create and run Nextstrain datasets
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 **Datasets** - From consensus sequences to advanced Nextstrain phylogenetic and genomic analysis, coupled with geographic and temporal data visualization and exploration of sequence metadata.
 
