@@ -89,7 +89,7 @@ You may want to remove some samples from your project (e.g., for exclusively kee
 
  
  
- **Datasets** - Creation and scale-up
+**Datasets** - Creation and scale-up
 ++++++++++++++++++++++++++++++++++++++
 
 **Datasets** - From consensus sequences to advanced Nextstrain phylogenetic and genomic analysis, coupled with geographic and temporal data visualization and exploration of sequence metadata.
