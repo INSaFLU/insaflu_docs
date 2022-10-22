@@ -473,7 +473,7 @@ The reference genome used for site (nucleotide  / amino acid) numbering and geno
 
 **Generic**
 
-This build is a simplified version of the Nextstrain build available at https://github.com/nextstrain/zika-tutorial
+This build is a simplified version of the Nextstrain build available at https://github.com/nextstrain/zika
 
 This generic build uses as reference sequence (as tree root and for mutation annotation) one of the reference sequences of the projects included in the Nextstrain dataset.
 
