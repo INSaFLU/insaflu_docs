@@ -174,16 +174,11 @@ You can add samples to the Dataset from different sources:
 
 - **Projects** - user-selected consensus sequences generated within INSaFLU projects
 
-- **External sequences** - to upload external sequences, click in
+- **External sequences** - to upload external sequences, click in "Add your onw consensus", followed by "Upload new consensus". You can upload FASTA or MULTI-FASTA files. Please make sure that the upload sequences match the respective build (e.g., genome sequences for SARS-CoV-2 Nextstrain build or HA sequences for influenza Nextstrain builds).
 
 
 5. Scale-up your **dataset**. 
 .............................
-
-You may add more samples to your **Project** project at any time.
-
-.. image:: _static/create_project_4_scale_up.png
-
 
 6. Remove samples from your *Datasets*. 
 ........................................
