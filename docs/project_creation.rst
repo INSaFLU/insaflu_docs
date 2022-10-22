@@ -179,10 +179,12 @@ You can add samples to the Dataset from different sources:
 5. Scale-up your **dataset**. 
 .............................
 
+You may add more samples to your Dataset at any time.
+
 6. Remove samples from your *Datasets*. 
 ........................................
 
-You may remove some samples from your Dataset
+You may remove some samples from your Dataset.
   
 
 
