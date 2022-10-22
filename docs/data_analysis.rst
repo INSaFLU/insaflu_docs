@@ -482,7 +482,9 @@ Currently, the generic build does not generate a Time-Resolved Tree (unlike the 
 
 .. important::
 	**To take advantage of temporal and geographical features of Nextstrain**, please make sure you provide:
+	
 	- **"collection date"** for all samples added to Nextstrain datasets. If no collection date is provided, INSaFLU will automatically insert the date of the analysis as the "collection date", which might (considerably) bias the time-scale trees generated for influenza, SARS-CoV-2 and Monkeypox.
+	
 	- **"region","country","division" and/or "location"** columns in the metadata.
 
 	To add/update the metadata of samples previously uploaded to INSaFLU, please follow these instructions: https://insaflu.readthedocs.io/en/latest/uploading_data.html#updating-sample-metadata
