@@ -434,17 +434,19 @@ Nextstrain Datasets
 
 *Description*
 
-This module allows the creation of datasets for further in-depth phylogenetic analysis using Nextstrain. This provides an advanced vizualization and exploration of phylogenetic and genomic data, allowing the integration of geographic and temporal data and further user-provided metadata.
+This module allows the creation of datasets for further in-depth phylogenetic analysis using Nextstrain (https://docs.nextstrain.org/en/latest/index.html). This provides an advanced vizualization and exploration of phylogenetic and genomic data, allowing the integration of geographic and temporal data and further user-provided metadata.
 
 Currently, INSaFLU allows the creation of Datasets using virus-specific Nextstrain builds (seasonal Influenza, SARS-CoV-2 and Monkeypox) as well as a "generic" build that can be used for any pathogen.
+
+More details here: https://github.com/INSaFLU/nextstrain_builds
 
 *Builds*
 
 **Influenza**
 
-This build is a simplified version of the Influenza Nextstrain build available at https://github.com/nextstrain/seasonal-flu
+INSaFLU allows running four Nexstrain builds for the seasonal influenza (A/H3N2, A/H1N1/, B/Victoria and B/Yamagata), which are simplified versions of the Influenza Nextstrain builds available at https://github.com/nextstrain/seasonal-flu
 
-It is available using the following reference genomes:
+The reference genomes used for site (nucleotide  / amino acid) numbering and genome structure in the output JSON files are:
 
 - H1N1PDM: A/California/07/2009(H1N1) (https://www.ncbi.nlm.nih.gov/nuccore/CY121680.1/)
 - H3N2: A/Beijing/32/1992 (https://www.ncbi.nlm.nih.gov/nuccore/U26830.1/)
@@ -455,7 +457,7 @@ It is available using the following reference genomes:
 
 This build is a simplified version of the SARS-CoV-2 Nextstrain build available at https://github.com/nextstrain/ncov
 
-It is available using the following reference genome:
+The reference genome used for site (nucleotide  / amino acid) numbering and genome structure in the output JSON files is:
 
 - Wuhan-Hu-1/2019 (https://www.ncbi.nlm.nih.gov/nuccore/MN908947)
 
@@ -464,7 +466,7 @@ It is available using the following reference genome:
 
 This build is a simplified version of the Monkeypox virus Nextstrain build available at https://github.com/nextstrain/monkeypox
 
-It is available using the following reference genome:
+The reference genome used for site (nucleotide  / amino acid) numbering and genome structure in the output JSON files is:
 
 - MPXV-M5312_HM12_Rivers (https://www.ncbi.nlm.nih.gov/nuccore/NC_063383)
 
@@ -473,11 +475,18 @@ It is available using the following reference genome:
 
 This build is a simplified version of the Nextstrain build available at https://github.com/nextstrain/zika-tutorial
 
-This generic build uses as reference sequence (as tree root and for mutation annotation) one of the reference sequences of the projects included in the dataset.
+This generic build uses as reference sequence (as tree root and for mutation annotation) one of the reference sequences of the projects included in the Nextstrain dataset.
 
 Currently, the generic build does not generate a Time-Resolved Tree (unlike the virus-specific builds).
-   
-  
+
+
+.. important::
+	**To take advantage of temporal and geographical features of Nextstrain**, please make sure you provide:
+	- **"collection date"** for all samples added to Nextstrain datasets. If no collection date is provided, INSaFLU will automatically insert the date of the analysis as the "collection date", which might (considerably) bias the time-scale trees generated for influenza, SARS-CoV-2 and Monkeypox.
+	- **"region","country","division" and/or "location"** columns in the metadata.
+
+	To add/update the metadata of samples previously uploaded to INSaFLU, please follow these instructions: https://insaflu.readthedocs.io/en/latest/uploading_data.html#updating-sample-metadata
+
    
 
 User-defined parameters
