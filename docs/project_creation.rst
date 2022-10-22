@@ -11,8 +11,8 @@ INSaFLU allows running:
 
 
 
-**Project** - How to create and scale-up
-++++++++++++++++++++++++++++++++++++++++++
+**Project** - How to create and scale-up a INSaFLU project
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 **Projects** - From reads to reference-based generation of consensus sequences and mutations annotation, followed by gene- and genome-based alignments, amino acid alignments, Pango classification, NextClade linkage, etc.
 
@@ -164,7 +164,7 @@ Currently, the generic build does not generate a Time-Resolved Tree (unlike the 
 
 
 
-4. Add the *samples* to be included in the *Dataset*
+4. Add the samples to be included in the *Dataset*
 ........................................................
 
 You can add samples to the Dataset from different sources:
@@ -176,7 +176,7 @@ You can add samples to the Dataset from different sources:
 - **External sequences** - to upload external sequences, click in "Add your onw consensus", followed by "Upload new consensus". You can upload FASTA or MULTI-FASTA files. Please make sure that the upload sequences match the respective build (e.g., genome sequences for SARS-CoV-2 Nextstrain build or HA sequences for influenza Nextstrain builds).
 
 
-5. Scale-up your **dataset**. 
+5. Scale-up your *Dataset*. 
 .............................
 
 You may add more samples to your Dataset at any time.
