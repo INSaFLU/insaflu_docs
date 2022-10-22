@@ -6,7 +6,7 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2022
 -------
 
-January 26, 2021
+January 26, 2022
 ..........................
 
 
