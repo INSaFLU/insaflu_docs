@@ -380,10 +380,9 @@ The **Download** button provides:
 
 .. note::
  - To visualize the *Dataset* outputs, **download the JSON files and drag-and drop the files in https://auspice.us/.**
-
-- You can also **drag-and drop the nextstrain metadata file (Nextstrain_matadata.tsv) in auspice.us** to update the displayed metadata. The downloaded metadata file can be enriched with additional information to have an enhanced visualization and exploration of phylogeographic and temporal data. With https://auspice.us/, your datasets are visualised client-side in the browser -- no data is transmitted, and no tracking cookies are used. 
-
-- When more samples are added to the Dataset, the metadata file and JSON files are automatically re-build and cumulatively updated.
+ 
+ - You can also **drag-and drop the nextstrain metadata file (Nextstrain_matadata.tsv) in auspice.us** to update the displayed metadata. The downloaded metadata file can be enriched with additional information to have an enhanced visualization and exploration of phylogeographic and temporal data. With https://auspice.us/, your datasets are visualised client-side in the browser -- no data is transmitted, and no tracking cookies are used.
+ - When more samples are added to the Dataset, the metadata file and JSON files are automatically re-build and cumulatively updated.
 
 
 .. important::
@@ -434,16 +433,6 @@ Within this panel, you can explore the Nextstrain nucleotide alignment used to d
    Alignments are only built when datasets have more than one sample.
 
 .. image:: _static/projects_nucleotide_alignments.png
-
-.. warning::
-   
-   - Each locus-specific alignment exclusively enrolls samples color-coded as GREEN or YELLOW for the respective locus in the coverage interactive report (see meaning above).   
-   
-   - The genome-based nucleotide alignment ("All") exclusively enrolls samples having all loci color-coded as GREEN or YELLOW in the coverage interactive report.
-
-
-
-
 
 
 
