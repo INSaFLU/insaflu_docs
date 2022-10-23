@@ -351,6 +351,96 @@ By clicking on the "Download" button in the Project results page, it is possible
 
 
 
+Navigate through Nextstrain *Datasets"
+++++++++++++++++++++++++++++++++++++++++
+
+The *Datasets* tab lists all your Nextstrain Datasets, organized by the available builds (more info here: https://insaflu.readthedocs.io/en/latest/data_analysis.html#nextstrain-datasets)
+
+Click in **Results"** to explore outputs of a given Dataset.
+
+The *Dataset* outputs are available through the **Download** button and dynamic **'expand-and-collapse' panels**:
+
+
+A. Explore the main Nextstrain output (JSON file) using auspice.us
+..................................................................................
+
+The **Download" button provides:
+
+- **auspice.json** (zipped): the JSON files within this compressed file are the **main outputs** of the *Datasets* module, compiling the results of the Nextstrain integrative phylogenetic, temporal and geographic analyses.
+
+- **Dataset list** (csv/tsv format): this file compiles all metadata of the sequences included in the Dataset (included their source: References, Projects or External sequences) as well as additional data provided by INSaFLU ("type and subtype/lineage" and "putative mixed infection" data)
+
+- **Nextstrain metadata** (tsv format): same metadata file as the "Dataset list", but with columns/headers compatible with the Nextstrain build (and the output JSON files).
+
+- **Sequences** (AllConsensus.fasta): comiles all sequences included in the *Dataset* 
+
+
+.. note::
+
+- To visualize the *Dataset* outputs, **download the JSON files and drag-and drop the files in https://auspice.us/.** You can also upload the nextstrain metadata file (Nextstrain_matadata.tsv) in auspice.us to update the displayed metadata.
+
+- You can enrich your metadata file with additional information to have an enhanced visualization and exploration of phylogeographic and temporal data. With https://auspice.us/, your datasets are visualised client-side in the browser -- no data is transmitted, and no tracking cookies are used. 
+
+- When more samples are added to the Dataset, the metadata file and JSON files are automatically re-build and cumulatively updated.
+
+
+.. important::
+	**To take advantage of temporal and geographical features of Nextstrain**, please make sure you provide:
+	
+	- **"collection date"** for all samples added to Nextstrain datasets. If no collection date is provided, INSaFLU will automatically insert the date of the analysis as the "collection date", which might (considerably) bias (or even break) the time-scale trees generated for influenza, SARS-CoV-2 and Monkeypox.
+	
+	- **"region", "country", "division" and/or "location"** columns in the metadata. These values will be screened against a vast database of "latitude and longitude" coordinates (https://github.com/INSaFLU/nextstrain_builds/blob/main/generic/config/lat_longs.tsv) to geographically place the sequences in the Nextstrain map.
+
+	To add/update the metadata of samples previously uploaded to INSaFLU, please follow these instructions: https://insaflu.readthedocs.io/en/latest/uploading_data.html#updating-sample-metadata
+
+
+
+B. Navigate through **Phylogenetic trees** and Explore your metadata
+......................................................................
+
+Within this panel, as a complement of https://auspice.us/ visualization, you can also visualize the Nextstrain *Divergence* tree using Phylocanvas (http://phylocanvas.org/).
+
+.. note::
+   Phylogenetic trees are automatically re-build and cumulatively updated as more samples are added to the Dataset.
+   
+   Trees are only built when projects have more than one sample.
+   
+
+.. image:: _static/projects_phylogenetic_trees.png
+
+
+Instructions:
+
+.. image:: _static/insaphylogeo_instructions_1.png
+
+
+Examples:
+
+.. image:: _static/insaphylogeo_1.png
+
+.. image:: _static/insaphylogeo_2.png
+
+
+C. Navigate through **Nucleotide alignments by MSAViewer**
+...........................................................
+
+Within this panel, you can explore the Nextstrain nucleotide alignment used to derive the phylogeny.
+
+.. note::
+   Nucleotide alignments are automatically re-build and cumulatively updated as more samples are added to the project.
+      
+   Alignments are only built when datasets have more than one sample.
+
+.. image:: _static/projects_nucleotide_alignments.png
+
+.. warning::
+   
+   - Each locus-specific alignment exclusively enrolls samples color-coded as GREEN or YELLOW for the respective locus in the coverage interactive report (see meaning above).   
+   
+   - The genome-based nucleotide alignment ("All") exclusively enrolls samples having all loci color-coded as GREEN or YELLOW in the coverage interactive report.
+
+
+
 
 
 
