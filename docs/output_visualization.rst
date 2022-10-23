@@ -351,7 +351,7 @@ By clicking on the "Download" button in the Project results page, it is possible
 
 
 
-Navigate through Nextstrain *Datasets"
+Navigate through Nextstrain *Datasets*
 ++++++++++++++++++++++++++++++++++++++++
 
 The *Datasets* tab lists all your Nextstrain Datasets, organized by the available builds (more info here: https://insaflu.readthedocs.io/en/latest/data_analysis.html#nextstrain-datasets)
