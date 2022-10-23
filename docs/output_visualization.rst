@@ -361,6 +361,9 @@ Click in **Results"** to explore outputs of a given Dataset.
 The *Dataset* outputs are available through the **Download** button and dynamic **'expand-and-collapse' panels**:
 
 
+Explore the *Dataset* outputs
+-------------------------------
+
 A. Explore the main Nextstrain output (JSON file) using auspice.us
 ..................................................................................
 
