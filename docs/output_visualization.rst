@@ -379,10 +379,9 @@ The **Download** button provides:
 
 
 .. note::
+ - To visualize the *Dataset* outputs, **download the JSON files and drag-and drop the files in https://auspice.us/.**
 
-- To visualize the *Dataset* outputs, **download the JSON files and drag-and drop the files in https://auspice.us/.**
-
-- You can also **drag-and drop the nextstrain metadata file (Nextstrain_matadata.tsv) in auspice.us* to update the displayed metadata. The downloaded metadata file can be enriched with additional information to have an enhanced visualization and exploration of phylogeographic and temporal data. With https://auspice.us/, your datasets are visualised client-side in the browser -- no data is transmitted, and no tracking cookies are used. 
+- You can also **drag-and drop the nextstrain metadata file (Nextstrain_matadata.tsv) in auspice.us** to update the displayed metadata. The downloaded metadata file can be enriched with additional information to have an enhanced visualization and exploration of phylogeographic and temporal data. With https://auspice.us/, your datasets are visualised client-side in the browser -- no data is transmitted, and no tracking cookies are used. 
 
 - When more samples are added to the Dataset, the metadata file and JSON files are automatically re-build and cumulatively updated.
 
