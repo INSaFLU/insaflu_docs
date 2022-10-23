@@ -364,7 +364,7 @@ The *Dataset* outputs are available through the **Download** button and dynamic 
 A. Explore the main Nextstrain output (JSON file) using auspice.us
 ..................................................................................
 
-The **Download" button provides:
+The **Download** button provides:
 
 - **auspice.json** (zipped): the JSON files within this compressed file are the **main outputs** of the *Datasets* module, compiling the results of the Nextstrain integrative phylogenetic, temporal and geographic analyses.
 
@@ -372,14 +372,14 @@ The **Download" button provides:
 
 - **Nextstrain metadata** (tsv format): same metadata file as the "Dataset list", but with columns/headers compatible with the Nextstrain build (and the output JSON files).
 
-- **Sequences** (AllConsensus.fasta): comiles all sequences included in the *Dataset* 
+- **Sequences** (AllConsensus.fasta): compiles all sequences included in the *Dataset* 
 
 
 .. note::
 
-- To visualize the *Dataset* outputs, **download the JSON files and drag-and drop the files in https://auspice.us/.** You can also upload the nextstrain metadata file (Nextstrain_matadata.tsv) in auspice.us to update the displayed metadata.
+- To visualize the *Dataset* outputs, **download the JSON files and drag-and drop the files in https://auspice.us/.**
 
-- You can enrich your metadata file with additional information to have an enhanced visualization and exploration of phylogeographic and temporal data. With https://auspice.us/, your datasets are visualised client-side in the browser -- no data is transmitted, and no tracking cookies are used. 
+- You can also **drag-and drop the nextstrain metadata file (Nextstrain_matadata.tsv) in auspice.us* to update the displayed metadata. The downloaded metadata file can be enriched with additional information to have an enhanced visualization and exploration of phylogeographic and temporal data. With https://auspice.us/, your datasets are visualised client-side in the browser -- no data is transmitted, and no tracking cookies are used. 
 
 - When more samples are added to the Dataset, the metadata file and JSON files are automatically re-build and cumulatively updated.
 
@@ -398,7 +398,7 @@ The **Download" button provides:
 B. Navigate through **Phylogenetic trees** and Explore your metadata
 ......................................................................
 
-Within this panel, as a complement of https://auspice.us/ visualization, you can also visualize the Nextstrain *Divergence* tree using Phylocanvas (http://phylocanvas.org/).
+Within this panel, as a complement of https://auspice.us/ visualization, you can also visualize the Nextstrain *Divergence* tree and associated metadata using Phylocanvas (http://phylocanvas.org/).
 
 .. note::
    Phylogenetic trees are automatically re-build and cumulatively updated as more samples are added to the Dataset.
