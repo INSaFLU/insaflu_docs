@@ -121,7 +121,7 @@ ii) "influenza_assign_segments2contigs", which allows the automatic assignment o
 
 The generated outputs (i.e., draft assemblies, the identified type and subtype/lineage and a table linking contigs to segments/references) are automatically provided upon reads upload (i.e., no user intervention is needed). INSaFLU flags samples as "putative mixed infections" if more than one type, HA or NA subtype or lineage is detected. In addition, specific alerts are generated if an incomplete type/subtype is assigned. 
 
-**As of March 10, 2020, these two databases were upgraded for rapid classification and/or contigs assignment of Human Betacoronavirus (BetaCoV).** Details about the rationale behind this classification and outputs can be found here: :download:`INSaFLU_current_genetic_markers_v8_after_11_12_2021.xlsx <_static/INSaFLU_current_genetic_markers_v8_after_11_12_2021.xlsx>`
+**As of March 10, 2020, these two databases were upgraded for rapid classification and/or contigs assignment of Human Betacoronavirus (BetaCoV).** Details about the rationale behind this classification and outputs can be found here: :download:`INSaFLU_current_genetic_markers_v9_after_26_10_2022.xlsx <_static/INSaFLU_current_genetic_markers_v9_after_26_10_2022.xlsx>`
 
 Similarly to influenza classification, alerts are generated if, for instance, no BetaCoV virus is assigned or an incomplete human BetaCoV classification is obtained (for instance, due to the presence of a low number of human BetaCoV reads, etc)
 
