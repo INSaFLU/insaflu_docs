@@ -13,13 +13,13 @@ October 26, 2022
 
 - **New module (called “Datasets”) for Nextstrain (https://nextstrain.org/) phylogenetic and geotemporal analysis.** This user-friendly functionality will allow INSaFLU users to launch virus-specific Nextstrain builds (seasonal Influenza, SARS-CoV-2 and Monkeypox) as well as a “generic” build that can be used for “any” virus.
 
-*See more details in INSaFLU documentation: https://insaflu.readthedocs.io/en/latest/data_analysis.html#nextstrain-datasets and https://insaflu.readthedocs.io/en/latest/output_visualization.html#navigate-through-nextstrain-datasets  and https://github.com/INSaFLU/nextstrain_builds*
+See more details in INSaFLU documentation: https://insaflu.readthedocs.io/en/latest/data_analysis.html#nextstrain-datasets and https://insaflu.readthedocs.io/en/latest/output_visualization.html#navigate-through-nextstrain-datasets  and https://github.com/INSaFLU/nextstrain_builds
 
 
--**Integration of the “algn2pheno” (https://github.com/insapathogenomics/algn2pheno) tool within the “Projects” menu**. The functionality screens SARS-CoV-2 Spike amino acid alignments in each SARS-CoV-2 project against two default “genotype-phenotype” databases: the COG-UK Antigenic mutations (https://sars2.cvr.gla.ac.uk/cog-uk/)  and the Pokay Database (https://github.com/nodrogluap/pokay). **Align2pheno reports the full repertoire of Spike amino acid change found in each sequence, flagging for the presence of mutations of interest (and their potential impact on phenotype) included in those databases.**
+- **Integration of the “algn2pheno” (https://github.com/insapathogenomics/algn2pheno) tool within the “Projects” menu**. The functionality screens SARS-CoV-2 Spike amino acid alignments in each SARS-CoV-2 project against two default “genotype-phenotype” databases: the COG-UK Antigenic mutations (https://sars2.cvr.gla.ac.uk/cog-uk/)  and the Pokay Database (https://github.com/nodrogluap/pokay). **Align2pheno reports the full repertoire of Spike amino acid change found in each sequence, flagging for the presence of mutations of interest (and their potential impact on phenotype) included in those databases.**
 
 
-*See more details in INSaFLU documentation:  https://insaflu.readthedocs.io/en/latest/data_analysis.html#algn2pheno and https://insaflu.readthedocs.io/en/latest/output_visualization.html#h-explore-the-algn2pheno-report-panel-and-results*
+See more details in INSaFLU documentation:  https://insaflu.readthedocs.io/en/latest/data_analysis.html#algn2pheno and https://insaflu.readthedocs.io/en/latest/output_visualization.html#h-explore-the-algn2pheno-report-panel-and-results
 
 
 
