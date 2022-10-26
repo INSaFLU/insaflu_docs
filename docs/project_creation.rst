@@ -153,17 +153,6 @@ This generic build uses as reference sequence (as tree root and for mutation ann
 Currently, the generic build does not generate a Time-Resolved Tree (unlike the virus-specific builds).
 
 
-.. important::
-	**To take advantage of temporal and geographical features of Nextstrain**, please make sure you provide:
-	
-	- **"collection date"** for all samples added to Nextstrain datasets. If no collection date is provided, INSaFLU will automatically insert the date of the analysis as the "collection date", which might (considerably) bias (or even break) the time-scale trees generated for influenza, SARS-CoV-2 and Monkeypox.
-	
-	- **"region", "country", "division" and/or "location"** columns in the metadata. These values will be screened against a vast database of "latitude and longitude" coordinates (https://github.com/INSaFLU/nextstrain_builds/blob/main/generic/config/lat_longs.tsv) to geographically place the sequences in the Nextstrain map.
-
-	To add/update the metadata of samples previously uploaded to INSaFLU, please follow these instructions: https://insaflu.readthedocs.io/en/latest/uploading_data.html#updating-sample-metadata
-
-
-
 4. Add the samples to be included in the *Dataset*
 ........................................................
 
@@ -175,11 +164,23 @@ You can add samples to the Dataset from different sources:
 
 - **External sequences** - to upload external sequences, click in "Add your onw consensus", followed by "Upload new consensus". You can upload FASTA or MULTI-FASTA files. Please make sure that the upload sequences match the respective build (e.g., genome sequences for SARS-CoV-2 Nextstrain build or HA sequences for influenza Nextstrain builds).
 
+After adding samples, click in the "hourglass" icon to start the Nexstrain analysis.
+
+
+.. important::
+	**To take advantage of temporal and geographical features of Nextstrain**, please make sure you provide:
+	
+	- **"collection date"** for all samples added to Nextstrain datasets. If no collection date is provided, INSaFLU will automatically insert the date of the analysis as the "collection date", which might (considerably) bias (or even break) the time-scale trees generated for influenza, SARS-CoV-2 and Monkeypox.
+	
+	- **"region", "country", "division" and/or "location"** columns in the metadata. These values will be screened against a vast database of "latitude and longitude" coordinates (https://github.com/INSaFLU/nextstrain_builds/blob/main/generic/config/lat_longs.tsv) to geographically place the sequences in the Nextstrain map.
+
+	To add/update the Nextstrain metadata of a given Dataset, click in "Metadata for Nextstrain", download the previous table, update it with new data and upload it. Then, click in the "hourglass" icon to Rebuild the Nexstrain outputs. Note: you can also add/update the metadata of sequences previously obtained with INSaFLU (i.e., consensus sequences coming from the "Projects" module), please follow these instructions: https://insaflu.readthedocs.io/en/latest/uploading_data.html#updating-sample-metadata (this option is not available for external sequences).
+
 
 5. Scale-up your *Dataset*. 
 .............................
 
-You may add more samples to your Dataset at any time.
+You may add more samples to your Dataset at any time and click in the "hourglass" icon to Rebuild the Nexstrain outputs.
 
 6. Remove samples from your *Datasets*. 
 ........................................
