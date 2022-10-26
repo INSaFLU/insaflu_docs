@@ -350,6 +350,7 @@ By clicking on the "Download" button in the Project results page, it is possible
 - **algn2pheno.log**: alg2pheno log file with tool version and useful links, description of databases used and respective sources, as well as description of outputs.
 
 
+More info about this functionality here: https://insaflu.readthedocs.io/en/latest/data_analysis.html#algn2pheno
 
 Navigate through Nextstrain *Datasets*
 ++++++++++++++++++++++++++++++++++++++++
@@ -394,6 +395,8 @@ The **Download** button provides:
 
 	To add/update the metadata of samples previously uploaded to INSaFLU, please follow these instructions: https://insaflu.readthedocs.io/en/latest/uploading_data.html#updating-sample-metadata
 
+
+.. image:: _static/json_nextstrain.png
 
 
 B. Navigate through **Phylogenetic trees** and Explore your metadata
