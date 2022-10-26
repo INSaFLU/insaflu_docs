@@ -393,7 +393,11 @@ The **Download** button provides:
 	
 	- **"region", "country", "division" and/or "location"** columns in the metadata. These values will be screened against a vast database of "latitude and longitude" coordinates (https://github.com/INSaFLU/nextstrain_builds/blob/main/generic/config/lat_longs.tsv) to geographically place the sequences in the Nextstrain map.
 
-	To add/update the metadata of samples previously uploaded to INSaFLU, please follow these instructions: https://insaflu.readthedocs.io/en/latest/uploading_data.html#updating-sample-metadata
+	To add/update the metadata of sequences previously obtained with INSaFLU (i.e., consensus sequences derived from reads using "Projects" module), please follow these instructions: https://insaflu.readthedocs.io/en/latest/uploading_data.html#updating-sample-metadata
+	
+	To add/update the Nextstrain metadata of a given Dataset, click in "Metadata for Nextstrain", download the previous table, update it with new data and upload it. Then, click in the "hourglass" icon to Rebuild the Nexstrain outputs.
+	
+	
 
 
 .. image:: _static/json_nextstrain.png
