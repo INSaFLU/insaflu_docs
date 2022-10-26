@@ -127,7 +127,7 @@ INSaFLU needs reference sequence files to be used for reference-based mapping.
 
 The current list of reference sequences, including loci size and NCBI accession numbers is provided here:
 
-:download:`INSaFLU_current_REFERENCE_DATABASE_10_03_2020.xlsx <_static/INSaFLU_current_REFERENCE_DATABASE_10_03_2020.xlsx>`
+:download:`INSaFLU_current_REFERENCE_DATABASE_26_01_2022.xlsx <_static/INSaFLU_current_REFERENCE_DATABASE_26_01_2022.xlsx>`
 
 The default reference files (FASTA and GenBank formats) have been prepared to fit amplicon-based schemas capturing the whole CDS of the main eight genes of influenza virus (PB2, PB1, PA, HA, NP, NA, M and NS), such as the wet-lab pre-NGS protocol for influenza whole genome amplification adapted from a RT-PCR assay described by Zhou and colleagues (Zhou et al, 2009, for Influenza A; and Zhou et al, 2014, for Influenza B; Zhou and Wentworth, 2012).
 
