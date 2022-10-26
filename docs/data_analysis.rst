@@ -422,7 +422,7 @@ The align2pheno module in INSaFLU performs the screening of genetic features pot
 
 Description: Database of Spike amino acid mutations adapted from the curated database available through the tool Pokay, which includes a comprehensive list of SARS-CoV-2 mutations, and their associated functional impact (e.g., vaccine efficacy, pharmaceutical effectiveness, etc.) collected from literature. Made available by the CSM Center for Health Genomics and Informatics, University of Calgary.
 
-Source: https://github.com/nodrogluap/pokay
+Source: https://github.com/nodrogluap/pokay/tree/master/data
 
 
 **COG-UK Antigenic Mutations Database**
