@@ -12,7 +12,7 @@ i) post-pandemic (2009) vaccine/reference influenza A(H1N1)pdm2009, A(H3N2) and 
 
 ii) representative virus of multiple combinations of HA/NA subtypes (i.e., H1N1, H2N2, H5N1, H7N9, etc)
 
-All reference sequences at INSaFLU  are publicly available at NCBI (or are made available under permission of the authors). Download the current list here: :download:`INSaFLU_current_REFERENCE_DATABASE_10_03_2020.xlsx <_static/INSaFLU_current_REFERENCE_DATABASE_10_03_2020.xlsx>`) 
+All reference sequences at INSaFLU  are publicly available at NCBI (or are made available under permission of the authors). Download the current list here: :download:`INSaFLU_current_REFERENCE_DATABASE_26_01_2022.xlsx <_static/INSaFLU_current_REFERENCE_DATABASE_26_01_2022.xlsx>`) 
 
 The reference files have been prepared to fit amplicon-based schemas capturing the whole CDS of the main eight genes of influenza virus (PB2, PB1, PA, HA, NP, NA, M and NS).
 
