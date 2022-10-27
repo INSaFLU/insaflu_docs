@@ -53,7 +53,7 @@ Uploading tables enriched with multiple metadata variables will allow you to eas
 
 Also, it has the clear advantage of allowing the subsequent upload of the samples list of each project (output: "Sample_list.csv" or "Sample_list.tsv") along to the standardized and multi-format outputs of INSaFLU projects (alignments/trees) to other platforms for phylogenetic data visualization and/or phylogeographical analysis, such as:
 
--	PHYLOViZ (http://www.phyloviz.net/), which accepts sample metadata (tab-separated format) plus alignments (FASTA format), among other formats;
+-	auspice (https://auspice.us/), which takes JSON files or sample metadata (in tsv-separated format) plus a phylogenetic tree (".nwk" format).
 -	Phandango (https://jameshadfield.github.io/phandango/#/), which runs sample metadata (csv-separated format) plus a phylogenetic tree (".tree" format);
 -	Microreact (https://microreact.org/), which takes sample metadata (in csv-separated format) plus a phylogenetic tree (".nwk" format). 
 
@@ -98,6 +98,9 @@ Here you can upload each sample at the time (including associated metadata and N
 Updating Sample metadata
 ++++++++++++++++++++++++
 
+A. In *Samples* menu (only for Samples with read data)
+......................................................
+
 You can add/update the **Samples's metadata** at any time by simply uploading a table comma-separated (.csv) or tab-separated (.tsv or .txt) table with the updated data (a template file is provided), as follows:
 
 -	Go to *Samples* menu and choose *Update metadata*, then Load a new file, using one of the provided template files. 
@@ -110,6 +113,15 @@ You can add/update the **Samples's metadata** at any time by simply uploading a 
 	You cannot update the fastq files. To replace the fastq files associated with a given sample, you need to delete the respective sample and upload all data (metadata plus fastq) again, i.e., create a new sample.  You must ensure that the sample to be deleted is not inserted in any Project before deleting it.
 	
 	Samples names in your account must be unique and only numbers, letters and underscores are allowed.
+
+B. In *Dataset* menu (to update Nexstrain metadata)
+...................................................
+
+You can add/update the Nextstrain metadata of a given *Dataset* by clicking in **"Metadata for Nextstrain"**, download the previous table, update it with new data and upload it again. Then, you need to click in the "hourglass" icon to Rebuild the Nextstrain outputs. When the new JSON file is generated, the updated metadata can then be  **drag-and drop**  to auspice.us after the JSON file to update the displayed metadata.
+
+Notes:
+- This update option is exclusive of each Dataset.
+- To add/update the metadata associated with consensus sequences derived from read data in INSaFLU *Projects* module, you can also add/update the metadata following these instructions of the previous point "A" (this option is not available for "external" consensus sequences).
 
 
 Uploading Reference data
