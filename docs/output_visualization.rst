@@ -384,6 +384,10 @@ The **Download** button provides:
  
  - You can also **drag-and drop the nextstrain metadata file (Nextstrain_matadata.tsv) in auspice.us** to update the displayed metadata. The downloaded metadata file can be enriched with additional information to have an enhanced visualization and exploration of phylogeographic and temporal data. With https://auspice.us/, your datasets are visualised client-side in the browser -- no data is transmitted, and no tracking cookies are used.
  - When more samples are added to the Dataset, the metadata file and JSON files are automatically re-build and cumulatively updated.
+ 
+ - **To update the Nextstrain metadata of a given Dataset**, please click in **"Metadata for Nextstrain"**, download the previous table, update it with new data and upload it. Then, click in the "hourglass" icon to Rebuild the Nexstrain outputs. 
+
+Note: For sequences previously obtained with INSaFLU (i.e., consensus sequences inported to "Datasets" from the "Projects" module), you can also add/update the metadata following these instructions: https://insaflu.readthedocs.io/en/latest/uploading_data.html#updating-sample-metadata (this option is not available for external sequences).
 
 
 .. important::
@@ -393,7 +397,6 @@ The **Download** button provides:
 	
 	- **"region", "country", "division" and/or "location"** columns in the metadata. These values will be screened against a vast database of "latitude and longitude" coordinates (https://github.com/INSaFLU/nextstrain_builds/blob/main/generic/config/lat_longs.tsv) to geographically place the sequences in the Nextstrain map.
 	
-	To add/update the Nextstrain metadata of a given Dataset, click in **"Metadata for Nextstrain"**, download the previous table, update it with new data and upload it. Then, click in the "hourglass" icon to Rebuild the Nexstrain outputs. Note: you can also add/update the metadata of sequences previously obtained with INSaFLU (i.e., consensus sequences coming from the "Projects" module) following these instructions: https://insaflu.readthedocs.io/en/latest/uploading_data.html#updating-sample-metadata (this option is not available for external sequences).
 	
 	
 .. image:: _static/json_nextstrain.png
