@@ -6,12 +6,12 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2022
 -------
 
-October 26, 2022
+October 27, 2022
 ..........................
 
 **Important update:**
 
-- **New module (called “Datasets”) for Nextstrain (https://nextstrain.org/) phylogenetic and geotemporal analysis.** This user-friendly functionality will allow INSaFLU users to launch virus-specific Nextstrain builds (seasonal Influenza, SARS-CoV-2 and Monkeypox) as well as a “generic” build that can be used for “any” virus.
+- **New module (called “Datasets”) for Nextstrain (https://nextstrain.org/) phylogenetic and geotemporal analysis.** This user-friendly functionality will allow INSaFLU users to launch virus-specific Nextstrain builds (seasonal Influenza, SARS-CoV-2 and Monkeypox) as well as a “generic” build that can be used for other viruses.
 
 See more details in INSaFLU documentation: https://insaflu.readthedocs.io/en/latest/data_analysis.html#nextstrain-datasets and https://insaflu.readthedocs.io/en/latest/output_visualization.html#navigate-through-nextstrain-datasets  and https://github.com/INSaFLU/nextstrain_builds
 
