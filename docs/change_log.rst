@@ -24,12 +24,13 @@ See more details in INSaFLU documentation:  https://insaflu.readthedocs.io/en/la
 *Acknowledgements*
 
 This important update was only possible with the contribution of several people and teams. **We would like to deeply acknowledge to:**
-- All INSaFLU developing team, with special thanks to Daniel Sobral (INSA), Miguel Pinheiro (Institute of Biomedicine - iBiMED, University of Aveiro), João Dourado Santos (INSA), Miguel Pinto (INSA) and Joana Isidro (INSA)
-- Carlijn Bogaart and Daniel Horton (University of Surrey, UK), for their key contribution to build the algn2pheno (https://github.com/insapathogenomics/algn2pheno) tool.
-- Nextstrain https://nextstrain.org/ team, for their amazing work in developing open-source tools for phylogenetic and geotemporal tracking of viral pathogens.
-- COK-UK consortium (https://www.cogconsortium.uk/) (UK) and the University of Calgary (Canada) for making available updated and comprehensive SARS-CoV-2 mutations databases (https://sars2.cvr.gla.ac.uk/cog-uk/ and https://github.com/nodrogluap/pokay/tree/master/data, respectively) for algn2pheno screening.
-- The Infraestrutura Nacional de Computação Distribuída (INCD) (https://www.incd.pt/)  for providing computational resources for testing the INSaFLU platform.
-- INSaFLU work has been supported by funding from the European Union’s Horizon 2020 Research and Innovation programme under grant agreement No 773830: One Health European Joint Programme, under the TELE-Vir project (https://onehealthejp.eu/jrp-tele-vir/) 
+
+	- All INSaFLU developing team, with special thanks to Daniel Sobral (INSA), Miguel Pinheiro (Institute of Biomedicine - iBiMED, University of Aveiro), João Dourado Santos (INSA), Miguel Pinto (INSA) and Joana Isidro (INSA)
+	- Carlijn Bogaart and Daniel Horton (University of Surrey, UK), for their key contribution to build the algn2pheno (https://github.com/insapathogenomics/algn2pheno) tool.
+	- Nextstrain https://nextstrain.org/ team, for their amazing work in developing open-source tools for phylogenetic and geotemporal tracking of viral pathogens.
+	- COK-UK consortium (https://www.cogconsortium.uk/) (UK) and the University of Calgary (Canada) for making available updated and comprehensive SARS-CoV-2 mutations databases (https://sars2.cvr.gla.ac.uk/cog-uk/ and https://github.com/nodrogluap/pokay/tree/master/data, respectively) for algn2pheno screening.
+	- The Infraestrutura Nacional de Computação Distribuída (INCD) (https://www.incd.pt/)  for providing computational resources for testing the INSaFLU platform.
+	- INSaFLU work has been supported by funding from the European Union’s Horizon 2020 Research and Innovation programme under grant agreement No 773830: One Health European Joint Programme, under the TELE-Vir project (https://onehealthejp.eu/jrp-tele-vir/) 
 
 
 2022
