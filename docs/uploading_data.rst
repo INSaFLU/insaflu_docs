@@ -34,7 +34,7 @@ Examples of template table files are provided in this menu.
 .. image:: _static/upload_samplemetadata_batch_3.png
 
 .. important::
-   Sample metadata should be a comma-separated value (.csv) or tab-separated value (.tsv or .txt) table containing the columns **“sample name”**, **“fastq1”** and **“fastq2”** (**mandatory columns to fulfill**; NOTE: fastq2 is exceptionally not fulfilled only for single-end data) as well these additional variables (that may not be fulfilled): **“data set”**, **”vaccine status”**, **”week”**, **”onset date”**, **”collection date”**, **”lab reception date”**, **”latitude”**, **”longitude”**. If you include data for **country, region, division and/or location**, these will be used to geographically locate your samples in the **Nextstrain Datasets**
+   Sample metadata should be a comma-separated value (.csv) or tab-separated value (.tsv or .txt) table containing the columns **“sample name”**, **“fastq1”** and **“fastq2”** (**mandatory columns to fulfill**; NOTE: fastq2 is exceptionally not fulfilled only for single-end data) as well these additional variables (that may not be fulfilled): **“data set”**, **”vaccine status”**, **”week”**, **”onset date”**, **”collection date”**, **”lab reception date”**, **”latitude”**, **”longitude”**. If you include data for **latitude/longitude** and/or **country, region, division and/or location**, these will be used to geographically locate your samples in the **Nextstrain Datasets**
    
    Users are encouraged to include any other columns with metadata variables to be associated with samples (see advantages below).
 
@@ -47,7 +47,7 @@ Examples of template table files are provided in this menu.
 
 **Advantages of uploading enriched Sample metadata tables**
 
-The template file contains the following additional variables, which commonly constitute the minimal metadata collected during seasonal influenza surveillance: “data set”, ”vaccine status”, ”week”, ”onset date”, ”collection date”, ”lab reception date”, ”latitude” and ”longitude”. (The "data set" column will help you to organize samples by specific groups, e.g., "early_season", "peak", etc). Users are also recommended to include data for **country, region, division and/or location**, as these fields will allow geographically locate your samples in the **Nextstrain Datasets**. Still, users are encouraged to include any other columns with metadata variables to be associated with samples. 
+The template file contains the following additional variables, which commonly constitute the minimal metadata collected during seasonal influenza surveillance: “data set”, ”vaccine status”, ”week”, ”onset date”, ”collection date”, ”lab reception date”, ”latitude” and ”longitude”. (The "data set" column will help you to organize samples by specific groups, e.g., "early_season", "peak", etc). Users are also recommended to include data for for **latitude/longitude** and/or **country, region, division and/or location**, as these fields will allow geographically locate your samples in the **Nextstrain Datasets**. Still, users are encouraged to include any other columns with metadata variables to be associated with samples. 
 
 Uploading tables enriched with multiple metadata variables will allow you to easily color the phylogenetic tree nodes (and/or add colored metadata blocks to the tree) according to any combination of metadata variables, which largely facilitates the visualization and exploration of your data.
 
@@ -107,7 +107,7 @@ You can add/update the **Samples's metadata** at any time by simply uploading a 
 
 
 .. important::
-	The table for Sample metadata update should contain the columns “sample name” (exactly corresponding to the samples to be updated), as well these additional variables (that may not be fulfilled): “data set”, ”vaccine status”, ”week”, ”onset date”, ”collection date”, ”lab reception date”, ”latitude”, ”longitude”. If you include data for **country, region, division and/or location**, these will be used to geographically locate your samples in the **Nextstrain Datasets**. Still, users are encouraged to include any other columns with metadata variables to be associated with samples (see advantages above).
+	The table for Sample metadata update should contain the columns “sample name” (exactly corresponding to the samples to be updated), as well these additional variables (that may not be fulfilled): “data set”, ”vaccine status”, ”week”, ”onset date”, ”collection date”, ”lab reception date”, ”latitude”, ”longitude”, "country, region", "division" and/or "location". If you include data for **"latitude" and "longitude"** AND/OR **country, region, division and/or location**, these will be used to geographically locate your samples in the **Nextstrain Datasets**. Still, users are encouraged to include any other columns with metadata variables to be associated with samples (see advantages above).
 
 .. note::
 	You cannot update the fastq files. To replace the fastq files associated with a given sample, you need to delete the respective sample and upload all data (metadata plus fastq) again, i.e., create a new sample.  You must ensure that the sample to be deleted is not inserted in any Project before deleting it.
