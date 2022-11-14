@@ -395,7 +395,7 @@ Note: For sequences previously obtained with INSaFLU (i.e., consensus sequences 
 	
 	- **"collection date"** for all samples added to Nextstrain datasets. If no collection date is provided, INSaFLU will automatically insert the date of the analysis as the "collection date", which might (considerably) bias (or even break) the time-scale trees generated for influenza, SARS-CoV-2 and Monkeypox.
 	
-	- **"latitude" and "longitude"** AND/OR **"region", "country", "division" and/or "location"** columns in the metadata. These values will be screened against a vast database of "latitude and longitude" coordinates (https://github.com/INSaFLU/nextstrain_builds/blob/main/generic/config/lat_longs.tsv) to geographically place the sequences in the Nextstrain map.
+	- **"latitude" and "longitude"** AND/OR **"region", "country", "division" and/or "location"** columns in the metadata. If you provide *"latitude"* and *"longitude"*, please make sure you select "Nextstrain_metadata.tsv_geo" as Map Options (Geographic resolution) in auspice.us. If *"region", "country", "division" and/or "location"** columns are provided, these values will be screened against a vast database of "latitude and longitude" coordinates (https://github.com/INSaFLU/nextstrain_builds/blob/main/generic/config/lat_longs.tsv) to geographically place the sequences in the Nextstrain map (please choose the  "Geographical resolution" in "Map Options" during auspice visualization).
 	
 	
 	
