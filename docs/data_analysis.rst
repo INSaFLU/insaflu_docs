@@ -1,21 +1,37 @@
-Data analysis
-=============
+Bioinformatics Pipeline
+========================
+
+INSaFLU is an open web-based bioinformatics platform for metagenomic virus detection and routine genomic surveillance.
+
+As such, it integrates two main pipelines / components:
+
+- a **Reference-based genomic surveillance** pipeline (from NGS reads to quality control, mutations detection, consensus generation, virus classification, alignments, “genotype-phenotype” screening, phylogenetics, integrative phylogeographical and temporal analysis etc)
+	
+- a **Virus detection** pipeline (from NGS reads to quality control and metagenomics virus identification)
 
 INSaFLU relies on a multi-software bioinformatics pipeline that will be under continuous development and improvement not only to enrich it with new features, but also to continuously shape the protocol to the best methodological advances in the field. 
 
-The current software settings, which were chosen upon intensive testing, are described below. For additional details about the bioinformatics pipeline, please visit the INSaFLU github account: https://github.com/INSaFLU/INSaFLU (more information for each software can also be found in the official repositories; links are also provided below). 
+The current software and default settings, which were chosen upon intensive testing, are described below, together with the list of Steps/Settings that can be turned ON/OFF or configured by the user. For additional details about the bioinformatics pipeline, please visit the INSaFLU github account: https://github.com/INSaFLU/INSaFLU (more information for each software can also be found in the official repositories; links are also provided below). 
 
-The bioinformatics pipeline developed and implemented in the INSaFLU web platform currently consists of 6 core steps (see WorkFlow) yielding multiple graphical, and sequence outputs (see *Output visualization and download* menu for details)
+
+Reference-based genomic surveillance
++++++++++++++++++++++++++++++++++++++
+
+The “surveillance-oriented” bioinformatics component of INSaFLU allows launching:
+
+Projects - From reads to reference-based generation of consensus sequences and mutations annotation, followed by gene- and genome-based alignments, amino acid alignments, Pango classification, NextClade linkage, etc.
+
+and 
+
+Datasets - From consensus sequences to advanced Nextstrain phylogenetic and genomic analysis, coupled with geographic and temporal data visualization and exploration of sequence metadata.
+
+The bioinformatics pipeline currently consists of multiple steps (see WorkFlow) yielding multiple graphical, and sequence outputs (see *Output visualization and download* menu for details)
 
 .. image:: _static/workflow_update_20221114.png
 
-INSaFLU bioinformatics pipeline workflow
+Simplified illustration of the main steps of the modular INSaFLU-TELEVIR bioinformatics pipeline for reference-based genomics surveillance.
 
-
-Bioinformatics pipeline
-+++++++++++++++++++++++
-
-*Modules (Description, Current software versions and settings)*
+*Find below the description of the main bioinformatics steps (Description, Current software versions and settings)*
 
 Read quality analysis and improvement
 --------------------------------------
@@ -491,7 +507,120 @@ Currently, the generic build does not generate a Time-Resolved Tree (unlike the 
 	
 	To add/update the Nextstrain metadata of a given Dataset, click in **"Metadata for Nextstrain"**, download the previous table, update it with new data and upload it. Then, click in the "hourglass" icon to Rebuild the Nexstrain outputs. Note: you can also add/update the metadata of sequences previously obtained with INSaFLU (i.e., consensus sequences coming from the "Projects" module), please follow these instructions: https://insaflu.readthedocs.io/en/latest/uploading_data.html#updating-sample-metadata (this option is not available for external sequences).
 
-   
+
+
+Metagenomics virus detection
++++++++++++++++++++++++++++++++++++++
+
+The “surveillance-oriented” bioinformatics component of INSaFLU allows launching:
+
+Projects - From reads to reference-based generation of consensus sequences and mutations annotation, followed by gene- and genome-based alignments, amino acid alignments, Pango classification, NextClade linkage, etc.
+
+and 
+
+Datasets - From consensus sequences to advanced Nextstrain phylogenetic and genomic analysis, coupled with geographic and temporal data visualization and exploration of sequence metadata.
+
+The bioinformatics pipeline currently consists of multiple steps (see WorkFlow) yielding multiple graphical, and sequence outputs (see *Output visualization and download* menu for details)
+
+.. image:: _static/televir_workflow_update_20221208.png
+
+Simplified illustration of the main steps of the modular INSaFLU-TELEVIR bioinformatics pipeline for metagenomics virus diagnostics.
+
+*Find below the description of the main bioinformatics steps (Description, Current software versions and settings)*
+
+Read quality analysis and improvement
+--------------------------------------
+
+
+*Description*
+
+This step takes the input single- or paired-end reads (fastq.gz format) and produces quality processed reads, as well as quality control reports for each file, before and after quality improvement. This module is automatically run upon reads upload (i.e., no user intervention is needed). 
+
+*Software version/settings*
+
+.. note::
+
+	**## ILLUMINA / Ion Torrent data ##**
+	
+   	**FastQC** (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) (version 0.11.5; date 15.01.2018)
+
+		input: single- or paired-end reads (fastq.gz format) (e.g., sample_L001_R1_001.fastq.gz and sample_L001_R2_001.fastq.gz for Illumina technology reads)
+		
+		--nogroup option: all reports will show data for every base in the read. 
+		
+	**Trimmomatic** (http://www.usadellab.org/cms/index.php?page=trimmomatic) (version 0.27; date 15.01.2018)
+	
+		input: single- or paired-end reads (fastq.gz format) (e.g., sample_L001_R1_001.fastq.gz and sample_L001_R2_001.fastq.gz for Illumina paired-end reads)
+	
+		ILLUMINACLIP: To clip adapters from the input file using user-specified adapter sequences. ILLUMINACLIP:<ADAPTER_FILE>:3:30:10:6:true
+		
+		HEADCROP: Cut the specified number of bases from the start of the read. Range: [0:100]. If value equal to 0 this parameter is excluded.
+		
+		CROP: Cut the read to a specified length. Range: [0:400]. If value equal to 0 this parameter is excluded.
+	
+		SLIDINGWINDOW: perform a sliding window trimming, cutting once the average quality within the window falls below a threshold (default: SLIDINGWINDOW:5:20, where 5 refers to window and 20 to the minimum average quality)
+	
+		LEADING: cut bases off the start of a read, if below a threshold quality (default: LEADING:3). This will allow discarding bases with very quality or N bases (quality score of 2 or less).
+	
+		TRAILING: cut bases off the end of a read, if below a threshold quality (default: TRAILING:3). This will allow discarding bases with very quality or N bases (quality score of 2 or less).
+	
+		MINLEN: drop the read if it is below a specified length (MINLEN:35)
+	
+		TOPHRED33:  Convert quality scores to Phred-33
+		
+	**## Oxford Nanopore Technologies (ONT) data ##**
+		
+	**NanoStat** (https://github.com/wdecoster/nanostat) (version 1.4.0)
+		
+		input: ONT reads (fastq.gz format) 
+
+	**NanoFilt** (https://github.com/wdecoster/nanofilt) (version 2.6.0)
+	
+
+		**-q (QUALITY)**: Filter on a minimum average read quality score. Range: [5:30] (default: 10)
+		
+		**-l (LENGTH)**: Filter on a minimum read length. Range: [50:1000]. (default: 50)
+		
+		**--headcrop**: Trim n nucleotides from start of read. Range: [1:1000]. If value equal to 0 this parameter is excluded. (default: 70)
+		
+		**--tailcrop**: Trim n nucleotides from end of read. Range: [1:1000]. If value equal to 0 this parameter is excluded. (default: 70)
+		
+		**--maxlength**: Set a maximum read length. Range: [100:50000]. If value equal to 0 this parameter is excluded. (default: 0)
+		
+
+	**RabbitQC** (https://github.com/ZekunYin/RabbitQC)  (version 0.0.1)**
+		
+		input: ONT reads (fastq.gz format) pre- and post- quality improvement with NanoFilt
+		
+		Files between 50 - 300 MB are downsized to ~50 MB before analysis by randomly sampling reads using fastq-sample from fastq-tools package https://github.com/dcjones/fastq-tools (developed by Daniel C. Jones dcjones@cs.washington.edu)
+
+
+.. note::
+
+	**## ILLUMINA data only ##**
+	
+		***As of October 10th, 2022**, users can use trimmomatic to perform trimming of primer sequences of several predefined Primer pool sets:
+		
+			-- SARS-CoV-2 Primal Scheme V3 (https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V3/nCoV-2019.tsv)
+			
+			-- SARS-CoV-2 Primal Scheme V4.1 (https://github.com/artic-network/artic-ncov2019/tree/master/primer_schemes/nCoV-2019/V4.1)
+			
+			-- Monkeypox Primal Scheme from Welkers, Jonges and van den Ouden (https://www.protocols.io/view/monkeypox-virus-whole-genome-sequencing-using-comb-n2bvj6155lk5/v1)
+			
+			-- Monkeypox Primal Scheme from Chen et al. (https://www.protocols.io/view/monkeypox-virus-multiplexed-pcr-amplicon-sequencin-5qpvob1nbl4o/v2)
+			
+		Please contact us if you want to add new Primer pools to the online tool
+
+.. important::
+	INSaFLU allows users to configure key parameters for reads quality analysis in the tab **“Settings”**. 
+	
+	**Please check your settings before uploading new samples to your account.**
+	
+	See details in https://insaflu.readthedocs.io/en/latest/data_analysis.html#user-defined-parameters
+
+
+
+
 
 User-defined parameters
 +++++++++++++++++++++++++
