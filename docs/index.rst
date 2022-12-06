@@ -55,7 +55,7 @@ Contents
    guide_pre_ngs.rst
    uploading_data.rst
    project_creation.rst
-   data_analysis.rst
    output_visualization.rst
+   data_analysis.rst
    change_log.rst
 
