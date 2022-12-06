@@ -512,21 +512,29 @@ Currently, the generic build does not generate a Time-Resolved Tree (unlike the 
 Metagenomics virus detection
 +++++++++++++++++++++++++++++++++++++
 
-The “surveillance-oriented” bioinformatics component of INSaFLU allows launching:
+The TELEVIR  bioinformatics component of INSaFLU is a modular pipeline for the identification of viral sequences in metagenomic data (both Illumina and ONT data). 
 
-Projects - From reads to reference-based generation of consensus sequences and mutations annotation, followed by gene- and genome-based alignments, amino acid alignments, Pango classification, NextClade linkage, etc.
+It is composed of six main steps (detailed below):
 
-and 
+1. Read quality analysis and improvement
+2. Viral Enrichment [optional].
+3. Host Depletion [optional].
+4. Assembly of the reads [optional].
+5. Identification of the viral sequences.
+	- Using reads.
+	- Using contigs (if assembled).
+	- Using several reference databases.
+6. Remapping of the viral sequences to the reference genome sequences. 
 
-Datasets - From consensus sequences to advanced Nextstrain phylogenetic and genomic analysis, coupled with geographic and temporal data visualization and exploration of sequence metadata.
+The pipeline culminates in the production of a set of summary statistics and visualizations of the results.
 
-The bioinformatics pipeline currently consists of multiple steps (see WorkFlow) yielding multiple graphical, and sequence outputs (see *Output visualization and download* menu for details)
 
 .. image:: _static/televir_workflow_update_20221208.png
 
 Simplified illustration of the main steps of the modular INSaFLU-TELEVIR bioinformatics pipeline for metagenomics virus diagnostics.
 
 *Find below the description of the main bioinformatics steps (Description, Current software versions and settings)*
+
 
 Read quality analysis and improvement
 --------------------------------------
@@ -540,7 +548,7 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 
 .. note::
 
-	**## ILLUMINA / Ion Torrent data ##**
+	**## ILLUMINA data ##**
 	
    	**FastQC** (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) (version 0.11.5; date 15.01.2018)
 
@@ -619,6 +627,127 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 	See details in https://insaflu.readthedocs.io/en/latest/data_analysis.html#user-defined-parameters
 
 
+
+
+Viral Enrichment
+------------------
+
+*Description*
+
+Taking as input raw or quality processed reads (as user-defined), the "Viral enrichment" step will try to retain potential viral reads based on a "permissive" reads classification against a viral sequence database.
+
+
+.. note::
+
+*Software*
+
+	**Centrifuge** (https://github.com/centrifuge/) 
+	
+	**Kraken2** 
+	
+	
+*Databases*
+
+	**XXXXXXXXX**
+
+
+Host depletion
+------------------
+
+*Description*
+
+The "Host depletion" step will try to remove potential host reads based on reference-based mapping, taking as input raw or quality processed reads (as user-defined), or reads retained after the "Viral enrichment" step. 
+
+
+.. note::
+
+*Software*
+
+	**BWA**
+	
+	**Minimap2** 
+	
+	
+*Host reference sequences**
+
+	**XXXXXXXXX**
+
+
+De novo assembly
+------------------
+
+*Description*
+
+This step will perform de novo assembly over the reads retained after the "Viral enrichment" and/or "Host depletion" steps. 
+
+
+.. note::
+
+*Software*
+
+	**SPAdes**
+	
+	**Raven** 
+	
+	**Flye** 
+	
+	
+
+Identification of the viral sequences
+--------------------------------------
+
+*Description*
+
+This step will screen reads and contigs against viral sequence databases.
+
+
+.. note::
+
+*Software*
+
+**Reads classification**
+
+	**Centrifuge**
+	
+	**FastViromeExplorer** 
+	
+	**Kraken2** 
+	
+	**Krakenuniq** 
+	
+	**Kaiju** 
+	
+
+**Contigs classification**
+	
+	**Blast**
+	
+	**FastViromeExplorer** 
+
+
+*Databases*
+
+	**XXXXXXXXX**
+
+
+Remapping of the viral sequences to the reference genome sequences. 
+---------------------------------------------------------------------
+
+*Description*
+
+This step will map reads and/or contigs against selected representative genome sequences of the viral TAXID identified in the previous step. Reads will also be mapped against the set of contigs classified for a each TAXID.
+
+
+.. note::
+
+*Software*
+
+	**Snippy**
+	
+	**Bowtie2** 
+	
+	**Minimap2** 
+	
 
 
 
