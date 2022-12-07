@@ -9,9 +9,9 @@ As such, it integrates two main pipelines / components:
 	
 - a **Virus detection** pipeline (from NGS reads to quality control and metagenomics virus identification)
 
-INSaFLU relies on a multi-software bioinformatics pipeline that will be under continuous development and improvement not only to enrich it with new features, but also to continuously shape the protocol to the best methodological advances in the field. 
+INSaFLU relies on a multi-software bioinformatics pipelines that will be under continuous development and improvement not only to enrich it with new features, but also to continuously shape the protocol to the best methodological advances in the field. 
 
-The current software and default settings, which were chosen upon intensive testing, are described below, together with the list of Steps/Settings that can be turned ON/OFF or configured by the user. For additional details about the bioinformatics pipeline, please visit the INSaFLU github account: https://github.com/INSaFLU/INSaFLU (more information for each software can also be found in the official repositories; links are also provided below). 
+The current software and default settings, which were chosen upon intensive testing, are described below, together with the list of Steps and Settings that can be turned ON/OFF or configured by the user, respectively. For additional details about the bioinformatics pipeline, please visit the INSaFLU github account: https://github.com/INSaFLU/INSaFLU (more information for each software can also be found in the official repositories; links are also provided below). 
 
 
 Reference-based genomic surveillance
@@ -19,11 +19,11 @@ Reference-based genomic surveillance
 
 The “surveillance-oriented” bioinformatics component of INSaFLU allows launching:
 
-Projects - From reads to reference-based generation of consensus sequences and mutations annotation, followed by gene- and genome-based alignments, amino acid alignments, Pango classification, NextClade linkage, etc.
+**Projects** - From reads to reference-based generation of consensus sequences and mutations annotation, followed by gene- and genome-based alignments, amino acid alignments, Pango classification, NextClade linkage, etc.
 
 and 
 
-Datasets - From consensus sequences to advanced Nextstrain phylogenetic and genomic analysis, coupled with geographic and temporal data visualization and exploration of sequence metadata.
+**Datasets** - From consensus sequences to advanced Nextstrain phylogenetic and genomic analysis, coupled with geographic and temporal data visualization and exploration of sequence metadata.
 
 The bioinformatics pipeline currently consists of multiple steps (see WorkFlow) yielding multiple graphical, and sequence outputs (see *Output visualization and download* menu for details)
 
@@ -514,9 +514,9 @@ Metagenomics virus detection
 
 The TELEVIR  bioinformatics component of INSaFLU is a modular pipeline for the identification of viral sequences in metagenomic data (both Illumina and ONT data). 
 
-It is composed of six main steps (detailed below):
+It is composed of these main steps (detailed below):
 
-1. Read quality analysis and improvement
+1. Read quality analysis and improvement [optional]
 2. Viral Enrichment [optional].
 3. Host Depletion [optional].
 4. Assembly of the reads [optional].
@@ -524,7 +524,8 @@ It is composed of six main steps (detailed below):
 	- Using reads.
 	- Using contigs (if assembled).
 	- Using several reference databases.
-6. Remapping of the viral sequences to the reference genome sequences. 
+6. Selection of viral TAXID and representative genome sequences for confirmatory re-mapping
+7. Remapping of the viral sequences against selected reference genome sequences. 
 
 The pipeline culminates in the production of a set of summary statistics and visualizations of the results.
 
@@ -634,7 +635,7 @@ Viral Enrichment
 
 *Description*
 
-Taking as input raw or quality processed reads (as user-defined), the "Viral enrichment" step will try to retain potential viral reads based on a "permissive" reads classification against a viral sequence database.
+The **"Viral enrichment"** step will try to **retain potential viral reads** based on a rapid and less strict classification of the reads against a viral sequence database. This step is directly performed over raw reads (if QC was turned OFF) or quality processed reads (if QC was turned ON).
 
 
 .. note::
@@ -656,7 +657,7 @@ Host depletion
 
 *Description*
 
-The "Host depletion" step will try to remove potential host reads based on reference-based mapping, taking as input raw or quality processed reads (as user-defined), or reads retained after the "Viral enrichment" step. 
+The **"Host depletion"** step will try to **remove potential host reads** based on reference-based mapping against host genome sequence(s) taking as input reads retained after the previous "Viral enrichment" step. If the Viral enrichment step was turned OFF, host depletion will be directly performed over raw reads (if QC was turned OFF) or quality processed reads (if QC was turned ON).
 
 
 .. note::
@@ -678,7 +679,7 @@ De novo assembly
 
 *Description*
 
-This step will perform de novo assembly over the reads retained after the "Viral enrichment" and/or "Host depletion" steps. 
+This step will perform de novo assembly over the reads retained after the "Viral enrichment" and/or "Host depletion" steps. If these steps were turned OFF, assembly will be directly performed over raw reads (if QC was turned OFF) or quality processed reads (if QC was turned ON).
 
 
 .. note::
@@ -698,7 +699,7 @@ Identification of the viral sequences
 
 *Description*
 
-This step will screen reads and contigs against viral sequence databases.
+This step will **screen reads and contigs against viral sequence databases**, providing intermediate reads and/or classification reports of the viral hits (by TAXID and representative accession numbers) potentially present in the sample. The most suspected viral hits will be automatically selected for confirmatory re-mapping (see next steps).
 
 
 .. note::
@@ -730,12 +731,33 @@ This step will screen reads and contigs against viral sequence databases.
 	**XXXXXXXXX**
 
 
-Remapping of the viral sequences to the reference genome sequences. 
----------------------------------------------------------------------
+Selection of viral TAXID and representative genome sequences for confirmatory re-mapping 
+-----------------------------------------------------------------------------------------
 
 *Description*
 
-This step will map reads and/or contigs against selected representative genome sequences of the viral TAXID identified in the previous step. Reads will also be mapped against the set of contigs classified for a each TAXID.
+In the previous step, reads and contigs (if available) were classified independently, with this classification being provided as intermediate reports. In this step, the top-15 most "suspected" viral hits (TAXID) are automatically selected for confirmatory mapping against reference viral genome(s) present in the available databases. 
+
+Viral TAXIDs are selected, up to a maximum of 15 hits, as follows:
+
+1º - TAXIDs classified in both sides (reads and contigs) are firstly selected; 
+2º - additional TAXIDs are then selected accross the reads classification reports (by number of hits, from top-down) and contigs classifications (by number of hits and total contigs length, from top-down) until reaching a total of 15 selected hits.
+
+
+*Databases*
+
+	**XXXXXXXXX**
+
+
+
+Remapping of the viral sequences against selected reference genome sequences. 
+--------------------------------------------------------------------------------
+
+*Description*
+
+This step will automatically map reads and/or contigs against representative genome sequences of the selected viral TAXIDs identified in the previous step. Reads will also be mapped against the set of contigs classified for a each TAXID. 
+
+NOTE: TAXIDs that were not automatically selected for this confirmatory re-mapping step (but that were present in the intermediate reads and/or contigs classification reports) can still be user-selected for mapping at any time. 
 
 
 .. note::
@@ -750,11 +772,10 @@ This step will map reads and/or contigs against selected representative genome s
 	
 
 
-
 User-defined parameters
 +++++++++++++++++++++++++
 
-INSaFLU allows turning ON/OFF specific modules and user-defined configuration of key parameters for reads quality analysis and mapping. Settings can be user-defined for the whole user account (tab “Settings”), for each project (just after project creation) or for individual samples within a project (click in the "Magic wand" icon).
+INSaFLU allows turning ON/OFF specific modules and user-defined configuration of key parameters for reads quality analysis and reference-based mapping. Settings can be user-defined for the whole user account (tab “Settings”), for each project (just after project creation) or for individual samples within a project (click in the "Magic wand" icon).
 
 .. image:: _static/settings_modules.png
 
