@@ -31,7 +31,7 @@ The bioinformatics pipeline currently consists of multiple steps (see WorkFlow) 
 
 Simplified illustration of the main steps of the modular INSaFLU-TELEVIR bioinformatics pipeline for reference-based genomics surveillance.
 
-*Find below the description of the main bioinformatics steps (Description, Current software versions and settings)*
+*Find below the description of the main bioinformatics steps (Description and Current software )*
 
 Read quality analysis and improvement
 --------------------------------------
