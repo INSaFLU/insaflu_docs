@@ -699,7 +699,7 @@ Identification of the viral sequences
 
 *Description*
 
-This step will **screen reads and contigs against viral sequence databases**, providing intermediate reads and/or classification reports of the viral hits (by TAXID and representative accession numbers) potentially present in the sample. The most suspected viral hits will be automatically selected for confirmatory re-mapping (see next steps).
+This step will **screen reads and contigs against viral sequence databases**, generating intermediate reads and/or contigs classification reports with a list of viral hits (TAXID and representative accession numbers) potentially present in the sample. The most "suspected" viral hits will be automatically selected for confirmatory re-mapping (see next steps).
 
 
 .. note::
@@ -736,11 +736,11 @@ Selection of viral TAXID and representative genome sequences for confirmatory re
 
 *Description*
 
-In the previous step, reads and contigs (if available) were classified independently, with this classification being provided as intermediate reports. In this step, the top-15 most "suspected" viral hits (TAXID) are automatically selected for confirmatory mapping against reference viral genome(s) present in the available databases. 
+In the previous step, reads and contigs (if available) were classified independently, with this classification being provided as intermediate reports. In this step, **the top-15 most "suspected" viral hits (TAXID) are automatically selected for confirmatory mapping against reference viral genome(s)** present in the available databases. 
 
 Viral TAXIDs are selected, up to a maximum of 15 hits, as follows:
 
-1º - TAXIDs classified in both sides (reads and contigs) are firstly selected; 
+1º - TAXIDs present in both classification sides (reads and contigs) are firstly selected; 
 2º - additional TAXIDs are then selected accross the reads classification reports (by number of hits, from top-down) and contigs classifications (by number of hits and total contigs length, from top-down) until reaching a total of 15 selected hits.
 
 
@@ -770,6 +770,8 @@ NOTE: TAXIDs that were not automatically selected for this confirmatory re-mappi
 	
 	**Minimap2** 
 	
+
+The virus detection pipeline culminates in the production of a set of summary statistics and visualizations of the results.
 
 
 User-defined parameters
