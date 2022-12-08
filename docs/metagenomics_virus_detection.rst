@@ -55,37 +55,76 @@ At this time, users may start monitoring the Project progress by checking the ru
 
 By clicking in *Run panel*, users can get an overviwe of the workflows run.
 
+
 Output Visualization and Download
 ++++++++++++++++++++++++++++++++++
 
-The INSaFLU-TELEVIR bioinformatics pipeline for metagenomics virus diagnostic generates multiple outputs, reflecting the multiple steps of the pipeline (detailed here: https://insaflu.readthedocs.io/en/latest/bioinformatics-pipeline.html#metagenomics-virus-detection):
+The INSaFLU-TELEVIR bioinformatics pipeline for metagenomics virus diagnostic generates multiple outputs, reflecting the multiple steps of the pipeline (detailed here: https://insaflu.readthedocs.io/en/latest/bioinformatics-pipeline.html#metagenomics-virus-detection).
 
-The outputs are organized in dynamic 'expand-and-collapse' panels as follows:
-
-- Main Table Report (**Pathogen Identification**)
+The outputs are organized in dynamic 'expand-and-collapse' panels:
 
 
-
-- **Viral Enrichment** and/or **Host depletion** (Pre-processing)
-- **Assembly**
-- **Reads and Contigs classification** 	
-- **Remapping** of the viral sequences against selected reference genome sequences. 
-
-
-
-
-
-Pre-processing: **Viral Enrichment** and/or **Host depletion** (Pre-processing)
--------------------------------------------------------------------------------- 
+Main report - **Pathogen identification**
+-----------------------------------------
    
 This tab displays all information for all loaded samples.
+
+set of summary statistics and visualizations of the results.
 
 A. XXXXX
 ..............................................................................
 
 
 
+ Reads will also be mapped against the set of contigs classified for a each TAXID.
+Users can consult the main report table per run, sample and project.
 
-B. XXXX
-...............................................................................
+
+Intermediate outputs 
+---------------------
+
+Multiple intermediate outputs and statistics are available by clicking in the following 'expand-and-collapse' panels:
+
+Pre-processing: **Viral Enrichment** and/or **Host depletion**
+..............................................................
+
+This tab provides an overview on the number of reads filtered during the **Viral enrichment** and/or **Host depletion** steps of the metagenomics virus detection pipeline.
+
+- "Viral enrichment" - retains potential viral reads based on a rapid and permissive classification of the reads against a viral sequence database.
+- "Host Depletion" - remove potential host reads based on reference-based mapping against host genome sequence(s) 
+
+The reads retained are provided for download (fastq.gz format).
+
+
+**Assembly**
+............
+
+This tab provides an overview on **de novo** assembly step (this steps uses the reads retained after the "Viral enrichment" and/or "Host depletion" steps).
+
+Filtered contigs are provided for download (fasta.gz format).
+
+**Reads and Contigs classification**
+....................................
+
+This tab provides **reads and/or contigs classification reports** (tsv format) with the list of viral hits (TAXID and representative accession numbers) detected after the intermediate screening  against viral sequence databases. The two reports are merged to select the most "suspected" viral hits to be automatically selected for confirmatory re-mapping (see next steps). These reports are also compiled in the **Raw Classification and Mapping Summary** panel (below).
+
+
+**Remapping** of the viral sequences against selected reference genome sequences. 
+
+.................................................................................
+
+Reads (and contigs) are mapped against  representative genome sequences of the "suspected" viral hits identified in the previous step.
+
+This tab provides an overview on the amount of viral hits (TAXIDs and representative accession numbers) yielding mapped reads/contigs. Only viral hits with mapped reads are shown in the Main Report - Pathogen Identification.  
+
+
+
+**Raw Classification and Mapping Summary**
+
+.................................................................................
+
+This table lists all viral hits (TAXID and representative accession numbers) detected during the intermediate step of **Reads and Contigs Classification** (see above) against viral sequence databases, indicating if they were (or not) automatically selected for confirmatory re-mapping.
+
+TAXIDs that were not automatically selected for confirmatory re-mapping step (flagged as "Unmapped") can be user-selected for mapping at any time by clicking in the "eye" icon.
+
 
