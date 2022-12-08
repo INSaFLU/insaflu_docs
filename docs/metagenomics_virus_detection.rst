@@ -67,17 +67,64 @@ The outputs are organized in dynamic 'expand-and-collapse' panels:
 Main report - **Pathogen identification**
 -----------------------------------------
    
-This tab displays all information for all loaded samples.
+This tab displays an interactive table with **summary statistics and visualizations of the end-point results of the TELEVIR metagenomic virus detection pipeline**. In summary, through this pipeline, reads and contigs (if available) are classified independently, then viral hits (TAXID) detected in both sides (and/or within the top-15 from each side) are selected for reference-based mapping against viral genome sequences present in the available databases. **This main report (interactive table) only includes viral hits that were classified at reads and/or contig level AND that had mapped reads.** 
 
-set of summary statistics and visualizations of the results.
+.. note::
+   - Only viral hits (TAXIDs and representative accession numbers) with mapped reads are automatically shown in this Main Report table.  
+   - Other viral TAXIDs that were not automatically selected for confirmatory re-mapping step (flagged as "Unmapped") can be user-selected for mapping at any time by clicking in the "eye" icon available in the **Raw Classification and Mapping Summary** panel.
+   
+Below, you can find a description of the main outputs and statistics.
 
-A. XXXXX
-..............................................................................
+Mapping statistics
+...................
+
+- **Cov (%)**: horizontal coverage (i.e., percentage of the reference sequence covered)
+- **Depth**: mean depth of coverage throughout the whole genome
+- **DepthC**: mean depth of coverage exclusively in the covered regions
+- **Mapped reads**: number of mapped reads
+- **start prop (%)**:  mapped reads divided by the number of input reads (after QC)
+- **mapped_prop (%)**: mapped reads divided by the number of reads used for mapping (i.e., reads retained after the "Virus enrichment" and/or "host depletion steps)
+- **Gaps**: number of regions with 0 coverage
+- **Windows Covered**: proportion of windows with mapped reads (the reference sequence is divided by x windows. 
+- **class. success**: indication whether the TAXID was selected for mapping after reads and/or contigs classification
+- **mapping success**: indication whether reads/and contigs successfully mapped against the TAXID representative references sequence
+- **Warning**: 
+	- *"Likely False Positive"*: when most reads map in a very small region of the reference sequence, i.e., hits with high “DepthC" but low “Depth” and low "Cov (%)". Flagged for hits with DepthC / Depth > 10 and Cov (%) > 5%.
+	- *"Vestigial Mapping"*: when only a vestigial amount of reads (<= 2) mapped.
+	
+
+Mapping plots and output files
+..............................
+
+By clicking in a TAXID description, user can visualize/download multiple outputs regarding:
+
+# READS MAPPING
+
+- **Mapping Coverage** plot (depth of coverage thorughout the reference genome)
+
+- **Integrative Genomics Viewer (IGV)** (interactive visualization of the mapped reads)
+
+- **Mapped reads** in FASTA and BAM
+
+- **Reference sequence** (".fa" format) and ".fai" index
+
+# CONTIGS MAPPING
+
+- **Assembly to reference dotplot** (location of the mapped contigs into the reference sequence)
+
+- **Mapped contigs** in FASTA
+
+- **Contigs alignment** in Pairwise mApping Format (PAF)
+
+-**Sample remap**: statistics for reads'mapping against the set of contigs classified for a each TAXID.
 
 
+Tips for Results interpretation
+................................
 
- Reads will also be mapped against the set of contigs classified for a each TAXID.
-Users can consult the main report table per run, sample and project.
+XXXXXXXXXXXXXXXXX
+
+
 
 
 Intermediate outputs 
@@ -123,7 +170,7 @@ This tab provides an overview on the amount of viral hits (TAXIDs and representa
 
 .................................................................................
 
-This table lists all viral hits (TAXID and representative accession numbers) detected during the intermediate step of **Reads and Contigs Classification** (see above) against viral sequence databases, indicating if they were (or not) automatically selected for confirmatory re-mapping.
+This table lists all viral hits (TAXID and representative accession numbers) detected during the intermediate step of **Reads and Contigs Classification** (see above), indicating if they were (or not) automatically selected for confirmatory re-mapping.
 
 TAXIDs that were not automatically selected for confirmatory re-mapping step (flagged as "Unmapped") can be user-selected for mapping at any time by clicking in the "eye" icon.
 
