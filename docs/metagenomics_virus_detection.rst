@@ -18,7 +18,7 @@ It is composed of these main steps (detailed in https://insaflu.readthedocs.io/e
 
 The pipeline culminates in the production of a set of summary statistics and visualizations of the results.
  
-Below, you can find instructions on how to create a TELEVIR project, run samples and visualize/intrepret the results
+Below, you can find instructions on how to create a TELEVIR project, run samples and visualize/intrepret the results.
 
 **TELEVIR Projects** - How to create and scale-up a metagenomics virus detection project
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -58,14 +58,20 @@ By clicking in *Run panel*, users can get an overviwe of the workflows run.
 Output Visualization and Download
 ++++++++++++++++++++++++++++++++++
 
-The INSaFLU-TELEVIR bioinformatics pipeline for metagenomics virus diagnostic generates multiple outputs for each sample, reflecting the multiple steps of the pipeline (detailed here: https://insaflu.readthedocs.io/en/latest/bioinformatics-pipeline.html#metagenomics-virus-detection):
+The INSaFLU-TELEVIR bioinformatics pipeline for metagenomics virus diagnostic generates multiple outputs, reflecting the multiple steps of the pipeline (detailed here: https://insaflu.readthedocs.io/en/latest/bioinformatics-pipeline.html#metagenomics-virus-detection):
+
+The outputs are organized in dynamic 'expand-and-collapse' panels as follows:
+
+- Main Table Report (**Pathogen Identification**)
+
+
 
 - **Viral Enrichment** and/or **Host depletion** (Pre-processing)
 - **Assembly**
 - **Reads and Contigs classification** 	
 - **Remapping** of the viral sequences against selected reference genome sequences. 
 
-The outputs are organized in dynamic 'expand-and-collapse' panels,
+
 
 
 
