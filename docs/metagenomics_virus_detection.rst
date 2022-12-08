@@ -1,25 +1,55 @@
-Output Visualization and Download
+Metagenomics virus detection
 =================================
 
-Upon project's launching, you can start exploring the diverse INSaFLU outputs, which include:
+The TELEVIR  bioinformatics component of INSaFLU is a modular pipeline for the identification of viral sequences in metagenomic data (both Illumina and ONT data). 
 
-- **sample-specific outputs** (such as, mapping files, variants annotation and consensus sequences)
+It is composed of these main steps (detailed in https://insaflu.readthedocs.io/en/latest/bioinformatics-pipeline.html#metagenomics-virus-detection):
 
-- **project outputs** (such as, nucleotide/amino acid alignments and phylogenetic trees). 
+1. Read quality analysis and improvement [optional]
+2. Viral Enrichment [optional].
+3. Host Depletion [optional].
+4. Assembly of the reads [optional].
+5. Identification of the viral sequences.
+	- Using reads.
+	- Using contigs (if assembled).
+	- Using several reference databases.
+6. Selection of viral TAXID and representative genome sequences for confirmatory re-mapping
+7. Remapping of the viral sequences against selected reference genome sequences. 
 
-Outputs are organized by the dynamic “expand-and-collapse” panels that allow you a user-friendly visualization/download of all graphical, text and sequence output data. The following table provides an overview on all INSaFLU outputs organized by bioinformatics module:
-
-:download:`INSaFLU_current_outputs_26_10_2022.xlsx <_static/INSaFLU_current_outputs_26_10_2022.xlsx>`
-   
-
-While navigating through INSaFLU menus, you will find which main software (including versions and settings) were used to generate outputs. The Sample list of each Project also also summarizes the software settings and user-defined cut-offs applied for each sample. 
+The pipeline culminates in the production of a set of summary statistics and visualizations of the results.
  
+Below, you can find instructions on how to create a TELEVIR project, run samples and visualize/intrepret the results
 
-Navigate through sample-specific outputs
-++++++++++++++++++++++++++++++++++++++++
+**TELEVIR Projects** - How to create and scale-up a metagenomics virus detection project
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
    
+Within the *TELEVIR Projects* menu:
 
-Explore the *Samples* menu
+1. Go to *Projects* menu and choose *Create project*
+....................................................
+
+For enhanced data interpretation, users are encouraged to create TELEVIR projects per metagenomics sequenincg run. 
+
+
+2. Add a *Name* and *Description*, Choose the *Sequencing technology* and *Save*
+................................................................................
+
+3. Select the workflow and software to be run
+.............................................
+
+After creating a project, and before adding/running sample, you can clicking in the "Magic wand" to select the bioinformatics workflow to be applied  to every sample added to the project. 
+
+As there is no “one-size-fits-all” bioinformatics pipeline that can detect all viruses, the TELEVIR module was precisely designed to allow users to easily run those complex workflows (covering the several combination of classification algorithms, databases and parameters, etc) simultaneously. The default workflows are “good-performant” workflows (selected after multiple testing and benchmarking) that together can potentiate the detection of clinical relevant viruses.
+
+Nonetheless, users can always turn ON/OFF specific steps (such as, Viral enrichment or Host depletion) and and select/deselect alternative software for each step. Details about the current pipeline can be found here: https://insaflu.readthedocs.io/en/latest/bioinformatics-pipeline.html#metagenomics-virus-detection):
+
+
+
+
+
+3. Choose the Nextstrain build
+...................................
+YYYYY
 --------------------------  
    
 This tab displays all information for all loaded samples.
