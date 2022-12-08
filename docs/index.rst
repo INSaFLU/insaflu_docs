@@ -54,8 +54,8 @@ Contents
 
    guide_pre_ngs.rst
    uploading_data.rst
-   project_creation.rst
-   output_visualization.rst
-   data_analysis.rst
+   routine_genomic_surveillance.rst
+   metagenomics_virus_detection.rst
+   bioinformatics_pipeline.rst
    change_log.rst
 
