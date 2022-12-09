@@ -257,7 +257,7 @@ This key module takes enables reference-based mapping, followed by SNP/indel cal
 		
 	**Masking low coverage regions:**
 
-	**msa_masker.py** (https://github.com/rfm-targa/BioinfUtils/blob/master/msa_masker.py; kind contribution of Rafael Mamede).
+	**msa_masker.py** (https://github.com/rfm-targa/BioinfUtils/blob/master/FASTA/msa_masker.py; kind contribution of Rafael Mamede).
 	
 	This script substitutes positions with a low depth of coverage in a Multiple Sequence Alignment (MSA) with 'N'. The depth of coverage value below which the process masks positions is user-selected (see  “User-defined parameters”). It will not mask gaps/indels contained in the aligned sequences.
 	
