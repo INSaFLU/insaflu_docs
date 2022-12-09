@@ -100,9 +100,9 @@ By clicking in a TAXID description, user can visualize/download multiple outputs
 
 # READS MAPPING
 
-- **Mapping Coverage** plot (depth of coverage thorughout the reference genome)
+- **Mapping Coverage** plot (depth of coverage throughout the reference genome)
 
-- **Integrative Genomics Viewer (IGV)** (interactive visualization of the mapped reads)
+- **Integrative Genomics Viewer (IGV)** visualization of the mapped reads)
 
 - **Mapped reads** in FASTA and BAM
 
@@ -116,7 +116,7 @@ By clicking in a TAXID description, user can visualize/download multiple outputs
 
 - **Contigs alignment** in Pairwise mApping Format (PAF)
 
--**Sample remap**: statistics for reads'mapping against the set of contigs classified for a each TAXID.
+- **Sample remap**: statistics regarding the reads' mapping against the set of contigs classified for a given TAXID.
 
 
 Tips for Results interpretation
@@ -146,7 +146,7 @@ The reads retained are provided for download (fastq.gz format).
 **Assembly**
 ............
 
-This tab provides an overview on **de novo** assembly step (this steps uses the reads retained after the "Viral enrichment" and/or "Host depletion" steps).
+This tab provides an overview on **de novo** assembly step (thi steps uses the reads retained after the "Viral enrichment" and/or "Host depletion" steps).
 
 Filtered contigs are provided for download (fasta.gz format).
 
