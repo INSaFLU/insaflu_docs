@@ -62,10 +62,10 @@ At this time, users may start monitoring the Project progress by checking the ru
 By clicking in *Run panel*, users can get an overview of the workflows run.
 
 
-TELEVIR - Output Visualization and Download
-++++++++++++++++++++++++++++++++++++++++++++
+**TELEVIR - Output Visualization and Download**
+++++++++++++++++++++++++++++++++++++++++++++++++
 
-The INSaFLU-TELEVIR bioinformatics pipeline for metagenomics virus diagnostic generates multiple outputs, reflecting the multiple steps of the pipeline (detailed here: https://insaflu.readthedocs.io/en/latest/bioinformatics_pipeline.html#metagenomics-virus-detection). **The main report lists the top viral hits, each accompanied by several robust and diagnostic-oriented metrics, statistics and visualizations, provided as (interactive) tables (intermediate and final reports), graphs (e.g., coverage plots, Integrative Genomics Viewer visualization, Assembly to reference dotplot) and multiple downloadable output files (e.g., list of the software parameters, reads/contigs classification reports, mapped reads/contigs identified per each virus; reference sequences, etc)**
+The INSaFLU-TELEVIR bioinformatics pipeline for metagenomics virus diagnostic generates multiple outputs, reflecting the multiple steps of the pipeline (detailed here: https://insaflu.readthedocs.io/en/latest/bioinformatics_pipeline.html#metagenomics-virus-detection). The main report lists the top viral hits, each accompanied by several robust and **diagnostic-oriented metrics, statistics and visualizations**, provided as (interactive) tables (intermediate and final reports), graphs (e.g., coverage plots, Integrative Genomics Viewer visualization, Assembly to reference dotplot) and multiple downloadable output files (e.g., list of the software parameters, reads/contigs classification reports, mapped reads/contigs identified per each virus; reference sequences, etc)
 
 The outputs are organized in dynamic 'expand-and-collapse' panels:
 
@@ -101,9 +101,8 @@ Below, you can find a description of the main outputs and statistics.
 	- *"Vestigial Mapping"*: when only a vestigial amount of reads (<= 2) mapped.
 
 .. note::
-*Coverage is considered only above a minimum depth threshold. By default, this threshold is set to 1 for ONT data, and to 2 for Illumina data.
-**Secondary mappings mappings are suppressed during the re-mapping step. However, for ONT, reads suppress supplementary alignments are not suppressed (split or chimeric alignments), since these can be informative. This behaviour can result in higher coverage than the number of reads mapped. 	
-
+- **Cov** is considered only above a minimum **Depth** threshold. By default, this threshold is set to 1 for ONT data, and to 2 for Illumina data.
+- Secondary mappings mappings are suppressed during the re-mapping step. However, for ONT, reads suppress supplementary alignments are not suppressed (split or chimeric alignments), since these can be informative. This behaviour can result in higher coverage than the number of reads mapped. 	
 
 
 
