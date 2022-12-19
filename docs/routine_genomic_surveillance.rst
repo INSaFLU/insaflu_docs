@@ -55,7 +55,7 @@ Samples are processed immediately upon selection, so, at this time, users may st
 
 
 5. Monitoring Projects' progress
-...............................
+.................................
 
 INSaFLU projects are automatically run upon creation. So, at this time, users may start monitoring the Project progress by checking the number of samples in the following status: Processed (P); Waiting (W) and Error (E).
 
@@ -209,11 +209,12 @@ While navigating through INSaFLU menus, you will find which main software (inclu
  
 
 Navigate through sample-specific outputs
------------------------------------------
+............................................
 
 Several sample-specific results can be found in *Samples* and *INSaFLU projects* tabs
    
 **A.** Go to *Samples* menu and check the *reads' quality reports and typing data*
+-------------------------------------------------------------------------------------
 
 Just after samples' metadata and NGS data submission, INSaFLU automatically updates samples' information with reads quality and typing data .
  
@@ -221,6 +222,7 @@ Just after samples' metadata and NGS data submission, INSaFLU automatically upda
 
 
 **B.** Go to *Samples* menu and explore the *'More info' icon next to each sample*.
+-------------------------------------------------------------------------------------
 
 By clicking on the 'More info' icon next to each sample, you can get an overview on the specific sample metadata and explore:
 
@@ -261,6 +263,7 @@ Click on ".html" files and explore each one of the FastQC (for Illumina/Ion Torr
 
 
 **C.** Go to *Projects* menu, and click on **"See results"** to explore outputs of a given project
+----------------------------------------------------------------------------------------------------
 
 Below the dynamic 'expand-and-collapse' panels, you can explore a table that contains multiple sample-specific outputs generated for each sample in a given project, including:
 
@@ -299,7 +302,7 @@ By clicking on each one of the color-coded circles, you can explore locus-specif
 
 
 **D.** Go to *Projects* menu, click on **"See results"** and explore the **"More info"** icon next to each sample
-
+------------------------------------------------------------------------------------------------------------------
 By clicking on the 'More info' icon next to each sample, you can get an overview on the specific sample metadata and additionally download/explore:
 
 
@@ -333,7 +336,7 @@ By clicking on "Mapping file by IGV (Explore 'sample.bam' file), you can finely 
 
 
 Navigate through global *Projects* outputs
--------------------------------------------
+............................................
    
 The *INSaFLU Projects* tab lists all your reference-based genomic surveillance projects. 
 
@@ -351,7 +354,7 @@ The "Sample_list" file can be uploaded, together with associated alignment or ph
 
 
 A. Click on the panel **Project 'Project_name'** to get an overview on the project
-..................................................................................
+-----------------------------------------------------------------------------------
 
 Within this panel you can get an overview on the project (e.g., number of samples processed, reference used, etc), and download project-specific outputs:
 
@@ -372,7 +375,7 @@ Within this panel you can get an overview on the project (e.g., number of sample
 
 
 B. Navigate through **Phylogenetic trees** and Explore your metadata
-....................................................................
+-----------------------------------------------------------------------------------
 
 Within this panel you can explore the "whole-genome"-based ("All") and locus-specific phylogenetic trees
 
@@ -409,14 +412,14 @@ Examples:
 
 
 C. Navigate through **Mutation list** 
-....................................................................
+-----------------------------------------------------------------------------------
 
 Within this panel you can explore the list of all validated mutations (SNPs and indels) assumed in the consensus sequences of all samples within the project. It can filter by any item (e.g., sample, aa change, etc) and download the sub-table with the filtered rows.
 
 
 
 D. Navigate through **Nucleotide alignments by MSAViewer**
-..........................................................
+-----------------------------------------------------------------------------------
 
 Within this panel you can explore the "whole-genome"-based ("All") and locus-specific nucleotide alignments 
 
@@ -437,7 +440,7 @@ Within this panel you can explore the "whole-genome"-based ("All") and locus-spe
 
 
 E. Navigate through **Amino acid alignments by MSAViewer**
-..........................................................
+-----------------------------------------------------------------------------------
 
 Within this panel you can explore the amino acid alignments for the influenza protein 
 
@@ -455,7 +458,7 @@ Within this panel you can explore the amino acid alignments for the influenza pr
   - Each locus-specific amino acid alignment exclusively enrolls samples color-coded as GREEN or YELLOW for the respective locus in the coverage interactive report (see meaning above). For YELLOW cases (i.e. incomplete locus), undefined amino acids (“X”) are automatically introduced in low coverage regions at a user-selected coverage thresholds. **NOTE: Protein alignments only include samples with < 10% of undefined amino acids (X).**
    
 F. Explore the **Intra-host minor variants annotation (and uncovering of putative mixed infections)** panel
-...........................................................................................................
+----------------------------------------------------------------------------------------------------------------
 
 Within this panel you can explore a graph plotting the proportion of iSNV at frequency at 1-50%  (minor iSNVs) and at frequency 50-90%, and download the list of all detected and annotated minor iSNVs (i.e., SNV displaying intra-sample variation at frequency between 1 and 50% - minor variants) for the project.
 
@@ -480,7 +483,7 @@ You may inspect this plot to uncover infections with influenza viruses presentin
 
 
 G. Explore the **Coverage for all samples** panel
-...........................................................................................................
+-----------------------------------------------------------------------------------
 
 This panel provides an additional interactive color-coded coverage report, summarizing the mean depth of coverage and horizontal coverage per locus for all samples within a project.
 
@@ -505,7 +508,7 @@ By clicking on each one of the color-coded rectangle, you can explore locus-spec
 
 
 H. Explore the **Algn2pheno report** panel and results
-...........................................................................................................
+-----------------------------------------------------------------------------------
 
 Within this panel you can explore the results of the Algn2pheno module that screens mutations of interest in the Spike amino acid sequences of samples in projects that have a SARS-CoV-2 reference sequence.
 
@@ -528,7 +531,7 @@ By clicking on the "Download" button in the Project results page, it is possible
 More info about this functionality here: https://insaflu.readthedocs.io/en/latest/data_analysis.html#algn2pheno
 
 Navigate through Nextstrain *Datasets*
--------------------------------------------
+............................................ 
 
 The *Datasets* tab lists all your Nextstrain Datasets, organized by the available builds (more info here: https://insaflu.readthedocs.io/en/latest/data_analysis.html#nextstrain-datasets)
 
@@ -540,7 +543,7 @@ The *Dataset* outputs are available through the **Download** button and dynamic 
 Explore the *Nextstrain Dataset* outputs:
 
 A. Explore the main Nextstrain output (JSON file) using auspice.us
-..................................................................................
+--------------------------------------------------------------------
 
 The **Download** button provides:
 
@@ -577,7 +580,7 @@ Note: For sequences previously obtained with INSaFLU (i.e., consensus sequences 
 
 
 B. Navigate through **Phylogenetic trees** and Explore your metadata
-......................................................................
+--------------------------------------------------------------------
 
 Within this panel, as a complement of https://auspice.us/ visualization, you can also visualize the Nextstrain *Divergence* tree and associated metadata using Phylocanvas (http://phylocanvas.org/).
 
@@ -603,7 +606,7 @@ Examples:
 
 
 C. Navigate through **Nucleotide alignments by MSAViewer**
-...........................................................
+--------------------------------------------------------------------
 
 Within this panel, you can explore the Nextstrain nucleotide alignment used to derive the phylogeny.
 
