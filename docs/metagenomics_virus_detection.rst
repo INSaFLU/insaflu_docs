@@ -46,7 +46,7 @@ Workflows and parameters can be changed at the global level, through the setting
    - The TELEVIR Settings page controls the bioinformatics workflows to be applied. Inside, software are organized by technology and pipeline. **Controlling workflows is done by selecting/deselecting which software are to run at each step of the pipeline, their parameters and/or databases when permitted.** Specific steps can be turned off by deselecting all software available for that step 
    - The default workflows are “well-performing” workflows (selected after multiple testing and benchmarking) that together can potentiate the detection of clinical relevant viruses.
  
- **NOTE:** *Some pipeline steps cannot be turned off (e.g. Remapping). Other cases are context dependent: Assembly cannot be turned OFF if Contig Classification is turned ON; at least one classification step must be turned ON (Contig Classification may not be turned OFF if Read Classification is already OFF, and vice-versa). Details about the current pipeline can be found here: https://insaflu.readthedocs.io/en/latest/bioinformatics-pipeline.html#metagenomics-virus-detection):*
+ **NOTE:** *Some pipeline steps cannot be turned off (e.g. Remapping). Other cases are context dependent: Assembly cannot be turned OFF if Contig Classification is turned ON; at least one classification step must be turned ON (Contig Classification may not be turned OFF if Read Classification is already OFF, and vice-versa).*
  
 
 4. *Add samples* to the TELEVIR project
@@ -100,7 +100,7 @@ Below, you can find a description of the main outputs and statistics.
 	- *"Likely False Positive"*: when most reads map in a very small region of the reference sequence, i.e., hits with high “DepthC" but low “Depth” and low "Cov (%)". Flagged for hits with DepthC / Depth > 10 and Cov (%) > 5%.
 	- *"Vestigial Mapping"*: when only a vestigial amount of reads (<= 2) mapped.
 
-::note::
+.. note::
 *Coverage is considered only above a minimum depth threshold. By default, this threshold is set to 1 for ONT data, and to 2 for Illumina data.
 **Secondary mappings mappings are suppressed during the re-mapping step. However, for ONT, reads suppress supplementary alignments are not suppressed (split or chimeric alignments), since these can be informative. This behaviour can result in higher coverage than the number of reads mapped. 	
 
@@ -133,15 +133,17 @@ By clicking in a TAXID description, user can visualize/download multiple outputs
 - **Sample remap**: statistics regarding the reads' mapping against the set of contigs classified for a given TAXID.
 
 
-Guide for report interpretation
---------------------------------
+**Guide for report interpretation**
+-----------------------------------
 
 **Interpretation of metagenomics virus detection data is not a trivial task (even for users with expertise in virology and/or bioinformatics)**. In order to facilitate output interpretation and decision-making on the part of users, TELEVIR runs culminate in user-oriented reports with a list of the top viral hits, each accompanied by several robust and diagnostic-oriented metrics (described above). Here, **we provide some guidance on how to interpret TELEVIR reports and exclude/confirm viral hits**, by exemplifying “expected” metric profiles (or combination of profiles) when there are differents levels of evidence for the virus presence:
 
 
-.. important::
+TABLE
 
-# Why do you have
+IMPORTANT:
+
+**# Why do you have**
 
 - **MULTIPLE HITS FOR THE SAME VIRUS (TAXID)?**. This is likely due to the presence of:
 
@@ -158,7 +160,9 @@ Guide for report interpretation
 2. **Re-run the sample by turning OFF** steps that might have filtered out your expected virus (namely Viral enrichment and/or Host depletion steps) or **by selecting new combinations of software** (e.g., for Reads classification).
 
 
-NOTE: Despite INSaFLU-TELEVIR platform is taking advantage of several viral reference databases, they do not cover all viruses. For instance, newly discovered or uncommon virus or viral strains (e.g., viruses without available complete genomes) might be missing, leading to false negative results.
+.. important::
+- Despite INSaFLU-TELEVIR platform is taking advantage of several viral reference databases, they do not cover all viruses. For instance, newly discovered or uncommon virus or viral strains (e.g., viruses without available complete genomes) might be missing, leading to false negative results.
+- The ultimate goal of the TELEVIR module is to detect viruses, and not necessarily to identify the virus “strain/variant/serotype”. Once a given virus is detected, users can perform fine-tune analyses (e.g, consensus sequences reconstruction, mutation detection, etc) with the classical INSaFLU projects. 
 
 
 # How can you **compare your test samples with the “negative controls”**?
@@ -193,7 +197,7 @@ The reads retained are provided for download (fastq.gz format).
 **Assembly**
 ---------------------------------------------------------------
 
-This tab provides an overview on **de novo** assembly step (thi steps uses the reads retained after the "Viral enrichment" and/or "Host depletion" steps).
+This tab provides an overview on the assembly step (thi steps uses the reads retained after the "Viral enrichment" and/or "Host depletion" steps).
 
 Filtered contigs are provided for download (fasta.gz format).
 
