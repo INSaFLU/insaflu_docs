@@ -525,9 +525,8 @@ It is composed of these main steps (detailed below):
 	- Using contigs (if assembled).
 	- Using several reference databases.
 6. Selection of viral TAXID and representative genome sequences for confirmatory re-mapping
-7. Remapping of the viral sequences against selected reference genome sequences. 
-
-The pipeline culminates in the production of a set of summary statistics and visualizations of the results.
+7. Remapping of the viral sequences against selected reference genome sequences.
+8. Reporting
 
 
 .. image:: _static/televir_workflow_update_20221208.png
@@ -543,7 +542,7 @@ Read quality analysis and improvement
 
 *Description*
 
-This step takes the input single- or paired-end reads (fastq.gz format) and produces quality processed reads, as well as quality control reports for each file, before and after quality improvement. This module is automatically run upon reads upload (i.e., no user intervention is needed). 
+This step takes the input single- or paired-end reads (fastq.gz format; ONT or Illumina) and produces quality processed reads, as well as quality control reports for each file, before and after this step. This module overlaps the two components (virus detection and surveillance) of the platform. 
 
 *Software version/settings*
 
@@ -635,7 +634,7 @@ Viral Enrichment
 
 *Description*
 
-The **"Viral enrichment"** step will try to **retain potential viral reads** based on a rapid and less strict classification of the reads against a viral sequence database. This step is directly performed over raw reads (if QC was turned OFF) or quality processed reads (if QC was turned ON).
+This step **retains potential viral reads** based on a rapid and permissive classification of the reads against a viral sequence database. This step is directly performed using over raw reads (if QC was turned OFF) or quality processed reads (if QC was turned ON).
 
 
 .. note::
@@ -644,12 +643,15 @@ The **"Viral enrichment"** step will try to **retain potential viral reads** bas
 
 	**Centrifuge** (https://github.com/centrifuge/) 
 	
-	**Kraken2** 
+	**Kraken2** (https://github.com/DerrickWood/kraken2)
 	
 	
 *Databases*
 
-	**XXXXXXXXX**
+	**Virosaurus90v 2020_4.2**  (https://viralzone.expasy.org/8676)
+	
+	**NCBI refseq viral genomes** release 4 (https://ftp.ncbi.nlm.nih.gov/genomes/refseq/)
+
 
 
 Host depletion
@@ -657,49 +659,47 @@ Host depletion
 
 *Description*
 
-The **"Host depletion"** step will try to **remove potential host reads** based on reference-based mapping against host genome sequence(s) taking as input reads retained after the previous "Viral enrichment" step. If the Viral enrichment step was turned OFF, host depletion will be directly performed over raw reads (if QC was turned OFF) or quality processed reads (if QC was turned ON).
-
+This step **removes potential host reads** based on reference-based mapping against host genome sequence(s). Mapped reads are treated as potential host reads and removed. If the Viral enrichment step was turned OFF, host depletion will be directly performed over raw reads (if QC was turned OFF) or quality processed reads (if QC was turned ON).
 
 .. note::
 
 *Software*
 
-	**BWA**
+	**BWA**  (https://github.com/lh3/bwa)
 	
-	**Minimap2** 
+	**Minimap2** (https://github.com/lh3/minimap2)
+
 	
 	
 *Host reference sequences**
 
-	**XXXXXXXXX**
+	**Human reference genome hg38 - NCBI accid GCA_000001405.15**
 
 
-De novo assembly
+Assembly
 ------------------
 
 *Description*
 
-This step will perform de novo assembly over the reads retained after the "Viral enrichment" and/or "Host depletion" steps. If these steps were turned OFF, assembly will be directly performed over raw reads (if QC was turned OFF) or quality processed reads (if QC was turned ON).
+This step performs assembly using reads retained after the "Viral enrichment" and/or "Host depletion" steps. If the latter steps were turned OFF, assembly will be directly performed using raw reads (if QC was turned OFF) or quality processed reads (if QC was turned ON).
 
 
 .. note::
 
 *Software*
 
-	**SPAdes**
+	**SPAdes** (https://github.com/ablab/spades)
 	
-	**Raven** 
+	**Raven** (https://github.com/lbcb-sci/raven)
 	
-	**Flye** 
-	
-	
+
 
 Identification of the viral sequences
 --------------------------------------
 
 *Description*
 
-This step will **screen reads and contigs against viral sequence databases**, generating intermediate reads and/or contigs classification reports with a list of viral hits (TAXID and representative accession numbers) potentially present in the sample. The most "suspected" viral hits will be automatically selected for confirmatory re-mapping (see next steps).
+This step **screens reads and contigs against viral sequence databases**, generating intermediate read and/or contig classification reports of viral hits (TAXID and representative accession numbers) potentially present in the sample. The top viral hits will be selected for confirmatory re-mapping (see next steps).
 
 
 .. note::
@@ -708,27 +708,32 @@ This step will **screen reads and contigs against viral sequence databases**, ge
 
 **Reads classification**
 
-	**Centrifuge**
+	**Centrifuge** (https://github.com/DaehwanKimLab/centrifuge)
 	
-	**FastViromeExplorer** 
+	**FastViromeExplorer** (https://github.com/saima-tithi/FastViromeExplorer)
 	
-	**Kraken2** 
+	**Kraken2** (https://github.com/DerrickWood/kraken2)
 	
-	**Krakenuniq** 
+	**Krakenuniq** (https://github.com/fbreitwieser/krakenuniq)
 	
-	**Kaiju** 
+	**Kaiju** (https://github.com/bioinformatics-centre/kaiju)
 	
 
 **Contigs classification**
 	
-	**Blast**
+	**Blast** (https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
 	
-	**FastViromeExplorer** 
+	**FastViromeExplorer** (https://github.com/saima-tithi/FastViromeExplorer)
 
 
 *Databases*
 
-	**XXXXXXXXX**
+
+	**Virosaurus90v 2020_4.2**  (https://viralzone.expasy.org/8676)
+	
+	**NCBI refseq viral genomes** release 4 (https://ftp.ncbi.nlm.nih.gov/genomes/refseq/)
+	
+	**RefSeq complete viral genomes/proteins**, as modified for the kraken2 and centrifuge databases.
 
 
 Selection of viral TAXID and representative genome sequences for confirmatory re-mapping 
@@ -736,18 +741,18 @@ Selection of viral TAXID and representative genome sequences for confirmatory re
 
 *Description*
 
-In the previous step, reads and contigs (if available) were classified independently, with this classification being provided as intermediate reports. In this step, **the top-15 most "suspected" viral hits (TAXID) are automatically selected for confirmatory mapping against reference viral genome(s)** present in the available databases. 
+In this step, the previously identified viral hits (TAXID) are selected for confirmatory mapping against reference viral genome(s) present in the available databases. Viral TAXIDs are selected, up to a maximum number of hits*, as follows:
 
 Viral TAXIDs are selected, up to a maximum of 15 hits, as follows:
 
-1º - TAXIDs present in both classification sides (reads and contigs) are firstly selected; 
-2º - additional TAXIDs are then selected accross the reads classification reports (by number of hits, from top-down) and contigs classifications (by number of hits and total contigs length, from top-down) until reaching a total of 15 selected hits.
-
+1º - Viral hits corresponding to phages are removed from classification reports.
+2º - TAXIDs present in both intermediate classification reports (reads and contigs) are selected;
+3º - additional TAXIDs are selected across the read classification report (by number of hits, in decreasing order) and contigs classification report (by number of hits and total length of matching sequences, from top-down) until reaching the defined maximum number of hits to be selected
+*currently, this number is set as 15 as default, but it is to be user-defined
 
 *Databases*
 
-	**XXXXXXXXX**
-
+	**NCBI Taxonomy** (https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/)
 
 
 Remapping of the viral sequences against selected reference genome sequences. 
@@ -755,23 +760,37 @@ Remapping of the viral sequences against selected reference genome sequences.
 
 *Description*
 
-This step will automatically map reads and/or contigs against representative genome sequences of the selected viral TAXIDs identified in the previous step. Reads will also be mapped against the set of contigs classified for a each TAXID. 
+This step **maps reads and/or contigs against representative genome sequences of the selected viral TAXIDs** collected in the previous step. Reads are also mapped against any contigs that successfully map against reference sequences. 
 
-NOTE: TAXIDs that were not automatically selected for this confirmatory re-mapping step (but that were present in the intermediate reads and/or contigs classification reports) can still be user-selected for mapping at any time. 
+Of note, TAXIDs that were not automatically selected for this confirmatory remapping step (but that were present in the intermediate reads and/or contigs classification reports) can still user-selected for mapping at any time.
 
 
 .. note::
 
 *Software*
 
-	**Snippy**
+	**Snippy** (https://github.com/tseemann/snippy)
 	
-	**Bowtie2** 
+	**Bowtie2** (https://github.com/BenLangmead/bowtie2)
 	
-	**Minimap2** 
+	**Minimap2** (https://github.com/lh3/minimap2)
 	
 
-The virus detection pipeline culminates in the production of a set of summary statistics and visualizations of the results.
+*Databases*
+
+	**Virosaurus90v 2020_4.2**  (https://viralzone.expasy.org/8676)
+	
+	**NCBI refseq viral genomes** release 4 (https://ftp.ncbi.nlm.nih.gov/genomes/refseq/)
+	
+	**RefSeq complete viral genomes/proteins**
+
+
+
+Reporting
+----------
+
+The workflows culminate in **user-oriented reports with a list of top viral hits, each accompanied by several robust and diagnostic-oriented metrics, statistics and visualizations**, provided as (interactive) *tables* (intermediate and final reports), *graphs* (e.g., coverage plots, Integrative Genomics Viewer visualization, Assembly to reference dotplot) and *multiple downloadable output files* (e.g., list of the software parameters, reads/contigs classification reports, mapped reads/contigs identified per each virus; reference sequences, etc).
+
 
 
 User-defined parameters
