@@ -209,20 +209,18 @@ While navigating through INSaFLU menus, you will find which main software (inclu
  
 
 Navigate through sample-specific outputs
-----------------------------------------
+-----------------------------------------
 
 Several sample-specific results can be found in *Samples* and *INSaFLU projects* tabs
    
-A. Go to *Samples* menu and check the *reads' quality reports and typing data*
-..............................................................................
+**A.** Go to *Samples* menu and check the *reads' quality reports and typing data*
 
 Just after samples' metadata and NGS data submission, INSaFLU automatically updates samples' information with reads quality and typing data .
  
 .. image:: _static/Samples_menu.png
 
 
-B. Go to *Samples* menu and explore the *'More info' icon next to each sample*.
-...............................................................................
+**B.** Go to *Samples* menu and explore the *'More info' icon next to each sample*.
 
 By clicking on the 'More info' icon next to each sample, you can get an overview on the specific sample metadata and explore:
 
@@ -262,8 +260,7 @@ Click on ".html" files and explore each one of the FastQC (for Illumina/Ion Torr
  	- Outputs of this module (i.e., draft assemblies, the identified type and subtype/lineage and a table linking contigs to segments/references) can be visualize or downloaded here.
 
 
-C. Go to *Projects* menu, and click on **"See results"** to explore outputs of a given project
-..............................................................................................
+**C.** Go to *Projects* menu, and click on **"See results"** to explore outputs of a given project
 
 Below the dynamic 'expand-and-collapse' panels, you can explore a table that contains multiple sample-specific outputs generated for each sample in a given project, including:
 
@@ -301,8 +298,7 @@ By clicking on each one of the color-coded circles, you can explore locus-specif
 .. image:: _static/sample_table_coverage_plot.png
 
 
-D. Go to *Projects* menu, click on **"See results"** and explore the **"More info"** icon next to each sample
-.............................................................................................................
+**D.** Go to *Projects* menu, click on **"See results"** and explore the **"More info"** icon next to each sample
 
 By clicking on the 'More info' icon next to each sample, you can get an overview on the specific sample metadata and additionally download/explore:
 
@@ -337,7 +333,7 @@ By clicking on "Mapping file by IGV (Explore 'sample.bam' file), you can finely 
 
 
 Navigate through global *Projects* outputs
-++++++++++++++++++++++++++++++++++++++++++
+-------------------------------------------
    
 The *INSaFLU Projects* tab lists all your reference-based genomic surveillance projects. 
 
@@ -532,7 +528,7 @@ By clicking on the "Download" button in the Project results page, it is possible
 More info about this functionality here: https://insaflu.readthedocs.io/en/latest/data_analysis.html#algn2pheno
 
 Navigate through Nextstrain *Datasets*
-++++++++++++++++++++++++++++++++++++++++
+-------------------------------------------
 
 The *Datasets* tab lists all your Nextstrain Datasets, organized by the available builds (more info here: https://insaflu.readthedocs.io/en/latest/data_analysis.html#nextstrain-datasets)
 
@@ -541,8 +537,7 @@ Click in **Results"** to explore outputs of a given Dataset.
 The *Dataset* outputs are available through the **Download** button and dynamic **'expand-and-collapse' panels**:
 
 
-Explore the *Nextstrain Dataset* outputs
--------------------------------
+Explore the *Nextstrain Dataset* outputs:
 
 A. Explore the main Nextstrain output (JSON file) using auspice.us
 ..................................................................................
