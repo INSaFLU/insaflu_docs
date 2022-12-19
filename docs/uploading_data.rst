@@ -1,5 +1,5 @@
-Uploading or Updating data
-==========================
+**Uploading or Updating data**
+===============================
 
 INSaFLU needs: 
 
