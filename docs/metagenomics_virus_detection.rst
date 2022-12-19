@@ -3,7 +3,7 @@ Metagenomics virus detection
 
 The TELEVIR  bioinformatics component of INSaFLU is a modular pipeline for the identification of viral sequences in metagenomic data (both Illumina and ONT data). 
 
-It is composed of these main steps (detailed in https://insaflu.readthedocs.io/en/latest/bioinformatics-pipeline.html#metagenomics-virus-detection):
+It is composed of these main steps (detailed in https://insaflu.readthedocs.io/en/latest/bioinformatics_pipeline.html#metagenomics-virus-detection):
 
 1. Read quality analysis and improvement [optional]
 2. Viral Enrichment [optional].
@@ -43,10 +43,10 @@ As there is no “one-size-fits-all” bioinformatics pipeline that can detect a
 Workflows and parameters can be changed at the global level, through the settings menu, or specifically for an existing project by clicking the “Magic Wand” icon on an existing project’s listing in the TELEVIR Projects page. Project settings will apply only to deployments within that project. Conversely, Global settings apply only to projects that have not had their settings changed. 
 
 .. note::
-   - The TELEVIR Settings page controls the bioinformatics workflows to be applied. Inside, software are organized by technology and pipeline. **Controlling workflows is done by selecting/deselecting which software are to run at each step of the pipeline, their parameters and/or databases when permitted.** Specific steps can be turned off by deselecting all software available for that step* 
+   - The TELEVIR Settings page controls the bioinformatics workflows to be applied. Inside, software are organized by technology and pipeline. **Controlling workflows is done by selecting/deselecting which software are to run at each step of the pipeline, their parameters and/or databases when permitted.** Specific steps can be turned off by deselecting all software available for that step 
    - The default workflows are “well-performing” workflows (selected after multiple testing and benchmarking) that together can potentiate the detection of clinical relevant viruses.
  
- * *Some pipeline steps cannot be turned off (e.g. Remapping). Other cases are context dependent: Assembly cannot be turned OFF if Contig Classification is turned ON; at least one classification step must be turned ON (Contig Classification may not be turned OFF if Read Classification is already OFF, and vice-versa). Details about the current pipeline can be found here: https://insaflu.readthedocs.io/en/latest/bioinformatics-pipeline.html#metagenomics-virus-detection):*
+ **NOTE:** *Some pipeline steps cannot be turned off (e.g. Remapping). Other cases are context dependent: Assembly cannot be turned OFF if Contig Classification is turned ON; at least one classification step must be turned ON (Contig Classification may not be turned OFF if Read Classification is already OFF, and vice-versa). Details about the current pipeline can be found here: https://insaflu.readthedocs.io/en/latest/bioinformatics-pipeline.html#metagenomics-virus-detection):*
  
 
 4. *Add samples* to the TELEVIR project
@@ -62,16 +62,16 @@ At this time, users may start monitoring the Project progress by checking the ru
 By clicking in *Run panel*, users can get an overview of the workflows run.
 
 
-Output Visualization and Download
-++++++++++++++++++++++++++++++++++
+TELEVIR - Output Visualization and Download
+++++++++++++++++++++++++++++++++++++++++++++
 
-The INSaFLU-TELEVIR bioinformatics pipeline for metagenomics virus diagnostic generates multiple outputs, reflecting the multiple steps of the pipeline (detailed here: https://insaflu.readthedocs.io/en/latest/bioinformatics-pipeline.html#metagenomics-virus-detection). The main report lists the top viral hits, each accompanied by several robust and diagnostic-oriented metrics, statistics and visualizations, provided as (interactive) tables (intermediate and final reports), graphs (e.g., coverage plots, Integrative Genomics Viewer visualization, Assembly to reference dotplot) and multiple downloadable output files (e.g., list of the software parameters, reads/contigs classification reports, mapped reads/contigs identified per each virus; reference sequences, etc)
+The INSaFLU-TELEVIR bioinformatics pipeline for metagenomics virus diagnostic generates multiple outputs, reflecting the multiple steps of the pipeline (detailed here: https://insaflu.readthedocs.io/en/latest/bioinformatics_pipeline.html#metagenomics-virus-detection). **The main report lists the top viral hits, each accompanied by several robust and diagnostic-oriented metrics, statistics and visualizations, provided as (interactive) tables (intermediate and final reports), graphs (e.g., coverage plots, Integrative Genomics Viewer visualization, Assembly to reference dotplot) and multiple downloadable output files (e.g., list of the software parameters, reads/contigs classification reports, mapped reads/contigs identified per each virus; reference sequences, etc)**
 
 The outputs are organized in dynamic 'expand-and-collapse' panels:
 
 
 Pathogen identification (**Main report**)
------------------------------------------
+...........................................
    
 This tab displays an interactive table with **summary statistics and visualizations of the end-point results of the TELEVIR metagenomic virus detection pipeline**. In summary, through this pipeline, reads and contigs (if available) are classified independently, then viral hits (TAXID) detected in both intermediate classification reports (reads and contigs) and/or within the top list from each side are selected for reference-based mapping against viral genome sequences present in the available databases. **This main report (interactive table) only includes viral hits that were classified at reads and/or contig (“class. success”) level AND that had mapped reads or contigs (“mapping success)** 
 
@@ -83,8 +83,8 @@ This tab displays an interactive table with **summary statistics and visualizati
    
 Below, you can find a description of the main outputs and statistics.
 
-Mapping statistics
-...................
+**Mapping statistics**
+----------------------
 
 - **Cov (%)**: horizontal coverage (i.e., percentage of the reference sequence covered)
 - **Depth**: mean depth of coverage throughout the whole genome
@@ -107,8 +107,8 @@ Mapping statistics
 
 
 
-Mapping plots and output files
-..............................
+**Mapping plots and output files**
+-----------------------------------
 
 By clicking in a TAXID description, user can visualize/download multiple outputs regarding:
 
@@ -134,7 +134,7 @@ By clicking in a TAXID description, user can visualize/download multiple outputs
 
 
 Guide for report interpretation
-................................
+--------------------------------
 
 **Interpretation of metagenomics virus detection data is not a trivial task (even for users with expertise in virology and/or bioinformatics)**. In order to facilitate output interpretation and decision-making on the part of users, TELEVIR runs culminate in user-oriented reports with a list of the top viral hits, each accompanied by several robust and diagnostic-oriented metrics (described above). Here, **we provide some guidance on how to interpret TELEVIR reports and exclude/confirm viral hits**, by exemplifying “expected” metric profiles (or combination of profiles) when there are differents levels of evidence for the virus presence:
 
@@ -148,7 +148,7 @@ Guide for report interpretation
 	1. **segmented virus(es)** in the sample (each reference segment has different accession numbers, so they are listed in different rows).  In this case, if segmented and non-segmented viruses are expected to be present in the sample, it might worth checking the Raw Classification table and requesting extra mapping (as the top hits listed in the Main report might have not included the non-segmented virus due to the over listing of the segmented ones).
 	2. **several reference genomes (strains/variants) of the same virus** in the available Viral reference databases. In this case, **the virus present in the sample is likely more closely related to the reference genome (accession number) yielding the best mapping metrics**.
 
-- **MMULTIPLE HITS FOR CLOSELY RELATED TAXID**? This is likely due to the cross-mapping of reads across several reference genomes with considerable nucleotide homology, such as viruses belonging to the same family. In this case, **the virus present in the sample is likely more closely related to the reference virus (TAXID) yielding the best mapping metrics**. INSaFLU team is working to facilitate grouping hits by virus genetic relatedness…
+- **MULTIPLE HITS FOR CLOSELY RELATED TAXID**? This is likely due to the cross-mapping of reads across several reference genomes with considerable nucleotide homology, such as viruses belonging to the same family. In this case, **the virus present in the sample is likely more closely related to the reference virus (TAXID) yielding the best mapping metrics**. INSaFLU team is working to facilitate grouping hits by virus genetic relatedness…
 
 
 # What should you do if **your expected virus is not listed in the Main report**?
@@ -175,12 +175,12 @@ For further recommendations for interpretation of  metagenomics virus detection 
 
 
 Intermediate outputs 
----------------------
+...........................................
 
 Multiple intermediate outputs and statistics are available by clicking in the following 'expand-and-collapse' panels:
 
 Pre-processing: **Viral Enrichment** and/or **Host depletion**
-..............................................................
+---------------------------------------------------------------
 
 This tab provides an overview on the number of reads filtered during the **Viral enrichment** and/or **Host depletion** steps of the metagenomics virus detection pipeline.
 
@@ -191,20 +191,20 @@ The reads retained are provided for download (fastq.gz format).
 
 
 **Assembly**
-............
+---------------------------------------------------------------
 
 This tab provides an overview on **de novo** assembly step (thi steps uses the reads retained after the "Viral enrichment" and/or "Host depletion" steps).
 
 Filtered contigs are provided for download (fasta.gz format).
 
 **Reads and Contigs classification**
-....................................
+---------------------------------------------------------------
 
 This tab provides **reads and/or contigs classification reports** (tsv format) with the list of viral hits (TAXID and representative accession numbers) detected after the intermediate screening  against viral sequence databases. The two reports are merged to select the top viral hits to be automatically subjected to confirmatory re-mapping (see next steps). These reports are also compiled in the **Raw Classification and Mapping Summary** panel (below).
 
 
 **Remapping** of the viral sequences against selected reference genome sequences. 
-.................................................................................
+-------------------------------------------------------------------------------------
 
 Reads (and contigs) are mapped against  representative genome sequences of the top viral hits identified in the previous step.
 
@@ -213,7 +213,7 @@ This tab provides an overview on the amount of viral hits (TAXIDs and representa
 
 
 **Raw Classification and Mapping Summary**
-.................................................................................
+-----------------------------------------------------------------------
 
 This table lists all viral hits (TAXID and representative accession numbers) detected during the intermediate step of **Reads and Contigs Classification** (see above), indicating if they were (or not) automatically selected for confirmatory re-mapping.
 
