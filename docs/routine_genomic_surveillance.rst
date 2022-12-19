@@ -1,5 +1,5 @@
-Reference-based genomic surveillance
-====================================
+**Reference-based genomic surveillance**
+=========================================
 
 The surveillance-oriented component of INSaFLU allows running:
 
@@ -189,8 +189,8 @@ You may add more samples to your Dataset at any time and click in the "hourglass
 You may remove some samples from your Dataset.
   
 
-Output Visualization and Download
-++++++++++++++++++++++++++++++++++
+**Output** Visualization and Download
+++++++++++++++++++++++++++++++++++++++
 
 The surveillance-oriented INSaFLU component generates multiple outputs, which include:
 
