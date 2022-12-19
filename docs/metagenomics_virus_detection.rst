@@ -1,4 +1,4 @@
-Metagenomics virus detection
+**Metagenomics virus detection**
 =================================
 
 The TELEVIR  bioinformatics component of INSaFLU is a modular pipeline for the identification of viral sequences in metagenomic data (both Illumina and ONT data). 
