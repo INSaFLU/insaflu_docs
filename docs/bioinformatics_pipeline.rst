@@ -1,5 +1,5 @@
-Bioinformatics Pipeline
-========================
+**Bioinformatics Pipeline**
+============================
 
 INSaFLU is an open web-based bioinformatics platform for metagenomic virus detection and routine genomic surveillance.
 
