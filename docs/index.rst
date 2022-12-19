@@ -10,7 +10,13 @@ Welcome to INSaFLU's documentation!
 
 .. image:: _static/logo.png
 
-**INSaFLU ("INSide the FLU") is a bioinformatics free web-based suite that deals with primary data (reads) towards the automatic generation of the output data that are actually the core first-line “genetic requests” for effective and timely influenza and SARS-CoV-2 laboratory surveillance. Data integration is continuously scalable, fitting the need for a real-time genomic surveillance during the flu and COVID-19 epidemics.**
+**INSaFLU-TELEVIR platform is a free bioinformatics web-based (but also locally installable) suite that deals with primary sequencing data (Illumina, Ion Torrent and Oxford Nanopore Technologies reads) towards:
+
+   -	metagenomics virus detection (from reads to virus detection) 
+
+   -	routine genomic surveillance (from reads mutations detection, consensus generation, virus classification, alignments, “genotype-phenotype” screening, phylogenetics, integrative Nextstrain phylogeographical and temporal analysis etc). 
+
+**INSaFLU-TELEVIR versatility and functionality is expected to supply public health laboratories and researchers with a user-oriented “start-to-end” bioinformatics framework that can potentiate a strengthened and timely detection and monitoring of viral (emerging) threats.**
 
 - **Online tool:** https://insaflu.insa.pt
 - **Documentation / Tutorial:** https://insaflu.readthedocs.io/en/latest/
@@ -18,16 +24,10 @@ Welcome to INSaFLU's documentation!
 - **Easy local installation:** https://github.com/INSaFLU/docker
 
 
-Highlights
+Overview
 ++++++++++
 
-* open to all, free of charge, user-restricted accounts
-* applicable to NGS data collected from any amplicon-based schema
-* allows advanced, multi-step software intensive analyses in a user-friendly manner without previous training in bioinformatics
-* automatic identification of influenza type and subtype/lineage, detection of putative mixed infections and intra-host minor variants
-* allows integrating data in a cumulative manner, thus fitting the analytical dynamics underlying the continuous epidemiological surveillance during flu epidemics
-* outputs are provided in nomenclature-stable and standardized formats and can be explored in situ or through multiple compatible downstream applications for fine-tune data analysis and visualization
-
+.. image:: _static/main_modules.png
 
 
 How to Cite
@@ -52,10 +52,10 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   guide_pre_ngs.rst
    uploading_data.rst
    routine_genomic_surveillance.rst
    metagenomics_virus_detection.rst
    bioinformatics_pipeline.rst
+   guide_pre_ngs.rst
    change_log.rst
 
