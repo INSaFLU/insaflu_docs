@@ -8,7 +8,7 @@ It is composed of these main steps (detailed in https://insaflu.readthedocs.io/e
 1. Read quality analysis and improvement [optional]
 2. Viral Enrichment [optional].
 3. Host Depletion [optional].
-4. Assembly of the reads [optional].
+4. *De novo* Assembly of the reads [optional].
 5. Identification of the viral sequences.
 	- Using reads.
 	- Using contigs (if assembled).
