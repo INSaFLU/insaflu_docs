@@ -13,9 +13,9 @@ It is composed of these main steps (detailed in https://insaflu.readthedocs.io/e
 	- Using reads.
 	- Using contigs (if assembled).
 	- Using several reference databases.
-6. Selection of viral TAXID and representative genome sequences for confirmatory re-mapping
+6. Selection of viral TAXID and representative genome sequences for confirmatory re-mapping.
 7. Remapping of the viral sequences against selected reference genomes. 
-8. Reporting
+8. Reporting.
 
 Below, you can find instructions on how to create a TELEVIR project, run samples and visualize/intrepret the results.
 
