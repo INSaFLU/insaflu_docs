@@ -519,7 +519,7 @@ It is composed of these main steps (detailed below):
 1. Read quality analysis and improvement [optional]
 2. Viral Enrichment [optional].
 3. Host Depletion [optional].
-4. Assembly of the reads [optional].
+4. *De novo* assembly of the reads [optional].
 5. Identification of the viral sequences.
 	- Using reads.
 	- Using contigs (if assembled).
@@ -529,7 +529,7 @@ It is composed of these main steps (detailed below):
 8. Reporting
 
 
-.. image:: _static/televir_workflow_update_20221208.png
+.. image:: _static/televir_workflow_update_20221219.png
 
 Simplified illustration of the main steps of the modular INSaFLU-TELEVIR bioinformatics pipeline for metagenomics virus diagnostics.
 
@@ -676,12 +676,12 @@ This step **removes potential host reads** based on reference-based mapping agai
 	**Human reference genome hg38 - NCBI accid GCA_000001405.15**
 
 
-Assembly
+*De novo* Assembly
 ------------------
 
 *Description*
 
-This step performs assembly using reads retained after the "Viral enrichment" and/or "Host depletion" steps. If the latter steps were turned OFF, assembly will be directly performed using raw reads (if QC was turned OFF) or quality processed reads (if QC was turned ON).
+This step performs *de novo* assembly using reads retained after the "Viral enrichment" and/or "Host depletion" steps. If the latter steps were turned OFF, assembly will be directly performed using raw reads (if QC was turned OFF) or quality processed reads (if QC was turned ON).
 
 
 .. note::
