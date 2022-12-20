@@ -149,8 +149,9 @@ By clicking in a TAXID description, user can visualize/download multiple outputs
 
 **Interpretation of metagenomics virus detection data is not a trivial task (even for users with expertise in virology and/or bioinformatics)**. In order to facilitate output interpretation and decision-making on the part of users, TELEVIR runs culminate in user-oriented reports with a list of the top viral hits, each accompanied by several robust and diagnostic-oriented metrics (described above). Here, **we provide some guidance on how to interpret TELEVIR reports and exclude/confirm viral hits**, by exemplifying “expected” metric profiles (or combination of profiles) when there are differents levels of evidence for the virus presence:
 
+.. image:: _static/televir_guide_report_interpretation.png
 
-TABLE
+Further guidance:
 
 **# Why do you have**
 
