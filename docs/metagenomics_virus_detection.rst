@@ -7,7 +7,7 @@ The TELEVIR  bioinformatics component of INSaFLU is a modular pipeline for the i
 
 It is composed of these main steps (detailed in https://insaflu.readthedocs.io/en/latest/bioinformatics_pipeline.html#metagenomics-virus-detection):
 
-1. Read quality analysis and improvement [optional]
+1. Read quality analysis and improvement [optional].
 2. Viral Enrichment [optional].
 3. Host Depletion [optional].
 4. *De novo* Assembly of the reads [optional].
