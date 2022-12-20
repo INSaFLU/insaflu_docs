@@ -782,7 +782,7 @@ Of note, TAXIDs that were not automatically selected for this confirmatory remap
 	
 	**NCBI refseq viral genomes** release 4 (https://ftp.ncbi.nlm.nih.gov/genomes/refseq/)
 	
-	**RefSeq complete viral genomes/proteins**
+	**RefSeq complete viral genomes/proteins**, as modified for the kraken2 and centrifuge databases.
 
 
 
