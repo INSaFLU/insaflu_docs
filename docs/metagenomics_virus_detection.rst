@@ -127,6 +127,10 @@ By clicking in a TAXID description, user can visualize/download multiple outputs
 
 - **Reference sequence** (".fa" format) and ".fai" index
 
+.. image:: _static/televir_project_mapping_plot.png
+
+
+
 # CONTIGS MAPPING
 
 - **Assembly to reference dotplot** (location of the mapped contigs into the reference sequence)
@@ -136,6 +140,8 @@ By clicking in a TAXID description, user can visualize/download multiple outputs
 - **Contigs alignment** in Pairwise mApping Format (PAF)
 
 - **Sample remap** page: statistics regarding the reads' mapping against the set of contigs classified for a given TAXID.
+
+.. image:: _static/televir_project_assembly_dotplot.png
 
 
 **Guide for report interpretation**
