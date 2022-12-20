@@ -33,6 +33,9 @@ For enhanced sample comparison and output interpretation, users are encouraged t
 2. Add a *Name* and *Description*, Choose the *Sequencing technology* and *Save*
 ................................................................................
 
+
+.. image:: _static/televir_project_create.png
+
 After creating a project, and before adding/running samples, please:.
 
 3. Select the *Workflow and Software* to be run
@@ -41,6 +44,8 @@ After creating a project, and before adding/running samples, please:.
 As there is no “one-size-fits-all” bioinformatics pipeline that can detect all viruses, the **TELEVIR module was designed to allow users to easily run  complex workflows simultaneously** (covering several combinations of classification algorithms, databases and parameters, etc). 
 
 Workflows and parameters can be changed at the global level, through the settings menu, or specifically for an existing project by clicking the “Magic Wand” icon on an existing project’s listing in the TELEVIR Projects page. Project settings will apply only to deployments within that project. Conversely, Global settings apply only to projects that have not had their settings changed. 
+
+.. image:: _static/televir_project_settings.png
 
 .. note::
    - The TELEVIR Settings page controls the bioinformatics workflows to be applied. Inside, software are organized by technology and pipeline. **Controlling workflows is done by selecting/deselecting which software are to run at each step of the pipeline, their parameters and/or databases when permitted.** Specific steps can be turned off by deselecting all software available for that step 
@@ -60,6 +65,8 @@ Before running the added samples, please make sure that you have previously sele
 At this time, users may start monitoring the Project progress by checking the runs (i.e., combinations of workflows) "Queued" or "Running".  Workflows are applied to every sample assigned to this project.
 
 By clicking in *Run panel*, users can get an overview of the workflows run.
+
+.. image:: _static/televir_project_add_samples_and_run.png
 
 
 **TELEVIR - Output Visualization and Download**
