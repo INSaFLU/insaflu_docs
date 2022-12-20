@@ -743,11 +743,13 @@ Selection of viral TAXID and representative genome sequences for confirmatory re
 
 In this step, the previously identified viral hits (TAXID) are selected for confirmatory mapping against reference viral genome(s) present in the available databases. Viral TAXIDs are selected, up to a maximum number of hits*, as follows:
 
-Viral TAXIDs are selected, up to a maximum of 15 hits, as follows:
+Viral TAXIDs are selected, up to a maximum of number of hits, as follows:
 
-1º - Viral hits corresponding to phages are removed from classification reports.
-2º - TAXIDs present in both intermediate classification reports (reads and contigs) are selected;
-3º - additional TAXIDs are selected across the read classification report (by number of hits, in decreasing order) and contigs classification report (by number of hits and total length of matching sequences, from top-down) until reaching the defined maximum number of hits to be selected
+- 1º - Viral hits corresponding to phages are removed from classification reports.
+- 2º - TAXIDs present in both intermediate classification reports (reads and contigs) are selected;
+- 3º - additional TAXIDs are selected across the read classification report (by number of hits, in decreasing order) and contigs classification report (by number of hits and total length of matching sequences, from top-down) until reaching the defined maximum number of hits to be selected
+- 4º - Representative sequences (accession ID) of the selected TAXID are queried from internal collection of databases (see next step).
+
 *currently, this number is set as 15 as default, but it is to be user-defined
 
 *Databases*
@@ -760,9 +762,9 @@ Remapping of the viral sequences against selected reference genome sequences.
 
 *Description*
 
-This step **maps reads and/or contigs against representative genome sequences of the selected viral TAXIDs** collected in the previous step. Reads are also mapped against any contigs that successfully map against reference sequences. 
+This step **maps reads and/or contigs against representative genome sequences of the selected viral TAXIDs** collected in the previous step. The reference sequences are collected from available databses (see below). If a given representative TAXID/sequence is present in more than one database, priority is given to NCBI refseq viral genomes and Virosaurus.
 
-Of note, TAXIDs that were not automatically selected for this confirmatory remapping step (but that were present in the intermediate reads and/or contigs classification reports) can still user-selected for mapping at any time.
+On note, reads are also mapped against any contigs that successfully map against reference sequences. TAXIDs that were not automatically selected for this confirmatory remapping step (but that were present in the intermediate reads and/or contigs classification reports) can still user-selected for mapping at any time.
 
 
 .. note::
@@ -783,7 +785,8 @@ Of note, TAXIDs that were not automatically selected for this confirmatory remap
 	**NCBI refseq viral genomes** release 4 (https://ftp.ncbi.nlm.nih.gov/genomes/refseq/)
 	
 	**RefSeq complete viral genomes/proteins**, as modified for the kraken2 and centrifuge databases.
-
+	
+	**NCBI Taxonomy** (https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/)
 
 
 Reporting
