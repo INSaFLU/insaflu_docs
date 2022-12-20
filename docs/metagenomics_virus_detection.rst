@@ -84,7 +84,6 @@ This tab displays an interactive table with **summary statistics and visualizati
 
 
 .. note::
-  - Only viral hits (TAXIDs and representative accession numbers) with mapped reads/contigs are automatically shown in this Main Report table.  
   - Other viral TAXIDs that were not automatically selected for confirmatory re-mapping step (flagged as "Unmapped") can be user-selected for mapping at any time by clicking in the "eye" icon available in the **Raw Classification and Mapping Summary** panel.
 
    
@@ -100,7 +99,7 @@ Below, you can find a description of the main outputs and statistics.
 - **start prop (%)**:   number of mapped mapped reads divided by the number of input reads (after QC)
 - **mapped_prop (%)**: number of mapped reads divided by the number of reads used for mapping (i.e., reads retained after the "Virus enrichment" and/or "host depletion steps)
 - **Gaps**: number of regions below the minimum coverage threshold (see note below)
-- **Windows Covered**: proportion of windows with mapped reads. Reference sequences are split into equal-sized windows (x). Window size, and number (x), is a function of sequence length, from a minimum of 3 up to a maximum of 10.
+- **Windows Covered**: proportion of windows with mapped reads. Reference sequences are split into windows (x), with window size and number (x) being a function of sequence length, from a minimum of 3 up to a maximum of 10. Window number (x) is calculated as the equal division of sequence length by 2000 (without remainder), i.e., sequences <8KB and >20KB result in 3 and 10 windows, respectively.
 - **class. success**:  indication of whether the TAXID was selected for mapping after reads and/or contigs classification
 - **mapping success**: indication of whether reads/and contigs successfully mapped against the TAXID representative references sequence
 - **Warning**: 
@@ -109,7 +108,7 @@ Below, you can find a description of the main outputs and statistics.
 
 .. note::
 - **Cov** is considered only above a minimum **Depth** threshold. By default, this threshold is set to 1 for ONT data, and to 2 for Illumina data.
-- Secondary mappings mappings are suppressed during the re-mapping step. However, for ONT, reads suppress supplementary alignments are not suppressed (split or chimeric alignments), since these can be informative. This behaviour can result in higher coverage than the number of reads mapped. 	
+- For ONT, secondary mappings are suppressed during the re-mapping step. However, supplementary alignments (split or chimeric alignments) are not suppressed , since these can be informative. This behaviour can result in higher coverage than the number of reads mapped. 	
 
 
 
@@ -136,7 +135,7 @@ By clicking in a TAXID description, user can visualize/download multiple outputs
 
 - **Contigs alignment** in Pairwise mApping Format (PAF)
 
-- **Sample remap**: statistics regarding the reads' mapping against the set of contigs classified for a given TAXID.
+- **Sample remap** page: statistics regarding the reads' mapping against the set of contigs classified for a given TAXID.
 
 
 **Guide for report interpretation**
