@@ -791,7 +791,7 @@ Reporting
 
 The workflows culminate in **user-oriented reports with a list of top viral hits, each accompanied by several robust and diagnostic-oriented metrics, statistics and visualizations**, provided as (interactive) *tables* (intermediate and final reports), *graphs* (e.g., coverage plots, Integrative Genomics Viewer visualization, Assembly to reference dotplot) and *multiple downloadable output files* (e.g., list of the software parameters, reads/contigs classification reports, mapped reads/contigs identified per each virus; reference sequences, etc).
 
-
+See the description of the reports and outputs here: https://insaflu.readthedocs.io/en/latest/metagenomics_virus_detection.html#televir-output-visualization-and-download
 
 User-defined parameters
 +++++++++++++++++++++++++
