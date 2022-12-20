@@ -106,9 +106,10 @@ Below, you can find a description of the main outputs and statistics.
 	- *"Likely False Positive"*: when most reads map in a very small region of the reference sequence, i.e., hits with high “DepthC" but low “Depth” and low "Cov (%)". Flagged for hits with DepthC / Depth > 10 and Cov (%) > 5%.
 	- *"Vestigial Mapping"*: when only a vestigial amount of reads (<= 2) mapped.
 
+
 .. note::
-- **Cov** is considered only above a minimum **Depth** threshold. By default, this threshold is set to 1 for ONT data, and to 2 for Illumina data.
-- For ONT, secondary mappings are suppressed during the re-mapping step. However, supplementary alignments (split or chimeric alignments) are not suppressed , since these can be informative. This behaviour can result in higher coverage than the number of reads mapped. 	
+  - **Cov** is considered only above a minimum **Depth** threshold. By default, this threshold is set to 1 for ONT data, and to 2 for Illumina data.
+  - For ONT, secondary mappings are suppressed during the re-mapping step. However, supplementary alignments (split or chimeric alignments) are not suppressed , since these can be informative. This behaviour can result in higher coverage than the number of reads mapped. 	
 
 
 
