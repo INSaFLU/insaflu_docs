@@ -1,3 +1,5 @@
+.. image:: _static/televir_logo.png
+
 **Metagenomics virus detection**
 =================================
 
