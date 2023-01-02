@@ -6,6 +6,32 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2022
 -------
 
+DECEMBER 21, 2022
+..........................
+
+**Major update:**
+
+A **New module for metagenomics virus detection (called TELEVIR)** has been released.  The main features of the TELEVIR module are:
+
+	- handles both Illumina and ONT data;
+
+	- allows easily running complex modular workflows, covering several combinations of steps (e.g., with/without Viral enrichment/Host depletion), classification software (e.g., Kaiju, Krakenuniq, Kraken2, Centrifuge, FastViromeExplorer), databases (NCBI RefSeq viral genome, Virosaurus, etc) and parameters;
+
+	- includes automate “confirmatory” re-mapping against reference viral genome(s) present in the available databases;
+
+	- culminates in user- and diagnosis-oriented  reports, including (interactive) tables and  graphs (e.g., coverage plots, Integrative Genomics Viewer visualization, Assembly to reference dotplot), as well as multiple downloadable output files (e.g., list of the software/parameters, reads/contigs classification reports, mapped reads/contigs identified per each virus; reference sequences, etc)
+ 
+
+For more information about this new module (features, functionality, etc), please consult:
+
+	- Tutorial and outputs: https://insaflu.readthedocs.io/en/latest/metagenomics_virus_detection.html#metagenomics-virus-detection
+
+	- Pipeline details: https://insaflu.readthedocs.io/en/latest/bioinformatics_pipeline.html#metagenomics-virus-detection
+
+	- INSaFLU Github page: https://github.com/INSaFLU
+
+ 
+
 October 27, 2022
 ..........................
 
