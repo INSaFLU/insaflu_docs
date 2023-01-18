@@ -70,8 +70,9 @@ B. Go to *Samples* menu and choose *Add Fastq Files*
 	**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows":**
 	
 	- Download one of these files:
-	concat_fastq.bat https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/concat_fastq.bat (use if your files are fastq)
-	concat_fastqgz.bat https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/concat_fastqgz.bat (use if your files are fastq.gz)
+	
+	**concat_fastq.bat** https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/concat_fastq.bat (for fastq files)
+	**concat_fastqgz.bat** https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/concat_fastqgz.bat (for fastq.gz)
 	
 	- Create a folder where you only put the fastq/fastq.gz you wish to concatenate
 	- Copy&paste the adequate “.bat” file (whether you have fastq or fastq.gz) to the same folder and double-click on the “.bat” file
