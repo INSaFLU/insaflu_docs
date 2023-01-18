@@ -1,8 +1,8 @@
 Guide for pre-NGS steps
 =======================
 
-Suggested pre-NGS wet-lab protocol
---------------------------------------
+Suggested pre-NGS wet-lab protocol for influenza
+-------------------------------------------------
 
 The reference-based surveillance-oriented component of INSaFLU (https://insaflu.readthedocs.io/en/latest/routine_genomic_surveillance.html#reference-based-genomic-surveillance) is highly flexible and **allows handling NGS data collected from "any" amplicon-based schema**, provided that users fit the reference files to their amplicon design and data.
 
@@ -24,8 +24,8 @@ During development, INSaFLU pipeline has been tested with NGS data collected aft
 
 You can download the suggested protocol here: :download:`Suggested_RT_PCR_assay_for_influenza_WGS.pdf <_static/Suggested_RT_PCR_assay_for_influenza_WGS.pdf>`
 
-How to design a NGS run?
---------------------------------------
+How to design a NGS run for influenza?
+---------------------------------------
 
 According to our tests during INSaFLU development, we suggest you ask your NGS service provider to perform runs in order to yield a final output of about 300000 (2 x 150000) reads per sample, if you use the influenza RT-PCR protocol indicated above.
 
