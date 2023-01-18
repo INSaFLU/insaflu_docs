@@ -66,9 +66,21 @@ Also, it has the clear advantage of allowing the subsequent upload of the sample
 B. Go to *Samples* menu and choose *Add Fastq Files*
 ....................................................
 
+.. note::
+	**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows":**
+	
+	- Download one of these files:
+	concat_fastq.bat https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/concat_fastq.bat (use if your files are fastq)
+	concat_fastqgz.bat https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/concat_fastqgz.bat (use if your files are fastq.gz)
+	
+	- Create a folder where you only put the fastq/fastq.gz you wish to concatenate
+	- Copy&paste the adequate “.bat” file (whether you have fastq or fastq.gz) to the same folder and double-click on the “.bat” file
+	
+	This will automatically create a single file named “concat.fastq.gz” (or “concat.fastq”) inside the same folder. You can then rename this file as needed. (Note that this will not eliminate or change the original fastq inside the folder.)
+
 .. image:: _static/upload_ngs_data_batch_1.png
 
-Navigate through your list of fastq.gz files and **simultaneously upload multiple fastq.gz files** (300MB maximum per file; files between 50-300 MB are downsized to ~50 MB by randomly sampling reads), which are automatically linked to the corresponding samples.
+Go to your fastq.gz directory and **simultaneously upload multiple fastq.gz files**, which are automatically linked to the corresponding samples.
 
 .. image:: _static/upload_ngs_data_batch_2.png
 
