@@ -16,7 +16,7 @@ iii) SARS-CoV-2 reference (e.g., SARS_CoV_2_Wuhan_Hu_1_MN908947.fasta)
 
 etc
 
-All reference sequences at INSaFLU  are publicly available at NCBI (or are made available under permission of the authors). Download the current list here: :download:`INSaFLU_current_REFERENCE_DATABASE_26_01_2022.xlsx <_static/INSaFLU_current_REFERENCE_DATABASE_26_01_2022.xlsx>`) 
+All reference sequences at INSaFLU  are publicly available at NCBI (or are made available under permission of the authors). Download the current list here: :download:`INSaFLU_current_REFERENCE_DATABASE_11_01_2023.xlsx <_static/INSaFLU_current_REFERENCE_DATABASE_11_01_2023.xlsx>`) 
 
 For influenza, the reference files have been prepared to fit amplicon-based schemas capturing the whole CDS of the main eight genes of influenza virus (PB2, PB1, PA, HA, NP, NA, M and NS).
 
