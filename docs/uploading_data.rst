@@ -97,15 +97,17 @@ Fastq.gz files that are not attached to any sample can be deleted by clicking in
 .. note::
 	**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows":**
 	
-	- Download one of these files from here https://github.com/INSaFLU/INSaFLU/tree/master/files_helpful:
+	1. Download one of these files:
 	
-	**concat_fastq.bat** (for fastq files)
-	**concat_fastqgz.bat** (for fastq.gz)
+	- **concat_fastq.bat** https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/concat_fastq.bat (for fastq files)
 	
-	- Create a folder where you only put the fastq/fastq.gz you wish to concatenate
-	- Copy&paste the adequate “.bat” file (whether you have fastq or fastq.gz) to the same folder and double-click on the “.bat” file
+	- **concat_fastqgz.bat** https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/concat_fastqgz.bat (for fastq.gz)
 	
-	This will automatically create a single file named “concat.fastq.gz” (or “concat.fastq”) inside the same folder. You can then rename this file as needed. (Note that this will not eliminate or change the original fastq inside the folder.)
+	
+	2. Create a folder where you only put the fastq/fastq.gz you wish to concatenate
+	3. Copy&paste the adequate “.bat” file (whether you have fastq or fastq.gz) to the same folder and double-click on the “.bat” file
+	
+	This will automatically **create a single file named “concat.fastq.gz” (or “concat.fastq”)** inside the same folder. You can then rename this file as needed. (Note that this will not eliminate or change the original fastq inside the folder.)
 
 A. Go to *Samples* menu and choose *Add Sample metadata*
 ........................................................
