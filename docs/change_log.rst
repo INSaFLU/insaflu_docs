@@ -3,6 +3,39 @@ Change log
 
 This tab includes a list (chronologically ordered) of notable changes in INSaFLU.
 
+
+READTHEDOCS
+
+2023
+-------
+
+January 26, 2022
+..........................
+
+**Important update:**
+
+**New features for Respiratory Syncytial Virus (RSV) analysis**:
+
+	- INSaFLU PROJECTS (reference-based mapping): **direct links for rapid  RSV clade/genotype classification using Nextclade (https://clades.nextstrain.org/)** are now automatically provided for RSV projects. The reference sequences used in NextClade for RSV-A (hRSV/A/England/397/2017) and RSV-B (hRSV/B/Australia/VIC-RCH056/2019) were also made available in the References database, with kind permission of the sequence authors/owners (UKHSA and WHO CCRI, respectively).
+	- Nextstrain DATASETS: **two new builds (RSV_A and RSV_B) are available**, allowing RSV-specific phylogenetic and spatiotemporal analysis using Nextstrain workflow https://github.com/nextstrain/rsv. 
+	- Samples menu: **RSV-A / RSV-B** was included in the typing database for **rapid classification** just after reads upload. 
+
+Other changes:
+
+- **TELEVIR** Projects:
+	o The Run table report column (TELEVIR Projects > Project > Sample) is now dynamically updated to represent the current status of an ongoing run, by module.
+	o Refinements in the Reference mapping optimization to prevent memory overflow crash in large samples.
+	o **Centrifuge software was added to the Illumina Read Classification Panel**. To activate this feature, the **user must visit the mains Settings page**. For existing projects with project settings these must be reset.
+	
+- **Nextstrain influenza**: to allow more sequences to be inserted in the tree, we've slightly alleviated the inclusion criteria allowing more NNN and divergence in the consensus sequences (25 ambiguous positions are allowed in the HA protein and clock_filter_iqd increased to 12)
+
+For more information, please consult:
+
+	- Documentation : https://insaflu.readthedocs.io/en/latest/
+
+	- Github page: https://github.com/INSaFLU
+
+
 2022
 -------
 
