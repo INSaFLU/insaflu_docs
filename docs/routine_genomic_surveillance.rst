@@ -143,6 +143,16 @@ The reference genome used for site (nucleotide  / amino acid) numbering and geno
 - MPXV-M5312_HM12_Rivers (https://www.ncbi.nlm.nih.gov/nuccore/NC_063383)
 
 
+**Respiratory Syncytial Virus (RSV)**
+
+This build is a simplified version of the RSV virus Nextstrain build available at https://github.com/nextstrain/rsv
+
+The reference genomes used for site (nucleotide  / amino acid) numbering and genome structure in the output JSON files is:
+
+- **RSV A**: RSV-A/US/BID-V8469/2001 (https://www.ncbi.nlm.nih.gov/nuccore/KJ627695.1/)
+- **RSV B**: RSVB/Homo sapiens/USA/MCRSV_208/1980 (https://www.ncbi.nlm.nih.gov/nuccore/MG642037.1/)
+
+
 **Generic**
 
 This build is a simplified version of the Nextstrain build available at https://github.com/nextstrain/zika
