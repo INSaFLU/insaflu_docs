@@ -23,9 +23,9 @@ January 26, 2022
 Other changes:
 
 - **TELEVIR** Projects:
-	o The Run table report column (TELEVIR Projects > Project > Sample) is now dynamically updated to represent the current status of an ongoing run, by module.
-	o Refinements in the Reference mapping optimization to prevent memory overflow crash in large samples.
-	o **Centrifuge software was added to the Illumina Read Classification Panel**. To activate this feature, the **user must visit the mains Settings page**. For existing projects with project settings these must be reset.
+	- The Run table report column (TELEVIR Projects > Project > Sample) is now dynamically updated to represent the current status of an ongoing run, by module.
+	- Refinements in the Reference mapping optimization to prevent memory overflow crash in large samples.
+	- **Centrifuge software was added to the Illumina Read Classification Panel**. To activate this feature, the **user must visit the mains Settings page**. For existing projects with project settings these must be reset.
 	
 - **Nextstrain influenza**: to allow more sequences to be inserted in the tree, we've slightly alleviated the inclusion criteria allowing more NNN and divergence in the consensus sequences (25 ambiguous positions are allowed in the HA protein and clock_filter_iqd increased to 12)
 
