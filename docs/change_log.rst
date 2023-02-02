@@ -12,6 +12,15 @@ READTHEDOCS
 January 26, 2022
 ..........................
 
+Bug fix:
+
+**Algn2pheno module**: solve bug in mutation count for sequences with no mutations (default 0); fix final report phenotype categories to display sets of flagged mutations instead of single draw. Update algn2pheno package to 1.1.5
+
+
+
+January 26, 2022
+..........................
+
 **Important update:**
 
 **New features for Respiratory Syncytial Virus (RSV) analysis**:
