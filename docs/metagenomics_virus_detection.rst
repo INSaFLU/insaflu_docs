@@ -105,7 +105,7 @@ Below, you can find a description of the main outputs and statistics.
 - **class. success**:  indication of whether the TAXID was selected for mapping after reads and/or contigs classification
 - **mapping success**: indication of whether reads/and contigs successfully mapped against the TAXID representative references sequence
 - **Warning**: 
-	- *"Likely False Positive"*: when most reads map in a very small region of the reference sequence, i.e., hits with high “DepthC" but low “Depth” and low "Cov (%)". Flagged for hits with DepthC / Depth > 10 and Cov (%) > 5%.
+	- *"Likely False Positive"*: when most reads map in a very small region of the reference sequence, i.e., hits with high “DepthC" but low “Depth” and low "Cov (%)". Flagged for hits with DepthC / Depth > 10 and Cov (%) < 5%.
 	- *"Vestigial Mapping"*: when only a vestigial amount of reads (<= 2) mapped.
 
 
