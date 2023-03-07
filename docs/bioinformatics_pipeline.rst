@@ -187,13 +187,15 @@ Similarly to influenza classification, alerts are generated if, for instance, no
 		
 
 
-Latest list of genetic markers (version 10; 26.01.2023) can be downloaded here: 
+Latest list of genetic markers (version 11; 07.03.2023) can be downloaded here: 
 
-:download:`INSaFLU_current_genetic_markers_v10_after_26_01_2023.xlsx <_static/INSaFLU_current_genetic_markers_v10_after_26_01_2023.xlsx>`
+:download:`INSaFLU_current_genetic_markers_v11_after_07_03_2023.xlsx <_static/INSaFLU_current_genetic_markers_v11_after_03_02_2023.xlsx>`
 				
 Previous database versions can be downloaded here:
 
-version 9 (until 26.01.2023) :download:`INSaFLU_genetic_markers_v9_before_26_01_2022.xlsx <_static/INSaFLU_genetic_markers_v9_before_26_01_2022.xlsx>`
+version 10 (until 07.03.2023) :download:`INSaFLU_genetic_markers_v10_before_07_03_2023.xlsx <_static/INSaFLU_genetic_markers_v10_before_07_03_2023.xlsx>`
+
+version 9 (until 26.01.2023) :download:`INSaFLU_genetic_markers_v9_before_26_01_2020.xlsx <_static/INSaFLU_genetic_markers_v9_before_26_01_2020.xlsx>`
 
 version 8 (until 26.10.2022) :download:`INSaFLU_genetic_markers_v8_before_26_10_2022.xlsx <_static/INSaFLU_genetic_markers_v8_before_26_10_2022.xlsx>`
 
