@@ -127,7 +127,7 @@ So far, influenza analyses are restricted to the Hemagglutinn (HA) coding gene. 
 
 **Avian influenza**
 
-INSaFLU allows running four Nexstrain builds for the avian influenza (A/H5N1), which is a simplified version of the Nextstrain builds available at https://github.com/nextstrain/avian-flu
+INSaFLU allows running Nexstrain builds for the avian influenza (A/H5N1), which are a simplified version of the Nextstrain builds available at https://github.com/nextstrain/avian-flu
 
 So far, Nextstrain avian influenza can be launched for the Hemagglutinn (HA), Neuraminidase (NA) and polymerase protein PB2 (PB2) coding genes. The reference sequences used for site (nucleotide  / amino acid) numbering in the output JSON files are:
 
