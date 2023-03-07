@@ -162,6 +162,8 @@ INSaFLU needs reference sequence files to be used for reference-based mapping.
 	i. post-pandemic (2009) vaccine/reference influenza A(H1N1)pdm2009, A(H3N2) and B viruses (from both Northern and Southern hemispheres);
 	ii. representative virus of multiple combinations of HA/NA subtypes (i.e., H1N1, H2N2, H5N1, H7N9, etc)
 	iii. SARS-CoV-2 reference genome sequence (Wuhan-Hu-1; NCBI accession MN908947)
+	iv. Mpox reference sequences
+	v. RSV references sequences 
 
 .. image:: _static/References_menu_1.png
 
@@ -169,7 +171,7 @@ The current list of reference sequences, including loci size and NCBI accession 
 
 :download:`INSaFLU_current_REFERENCE_DATABASE_07_03_2023.xlsx <_static/INSaFLU_current_REFERENCE_DATABASE_07_03_2023.xlsx>`
 
-The default reference files (FASTA and GenBank formats) have been prepared to fit amplicon-based schemas capturing the whole CDS of the main eight genes of influenza virus (PB2, PB1, PA, HA, NP, NA, M and NS), such as the wet-lab pre-NGS protocol for influenza whole genome amplification adapted from a RT-PCR assay described by Zhou and colleagues (Zhou et al, 2009, for Influenza A; and Zhou et al, 2014, for Influenza B; Zhou and Wentworth, 2012).
+NOTE: The default seasonal influenza reference files (FASTA and GenBank formats) have been prepared to fit amplicon-based schemas capturing the whole CDS of the main eight genes of influenza virus (PB2, PB1, PA, HA, NP, NA, M and NS), such as the wet-lab pre-NGS protocol for influenza whole genome amplification adapted from a RT-PCR assay described by Zhou and colleagues (Zhou et al, 2009, for Influenza A; and Zhou et al, 2014, for Influenza B; Zhou and Wentworth, 2012).
 
 You can download the suggested protocol here: :download:`Suggested_RT_PCR_assay_for_influenza_WGS.pdf <_static/Suggested_RT_PCR_assay_for_influenza_WGS.pdf>`
 
