@@ -114,7 +114,7 @@ More details here: https://github.com/INSaFLU/nextstrain_builds
 
 *Builds*
 
-**Influenza**
+**Seasonal influenza**
 
 INSaFLU allows running four Nexstrain builds for the seasonal influenza (A/H3N2, A/H1N1/, B/Victoria and B/Yamagata), which are simplified versions of the Influenza Nextstrain builds available at https://github.com/nextstrain/seasonal-flu
 
@@ -124,6 +124,17 @@ So far, influenza analyses are restricted to the Hemagglutinn (HA) coding gene. 
 - H3N2: A/Beijing/32/1992 (https://www.ncbi.nlm.nih.gov/nuccore/U26830.1/)
 - VIC: Influenza B virus (B/Hong Kong/02/1993) (https://www.ncbi.nlm.nih.gov/nuccore/CY018813.1/)
 - YAM: Influenza B virus (B/Singapore/11/1994) (https://www.ncbi.nlm.nih.gov/nuccore/CY019707.1/)
+
+**Avian influenza**
+
+INSaFLU allows running four Nexstrain builds for the avian influenza (A/H5N1), which is a simplified version of the Nextstrain builds available at https://github.com/nextstrain/avian-flu
+
+So far, Nextstrain avian influenza can be launched for the Hemagglutinn (HA), Neuraminidase (NA) and polymerase protein PB2 (PB2) coding genes. The reference sequences used for site (nucleotide  / amino acid) numbering in the output JSON files are:
+
+- HA: Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) hemagglutinin (HA) (https://www.ncbi.nlm.nih.gov/nuccore/AF144305.1/)
+- NA: Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) neuraminidase (NA) (https://www.ncbi.nlm.nih.gov/nuccore/AF144304.1)
+- PB2: Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) polymerase (PB2)(https://www.ncbi.nlm.nih.gov/nuccore/AF144300.1)
+
 
 **SARS-CoV-2**
 
