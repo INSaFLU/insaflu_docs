@@ -61,7 +61,7 @@ Workflows and parameters can be changed at the global level, through the setting
 
 Before running the added samples, please make sure that you have previously selected the bioinformatics workflows ("runs") to be applied to every sample added to the project using the "Magic wand"  (see previous step)
 
-5. *Run samples* by clicking in *Deploy Pathogen identification*
+5. *Run samples* by clicking in *Run*
 ................................................................
 
 At this time, users may start monitoring the Project progress by checking the runs (i.e., combinations of workflows) "Queued" or "Running".  Workflows are applied to every sample assigned to this project.
