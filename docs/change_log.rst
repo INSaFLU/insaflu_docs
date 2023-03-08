@@ -9,7 +9,38 @@ READTHEDOCS
 2023
 -------
 
-January 26, 2022
+March 7, 2023
+..........................
+
+**Important update:**
+
+Main change:
+
+**Release of a new Nextstrain module for avian influenza (A/H5N1)** . Nextstrain can be launched for the Hemagglutinn (HA), Neuraminidase (NA) and polymerase protein PB2 (PB2) coding genes. The reference sequences used for site (nucleotide / amino acid) numbering in the output JSON files regard to the A/Goose/Guangdong/1/96(H5N1) GenBank reference sequences (https://insaflu.readthedocs.io/en/latest/routine_genomic_surveillance.html#choose-the-nextstrain-build).
+
+
+Other changes:
+
+- **Respiratory Syncytial Virus (RSV) analysis**
+	- Added multiple reference sequences (dispersed accross the RSV phylogeny) to the Default Reference Database (https://insaflu.readthedocs.io/en/latest/uploading_data.html#uploading-reference-data)
+	- Added multiple RSV sequences to the assign2contigs database as a mean to faciliate the selection of closely related references for mapping.
+
+- **SARS-CoV-2 clade/ lineage classification**:  
+	- Upgraded the PANGO version; *usher* mode is now the default (instead of pangolearn).
+	- Update clades of the SARS-CoV-2 nextstrain build.
+
+- **TELEVIR** Projects:
+	- Renamed the "Deploy Pathogen Identification" button to "Run".
+	- Updated the coverage graphics components: coverage plots now using weighed average.
+	- Corrected bug in the generation of outputs after mapping by request in the "Raw Classification and Mapping Summary"
+	
+	- Documentation : https://insaflu.readthedocs.io/en/latest/
+
+	- Github page: https://github.com/INSaFLU
+
+
+
+February 2, 2023
 ..........................
 
 Bug fix:
@@ -18,7 +49,7 @@ Bug fix:
 
 
 
-January 26, 2022
+January 26, 2023
 ..........................
 
 **Important update:**
