@@ -34,9 +34,12 @@ Other changes:
 	- Updated the coverage graphics components: coverage plots now using weighed average.
 	- Corrected bug in the generation of outputs after mapping by request in the "Raw Classification and Mapping Summary"
 	
-	- Documentation : https://insaflu.readthedocs.io/en/latest/
 
-	- Github page: https://github.com/INSaFLU
+For more information, please consult:
+
+- Documentation : https://insaflu.readthedocs.io/en/latest/
+
+- Github page: https://github.com/INSaFLU
 
 
 
