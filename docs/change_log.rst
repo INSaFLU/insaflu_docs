@@ -9,17 +9,12 @@ READTHEDOCS
 2023
 -------
 
-March 7, 2023
-..........................
-
-**Important update:**
-
-Main change:
+(to be released soon)
 
 **Release of a new Nextstrain module for avian influenza (A/H5N1)** . Nextstrain can be launched for the Hemagglutinn (HA), Neuraminidase (NA) and polymerase protein PB2 (PB2) coding genes. The reference sequences used for site (nucleotide / amino acid) numbering in the output JSON files regard to the A/Goose/Guangdong/1/96(H5N1) GenBank reference sequences (https://insaflu.readthedocs.io/en/latest/routine_genomic_surveillance.html#choose-the-nextstrain-build).
 
-
-Other changes:
+March 7, 2023
+..........................
 
 - **Respiratory Syncytial Virus (RSV) analysis**
 	- Added multiple reference sequences (dispersed accross the RSV phylogeny) to the Default Reference Database (https://insaflu.readthedocs.io/en/latest/uploading_data.html#uploading-reference-data)
