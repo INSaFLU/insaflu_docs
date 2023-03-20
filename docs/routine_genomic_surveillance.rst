@@ -125,7 +125,7 @@ So far, influenza analyses are restricted to the Hemagglutinn (HA) coding gene. 
 - VIC: Influenza B virus (B/Hong Kong/02/1993) (https://www.ncbi.nlm.nih.gov/nuccore/CY018813.1/)
 - YAM: Influenza B virus (B/Singapore/11/1994) (https://www.ncbi.nlm.nih.gov/nuccore/CY019707.1/)
 
-**Avian influenza**
+**Avian influenza** (under construction)
 
 INSaFLU allows running Nexstrain builds for the avian influenza (A/H5N1), which are a simplified version of the Nextstrain builds available at https://github.com/nextstrain/avian-flu
 
