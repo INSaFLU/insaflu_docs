@@ -31,6 +31,8 @@ Within the *TELEVIR Projects* menu:
 
 For enhanced sample comparison and output interpretation, users are encouraged to create different TELEVIR projects for different metagenomics sequencing run. 
 
+.. image:: _static/25_create_TELEVIR_project.gif
+
 
 2. Add a *Name* and *Description*, Choose the *Sequencing technology* and *Save*
 ................................................................................
