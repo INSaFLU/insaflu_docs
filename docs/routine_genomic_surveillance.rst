@@ -599,6 +599,8 @@ Direct links to Nextclade (https://clades.nextstrain.org/) are available for fle
 Navigate through Nextstrain *Datasets*
 ............................................ 
 
+.. image:: _static/json_nextstrain.png
+
 The *Datasets* tab lists all your Nextstrain Datasets, organized by the available builds (more info here: https://insaflu.readthedocs.io/en/latest/data_analysis.html#nextstrain-datasets)
 
 Click in **Results"** to explore outputs of a given Dataset.
@@ -627,7 +629,6 @@ To visualize the *Dataset* outputs, **download the JSON files and drag-and drop 
 
 .. image:: _static/41_auspice_upload.gif
 
-.. image:: _static/json_nextstrain.png
 
 You can also **drag-and drop the nextstrain metadata file (Nextstrain_matadata.tsv) in auspice.us** to update the displayed metadata.
 
