@@ -389,7 +389,7 @@ Click on **"See results"** to explore outputs of a given project
 
 The projects outputs are organized by dynamic 'expand-and-collapse' panels containing project-specific outputs (see how to explore each one below). At the bottom of these panels you can explore sample-specific outputs and download the current list of samples. 
 
-.. image:: _static/projects_panels.png
+.. image:: _static/15_download_all_project_outputs.gif
 
 .. note::
    The project samples' list ("Sample_list" file) is automatically re-build and cumulatively updated as more samples are added to the project. This file compiles all samples' metadata as well as sample-specific additional data provided by INSaFLU ("type and subtype/lineage" and "putative mixed infection" data)
@@ -413,7 +413,7 @@ Within this panel you can get an overview on the project (e.g., number of sample
 .. note::
    These tables are automatically re-build and cumulatively updated as more samples are added to the project.
 
-.. image:: _static/15_download_all_project_outputs.gif
+.. image:: _static/projects_overview.png
 
 .. warning::
    - Validated mutations falling within loci not fully covered with ≥ ”mincov”-fold (color-coded as yellow or red) are still included in the "validated_variants" list (these cases are labeled in the table column "VARIANTS in INCOMPLETE LOCUS" as YES), so that users can still retrieve valuable and reliable data (e.g., specific epitope and antiviral drug resistance mutations) from samples with low coverage in some regions or even borderline coverage .
@@ -591,8 +591,9 @@ More info about this functionality here: https://insaflu.readthedocs.io/en/lates
 I. Explore your sequences using **Nextclade** 
 ----------------------------------------------
 
-.. image:: _static/24_send_seqs_to_nextclade.gif
+Direct links to Nextclade (https://clades.nextstrain.org/) are available for flexible SARS-CoV-2, seasonal influenza and MPXV consensus sequences analysis. This feature allows INSaFLU consensus sequences to be easily subjected to quality screening, clade classification, mutation exploration and other analyses available at the Nextclade framework.
 
+.. image:: _static/24_send_seqs_to_nextclade.gif
 
 
 Navigate through Nextstrain *Datasets*
@@ -620,14 +621,22 @@ The **Download** button provides:
 
 - **Sequences** (AllConsensus.fasta): compiles all sequences included in the *Dataset* 
 
+ 
 
-.. note::
- - To visualize the *Dataset* outputs, **download the JSON files and drag-and drop the files in https://auspice.us/.**
+To visualize the *Dataset* outputs, **download the JSON files and drag-and drop the files in https://auspice.us/.**
+
+.. image:: _static/41_auspice_upload.gif
+
+.. image:: _static/json_nextstrain.png
+
+You can also **drag-and drop the nextstrain metadata file (Nextstrain_matadata.tsv) in auspice.us** to update the displayed metadata.
+
+.. image:: _static/42_add_new_metadata.gif
+
+.. note:: 
+ -  The downloaded metadata file can be enriched with additional information to have an enhanced visualization and exploration of phylogeographic and temporal data. With https://auspice.us/, your datasets are visualised client-side in the browser -- no data is transmitted, and no tracking cookies are used.
  
- - You can also **drag-and drop the nextstrain metadata file (Nextstrain_matadata.tsv) in auspice.us** to update the displayed metadata. The downloaded metadata file can be enriched with additional information to have an enhanced visualization and exploration of phylogeographic and temporal data. With https://auspice.us/, your datasets are visualised client-side in the browser -- no data is transmitted, and no tracking cookies are used.
- - When more samples are added to the Dataset, the metadata file and JSON files are automatically re-build and cumulatively updated.
- 
- - **To update the Nextstrain metadata of a given Dataset**, please click in **"Metadata for Nextstrain"**, download the previous table, update it with new data and upload it. Then, click in the "hourglass" icon to Rebuild the Nexstrain outputs. 
+ Still, we recommend updating the metadata table when the Dataset is created or whenever more samples are added to the Dataset. **To update the Nextstrain metadata of a given Dataset**, please click in **"Metadata for Nextstrain"**, download the previous table, update it with new data and upload it. Then, click in the "hourglass" icon to Rebuild the Nexstrain outputs. 
 
 Note: For sequences previously obtained with INSaFLU (i.e., consensus sequences inported to "Datasets" from the "Projects" module), you can also add/update the metadata following these instructions: https://insaflu.readthedocs.io/en/latest/uploading_data.html#updating-sample-metadata (this option is not available for external sequences).
 
@@ -639,8 +648,7 @@ Note: For sequences previously obtained with INSaFLU (i.e., consensus sequences 
 	
 	- **"latitude" and "longitude"** AND/OR **"region", "country", "division" and/or "location"** columns in the metadata. If you provide *"latitude"* and *"longitude"*, please make sure you select "Nextstrain_metadata.tsv_geo" as Map Options (Geographic resolution) in auspice.us. If *"region", "country", "division" and/or "location"** columns are provided, these values will be screened against a vast database of "latitude and longitude" coordinates (https://github.com/INSaFLU/nextstrain_builds/blob/main/generic/config/lat_longs.tsv) to geographically place the sequences in the Nextstrain map (please choose the  "Geographical resolution" in "Map Options" during auspice visualization).
 	
-	
-	
+		
 .. image:: _static/json_nextstrain.png
 
 
@@ -654,6 +662,8 @@ Within this panel, as a complement of https://auspice.us/ visualization, you can
    
    Trees are only built when projects have more than one sample.
    
+   
+.. image:: _static/43_view_dataset_results_in_situ.gif
 
 .. image:: _static/projects_phylogenetic_trees.png
 
