@@ -808,14 +808,17 @@ See the description of the reports and outputs here: https://insaflu.readthedocs
 User-defined parameters
 +++++++++++++++++++++++++
 
-INSaFLU allows turning ON/OFF specific modules and user-defined configuration of key parameters for reads quality analysis and reference-based mapping. Settings can be user-defined for the whole user account (tab “Settings”), for each project (just after project creation) or for individual samples within a project (click in the "Magic wand" icon).
+INSaFLU allows turning ON/OFF specific modules and user-defined configuration of key parameters for reads quality analysis, INSaFLU and TELEVIR projects. Settings can be user-defined for the whole user account (tab “Settings”), for each project (just after project creation) or for individual samples within a project (click in the "Magic wand" icon).
 
-.. image:: _static/settings_modules.png
+**Please choose your settings before uploading new samples to your account.**
+
+Example:
+
+.. image:: _static/01_global_settings.gif
+
 
 Read quality analysis and improvement control (QC)
 --------------------------------------------------
-**Please choose your settings before uploading new samples to your account.**
-
 
 **##ILLUMINA / Ion Torrent data##**
 
