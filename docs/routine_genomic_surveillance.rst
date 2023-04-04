@@ -20,20 +20,17 @@ Within the *Projects* menu:
 1. Go to *Projects* menu and choose *Create project*
 ....................................................
 
+2. Choose a *Project Name*, select a *Reference sequence* and *Save*
+......................................................................
+
+.. image:: _static/10_create_insaflu_project.gif
+
 You are encouraged to create “umbrella” projects, such as projects enrolling same sub-type viruses from the same season that will be compared with the vaccine reference virus for a given flu season. 
 
 You can designate the projects so that the name easily indicates the combination “virus sub-type/season/reference” (e.g. **A_H3N2_2017_18_vaccine_ref**)
 
-.. image:: _static/create_project_1_create.png
-
-
-2. Choose a *Project Name*, select a *Reference sequence* and *Save*
-......................................................................
-
 .. important::
    You should select a reference sequence (e.g., the vaccine strain from the current influenza season) that fits both your amplicon design (i.e., a multi-fasta file containing the set of reference sequences with the precise size of each “intra-amplicon” target sequence that you capture by each one of the RT-PCR amplicons) and the set of samples that will be compared (e.g., same sub-type viruses from the same season to be compared with the vaccine reference virus).
-
-.. image:: _static/create_project_2_name_ref.png
 
 
 3. Choose the software parameters to be applied to the project.
@@ -41,17 +38,22 @@ You can designate the projects so that the name easily indicates the combination
 
 After creating a project, and before adding the first sample, you can clicking in the "Magic wand" to select the parameters to be applied by default to every sample added to the project. 
 
+.. image:: _static/11_change_project_settings.gif
+
 Note: Please set the parameters before assigning the first sample to the project. After that, you are still allowed to change the parameters for individual samples within the Project. Updated samples are automatically re-analysed using the novel parameters and re-inserted in the Project. 
 
 
 4. Add the **samples** to be included in the **project**
 ........................................................
 
-.. image:: _static/create_project_3_add_samples.png
+*Example - Add a few samples*
 
-Samples are processed immediately upon selection, so, at this time, users may start monitoring the Project progress by checking the number of samples in the following status: Processed (P); Waiting (W) and Error (E).
+.. image:: _static/12_add_few_samples_to_project.gif
 
-.. image:: _static/monitoring_project_status.png
+*Example - Add a btach of samples (dataset)*
+
+.. image:: _static/13_add_batch_samples_to_project.gif
+
 
 
 5. Monitoring Projects' progress
@@ -82,9 +84,9 @@ NOTE: Users can also re-run samples (with user-selected parameters) included in 
 8. Remove samples from your **project**. 
 ........................................
 
-You may want to remove some samples from your project (e.g., for exclusively keeping samples with success for all 8 locus) 
+You may want to remove some samples from your project (e.g., for exclusively keeping influenza samples with success for all 8 segments) 
 
-.. image:: _static/create_project_5_remove_samples.png
+.. image:: _static/14_remove_samples_from_project.gif
 
  
 **Nextstrain Datasets** - How to create and run Nextstrain datasets
