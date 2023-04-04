@@ -108,6 +108,8 @@ Within the *Datasets* menu:
 3. Choose the Nextstrain build
 ...................................
 
+.. image:: _static/14_remove_samples_from_project.gif
+
 After creating a Dataset, and before adding the first sample, you can clicking in the "Magic wand" to select the Nextstrain build that will be run.
 
 INSaFLU allows launching virus-specific Nextstrain builds (seasonal Influenza, SARS-CoV-2 and Monkeypox) as well as a "generic" build that can be used for any pathogen.
@@ -180,13 +182,26 @@ Currently, the generic build does not generate a Time-Resolved Tree (unlike the 
 
 You can add samples to the Dataset from different sources:
 
+- **Projects** - user-selected consensus sequences generated within INSaFLU projects
+
+.. image:: _static/37_add_samples_to_dataset.gif
+
 - **References** - user-selected references sequences available in the References repository
 
-- **Projects** - user-selected consensus sequences generated within INSaFLU projects
+.. image:: _static/38_add_refs_to_dataset.gif
 
 - **External sequences** - to upload external sequences, click in "Add your onw consensus", followed by "Upload new consensus". You can upload FASTA or MULTI-FASTA files. Please make sure that the upload sequences match the respective build (e.g., genome sequences for SARS-CoV-2 Nextstrain build or HA sequences for influenza Nextstrain builds).
 
-After adding samples, click in the "hourglass" icon to start the Nexstrain analysis.
+.. image:: _static/39_add_external_seqs_to_dataset.gif
+
+
+
+5. Enrich the metadata of the *Dataset* 
+........................................................
+
+INSaFLU automatically prepares a "Nextstrain_metadata.tsv" table compiling all the metadata available for samples added to the Dataset. You can download the table, add more data and upload it again.
+
+.. image:: _static/40_update_metadata_nextstrain.gif
 
 
 .. important::
@@ -199,6 +214,11 @@ After adding samples, click in the "hourglass" icon to start the Nexstrain analy
 	 **To update the Nextstrain metadata of a given Dataset**, please click in **"Metadata for Nextstrain"**, download the previous table, update it with new data and upload it. Then, click in the "hourglass" icon to Rebuild the Nexstrain outputs. 
 
 Note: For sequences previously obtained with INSaFLU (i.e., consensus sequences inported to "Datasets" from the "Projects" module), you can also add/update the metadata following these instructions: https://insaflu.readthedocs.io/en/latest/uploading_data.html#updating-sample-metadata (this option is not available for external sequences).
+
+6. Run your Dataset
+........................................................
+
+After adding samples, click in the "hourglass" icon to start the Nexstrain analysis.
 
 
 5. Scale-up your *Dataset*. 
@@ -238,20 +258,17 @@ Several sample-specific results can be found in *Samples* and *INSaFLU projects*
    
 **A.** Go to *Samples* menu and check the *reads' quality reports and typing data*
 -------------------------------------------------------------------------------------
+**B.** Go to *Samples* menu and explore the *'More info' icon next to each sample*.
+-------------------------------------------------------------------------------------
 
 Just after samples' metadata and NGS data submission, INSaFLU automatically updates samples' information with reads quality and typing data .
  
-.. image:: _static/Samples_menu.png
+.. image:: _static/07_check_sample_quality.gif
 
-
-**B.** Go to *Samples* menu and explore the *'More info' icon next to each sample*.
--------------------------------------------------------------------------------------
 
 By clicking on the 'More info' icon next to each sample, you can get an overview on the specific sample metadata and explore:
 
 - **Graphical quality reports for raw read files** 
-
-.. image:: _static/sample_metadata_FastQC_raw.png
 
 Click on ".html" files and explore each one of the FastQC (for Illumina/Ion Torrent data) or RabbitQC (for ONT data) "Analysis modules" - please consult https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/ and https://github.com/ZekunYin/RabbitQC for details]
 
@@ -272,7 +289,7 @@ Click on ".html" files and explore each one of the FastQC (for Illumina/Ion Torr
    
    - INSaFLU flags samples as "putative mixed infections" if more than one type, HA or NA subtype or lineage is detected. In addition, specific alerts are generated if an incomplete type/subtype is assigned.
    
-   As of March 10, 2020, INSaFLU was also upgraded for rapid classification and contigs assignment of Human Betacoronavirus (BetaCoV). 
+   As of March 10, 2020, INSaFLU was also upgraded for rapid classification and contigs assignment of Human Betacoronavirus (BetaCoV), and later on to assign Mpox, and RSV (A and B)
 
 
 - Assignment of viral segments/references to draft contigs
@@ -285,8 +302,8 @@ Click on ".html" files and explore each one of the FastQC (for Illumina/Ion Torr
  	- Outputs of this module (i.e., draft assemblies, the identified type and subtype/lineage and a table linking contigs to segments/references) can be visualize or downloaded here.
 
 
-**C.** Go to *Projects* menu, and click on **"See results"** to explore outputs of a given project
-----------------------------------------------------------------------------------------------------
+**C.** Go to *Projects* menu, and click on **"See results"** to explore outputs of a given sample of the project
+-----------------------------------------------------------------------------------------------------------------
 
 Below the dynamic 'expand-and-collapse' panels, you can explore a table that contains multiple sample-specific outputs generated for each sample in a given project, including:
 
@@ -297,6 +314,8 @@ Below the dynamic 'expand-and-collapse' panels, you can explore a table that con
 - **Coverage report per locus** (interactive color-coded statistics and plots of the depth of coverage throughout each locus sequence)
 
 - **Consensus sequence for the pool of loci** 
+
+.. image:: _static/16_project_single_sample_results.gif
 
 .. image:: _static/sample_table_projects.png 
 
@@ -336,6 +355,9 @@ By clicking on the 'More info' icon next to each sample, you can get an overview
 - **Consensus sequence for the pool of loci** 
 	
 - **Annotated variants (SNPs and indels)**
+
+.. image:: _static/16_project_single_sample_results.gif
+
 
 .. warning::
 
@@ -391,7 +413,7 @@ Within this panel you can get an overview on the project (e.g., number of sample
 .. note::
    These tables are automatically re-build and cumulatively updated as more samples are added to the project.
 
-.. image:: _static/projects_overview.png
+.. image:: _static/15_download_all_project_outputs.gif
 
 .. warning::
    - Validated mutations falling within loci not fully covered with ≥ ”mincov”-fold (color-coded as yellow or red) are still included in the "validated_variants" list (these cases are labeled in the table column "VARIANTS in INCOMPLETE LOCUS" as YES), so that users can still retrieve valuable and reliable data (e.g., specific epitope and antiviral drug resistance mutations) from samples with low coverage in some regions or even borderline coverage .
@@ -409,6 +431,7 @@ Within this panel you can explore the "whole-genome"-based ("All") and locus-spe
    
    Trees are only built when projects have more than one sample.
    
+.. image:: _static/18_phylogenentic_trees.gif
 
 .. image:: _static/projects_phylogenetic_trees.png
 
@@ -439,7 +462,7 @@ C. Navigate through **Mutation list**
 
 Within this panel you can explore the list of all validated mutations (SNPs and indels) assumed in the consensus sequences of all samples within the project. It can filter by any item (e.g., sample, aa change, etc) and download the sub-table with the filtered rows.
 
-
+.. image:: _static/19_mutations_list.gif
 
 D. Navigate through **Nucleotide alignments by MSAViewer**
 -----------------------------------------------------------------------------------
@@ -452,6 +475,8 @@ Within this panel you can explore the "whole-genome"-based ("All") and locus-spe
    The Reference sequence is included in each alignment. 
    
    Alignments are only built when projects have more than one sample.
+
+.. image:: _static/20_nucleotide_alignments.gif
 
 .. image:: _static/projects_nucleotide_alignments.png
 
@@ -474,6 +499,8 @@ Within this panel you can explore the amino acid alignments for the influenza pr
    
    Alignments are only built when projects have more than one sample.
 
+.. image:: _static/21_amino_acid_alignments.gif
+
 .. image:: _static/projects_amino_acid_alignments.png
 
 .. warning::
@@ -489,6 +516,9 @@ Within this panel you can explore a graph plotting the proportion of iSNV at fre
    Both the graph and the list of validated minor iSNVs are automatically re-build and cumulatively updated as more samples are added to the project 
 
 You may inspect this plot to uncover infections with influenza viruses presenting clearly distinct genetic backgrounds (so called **'mixed infections'**). A cumulative high proportion of iSNVs at both frequency' ranges is mostly likely to represent a mixed infection, in a sense that the natural intra-patient influenza diversification (that NGS is capable of detecting) is expected to be very low (no more than a few tenths of variants, most of them at frequency <10%)
+
+
+.. image:: _static/22_minor_variants.gif
 
 .. image:: _static/projects_graph_iSNVs.png
 
@@ -509,6 +539,8 @@ G. Explore the **Coverage for all samples** panel
 -----------------------------------------------------------------------------------
 
 This panel provides an additional interactive color-coded coverage report, summarizing the mean depth of coverage and horizontal coverage per locus for all samples within a project.
+
+.. image:: _static/17_coverage_panel.gif
 
 COVERAGE COLOR CODE:
 	
@@ -535,6 +567,9 @@ H. Explore the **Algn2pheno report** panel and results
 
 Within this panel you can explore the results of the Algn2pheno module that screens mutations of interest in the Spike amino acid sequences of samples in projects that have a SARS-CoV-2 reference sequence.
 
+.. image:: _static/23_algn2pheno.gif
+
+
 Algn2pheno uses two databases for screening: Pokay database and COG-UK Antigenic Mutations database. By default, the Algn2pheno report panel shows the screening results (corresponding to the output file "_final_report.tsv" described below) obtained using the COG-UK Antigenic Mutations database.
 
 This interactive table can be filtered by any item (e.g., sample, aa change, etc.) and the filtered rows can be downloaded as a sub-table.
@@ -552,6 +587,13 @@ By clicking on the "Download" button in the Project results page, it is possible
 
 
 More info about this functionality here: https://insaflu.readthedocs.io/en/latest/data_analysis.html#algn2pheno
+
+I. Explore your sequences using **Nextclade** 
+----------------------------------------------
+
+.. image:: _static/24_send_seqs_to_nextclade.gif
+
+
 
 Navigate through Nextstrain *Datasets*
 ............................................ 
