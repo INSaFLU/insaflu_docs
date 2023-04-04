@@ -72,18 +72,24 @@ Reads (fastq.gz)  can be selected from the multi-select dialog box or just DRAG 
 Fastq.gz files that are not attached to any sample can be deleted by clicking in "Remove all files not processed".
 
 
+**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows":**
+
+.. image:: _static/02_fastq_concatenation.gif
+
 .. note::
 	**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows":**
 	
-	- Download one of these files from here https://github.com/INSaFLU/INSaFLU/tree/master/files_helpful:
+	1. Download one of these files:
 	
-	**concat_fastq.bat** (for fastq files)
-	**concat_fastqgz.bat** (for fastq.gz)
+	- **concat_fastq.bat** https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/concat_fastq.bat (for fastq files)
 	
-	- Create a folder where you only put the fastq/fastq.gz you wish to concatenate
-	- Copy&paste the adequate “.bat” file (whether you have fastq or fastq.gz) to the same folder and double-click on the “.bat” file
+	- **concat_fastqgz.bat** https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/concat_fastqgz.bat (for fastq.gz)
 	
-	This will automatically create a single file named “concat.fastq.gz” (or “concat.fastq”) inside the same folder. You can then rename this file as needed. (Note that this will not eliminate or change the original fastq inside the folder.)
+	
+	2. Create a folder where you only put the fastq/fastq.gz you wish to concatenate
+	3. Copy&paste the adequate “.bat” file (whether you have fastq or fastq.gz) to the same folder and double-click on the “.bat” file
+	
+	This will automatically **create a single file named “concat.fastq.gz” (or “concat.fastq”)** inside the same folder. You can then rename this file as needed. (Note that this will not eliminate or change the original fastq inside the folder.)
 
 .. important::
    Original reads (i.e., the fastq.gz files uploaded) will be deleted (normally after 10 days) of their upload. In fact, after quality analysis and improvement, the INSaFLU pipeline does not use those original reads for any other downstream analysis (all quality reports and derived quality processed reads are kept available for download).
@@ -109,6 +115,10 @@ Example for a Illumina (paired-end) sample:
    Original reads (i.e., the fastq.gz files uploaded) will be deleted (normally after 10 days) of their upload. In fact, after quality analysis and improvement, the INSaFLU pipeline does not use those original reads for any other downstream analysis (all quality reports and derived quality processed reads are kept available for download).
 
 
+**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows":**
+
+.. image:: _static/02_fastq_concatenation.gif
+
 .. note::
 	**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows":**
 	
@@ -123,6 +133,11 @@ Example for a Illumina (paired-end) sample:
 	3. Copy&paste the adequate “.bat” file (whether you have fastq or fastq.gz) to the same folder and double-click on the “.bat” file
 	
 	This will automatically **create a single file named “concat.fastq.gz” (or “concat.fastq”)** inside the same folder. You can then rename this file as needed. (Note that this will not eliminate or change the original fastq inside the folder.)
+
+.. important::
+   This option does not allow the user to add additional metadata fields (contrarily to batch upload; see next section to lear how to update the sample metadata).
+
+   Original reads (i.e., the fastq.gz files uploaded) will be deleted (normally after 10 days) of their upload. In fact, after quality analysis and improvement, the INSaFLU pipeline does not use those original reads for any other downstream analysis (all quality reports and derived quality processed reads are kept available for download).
 
 
 Updating Sample metadata
@@ -144,8 +159,8 @@ You can add/update the **Samples's metadata** at any time by simply uploading a 
 	
 	Samples names in your account must be unique and only numbers, letters and underscores are allowed.
 
-B. In *Dataset* menu (to update Nexstrain metadata)
-...................................................
+B. In *Dataset* menu (to update Nextstrain metadata)
+.....................................................
 
 You can add/update the Nextstrain metadata of a given *Dataset* by clicking in **"Metadata for Nextstrain"**, download the previous table, update it with new data and upload it again. Then, you need to click in the "hourglass" icon to Rebuild the Nextstrain outputs. When the new JSON file is generated, the updated metadata can then be  **drag-and drop**  to auspice.us after the JSON file to update the displayed metadata.
 
@@ -193,7 +208,7 @@ You can:
 
 .. note::
    
-   Your genbank file must be compatible with INSaFLU (see guide and documentation). 
+   Your genbank file must be compatible with INSaFLU.
    ## See below a GUIDE to generate additional reference sequences
 
 - Upload a FASTA file 
@@ -247,7 +262,7 @@ Upon submission, INSaFLU automatically updates samples’ information with reads
 
 Just explore the “More info” icon next to each sample.
 
-.. image:: _static/Samples_menu.png
+.. image:: _static/07_check_sample_quality.gif
 
 
 *References* menu displays all information for all reference sequences available at your confidential session. 
