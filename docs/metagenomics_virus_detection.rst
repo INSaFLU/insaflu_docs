@@ -49,7 +49,7 @@ As there is no “one-size-fits-all” bioinformatics pipeline that can detect a
 
 Workflows and parameters can be changed at the global level, through the settings menu, or specifically for an existing project by clicking the “Magic Wand” icon on an existing project’s listing in the TELEVIR Projects page. Project settings will apply only to deployments within that project. Conversely, Global settings apply only to projects that have not had their settings changed. 
 
-.. image:: _static/televir_project_settings.png
+.. image:: _static/26_change_TELEVIR_project_settings.gif
 
 .. note::
    - The TELEVIR Settings page controls the bioinformatics workflows to be applied. Inside, software are organized by technology and pipeline. **Controlling workflows is done by selecting/deselecting which software are to run at each step of the pipeline, their parameters and/or databases when permitted.** Specific steps can be turned off by deselecting all software available for that step 
@@ -58,19 +58,19 @@ Workflows and parameters can be changed at the global level, through the setting
  **NOTE:** *Some pipeline steps cannot be turned off (e.g. Remapping). Other cases are context dependent: Assembly cannot be turned OFF if Contig Classification is turned ON; at least one classification step must be turned ON (Contig Classification may not be turned OFF if Read Classification is already OFF, and vice-versa).*
  
 
-4. *Add samples* to the TELEVIR project
-.........................................
+4. *Add samples* to the TELEVIR project and click in *Run*
+...........................................................
 
 Before running the added samples, please make sure that you have previously selected the bioinformatics workflows ("runs") to be applied to every sample added to the project using the "Magic wand"  (see previous step)
 
-5. *Run samples* by clicking in *Run*
-................................................................
+.. image:: _static/27_add_samples_TELEVIR_project.gif
+
 
 At this time, users may start monitoring the Project progress by checking the runs (i.e., combinations of workflows) "Queued" or "Running".  Workflows are applied to every sample assigned to this project.
 
 By clicking in *Run panel*, users can get an overview of the workflows run.
 
-.. image:: _static/televir_project_add_samples_and_run.png
+.. image:: _static/28_monitoring_progress.gif
 
 
 **TELEVIR - Output Visualization and Download**
@@ -80,6 +80,7 @@ The INSaFLU-TELEVIR bioinformatics pipeline for metagenomics virus diagnostic ge
 
 The outputs are organized in dynamic 'expand-and-collapse' panels:
 
+.. image:: _static/29_TELEVIR_panels_results_overview.gif
 
 Pathogen identification (**Main report**)
 ...........................................
@@ -89,6 +90,9 @@ This tab displays an interactive table with **summary statistics and visualizati
 
 .. note::
   - Other viral TAXIDs that were not automatically selected for confirmatory re-mapping step (flagged as "Unmapped") can be user-selected for mapping at any time by clicking in the "eye" icon available in the **Raw Classification and Mapping Summary** panel.
+
+
+.. image:: _static/30_TELEVIR_link_to_NCBI.gif
 
    
 Below, you can find a description of the main outputs and statistics.
@@ -126,13 +130,17 @@ By clicking in a TAXID description, user can visualize/download multiple outputs
 
 - **Mapping Coverage** plot (depth of coverage throughout the reference genome)
 
+.. image:: _static/televir_project_mapping_plot.png
+
 - **Integrative Genomics Viewer (IGV)** visualization of the mapped reads
+
+.. image:: _static/31_TELEVIR_IGV.gif
 
 - **Mapped reads** in FASTA and BAM
 
-- **Reference sequence** (".fa" format) and ".fai" index
+.. image:: _static/33_TELEVIR_download_mapped_reads.gif
 
-.. image:: _static/televir_project_mapping_plot.png
+- **Reference sequence** (".fa" format) and ".fai" index
 
 
 
@@ -147,6 +155,8 @@ By clicking in a TAXID description, user can visualize/download multiple outputs
 - **Sample remap** page: statistics regarding the reads' mapping against the set of contigs classified for a given TAXID.
 
 .. image:: _static/televir_project_assembly_dotplot.png
+
+.. image:: _static/34_TELEVIR_mapped_contigs.gif
 
 
 **Guide for report interpretation**
@@ -237,6 +247,9 @@ This tab provides an overview on the amount of viral hits (TAXIDs and representa
 This table lists all viral hits (TAXID and representative accession numbers) detected during the intermediate step of **Reads and Contigs Classification** (see above), indicating if they were (or not) automatically selected for confirmatory re-mapping.
 
 TAXIDs that were not automatically selected for confirmatory re-mapping step (flagged as "Unmapped") can be user-selected for mapping at any time by clicking in the "eye" icon. The result of the user-requested mapping will show up in the Main table report.
+
+
+.. image:: _static/35_TELEVIR_mapping_raw_report.gif
 
 
 
