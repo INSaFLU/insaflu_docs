@@ -73,13 +73,8 @@ Reads (fastq.gz)  can be selected from the multi-select dialog box or just DRAG 
 
 Fastq.gz files that are not attached to any sample can be deleted by clicking in "Remove all files not processed".
 
-
-**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows":**
-
-.. image:: _static/02_fastq_concatenation.gif
-
 .. note::
-	**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows":**
+	**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows" (see video below):**
 	
 	1. Download one of these files:
 	
@@ -92,6 +87,8 @@ Fastq.gz files that are not attached to any sample can be deleted by clicking in
 	3. Copy&paste the adequate “.bat” file (whether you have fastq or fastq.gz) to the same folder and double-click on the “.bat” file
 	
 	This will automatically **create a single file named “concat.fastq.gz” (or “concat.fastq”)** inside the same folder. You can then rename this file as needed. (Note that this will not eliminate or change the original fastq inside the folder.)
+
+.. image:: _static/02_fastq_concatenation.gif
 
 .. important::
    Original reads (i.e., the fastq.gz files uploaded) will be deleted (normally after 10 days) of their upload. In fact, after quality analysis and improvement, the INSaFLU pipeline does not use those original reads for any other downstream analysis (all quality reports and derived quality processed reads are kept available for download).
@@ -117,12 +114,8 @@ Example for a Illumina (paired-end) sample:
    Original reads (i.e., the fastq.gz files uploaded) will be deleted (normally after 10 days) of their upload. In fact, after quality analysis and improvement, the INSaFLU pipeline does not use those original reads for any other downstream analysis (all quality reports and derived quality processed reads are kept available for download).
 
 
-**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows":**
-
-.. image:: _static/02_fastq_concatenation.gif
-
 .. note::
-	**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows":**
+	**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows" (see video below):**
 	
 	1. Download one of these files:
 	
@@ -136,8 +129,11 @@ Example for a Illumina (paired-end) sample:
 	
 	This will automatically **create a single file named “concat.fastq.gz” (or “concat.fastq”)** inside the same folder. You can then rename this file as needed. (Note that this will not eliminate or change the original fastq inside the folder.)
 
+.. image:: _static/02_fastq_concatenation.gif
+
+
 .. important::
-   This option does not allow the user to add additional metadata fields (contrarily to batch upload; see next section to lear how to update the sample metadata).
+   This "individual" upload option does not allow the user to add additional metadata fields (contrarily to batch upload; see next section to lear how to update the sample metadata).
 
    Original reads (i.e., the fastq.gz files uploaded) will be deleted (normally after 10 days) of their upload. In fact, after quality analysis and improvement, the INSaFLU pipeline does not use those original reads for any other downstream analysis (all quality reports and derived quality processed reads are kept available for download).
 
