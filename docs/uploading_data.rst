@@ -18,8 +18,14 @@ Uploading Sample metadata and NGS data
 # Option 1 (Batch)
 ------------------
 
-A. Go to *Samples* menu and choose *Add Samples from csv / tsv file*.
-.....................................................................
+A. Go to *Samples* menu and choose *Add Multiple Samples / Load new file*.
+...........................................................................
+
+*Examples of template table files are provided in this menu.*
+
+.. image:: _static/upload_samplemetadata_batch_3.png
+
+*Here is how to upload the metadata table:*
 
 .. image:: _static/05_upload_batch.gif
 
@@ -29,10 +35,6 @@ A. Go to *Samples* menu and choose *Add Samples from csv / tsv file*.
    Users are encouraged to include any other columns with metadata variables to be associated with samples (see advantages below).
    
    The table will be locked until you submit the NGS reads corresponding to the new samples. In case you decide not to proceed with the upload, the table can be unlocked by clicking in "Unlock last file". 
-
-Examples of template table files are provided in this menu. 
-
-.. image:: _static/upload_samplemetadata_batch_3.png
 
 
 .. important::
