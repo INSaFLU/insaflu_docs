@@ -21,22 +21,18 @@ Uploading Sample metadata and NGS data
 A. Go to *Samples* menu and choose *Add Samples from csv / tsv file*.
 .....................................................................
 
-.. image:: _static/upload_samplemetadata_batch_1.png
-
-Check your list of "Samples metadata" tables and **Load a new file**.
-
-The table will be locked until you submit the NGS reads corresponding to the new samples. In case you decide not to proceed with the upload, the table can be unlocked by clicking in "Unlock last file". 
-
-.. image:: _static/upload_samplemetadata_batch_2.png
-
-Examples of template table files are provided in this menu. 
-
-.. image:: _static/upload_samplemetadata_batch_3.png
+.. image:: _static/05_upload_batch.gif
 
 .. important::
    Sample metadata should be a comma-separated value (.csv) or tab-separated value (.tsv or .txt) table containing the columns **“sample name”**, **“fastq1”** and **“fastq2”** (**mandatory columns to fulfill**; NOTE: fastq2 is exceptionally not fulfilled only for single-end data) as well these additional variables (that may not be fulfilled): **“data set”**, **”vaccine status”**, **”week”**, **”onset date”**, **”collection date”**, **”lab reception date”**, **”latitude”**, **”longitude”**. If you include data for **latitude/longitude** and/or **country, region, division and/or location**, these will be used to geographically locate your samples in the **Nextstrain Datasets**
    
    Users are encouraged to include any other columns with metadata variables to be associated with samples (see advantages below).
+   
+   The table will be locked until you submit the NGS reads corresponding to the new samples. In case you decide not to proceed with the upload, the table can be unlocked by clicking in "Unlock last file". 
+
+Examples of template table files are provided in this menu. 
+
+.. image:: _static/upload_samplemetadata_batch_3.png
 
 
 .. important::
@@ -66,6 +62,16 @@ Also, it has the clear advantage of allowing the subsequent upload of the sample
 B. Go to *Samples* menu and choose *Add Fastq Files*
 ....................................................
 
+
+Go to your fastq.gz directory and **simultaneously upload multiple fastq.gz files**, which are automatically linked to the corresponding samples.
+
+Reads (fastq.gz)  can be selected from the multi-select dialog box or just DRAG & DROPPED.
+ 
+.. image:: _static/06_upload_batch_FASTQ.gif
+
+Fastq.gz files that are not attached to any sample can be deleted by clicking in "Remove all files not processed".
+
+
 .. note::
 	**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows":**
 	
@@ -79,20 +85,29 @@ B. Go to *Samples* menu and choose *Add Fastq Files*
 	
 	This will automatically create a single file named “concat.fastq.gz” (or “concat.fastq”) inside the same folder. You can then rename this file as needed. (Note that this will not eliminate or change the original fastq inside the folder.)
 
-.. image:: _static/upload_ngs_data_batch_1.png
-
-Go to your fastq.gz directory and **simultaneously upload multiple fastq.gz files**, which are automatically linked to the corresponding samples.
-
-.. image:: _static/upload_ngs_data_batch_2.png
-
-Just DRAG & DROP your fastq.gz files.
-
-.. image:: _static/upload_ngs_data_batch_3.png
-
-Fastq.gz files that are not attached to any sample can be deleted by clicking in "Remove all files not processed".
+.. important::
+   Original reads (i.e., the fastq.gz files uploaded) will be deleted (normally after 10 days) of their upload. In fact, after quality analysis and improvement, the INSaFLU pipeline does not use those original reads for any other downstream analysis (all quality reports and derived quality processed reads are kept available for download).
 
 # Option 2 (Individual)
 -----------------------
+
+A. Go to *Samples* menu and choose *Add One Sample*
+........................................................
+
+Here you can upload each sample at the time (including associated metadata and NGS data).
+
+Example for a ONT sample:
+
+.. image:: _static/03_upload_1_sample_ONT.gif
+
+Example for a Illumina (paired-end) sample:
+
+.. image:: _static/04_upload_1_sample_Illumina.gif
+
+
+.. important::
+   Original reads (i.e., the fastq.gz files uploaded) will be deleted (normally after 10 days) of their upload. In fact, after quality analysis and improvement, the INSaFLU pipeline does not use those original reads for any other downstream analysis (all quality reports and derived quality processed reads are kept available for download).
+
 
 .. note::
 	**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows":**
@@ -108,19 +123,6 @@ Fastq.gz files that are not attached to any sample can be deleted by clicking in
 	3. Copy&paste the adequate “.bat” file (whether you have fastq or fastq.gz) to the same folder and double-click on the “.bat” file
 	
 	This will automatically **create a single file named “concat.fastq.gz” (or “concat.fastq”)** inside the same folder. You can then rename this file as needed. (Note that this will not eliminate or change the original fastq inside the folder.)
-
-A. Go to *Samples* menu and choose *Add Sample metadata*
-........................................................
-
-.. image:: _static/upload_samplemetadata_individual_1.png
-
-Here you can upload each sample at the time (including associated metadata and NGS data).
-
-.. image:: _static/upload_samplemetadata_individual_2.png
-
-
-.. important::
-   Original reads (i.e., the fastq.gz files uploaded) will be deleted (normally after 10 days) of their upload. In fact, after quality analysis and improvement, the INSaFLU pipeline does not use those original reads for any other downstream analysis (all quality reports and derived quality processed reads are kept available for download).
 
 
 Updating Sample metadata
@@ -181,11 +183,24 @@ You can download the suggested protocol here: :download:`Suggested_RT_PCR_assay_
     However, you may need to UPLOAD additional reference files to the user-restricted reference database. For instance, you may need to upload the A/H3N2 vaccine reference sequence for the season 2017/2018 (A/Hong Kong/4801/2014 virus), which is not freely available. 
        
     
-- To upload additional references (FASTA format; maximum 50000 bp per file): GO TO *References* MENU and CHOOSE **Add Reference**
-    
+**To upload additional reference sequences**, GO TO *References* MENU and CHOOSE **Add Reference**
 
+You can:
 
-.. image:: _static/References_menu_2.png
+- Upload a FASTA + GENBANK file
+
+.. image:: _static/09_add_new_ref_w_gbk.gif
+
+.. note::
+   
+   Your genbank file must be compatible with INSaFLU (see guide and documentation). 
+   ## See below a GUIDE to generate additional reference sequences
+
+- Upload a FASTA file 
+(in this case, INSafLU will automatically generate an annotation in GenBabk format)
+
+.. image:: _static/08_add_new_ref_fasta_only.gif
+
 
 .. note::
    
@@ -193,14 +208,11 @@ You can download the suggested protocol here: :download:`Suggested_RT_PCR_assay_
    
    1. Multi-FASTA files to be uploaded will typically contain the set of reference sequences that constitute the influenza “whole-genome” sequence of a particular virus (e.g, the combination of the traditional 8 amplicons targeting the 8 eight influenza RNA segments). Still, you are free to upload references files including a specific panel of segments/genes (e.g, segments 4 and 6, which encode the surface proteins HA and NA, respectively)  
    
-   2. Each individual sequence of the multi-FASTA file should ideally have the precise size of each “intra-amplicon” target sequence that you capture by each one of the RT-PCR amplicons. Otherwise, you will get regions with no or low coverage (these will be masked with undefined bases NNN according to the user-defined coverage thresholds).
+   2. Each individual sequence of the multi-FASTA file should ideally have the size of each “intra-amplicon” target sequence that you capture by each one of the RT-PCR amplicons. Otherwise, you will get regions with no or low coverage (these will be masked with undefined bases NNN according to the user-defined coverage thresholds).
    
    3. INSaFLU automatically annotates the uploaded multi-FASTA sequences upon submission, but, if you prefer, you can also upload (optionally) the respective multi-GenBank file.   
    
    ## See below a GUIDE to generate additional reference sequences
-   
-   
-.. image:: _static/upload_add_reference.png
 
 
 GUIDE TO GENERATE ADDITIONAL REFERENCE SEQUENCES
