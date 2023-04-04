@@ -108,7 +108,7 @@ Within the *Datasets* menu:
 3. Choose the Nextstrain build
 ...................................
 
-.. image:: _static/14_remove_samples_from_project.gif
+.. image:: _static/36_create_nextstrain_dataset.gif
 
 After creating a Dataset, and before adding the first sample, you can clicking in the "Magic wand" to select the Nextstrain build that will be run.
 
