@@ -174,7 +174,7 @@ Uploading Reference data
 
 INSaFLU needs reference sequence files to be used for reference-based mapping. 
 
-- In *References* menu, **INSaFLU provides a set of ready-to-use reference sequences**, all publicly available at NCBI (or made available under permission of authors), currently including:
+In *References* menu, **INSaFLU provides a set of ready-to-use reference sequences**, all publicly available at NCBI (or made available under permission of authors), currently including:
 
 	i. post-pandemic (2009) vaccine/reference influenza A(H1N1)pdm2009, A(H3N2) and B viruses (from both Northern and Southern hemispheres);
 	ii. representative virus of multiple combinations of HA/NA subtypes (i.e., H1N1, H2N2, H5N1, H7N9, etc)
@@ -195,14 +195,15 @@ You can download the suggested protocol here: :download:`Suggested_RT_PCR_assay_
 .. important::
     **NO FURTHER ACTIONS ARE NEEDED** if you are using the suggested wet-lab pre-NGS protocol and you want to compare your sequences against a reference available at INSaFLU database.
     
-    However, you may need to UPLOAD additional reference files to the user-restricted reference database. For instance, you may need to upload the A/H3N2 vaccine reference sequence for the season 2017/2018 (A/Hong Kong/4801/2014 virus), which is not freely available. 
+    However, you may need to UPLOAD additional reference files to the user-restricted reference database. For instance, you may need to upload the A/H3N2 vaccine reference sequence for the season 2017/2018 (A/Hong Kong/4801/2014 virus), which is not freely available.    
+   
        
-    
+       
 **To upload additional reference sequences**, GO TO *References* MENU and CHOOSE **Add Reference**
 
-You can:
+You can eitheir:
 
-- Upload a FASTA + GENBANK file
+ - **Upload a FASTA + GENBANK file**
 
 .. image:: _static/09_add_new_ref_w_gbk.gif
 
@@ -211,11 +212,11 @@ You can:
    Your genbank file must be compatible with INSaFLU.
    ## See below a GUIDE to generate additional reference sequences
 
-- Upload a FASTA file 
-(in this case, INSafLU will automatically generate an annotation in GenBabk format)
+- **Upload a FASTA file**
+
+*In this case, INSaFLU will automatically generate an annotation in GenBabk format** 
 
 .. image:: _static/08_add_new_ref_fasta_only.gif
-
 
 .. note::
    
