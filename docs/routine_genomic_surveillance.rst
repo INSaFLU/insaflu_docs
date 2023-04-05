@@ -50,7 +50,7 @@ Note: Please set the parameters before assigning the first sample to the project
 
 .. image:: _static/12_add_few_samples_to_project.gif
 
-*Example - Add a btach of samples (dataset)*
+*Example - Add a batch of samples (dataset)*
 
 .. image:: _static/13_add_batch_samples_to_project.gif
 
