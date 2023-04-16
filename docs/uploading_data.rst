@@ -78,9 +78,9 @@ Fastq.gz files that are not attached to any sample can be deleted by clicking in
 	
 	1. Download one of these files from https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/ (check the README)
 	
-	- **concat_fastq.bat**  (for fastq files)
+	- **concat_fastq**  (for fastq files)
 	
-	- **concat_fastqgz.bat** (for fastq.gz)
+	- **concat_fastqgz** (for fastq.gz)
 	
 	
 	2. Create a folder where you only put the fastq/fastq.gz you wish to concatenate
@@ -119,9 +119,9 @@ Example for a Illumina (paired-end) sample:
 	
 	1. Download one of these files from https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/ (check the README)
 	
-	- **concat_fastq.bat**  (for fastq files)
+	- **concat_fastq**  (for fastq files)
 	
-	- **concat_fastqgz.bat** (for fastq.gz)
+	- **concat_fastqgz** (for fastq.gz)
 	
 	
 	2. Create a folder where you only put the fastq/fastq.gz you wish to concatenate
