@@ -74,17 +74,17 @@ Reads (fastq.gz)  can be selected from the multi-select dialog box or just DRAG 
 Fastq.gz files that are not attached to any sample can be deleted by clicking in "Remove all files not processed".
 
 .. note::
-	**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows" (see video below):**
+	**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows" or "MAC" (see video below):**
 	
-	1. Download one of these files:
+	1. Download one of these files from https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/ (check the README)
 	
-	- **concat_fastq.bat** https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/concat_fastq.bat (for fastq files)
+	- **concat_fastq.bat**  (for fastq files)
 	
-	- **concat_fastqgz.bat** https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/concat_fastqgz.bat (for fastq.gz)
+	- **concat_fastqgz.bat** (for fastq.gz)
 	
 	
 	2. Create a folder where you only put the fastq/fastq.gz you wish to concatenate
-	3. Copy&paste the adequate “.bat” file (whether you have fastq or fastq.gz) to the same folder and double-click on the “.bat” file
+	3. Copy&paste the adequate “.bat” (Windows) or ".command" (MAC) file (whether you have fastq or fastq.gz) to the same folder and double-click on the file
 	
 	This will automatically **create a single file named “concat.fastq.gz” (or “concat.fastq”)** inside the same folder. You can then rename this file as needed. (Note that this will not eliminate or change the original fastq inside the folder.)
 
@@ -115,17 +115,17 @@ Example for a Illumina (paired-end) sample:
 
 
 .. note::
-	**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows" (see video below):**
+	**How to merge several ONT fastq/fastq.gz files into a single ONT fastq/fastq.gz on "Windows" or "MAC" (see video below):**
 	
-	1. Download one of these files:
+	1. Download one of these files from https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/ (check the README)
 	
-	- **concat_fastq.bat** https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/concat_fastq.bat (for fastq files)
+	- **concat_fastq.bat**  (for fastq files)
 	
-	- **concat_fastqgz.bat** https://github.com/INSaFLU/INSaFLU/raw/master/files_helpful/concat_fastqgz.bat (for fastq.gz)
+	- **concat_fastqgz.bat** (for fastq.gz)
 	
 	
 	2. Create a folder where you only put the fastq/fastq.gz you wish to concatenate
-	3. Copy&paste the adequate “.bat” file (whether you have fastq or fastq.gz) to the same folder and double-click on the “.bat” file
+	3. Copy&paste the adequate “.bat” (Windows) or ".command" (MAC) file (whether you have fastq or fastq.gz) to the same folder and double-click on the file
 	
 	This will automatically **create a single file named “concat.fastq.gz” (or “concat.fastq”)** inside the same folder. You can then rename this file as needed. (Note that this will not eliminate or change the original fastq inside the folder.)
 
