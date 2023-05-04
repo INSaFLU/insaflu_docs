@@ -255,89 +255,12 @@ The influenza GenBank files available at NCBI are not compatible with the "HA1 n
 
 **THESE ORIGINAL LINES in THE GENBANK FILE ....**
 
-.. note::
-FEATURES             Location/Qualifiers
-     source          1..1718
-                     /organism="Influenza A virus"
-                     /mol_type="viral cRNA"
-                     /strain="A/Darwin/6/2021"
-                     /serotype="H3N2"
-                     /isolate="6"
-                     /host="Homo sapiens"
-                     /db_xref="taxon:11320"
-                     /segment="4"
-                     /country="Australia: Northern Territory, Darwin"
-                     /collection_date="2021-03-16"
-                     /note="EPI_ISL_2233238"
-     gene            1..1701
-                     /gene="HA"
-     CDS             1..1701
-                     /gene="HA"
-                     /function="receptor binding and fusion protein"
-                     /codon_start=1
-                     /product="hemagglutinin"
-                     /protein_id="WEY08916.1"
-                     /translation="MKTIIALSNILCLVFAQKIPGNDNSTATLCLGHHAVPNGTIVKT
-                     ITNDRIEVTNATELVQNSSIGEICGSPHQILDGGNCTLIDALLGDPQCDGFQNKEWDL
-                     FVERSRANSNCYPYDVPDYASLRSLVASSGTLEFKNESFNWTGVKQNGTSSACIRGSS
-                     SSFFSRLNWLTSLNNIYPAQNVTMPNKEQFDKLYIWGVHHPDTDKNQISLFAQSSGRI
-                     TVSTKRSQQAVIPNIGSRPRIRGIPSRISIYWTIVKPGDILLINSTGNLIAPRGYFKI
-                     RSGKSSIMRSDAPIGKCKSECITPNGSIPNDKPFQNVNRITYGACPRYVKQSTLKLAT
-                     GMRNVPEKQTRGIFGAIAGFIENGWEGMVDGWYGFRHQNSEGRGQAADLKSTQAAIDQ
-                     INGKLNRLIGKTNEKFHQIEKEFSEVEGRVQDLEKYVEDTKIDLWSYNAELLVALENQ
-                     HTIDLTDSEMNKLFEKTKKQLRENAEDMGNGCFKIYHKCDNACIGSIRNETYDHNVYR
-                     DEALNNRFQIKGVELKSGYKDWILWISFAMSCFLLCIALLGFIMWACQKGNIRCNICI
-                     "
-     sig_peptide     1..48
-                     /gene="HA"
-     mat_peptide     49..1035
-                     /gene="HA"
-                     /product="HA1"
-     mat_peptide     1036..1698
-                     /gene="HA"
-                     /product="HA2"
-
+.. image:: _static/lines_gbk_original.PNG
 
 
 **...SHOULD BE REPLACED BY:**
 
-.. note::
-FEATURES             Location/Qualifiers
-     source          1..1718
-                     /organism="Influenza A virus"
-                     /mol_type="viral cRNA"
-                     /strain="A/Darwin/6/2021"
-                     /serotype="H3N2"
-                     /isolate="6"
-                     /host="Homo sapiens"
-                     /db_xref="taxon:11320"
-                     /segment="4"
-                     /country="Australia: Northern Territory, Darwin"
-                     /collection_date="2021-03-16"
-                     /note="EPI_ISL_2233238"
-     CDS             1..48
-                     /gene="HA_sp"
-                     /locus_tag="locus_00004a"
-                     /product="Hemagglutinin sig_peptide"
-     CDS             49..1035
-                     /gene="HA1"
-                     /locus_tag="locus_00004b"					 
-                     /product="Hemagglutinin HA1"
-     CDS             1036..1698
-                     /gene="HA2"
-                     /locus_tag="locus_00004c"					 
-                     /product="Hemagglutinin HA2"
-                     /translation="MKTIIALSNILCLVFAQKIPGNDNSTATLCLGHHAVPNGTIVKT
-                     ITNDRIEVTNATELVQNSSIGEICGSPHQILDGGNCTLIDALLGDPQCDGFQNKEWDL
-                     FVERSRANSNCYPYDVPDYASLRSLVASSGTLEFKNESFNWTGVKQNGTSSACIRGSS
-                     SSFFSRLNWLTSLNNIYPAQNVTMPNKEQFDKLYIWGVHHPDTDKNQISLFAQSSGRI
-                     TVSTKRSQQAVIPNIGSRPRIRGIPSRISIYWTIVKPGDILLINSTGNLIAPRGYFKI
-                     RSGKSSIMRSDAPIGKCKSECITPNGSIPNDKPFQNVNRITYGACPRYVKQSTLKLAT
-                     GMRNVPEKQTRGIFGAIAGFIENGWEGMVDGWYGFRHQNSEGRGQAADLKSTQAAIDQ
-                     INGKLNRLIGKTNEKFHQIEKEFSEVEGRVQDLEKYVEDTKIDLWSYNAELLVALENQ
-                     HTIDLTDSEMNKLFEKTKKQLRENAEDMGNGCFKIYHKCDNACIGSIRNETYDHNVYR
-                     DEALNNRFQIKGVELKSGYKDWILWISFAMSCFLLCIALLGFIMWACQKGNIRCNICI
-                     "
+.. image:: _static/lines_gbk_HA1_numbering.PNG
 
 
 Explore your Sample and Reference databases
