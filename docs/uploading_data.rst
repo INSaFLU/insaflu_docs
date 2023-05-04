@@ -255,6 +255,7 @@ The influenza GenBank files available at NCBI are not compatible with the "HA1 n
 
 **THESE ORIGINAL LINES in THE GENBANK FILE ....**
 
+.. note::
 FEATURES             Location/Qualifiers
      source          1..1718
                      /organism="Influenza A virus"
@@ -300,6 +301,7 @@ FEATURES             Location/Qualifiers
 
 **...SHOULD BE REPLACED BY:**
 
+.. note::
 FEATURES             Location/Qualifiers
      source          1..1718
                      /organism="Influenza A virus"
