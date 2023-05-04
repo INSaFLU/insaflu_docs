@@ -245,11 +245,97 @@ Please take this guide into account when generating additional reference sequenc
 			example:  :download:`A_H3N2_A_Perth_16_2009.fasta <_static/A_H3N2_A_Perth_16_2009.fasta>`
 
 
-4. INSaFLU automatically annotates uploaded (multi-)FASTA sequences upon submission, but, if you prefer, you can also upload (optionally) the respective multi-GenBank file. **If you upload FASTA and respective GenBank files that have been downloaded from NCBI, please make sure that FASTA ID(s) (after the '>' character) match the name/number that appears in the LOCUS and ACCESSION lines of the GenBank file.**
-
+4. INSaFLU automatically annotates uploaded (multi-)FASTA sequences upon submission, but, if you prefer, you can also upload (optionally) the respective multi-GenBank file. **If you upload FASTA and respective GenBank files that have been downloaded from NCBI, please make sure that FASTA ID(s) (after the '>' character) match the name/number that appears in the LOCUS and ACCESSION lines of the GenBank file.**. 
 
 5. **INSaFLU requires reference sequences exclusively composed by non-degenerate bases (i.e. A, T, C, or G)**. As such, please ensure that all degenerated bases (e.g., R, Y, M, K, S and W) are replaced by non-degenerate sequences before uploading. The choice of the base used in the replacement (e.g., “A” or “G” when replacing an “R”) has no impact on the analysis. It simply means that mutations falling in the replaced nucleotide position will be reported taking into account the reference base selected.
 
+**IMPORTANT**: 
+
+The influenza GenBank files available at NCBI are not compatible with the "HA1 numbering" (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4229193/) commonly applied for seasonal influenza. As such, in order to get mutations annotated for each peptide (signal peptide, HA1 and HA2 peptides), instead of the full-protein, make sure you modified the GenBank file as follows:
+
+**THESE ORIGINAL LINES in THE GENBANK FILE ....**
+
+FEATURES             Location/Qualifiers
+     source          1..1718
+                     /organism="Influenza A virus"
+                     /mol_type="viral cRNA"
+                     /strain="A/Darwin/6/2021"
+                     /serotype="H3N2"
+                     /isolate="6"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:11320"
+                     /segment="4"
+                     /country="Australia: Northern Territory, Darwin"
+                     /collection_date="2021-03-16"
+                     /note="EPI_ISL_2233238"
+     gene            1..1701
+                     /gene="HA"
+     CDS             1..1701
+                     /gene="HA"
+                     /function="receptor binding and fusion protein"
+                     /codon_start=1
+                     /product="hemagglutinin"
+                     /protein_id="WEY08916.1"
+                     /translation="MKTIIALSNILCLVFAQKIPGNDNSTATLCLGHHAVPNGTIVKT
+                     ITNDRIEVTNATELVQNSSIGEICGSPHQILDGGNCTLIDALLGDPQCDGFQNKEWDL
+                     FVERSRANSNCYPYDVPDYASLRSLVASSGTLEFKNESFNWTGVKQNGTSSACIRGSS
+                     SSFFSRLNWLTSLNNIYPAQNVTMPNKEQFDKLYIWGVHHPDTDKNQISLFAQSSGRI
+                     TVSTKRSQQAVIPNIGSRPRIRGIPSRISIYWTIVKPGDILLINSTGNLIAPRGYFKI
+                     RSGKSSIMRSDAPIGKCKSECITPNGSIPNDKPFQNVNRITYGACPRYVKQSTLKLAT
+                     GMRNVPEKQTRGIFGAIAGFIENGWEGMVDGWYGFRHQNSEGRGQAADLKSTQAAIDQ
+                     INGKLNRLIGKTNEKFHQIEKEFSEVEGRVQDLEKYVEDTKIDLWSYNAELLVALENQ
+                     HTIDLTDSEMNKLFEKTKKQLRENAEDMGNGCFKIYHKCDNACIGSIRNETYDHNVYR
+                     DEALNNRFQIKGVELKSGYKDWILWISFAMSCFLLCIALLGFIMWACQKGNIRCNICI
+                     "
+     sig_peptide     1..48
+                     /gene="HA"
+     mat_peptide     49..1035
+                     /gene="HA"
+                     /product="HA1"
+     mat_peptide     1036..1698
+                     /gene="HA"
+                     /product="HA2"
+
+
+
+**...SHOULD BE REPLACED BY:**
+
+FEATURES             Location/Qualifiers
+     source          1..1718
+                     /organism="Influenza A virus"
+                     /mol_type="viral cRNA"
+                     /strain="A/Darwin/6/2021"
+                     /serotype="H3N2"
+                     /isolate="6"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:11320"
+                     /segment="4"
+                     /country="Australia: Northern Territory, Darwin"
+                     /collection_date="2021-03-16"
+                     /note="EPI_ISL_2233238"
+     CDS             1..48
+                     /gene="HA_sp"
+                     /locus_tag="locus_00004a"
+                     /product="Hemagglutinin sig_peptide"
+     CDS             49..1035
+                     /gene="HA1"
+                     /locus_tag="locus_00004b"					 
+                     /product="Hemagglutinin HA1"
+     CDS             1036..1698
+                     /gene="HA2"
+                     /locus_tag="locus_00004c"					 
+                     /product="Hemagglutinin HA2"
+                     /translation="MKTIIALSNILCLVFAQKIPGNDNSTATLCLGHHAVPNGTIVKT
+                     ITNDRIEVTNATELVQNSSIGEICGSPHQILDGGNCTLIDALLGDPQCDGFQNKEWDL
+                     FVERSRANSNCYPYDVPDYASLRSLVASSGTLEFKNESFNWTGVKQNGTSSACIRGSS
+                     SSFFSRLNWLTSLNNIYPAQNVTMPNKEQFDKLYIWGVHHPDTDKNQISLFAQSSGRI
+                     TVSTKRSQQAVIPNIGSRPRIRGIPSRISIYWTIVKPGDILLINSTGNLIAPRGYFKI
+                     RSGKSSIMRSDAPIGKCKSECITPNGSIPNDKPFQNVNRITYGACPRYVKQSTLKLAT
+                     GMRNVPEKQTRGIFGAIAGFIENGWEGMVDGWYGFRHQNSEGRGQAADLKSTQAAIDQ
+                     INGKLNRLIGKTNEKFHQIEKEFSEVEGRVQDLEKYVEDTKIDLWSYNAELLVALENQ
+                     HTIDLTDSEMNKLFEKTKKQLRENAEDMGNGCFKIYHKCDNACIGSIRNETYDHNVYR
+                     DEALNNRFQIKGVELKSGYKDWILWISFAMSCFLLCIALLGFIMWACQKGNIRCNICI
+                     "
 
 
 Explore your Sample and Reference databases
