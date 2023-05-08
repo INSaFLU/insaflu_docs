@@ -23,13 +23,14 @@ May 8, 2023
 	2. Added a **new button to start analyses of particular samples** within a TELEVIR project. 
 	3. New search tab in TELEVIR projects. Relies on Project and Sample names.  
   
-- **Local DOCKER installation:**  The new docker installation version 2.0.0 (including the TELEVIR module) is now available at https://github.com/INSaFLU/docker. To avoid incompatibilities when updating the previous local installations, **we recommend that users set up a brand new installation.** 
-  
 
 - **Release of findONTime** (https://github.com/INSaFLU/findONTime)
 	1. **Description:** This tool **runs concurrently with MinION sequencing** and merges (at user defined time intervals) the FASTQ files that are being generated in real-time for each sample. It can also automatically upload the files to a local docker instance of the INSaFLU-TELEVIR platform and launch the metagenomics virus detection analysis using the TELEVIR module. 
 	2. **Motivation and Goal:** This development will allow users **to detect a virus in a sample as early as possible during the sequencing run**, reducing the time gap between obtaining the sample and the diagnosis, and also reducing sequencing costs (as ONT runs can be stopped at any time and the flow cells can be cleaned and reused). 
 	3. **Usage:** findONTime can be used as a “start-to-end” solution or for particular tasks (e.g., merging ONT output files, metadata preparation and upload to INSaFLU-TELEVIR). See examples here: https://github.com/INSaFLU/findONTime#usage 
+	
+
+- **Local DOCKER installation:**  The new docker installation version 2.0.0 (including the TELEVIR module) is now available at https://github.com/INSaFLU/docker. To avoid incompatibilities when updating the previous local installations, **we recommend that users set up a brand new installation.** 
 
 
 March 7, 2023
