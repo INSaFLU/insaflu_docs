@@ -9,9 +9,27 @@ READTHEDOCS
 2023
 -------
 
-(to be released soon)
+May 8, 2023
+..........................
 
-**Release of a new Nextstrain module for avian influenza (A/H5N1)** . Nextstrain can be launched for the Hemagglutinn (HA), Neuraminidase (NA) and polymerase protein PB2 (PB2) coding genes. The reference sequences used for site (nucleotide / amino acid) numbering in the output JSON files regard to the A/Goose/Guangdong/1/96(H5N1) GenBank reference sequences (https://insaflu.readthedocs.io/en/latest/routine_genomic_surveillance.html#choose-the-nextstrain-build).
+- **Nextstrain DATASETS:** new builds for the **avian influenza (A/H5N1)** are now available (HA, NA and PB2 genes), allowing phylogenetic and spatiotemporal analysis using Nextstrain workflow https://github.com/INSaFLU/nextstrain_builds/tree/main/avian-flu (adapted from https://github.com/nextstrain/avian-flu). From now on, the build is selected upon creation of a New Dataset [cannot be changed afterwards].
+
+- **References menu:**
+	1. **Vaccine-like reference sequences for the 2023-2024 season publicly available at GenBank, for A/H3N2 (A/Darwin/6/2021) and A/H1N1 (A/Wisconsin/67/2022)**, are now available in INSaFLU reference default database. This update was performed with kind support of the WHOCC Reference and Research on influenza, VIDRL, Melbourne, Australia (special thanks to Dr. Ammar Aziz and Dr. Ian Barr);
+	2. All seasonal influenza sequences (A/H3N2, A/H1N1, B/Victoria and B/Yamagata) available at the default INSaFLU database were re-annotated to allow mutation annotation following the **HA1 numbering** (i.e., mutations will now be annotated for each peptide: signal peptide, HA1 and HA2 peptides, instead of the full-protein). 
+
+- **TELEVIR Projects (virus detection):**
+	1. **Controls:** user can now select “control” sample(s) within a TELEVIR project. Viral TAXID detected in the Main report of the user-selected “control” sample(s) will be flagged in the reports of samples in the same project as “Taxid found in control” in a new “Control” column. **This new functionality is designed to facilitate the background subtraction of negative controls.** Multiple controls are possible.
+	2. Added a **new button to start analyses of particular samples** within a TELEVIR project. 
+	3. New search tab in TELEVIR projects. Relies on Project and Sample names.  
+  
+- **Local DOCKER installation:**  The new docker installation version 2.0.0 (including the TELEVIR module) is now available at https://github.com/INSaFLU/docker. To avoid incompatibilities when updating the previous local installations, **we recommend that users set up a brand new installation.**
+
+- **Release of findONTime (https://github.com/INSaFLU/findONTime).**
+	1. **Description:** This tool **runs concurrently with MinION sequencing** and merges (at user defined time intervals) the FASTQ files that are being generated in real-time for each sample. It can also automatically upload the files to a local docker instance of the INSaFLU-TELEVIR platform and launch the metagenomics virus detection analysis using the TELEVIR module. 
+	2. **Motivation and Goal:** This development will allow users **to detect a virus in a sample as early as possible during the sequencing run**, reducing the time gap between obtaining the sample and the diagnosis, and also reducing sequencing costs (as ONT runs can be stopped at any time and the flow cells can be cleaned and reused). 
+	3. **Usage:** findONTime can be used as a “start-to-end” solution or for particular tasks (e.g., merging ONT output files, metadata preparation and upload to INSaFLU-TELEVIR). See examples here: https://github.com/INSaFLU/findONTime#usage 
+
 
 March 7, 2023
 ..........................
