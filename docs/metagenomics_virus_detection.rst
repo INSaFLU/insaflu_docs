@@ -72,6 +72,15 @@ By clicking in *Run panel*, users can get an overview of the workflows run.
 
 .. image:: _static/28_monitoring_progress.gif
 
+5. *Select a Control* to the TELEVIR project
+.............................................
+
+The inclusion of **negative controls** (e.g. pathogen-negative samples, library preparation buffers, etc) during metagenomic sequencing in clinical virology is highly recommended to identify sources of potential contamination and detect false positive hits. In addition, the inclusion of **positive controls** (e.g., samples spiked with RNA or DNA viruses that do not infect humans) is also commonly performed to control for the success of nucleic acids extraction, preparation and sequencing.
+
+In TELEVIR projects, user can select “control” sample(s) at any time (before and after data analysis). Viral TAXID detected in the Main report of the user-selected “control” sample(s) will be flagged in the reports of samples in the same project as “Taxid found in control” in a new “Control” column. This new functionality is designed to facilitate the background subtraction of viral hits also found in controls. Multiple controls are possible.
+
+.. image:: _static/televir_control_selection.png
+
 
 **TELEVIR - Output Visualization and Download**
 ++++++++++++++++++++++++++++++++++++++++++++++++
@@ -190,11 +199,17 @@ Further guidance:
 - The ultimate goal of the TELEVIR module is to detect viruses, and not necessarily to identify the virus “strain/variant/serotype”. Once a given virus is detected, users can perform fine-tune analyses (e.g, consensus sequences reconstruction, mutation detection, etc) with the classical INSaFLU projects. 
 
 
-# How can you **compare your test samples with the “negative controls”**?
+# How can you **compare your test samples with the “negative/positive controls”**?
 
-The **inclusion of negative controls** (e.g. pathogen-negative samples, library preparation buffers, etc) during metagenomic sequencing in clinical virology **is highly recommended to identify sources of potential contamination and detect false positive hits**. Indeed, viral taxa/sequences detected in the test samples that are also present in the negative run controls should be interpreted as contamination (e.g., during wet-lab steps) or background noise (e.g., nucleic acids present in wet-lab reagents might yield false positive viral hits across test and control samples>)
+The **inclusion of negative controls** (e.g. pathogen-negative samples, library preparation buffers, etc) during metagenomic sequencing in clinical virology **is highly recommended to identify sources of potential contamination and detect false positive hits**. Indeed, viral taxa/sequences detected in the test samples that are also present in the negative run controls should be interpreted as contamination (e.g., during wet-lab steps) or background noise (e.g., nucleic acids present in wet-lab reagents might yield false positive viral hits across test and control samples). In another perspective, the inclusion of **positive controls** (e.g., samples spiked with RNA or DNA viruses that do not infect humans) is also recoomended to control for the success of nucleic acids extraction, preparation and sequencing.
 
-In this context, INSaFLU-TELEVIR users are encouraged to **create different TELEVIR projects per different metagenomics sequencing run (including negative controls)** for an enhanced sample comparison and output interpretation. The “View all reports” table available per Project might facilitate the manual inspection and subtraction of viral hits detected in negative run controls. INSaFLU team is working to automate the negative controls background subtraction/flagging upon user request.
+In this context, INSaFLU-TELEVIR users are encouraged to **create different TELEVIR projects per different metagenomics sequencing run (including negative/positive controls)** for an enhanced sample comparison and output interpretation. 
+
+After selection of “control” sample(s) (which can be done before and after data analysis), **viral TAXID detected in the Main report of the user-selected “control” sample(s) will be flagged in the reports of the other samples as “Taxid found in control” in the “Control” column.** This new functionality is designed to facilitate the background subtraction of viral hits also found in controls. Multiple controls are possible.
+
+
+.. image:: _static/televir_control_report.png
+
 
 For further recommendations for interpretation of  metagenomics virus detection data, we recommend the following literature:
 
