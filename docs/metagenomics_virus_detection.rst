@@ -77,7 +77,7 @@ By clicking in *Run panel*, users can get an overview of the workflows run.
 
 The inclusion of **negative controls** (e.g. pathogen-negative samples, library preparation buffers, etc) during metagenomic sequencing in clinical virology is highly recommended to identify sources of potential contamination and detect false positive hits. In addition, the inclusion of **positive controls** (e.g., samples spiked with RNA or DNA viruses that do not infect humans) is also commonly performed to control for the success of nucleic acids extraction, preparation and sequencing.
 
-In TELEVIR projects, user can select “control” sample(s) at any time (before and after data analysis). Viral TAXID detected in the Main report of the user-selected “control” sample(s) will be flagged in the reports of samples in the same project as “Taxid found in control” in a new “Control” column. This new functionality is designed to facilitate the background subtraction of viral hits also found in controls. Multiple controls are possible.
+In TELEVIR projects, **user can select “control” sample(s) at any time (before and after data analysis)**. Viral TAXID detected in the Main report of the user-selected “control” sample(s) will be flagged in the reports of samples in the same project as “Taxid found in control” in a new “Control” column. This functionality is designed to facilitate the background subtraction of viral hits also found in controls. Multiple controls are possible.
 
 .. image:: _static/televir_control_selection.png
 
