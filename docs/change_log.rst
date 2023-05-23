@@ -16,7 +16,7 @@ May 8, 2023
 
 - **References menu:**
 	1. **Vaccine-like reference sequences for the 2023-2024 season publicly available at GenBank, for A/H3N2 (A/Darwin/6/2021) and A/H1N1 (A/Wisconsin/67/2022)**, are now available in INSaFLU reference default database. This update was performed with kind support of the WHOCC Reference and Research on influenza, VIDRL, Melbourne, Australia (special thanks to Dr. Ammar Aziz and Dr. Ian Barr);
-	2. All seasonal influenza sequences (A/H3N2, A/H1N1, B/Victoria and B/Yamagata) available at the default INSaFLU database were re-annotated to allow mutation annotation following the **HA1 numbering** (i.e., mutations will now be annotated for each peptide: signal peptide, HA1 and HA2 peptides, instead of the full-protein). 
+	2. All seasonal influenza sequences (A/H3N2, A/H1N1, B/Victoria and B/Yamagata) available at the default INSaFLU database were re-annotated to allow mutation annotation following the **HA1 numbering** (i.e., mutations will now be annotated for each peptide: signal peptide, HA1 and HA2 peptides, instead of the full-protein). **The new annotation (HA1 numbering) will only be applied to new projects**
 
 - **TELEVIR Projects (virus detection):**
 	1. **Controls:** user can now select “control” sample(s) within a TELEVIR project. Viral TAXID detected in the Main report of the user-selected “control” sample(s) will be flagged in the reports of samples in the same project as “Taxid found in control” in a new “Control” column. **This new functionality is designed to facilitate the background subtraction of negative controls.** Multiple controls are possible.
