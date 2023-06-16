@@ -12,15 +12,20 @@ READTHEDOCS
 June 16, 2023
 ..........................
 
+
 - **Mutation detection and consensus generation**: We've added an extra parameter to enable primer removal using iVar (https://genomebiology.biomedcentral.com/articles/10.1186/s13059-018-1618-7), for both Illumina and ONT data. The procedure is an adaptation of the iVar CookBook (https://github.com/andersen-lab/paper_2018_primalseq-ivar/blob/master/cookbook/CookBook.ipynb).
+
 
 - **Nextstrain DATASETS:** 
 	1. A new **Generic with Time Tree** build is now available. It is similar to the Generic build, but it also builds a time tree, inferring a mutation rate from the sample dates. Like in the Generic build, one reference is required to align the dataset consensus sequences. Nonetheless, unlike in the Generic build, the reference is not specifically defined as the root, but inferred from the data instead. To make use of this build, you need to accurately specify dates associated with each sample.
 	2. In the specific case of the **SARS-CoV-2 build**, when importing consensus from projects, the reference of the project is no longer included automatically in the dataset. For the other builds, the project reference is still automatically included.
 	
+
 - **Algn2pheno module**: We introduced a new database of Spike amino acid mutations in epitope residues listed in Carabelli et al, 2023, 21(3), 162–177, Nat Rev Microbiol (https://doi.org/10.1038/s41579-022-00841-7), Figure 1. This is now the report that is visualized in the project page. **Important**: for older projects, the visualization of the Algn2pheno report will fail. Nonetheless, the old reports are still available in the algn2pheno.zip file that is downloadable from the project page. To update to the new database, you can either modify the settings of at least one sample within a project, add/remove samples in the project, or create a new project with the same samples.
 
+
 - **Type/Subtype identification**: We relaxed the mincov parameter in abricate from 60% to 40%. 
+
 
 - **Other:** We performed internal modifications to improve the stability of the website. We also performed minor aesthetical adjustments. 
 
