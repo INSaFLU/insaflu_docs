@@ -163,7 +163,7 @@ Similarly to influenza classification, alerts are generated if, for instance, no
 	
 		--minid: minimum DNA %identity (--minid 70)
 		
-		--mincov: minimum DNA % coverage (--mincov 60)
+		--mincov: minimum DNA % coverage (--mincov 40, until 15/06/2023: --mincov 60)
 		
 
 		***As of March 10th, 2020**, samples can be classified as: 
@@ -245,6 +245,8 @@ This key module takes enables reference-based mapping, followed by SNP/indel cal
 		
 		--minfrac: minimum proportion for variant evidence (default: --minfrac 0.51)
 		
+		--primer: defines primer sequences to be removed using iVar(version 1.4.2, available since 16/06/2023) (by default no primers are removed). The primer removal procedure was based on the iVar CookBook (https://github.com/andersen-lab/paper_2018_primalseq-ivar/blob/master/cookbook/CookBook.ipynb), but where no quality filtering is performed, and reads starting outside the primer are not excluded. Primer removal is obtained after the alignment step, but before variant calling and consensus generation.
+		
 		
 	**## Oxford Nanopore Technologies (ONT) data ##**
 	
@@ -254,8 +256,9 @@ This key module takes enables reference-based mapping, followed by SNP/indel cal
 		
 		input: ONT quality processed reads obtained after NanoFilt analysis.
 		
-		medaka consensus -m model (default: r941_min_high_g360)
-		
+		medaka consensus -m model (default: r941_min_high_g360) --primer (default: empty)
+			Optional primer removal using iVar follows the same procedure as described before for snippy, being applied before consensus generation.
+					
 		medaka variant
 		
 	_VCF filtering:
