@@ -430,7 +430,7 @@ Algn2pheno
 
 *Description*
 
-The align2pheno module in INSaFLU performs the screening of genetic features potentially linked to specific phenotypes. Aln2pheno currently screens SARS-CoV-2 Spike amino acid alignments in each SARS-CoV-2 project against two default "genotype-phenotype" databases: the COG-UK Antigenic mutations and the Pokay Database (detailed below). Align2pheno reports the repertoire of mutations of interest per sequence and their potential impact on phenotype.
+The align2pheno module in INSaFLU performs the screening of genetic features potentially linked to specific phenotypes. Aln2pheno currently screens SARS-CoV-2 Spike amino acid alignments in each SARS-CoV-2 project against three default "genotype-phenotype" databases: the Carabelli mutations, the COG-UK Antigenic mutations and the Pokay Database (detailed below). Align2pheno reports the repertoire of mutations of interest per sequence and their potential impact on phenotype.
 
 .. note::
    **Algn2pheno** (https://github.com/insapathogenomics/algn2pheno)
@@ -440,6 +440,12 @@ The align2pheno module in INSaFLU performs the screening of genetic features pot
    		Software and databases versions are provided in a log file in each run.
 
 *Databases*
+
+**Carabelli Database**
+
+Description: Database of Spike amino acid mutations in epitope residues listed in Carabelli et al, 2023, 21(3), 162–177, Nat Rev Microbiol (https://doi.org/10.1038/s41579-022-00841-7), Figure 1.
+
+Source: https://github.com/insapathogenomics/algn2pheno/blob/main/tests/DB_SARS_CoV_2_Spike_EpitopeResidues_Carabelli_2023_NatRevMic_Fig1.tsv (prepared and adapted for align2pheno based on https://doi.org/10.1038/s41579-022-00841-7)
 
 **Pokay Database**
 
@@ -453,6 +459,7 @@ Source: https://github.com/nodrogluap/pokay/tree/master/data
 Description: Database of Spike amino acid mutations adapted from the COG-UK Antigenic Mutations Database that includes “Spike amino acid replacements reported to confer antigenic change relevant to antibodies, detected in the UK data. The table lists those mutations in the spike gene identified in the UK dataset that have been associated with weaker neutralisation of the virus by convalescent plasma from people who have been infected with SARS-CoV-2, and/or monoclonal antibodies (mAbs) that recognise the SARS-CoV-2 spike protein.” Made available by the COVID-19 Genomics UK (COG-UK) Consortium through the COG-UK/Mutation Explorer.
 
 Source: https://sars2.cvr.gla.ac.uk/cog-uk/
+
 
 Nextstrain Datasets
 --------------------------------------
@@ -523,7 +530,13 @@ This build is a simplified version of the Nextstrain build available at https://
 
 This generic build uses as reference sequence (as tree root and for mutation annotation) one of the reference sequences of the projects included in the Nextstrain dataset.
 
-Currently, the generic build does not generate a Time-Resolved Tree (unlike the virus-specific builds).
+Currently, the generic build does not generate a Time-Resolved Tree. To do this you need to select the Generic with TimeTree option.
+
+
+**Generic with TimeTree**
+
+This build is similar to the Generic build, but it also builds a time tree, inferring a mutation rate from the sample dates. Like in the Generic build, one reference is required to align the dataset consensus sequences. Nonetheless, unlike in the Generic build, the reference is not specifically defined as the root, but the root is inferred from the data instead. To make use of this build, you need to accurately specify dates associated with each sample.
+
 
 
 .. important::
