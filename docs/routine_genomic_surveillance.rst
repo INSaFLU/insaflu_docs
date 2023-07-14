@@ -570,7 +570,7 @@ Within this panel you can explore the results of the Algn2pheno module that scre
 .. image:: _static/23_algn2pheno.gif
 
 
-Algn2pheno uses two databases for screening: Pokay database and COG-UK Antigenic Mutations database. By default, the Algn2pheno report panel shows the screening results (corresponding to the output file "_final_report.tsv" described below) obtained using the COG-UK Antigenic Mutations database.
+Algn2pheno uses three databases for screening: Carabelli, Pokay and COG-UK Antigenic Mutations database. By default, the Algn2pheno report panel shows the screening results (corresponding to the output file "_final_report.tsv" described below) obtained using the Carabelli database.
 
 This interactive table can be filtered by any item (e.g., sample, aa change, etc.) and the filtered rows can be downloaded as a sub-table.
 
