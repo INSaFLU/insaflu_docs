@@ -586,7 +586,6 @@ By clicking on the "Download" button in the Project results page, it is possible
 - **algn2pheno.log**: alg2pheno log file with tool version and useful links, description of databases used and respective sources, as well as description of outputs.
 
 
-More info about this functionality here: https://insaflu.readthedocs.io/en/latest/data_analysis.html#algn2pheno
 
 I. Explore your sequences using **Nextclade** 
 ----------------------------------------------
