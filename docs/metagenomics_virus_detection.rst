@@ -8,16 +8,17 @@ The TELEVIR  bioinformatics component of INSaFLU is a modular pipeline for the i
 It is composed of these main steps (detailed in https://insaflu.readthedocs.io/en/latest/bioinformatics_pipeline.html#metagenomics-virus-detection):
 
 1. Read quality analysis and improvement [optional].
-2. Viral Enrichment [optional].
-3. Host Depletion [optional].
-4. *De novo* Assembly of the reads [optional].
-5. Identification of the viral sequences.
+2. Extra filtering [optional].
+3. Viral Enrichment [optional].
+4. Host Depletion [optional].
+5. *De novo* Assembly of the reads [optional].
+6. Identification of the viral sequences.
 	- Using reads.
 	- Using contigs (if assembled).
 	- Using several reference databases.
-6. Selection of viral TAXID and representative genome sequences for confirmatory re-mapping.
-7. Remapping of the viral sequences against selected reference genomes. 
-8. Reporting.
+7. Selection of viral TAXID and representative genome sequences for confirmatory re-mapping.
+8. Remapping of the viral sequences against selected reference genomes. 
+9. Reporting.
 
 Below, you can find instructions on how to create a TELEVIR project, run samples and visualize/intrepret the results.
 
@@ -87,7 +88,9 @@ In TELEVIR projects, **user can select “control” sample(s) at any time (befo
 
 The INSaFLU-TELEVIR bioinformatics pipeline for metagenomics virus diagnostic generates multiple outputs, reflecting the multiple steps of the pipeline (detailed here: https://insaflu.readthedocs.io/en/latest/bioinformatics_pipeline.html#metagenomics-virus-detection). The main report lists the top viral hits, each accompanied by several robust and **diagnostic-oriented metrics, statistics and visualizations**, provided as (interactive) tables (intermediate and final reports), graphs (e.g., coverage plots, Integrative Genomics Viewer visualization, Assembly to reference dotplot) and multiple downloadable output files (e.g., list of the software parameters, reads/contigs classification reports, mapped reads/contigs identified per each virus; reference sequences, etc)
 
-The outputs are organized in dynamic 'expand-and-collapse' panels:
+TELEVIR reports are generated per **Workflow**, per **Sample** (combining non-redundant hits detected across workflows) and per **Project** (combining several samples), with a decreasing level of detail.
+
+**Workflow Reports** are organized in dynamic 'expand-and-collapse' panels:
 
 .. image:: _static/29_TELEVIR_panels_results_overview.gif
 
@@ -103,7 +106,16 @@ This tab displays an interactive table with **summary statistics and visualizati
 
 .. image:: _static/30_TELEVIR_link_to_NCBI.gif
 
-   
+.. note::
+   - The **Sample** reports have the same layout as this Workflow main report, but compile all viral hits identified accross all workflows that were run a given sample, in which redundant hits are excluded. 
+   - The **Project** reports are simple tables combining all top viral hits identified in the main reports of the several workflows that were run for all samples included in the project.
+- Both Sample and Project reports provide direct links to the detailed Workflow reports for an enhanced and advanced output interpretation 
+
+
+.. important::
+	- Viral hits (reference accession IDs) in the main reports (at both “Workflow” and “Sample” levels) can be grouped and sorted by the degree of overlap of cross-mapped reads. This grouping intends to place together true positive hits with their corresponding cross-mapped potential false positives, allowing for the easy identification of the latter. It can be also useful to join same-segment references (for segmented virus) and to help identifying reference sequences most closely related to the virus present in the sample. The grouping parameter (--r-overlap) is modifiable in a new “Reporting” section of the TELEVIR Settings Menu for both technologies. “Sort sample report” should be deployed everytime the grouping parameter is changed for existing projects.
+
+
 Below, you can find a description of the main outputs and statistics.
 
 **Mapping statistics**
@@ -223,11 +235,12 @@ Intermediate outputs
 
 Multiple intermediate outputs and statistics are available by clicking in the following 'expand-and-collapse' panels:
 
-Pre-processing: **Viral Enrichment** and/or **Host depletion**
----------------------------------------------------------------
+Pre-processing: **Extra filtering**, **Viral Enrichment** and/or **Host depletion**
+--------------------------------------------------------------------------------------
 
-This tab provides an overview on the number of reads filtered during the **Viral enrichment** and/or **Host depletion** steps of the metagenomics virus detection pipeline.
+This tab provides an overview on the number of reads filtered during the **Extra Filtering**, **Viral enrichment** and/or **Host depletion** steps of the metagenomics virus detection pipeline.
 
+- "Extra Filtering" - remove reads enriched in low complexity regions (e.g., homopolymeric tracts or repeat regions), which are a common source of false-positive hits
 - "Viral enrichment" - retains potential viral reads based on a rapid and permissive classification of the reads against a viral sequence database.
 - "Host Depletion" - remove potential host reads based on reference-based mapping against host genome sequence(s) 
 
