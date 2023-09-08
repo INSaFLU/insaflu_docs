@@ -582,16 +582,17 @@ The TELEVIR  bioinformatics component of INSaFLU is a modular pipeline for the i
 It is composed of these main steps (detailed below):
 
 1. Read quality analysis and improvement [optional]
-2. Viral Enrichment [optional].
-3. Host Depletion [optional].
-4. *De novo* assembly of the reads [optional].
-5. Identification of the viral sequences.
+2. Extra-filtering [optional].
+3. Viral Enrichment [optional].
+4. Host Depletion [optional].
+5. *De novo* assembly of the reads [optional].
+6. Identification of the viral sequences.
 	- Using reads.
 	- Using contigs (if assembled).
 	- Using several reference databases.
-6. Selection of viral TAXID and representative genome sequences for confirmatory re-mapping
-7. Remapping of the viral sequences against selected reference genome sequences.
-8. Reporting
+7. Selection of viral TAXID and representative genome sequences for confirmatory re-mapping
+8. Remapping of the viral sequences against selected reference genome sequences.
+9. Reporting
 
 
 .. image:: _static/televir_workflow_update_20221219.png
@@ -676,6 +677,21 @@ This step takes the input single- or paired-end reads (fastq.gz format; ONT or I
 	See details in https://insaflu.readthedocs.io/en/latest/data_analysis.html#user-defined-parameters
 
 
+Extra Filtering
+------------------
+
+*Description*
+
+This step **remove reads enriched in low complexity regions** (e.g., homopolymeric tracts or repeat regions), which are a common source of false-positive bioinformatics hits**. This step is directly performed using over raw reads (if QC was turned OFF) or quality processed reads (if QC was turned ON).
+
+
+.. note::
+
+*Software*
+
+	**PrinSeq++** (https://github.com/Adrian-Cantu/PRINSEQ-plus-plus) 
+	
+	
 
 
 Viral Enrichment
@@ -683,7 +699,7 @@ Viral Enrichment
 
 *Description*
 
-This step **retains potential viral reads** based on a rapid and permissive classification of the reads against a viral sequence database. This step is directly performed using over raw reads (if QC was turned OFF) or quality processed reads (if QC was turned ON).
+This step **retains potential viral reads** based on a rapid and permissive classification of the reads against a viral sequence database. If "Extra-filtering" is OFF, this step is directly performed using over raw reads (if QC was turned OFF) or quality processed reads (if QC was turned ON).
 
 
 .. note::
@@ -708,7 +724,7 @@ Host depletion
 
 *Description*
 
-This step **removes potential host reads** based on reference-based mapping against host genome sequence(s). Mapped reads are treated as potential host reads and removed. If the Viral enrichment step was turned OFF, host depletion will be directly performed over raw reads (if QC was turned OFF) or quality processed reads (if QC was turned ON).
+This step **removes potential host reads** based on reference-based mapping against host genome sequence(s). Mapped reads are treated as potential host reads and removed. If the Extra filetring and Viral enrichment steps were turned OFF, host depletion will be directly performed over raw reads (if QC was turned OFF) or quality processed reads (if QC was turned ON).
 
 .. note::
 
