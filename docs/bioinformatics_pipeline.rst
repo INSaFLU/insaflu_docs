@@ -104,7 +104,7 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 
 	**## ILLUMINA data only ##**
 	
-		***As of October 10th, 2022**, users can use trimmomatic to perform trimming of primer sequences of several predefined Primer pool sets:
+		***Users can also use trimmomatic to perform trimming of primer sequences of several predefined Primer pool sets:
 		
 			-- SARS-CoV-2 Primal Scheme V3 (https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V3/nCoV-2019.tsv)
 			
@@ -124,12 +124,12 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 	See details in https://insaflu.readthedocs.io/en/latest/data_analysis.html#user-defined-parameters
 
 
-Influenza type and sub-type identification (and Human Betacoronavirus classification, as of March 2020)
--------------------------------------------------------------------------------------------------------
+Influenza type and sub-type identification (and identification of other viruses: Human Betacoronavirusm, RSV and MPXV)
+-------------------------------------------------------------------------------------------------------------------------------------
 
 *Description*
  
-In this module, post-QC reads (ONT data) or draft assemblies derived from post-QC reads (Illumina / Ion Torrent data) are screened (using ABRIcate) against two INSaFLU in house sequence markers databases: 
+In this module, draft assemblies derived from post-QC reads are screened (using ABRIcate) against two INSaFLU in house sequence markers databases: 
 
 i) "influenza_typing", which drives the discrimination of the influenza types A and B, all currently defined influenza A subtypes (18 hemagglutinin subtypes and 11 neuraminidase sub-types) and the two influenza B lineages (Yamagata and Victoria).
 
@@ -137,7 +137,7 @@ ii) "influenza_assign_segments2contigs", which allows the automatic assignment o
 
 The generated outputs (i.e., draft assemblies, the identified type and subtype/lineage and a table linking contigs to segments/references) are automatically provided upon reads upload (i.e., no user intervention is needed). INSaFLU flags samples as "putative mixed infections" if more than one type, HA or NA subtype or lineage is detected. In addition, specific alerts are generated if an incomplete type/subtype is assigned. 
 
-**As of March 10, 2020, these two databases were upgraded for rapid classification and/or contigs assignment of Human Betacoronavirus (BetaCoV).** Details about the rationale behind this classification and outputs can be found here: :download:`INSaFLU_current_genetic_markers_v11_after_03_03_2023.xlsx <_static/INSaFLU_current_genetic_markers_v11_after_07_03_2023.xlsx>`
+**Since March 10, 2020, these two databases have been upgraded for rapid classification and/or contigs assignment of Human Betacoronavirus (BetaCoV) and other viruses.** Details about the rationale behind this classification and outputs can be found here: :download:`INSaFLU_current_genetic_markers_v11_after_03_03_2023.xlsx <_static/INSaFLU_current_genetic_markers_v11_after_07_03_2023.xlsx>`
 
 Similarly to influenza classification, alerts are generated if, for instance, no BetaCoV virus is assigned or an incomplete human BetaCoV classification is obtained (for instance, due to the presence of a low number of human BetaCoV reads, etc)
 
@@ -145,7 +145,7 @@ Similarly to influenza classification, alerts are generated if, for instance, no
 
 .. note::
 
-	**## ILLUMINA data only ##** (under development for ONT data)
+**## ILLUMINA / Ion Torrent data ##**
 	
 	**SPAdes** (http://cab.spbu.ru/software/spades/) (version 3.11.1; date 15.01.2018)
    
@@ -154,7 +154,14 @@ Similarly to influenza classification, alerts are generated if, for instance, no
 		--only-assembler: runs assembly module only and does not perform reads correction
 		
 				(contigs with k-mer coverage below '3' are discarded for subsequent ABRIcate analyses to avoid the classification of vestigial sequencer-derived contaminating sequences)
-	
+
+**## Oxford Nanopore Technologies (ONT) data ##**
+
+	**Raven** (https://github.com/lbcb-sci/raven) (version 1.8.1; date 08.09.2018)
+
+
+**Illumina and ONT**
+
 	**ABRIcate** (https://github.com/tseemann/abricate) (version 0.8-dev; date 15.01.2018)
 	
 		# For type and subtype/lineage identification (and Human BetaCoV classification*):
@@ -168,9 +175,9 @@ Similarly to influenza classification, alerts are generated if, for instance, no
 
 		***As of March 10th, 2020**, samples can be classified as: 
 
-		- "BetaCoV” if the draft assemblies (Illumina/Ion Torrent data) or post-QC reads (ONT data) contain an “M gene” with ≥70% identity and ≥60% coverage to one of the M (partial) gene marker sequences of the five representative Human BetaCoronavirus genomes in the database)
+		- "BetaCoV” if the draft assemblies contain an “M gene” with ≥70% identity and ≥40% coverage (until 15/06/2023: 60%) to one of the M (partial) gene marker sequences of the five representative Human BetaCoronavirus genomes in the database)
 		
-		- “SARS_CoV_2”, "SCoV2_potential_Omicron", “MERS_CoV”, “SARS_CoV”, “HCoV_HKU1” or “HCoV_OC43” if the draft assemblies (Illumina/Ion Torrent data) or post-QC reads (ONT data) contain a “S gene” with ≥70% Identity and ≥60% coverage to one of the S (partial) gene marker sequences of the five representative Human BetaCoronavirus (the classification reflects the closest match among the five human BetaCoV listed above).
+		- “SARS_CoV_2”, "SCoV2_potential_Omicron", “MERS_CoV”, “SARS_CoV”, “HCoV_HKU1” or “HCoV_OC43” if the draft assemblies contain a “S gene” with ≥70% Identity and ≥40% coverage (until 15/06/2023: 60%) coverage to one of the S (partial) gene marker sequences of the five representative Human BetaCoronavirus (the classification reflects the closest match among the five human BetaCoV listed above).
 
 				
 		# For segments/references assignment: 
@@ -181,7 +188,7 @@ Similarly to influenza classification, alerts are generated if, for instance, no
 		
 		--mincov: minimum DNA % coverage (--mincov 30)
 		
-		**As of March 10th, 2020,** draft assemblies (Illumina/Ion Torrent data) or post-QC reads (ONT data) are labeled with the closest match among the five human BetaCoV (see above) if they have ≥70% Identity and ≥30% coverage to one of the five BetaCoV full-genome sequences (for assemblies) or partial S/M genes (for ONT reads) in the database.
+		**Draft assemblies (Illumina/Ion Torrent data or ONT data) are labeled with the closest match among the five human BetaCoV (see above) if they have ≥70% Identity and ≥30% coverage to one of the five BetaCoV full-genome sequences or partial S/M genes in the database.
 		
 		Important note: Since the "influeza_assign_segments2contigs" database is naturally not as exhaustive as other databases (such as, NCBI, Fludb or EpiFLU/GISAID), users may need to run the draft assemblies in these databases (or associated tools, such as BLAST) for some purposes (e.g., to detect/confirm reassortments or to infer the closest reference sequence of each segment / genome).
 		
