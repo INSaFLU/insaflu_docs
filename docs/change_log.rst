@@ -9,11 +9,22 @@ READTHEDOCS
 2023
 -------
 
+September 8, 2023
+..........................
+
+- **TELEVIR Projects (virus detection):**
+	1. **Reports** are now generated per **Workflow** (as previously), per **Sample** (**NEW REPORT** combining non-redundant hits detected across workflows) and per **Project** (combining several samples, as previously), with a decreasing level of detail.
+	2. **New button to “Sort sample reports”**. Viral hits (reference accession IDs) in the main reports (at both “Workflow” and “Sample” levels) can now be grouped and sorted by the degree of overlap of cross-mapped reads. This grouping intends to place together true positive hits with their corresponding cross-mapped potential false positives, allowing for the easy identification of the latter. It can be also useful to join same-segment references (for segmented virus) and to help identifying reference sequences most closely related to the virus present in the sample. The grouping parameter (--r-overlap) is modifiable in a new “Reporting” section of the TELEVIR Settings Menu for both technologies. “Sort sample report” should be deployed everytime the grouping parameter is changed for existing projects.
+	3. **New step in the Workflow - “Extra filtering”**. Low complexity regions (e.g., homopolymeric tracts or repeat regions) are a common source of false-positive bioinformatics hits, as such we added an filtering layer that targets low complexity reads using the software PrinSeq++ (Cantu et al. 2019). This additional layer is optional and disabled by default.
+	4. **New step in the Workflow - “Mapping stringency”**. An optional, extra layer of “mapping stringency” was added to this step to minimize false positive hits, allowing users to set a maximum sum of the mismatch qualities before marking a read unmapped and a maximum fraction of nucleotide mismatches allowed before soft clipping from ends (Using Bamutils). This additional layer is optional and disabled by default within the settings “Remapping” section.
+
+- **Type/Subtype identification upon ONT reads upload**
+	1. Screening is now performed over a draft assembly (using Raven) instead of directly from reads to increase precision. This new feature will be turned ON by default in new accounts.
+
 June 16, 2023
 ..........................
 
-
-- **Mutation detection and consensus generation**: We've added an extra parameter to enable primer removal using iVar (https://genomebiology.biomedcentral.com/articles/10.1186/s13059-018-1618-7), for both Illumina and ONT data. The procedure is an adaptation of the iVar CookBook (https://github.com/andersen-lab/paper_2018_primalseq-ivar/blob/master/cookbook/CookBook.ipynb).
+- **Mutation detection and consensus generation**: We've added an extra parameter to enable primer removal using iVar (https://genomebiology.biomedcentral.com/articles/10.1186/s13059-018-1618-7), for both Illumina and ONT data. The procedure is an adaptation of the iVar CookBook (https://github.com/andersen-lab/paper_2018_primalseq-ivar/blob/master/cookbook/CookBook.ipynb). This additional layer is optional within the settings “Mutation detection and consensus generation” section, for both Illumina and ONT.
 
 
 - **Nextstrain DATASETS:** 
