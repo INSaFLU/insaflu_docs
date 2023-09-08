@@ -113,7 +113,7 @@ This tab displays an interactive table with **summary statistics and visualizati
 
 
 .. important::
-	- Viral hits (reference accession IDs) in the main reports (at both “Workflow” and “Sample” levels) can be grouped and sorted by the degree of overlap of cross-mapped reads. This grouping intends to place together true positive hits with their corresponding cross-mapped potential false positives, allowing for the easy identification of the latter. It can be also useful to join same-segment references (for segmented virus) and to help identifying reference sequences most closely related to the virus present in the sample. The grouping parameter (--r-overlap) is modifiable in a new “Reporting” section of the TELEVIR Settings Menu for both technologies. “Sort sample report” should be deployed everytime the grouping parameter is changed for existing projects.
+	- Viral hits (reference accession IDs) in the main reports (at both “Workflow” and “Sample” levels) can be grouped and sorted by the **degree of overlap of cross-mapped reads.** This grouping intends to place together true positive hits with their corresponding cross-mapped potential false positives, allowing for the easy identification of the latter. It can be also useful to join same-segment references (for segmented virus) and to help identifying reference sequences most closely related to the virus present in the sample. The grouping parameter (--r-overlap) is modifiable in a new “Reporting” section of the TELEVIR Settings Menu for both technologies. **“Sort sample report” should be deployed everytime the grouping parameter is changed for existing projects.**
 
 
 Below, you can find a description of the main outputs and statistics.
