@@ -245,7 +245,7 @@ The surveillance-oriented INSaFLU component generates multiple outputs, which in
 
 Outputs are organized by the dynamic “expand-and-collapse” panels that allow you a user-friendly visualization/download of all graphical, text and sequence output data. The following table provides an overview on all INSaFLU outputs organized by bioinformatics module:
 
-:download:`INSaFLU_current_outputs_26_10_2022.xlsx <_static/INSaFLU_current_outputs_26_10_2022.xlsx>`
+:download:`INSaFLU_current_outputs_08_09_2023.xlsx <_static/INSaFLU_current_outputs_08_09_2023.xlsx>`
    
 
 While navigating through INSaFLU menus, you will find which main software (including versions and settings) were used to generate outputs. The Sample list of each Project also also summarizes the software settings and user-defined cut-offs applied for each sample. 
