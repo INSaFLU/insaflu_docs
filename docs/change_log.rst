@@ -182,6 +182,22 @@ This important update was only possible with the contribution of several people 
 	- INSaFLU work has been supported by funding from the European Union’s Horizon 2020 Research and Innovation programme under grant agreement No 773830: One Health European Joint Programme, under the TELE-Vir project (https://onehealthejp.eu/jrp-tele-vir/) 
 
 
+October 10, 2022
+..........................
+
+Users can now use trimmomatic to perform trimming of primer sequences of several predefined Primer pool sets:
+
+– SARS-CoV-2 Primal Scheme V3 (https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V3/nCoV-2019.tsv)
+
+—SARS-CoV-2 Primal Scheme V4.1 (https://github.com/artic-network/artic-ncov2019/tree/master/primer_schemes/nCoV-2019/V4.1)
+
+– Monkeypox Primal Scheme from Welkers, Jonges and van den Ouden (https://www.protocols.io/view/monkeypox-virus-whole-genome-sequencing-using-comb-n2bvj6155lk5/v1)
+
+—Monkeypox Primal Scheme from Chen et al. (https://www.protocols.io/view/monkeypox-virus-multiplexed-pcr-amplicon-sequencin-5qpvob1nbl4o/v2)
+
+Please contact us if you want to add new Primer pools to the online tool
+
+
 January 26, 2022
 ..........................
 
