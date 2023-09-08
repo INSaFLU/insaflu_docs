@@ -283,9 +283,26 @@ This key module takes enables reference-based mapping, followed by SNP/indel cal
 	
 	Consensus sequences are generated using bcftools (consensus -s sample.filtered.vcf.gz -f reference.fasta > sample.consensus.fasta) based on the vcf file containing the validated mutations. As for the Illumina pipeline, variant annotation is performed using snpEff 4.1l available with Snippy (see above).
 
+
+.. note::
+
+**PRIMER CLIPPING:** An extra parameter to enable primer removal using iVar (https://genomebiology.biomedcentral.com/articles/10.1186/s13059-018-1618-7) is available within the settings “Mutation detection and consensus generation” section, for both Illumina and ONT. The procedure is an adaptation of the iVar CookBook (https://github.com/andersen-lab/paper_2018_primalseq-ivar/blob/master/cookbook/CookBook.ipynb). 
 	
+		***Users can request  trimming of primer sequences of several predefined Primer pool sets:
 		
-	**Masking low coverage regions:**
+			-- SARS-CoV-2 Primal Scheme V3 (https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V3/nCoV-2019.tsv)
+			
+			-- SARS-CoV-2 Primal Scheme V4.1 (https://github.com/artic-network/artic-ncov2019/tree/master/primer_schemes/nCoV-2019/V4.1)
+			
+			-- Monkeypox Primal Scheme from Welkers, Jonges and van den Ouden (https://www.protocols.io/view/monkeypox-virus-whole-genome-sequencing-using-comb-n2bvj6155lk5/v1)
+			
+			-- Monkeypox Primal Scheme from Chen et al. (https://www.protocols.io/view/monkeypox-virus-multiplexed-pcr-amplicon-sequencin-5qpvob1nbl4o/v2)
+			
+		Please contact us if you want to add new Primer pools to the online tool
+
+
+
+**Masking low coverage regions:**
 
 	**msa_masker.py** (https://github.com/rfm-targa/BioinfUtils/blob/master/FASTA/msa_masker.py; kind contribution of Rafael Mamede).
 	
