@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'INSaFLU'
-copyright = '2018, Vitor Borges'
+copyright = '2023, Vitor Borges'
 author = 'Vitor Borges'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -55,7 +55,7 @@ author = 'Vitor Borges'
 # built documents.
 #
 # The short X.Y version.
-version = '1.0'
+version = '2.1'
 # The full version, including alpha/beta/rc tags.
 release = '0'
 
@@ -64,7 +64,7 @@ release = '0'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -83,7 +83,7 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'default'
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -101,12 +101,12 @@ html_static_path = ['_static']
 #
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
-html_sidebars = {
-    '**': [
-        'relations.html',  # needs 'show_related': True theme option to display
-        'searchbox.html',
-    ]
-}
+#html_sidebars = {
+#    '**': [
+#        'relations.html',  # needs 'show_related': True theme option to display
+#        'searchbox.html',
+#    ]
+#}
 
 
 # -- Options for HTMLHelp output ------------------------------------------
@@ -117,7 +117,7 @@ htmlhelp_basename = 'INSaFLUdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
-latex_elements = {
+#latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
     # 'papersize': 'letterpaper',
@@ -133,25 +133,25 @@ latex_elements = {
     # Latex figure (float) alignment
     #
     # 'figure_align': 'htbp',
-}
+#}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'INSaFLU.tex', 'INSaFLU Documentation',
-     'Vitor Borges', 'manual'),
-]
+#latex_documents = [
+#    (master_doc, 'INSaFLU.tex', 'INSaFLU Documentation',
+#     'Vitor Borges', 'manual'),
+#]
 
 
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'insaflu', 'INSaFLU Documentation',
-     [author], 1)
-]
+#man_pages = [
+#    (master_doc, 'insaflu', 'INSaFLU Documentation',
+#     [author], 1)
+#]
 
 
 # -- Options for Texinfo output -------------------------------------------
@@ -159,15 +159,19 @@ man_pages = [
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
-texinfo_documents = [
-    (master_doc, 'INSaFLU', 'INSaFLU Documentation',
-     author, 'INSaFLU', 'One line description of project.',
-     'Miscellaneous'),
+#texinfo_documents = [
+#    (master_doc, 'INSaFLU', 'INSaFLU Documentation',
+#     author, 'INSaFLU', 'One line description of project.',
+#     'Miscellaneous'),
+#]
+
+html_css_files = [
+    'css/insaflu.css',
 ]
 
 ### add extra css
-def setup(app):
-    app.add_stylesheet('css/insaflu.css')
+#def setup(app):
+#    app.add_stylesheet('css/insaflu.css')
 
 
 
