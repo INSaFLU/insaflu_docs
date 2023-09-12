@@ -857,12 +857,46 @@ On note, reads are also mapped against any contigs that successfully map against
 Reporting
 ----------
 
+TELEVIR reports are generated per **Workflow**, per **Sample** (combining non-redundant hits detected across workflows) and per **Project** (combining several samples), with a decreasing level of detail.
+
 The workflows culminate in **user-oriented reports with a list of top viral hits, each accompanied by several robust and diagnostic-oriented metrics, statistics and visualizations**, provided as (interactive) *tables* (intermediate and final reports), *graphs* (e.g., coverage plots, Integrative Genomics Viewer visualization, Assembly to reference dotplot) and *multiple downloadable output files* (e.g., list of the software parameters, reads/contigs classification reports, mapped reads/contigs identified per each virus; reference sequences, etc).
 
 See the description of the reports and outputs here: https://insaflu.readthedocs.io/en/latest/metagenomics_virus_detection.html#televir-output-visualization-and-download
 
-User-defined parameters
-+++++++++++++++++++++++++
+**- Sorting**
+
+In order to simplify the final reports (per **Sample** and per **Workflow**) and facilitate the identification of potential false positive hits (often arising from cross-mapping with true positive hits), **sample-specific viral references are grouped together by mapping affinity, as measured by shared mapped reads.**
+
+In summary, reference hits selected for remapping are first pooled across sample workflows, excluding references with no mapped reads. A neighbor-joining tree based on shared reads is then constructed. A maximum of 100000 reads are used after filtering out reads shared by 5% of references or less. A filter is then applied on the inner nodes of the tree that considers the distribution of shared reads as summarized by two statistics:
+
+	- private_reads : the proportion of reads found to map only to descendents of that node.
+	- pairwise_min : the minimum reciprocal proportion of reads mapped between every pair of descendents (i.e. all samples must share at least X% (user-defined) of their reads with another sample among descendents of the same node).
+
+Thresholds for these two statistics are defined beforehand: private_reads is set by the user through the parameter “--r-overlap” (defaults to 50 %); pairwise_min is a TELEVIR constant set to  5 %. After filtering, nodes are sorted by the total number of reads mapped to their descendents. Finally, references (tree leaves) are mapped to the filtered inner nodes and sorted accordingly. Orphaned leaves and references with no mapped reads are appended last. 
+
+
+**- Warnings and Flags**
+
+TELEVIR reports provide specific Warnings for  bioinformatics “artifacts” commonly yielding false-positive taxid assignments. Calculations depend on the flag-type, a user defined variable (TELEVIR Settings – Reporting – Final Report - Flagging and Sorting – --flag-type, default: viruses), and target broad characteristics of main input types. 
+
+Two flag-types currently exist for **viruses** (oriented for shotgun metagenomics) and **probes** (oriented for probe-based NGS target panels)
+
+## Flag-type **"viruses"** 
+
+- *"Likely False Positive"*: when most reads map to a very small region of the reference sequence, i.e., hits with high “DepthC" but low “Depth” and low "Cov (%)". Flagged for hits with DepthC / Depth > 10 and Cov (%) < 5%.
+	
+- *"Vestigial Mapping"*: when only a vestigial amount of reads (<= 2) mapped.
+
+
+## Flag-type **"probes"** 
+
+- *"Likely False Positive"*: when the reference genome is not sufficiently covered. Flagged for hits with Windows Covered  <= 50 %.
+	
+- *"Vestigial Mapping"*: when only a vestigial amount of reads (<= 2) mapped.
+
+
+User-defined parameters (UNDER CONSTRUCTION)
++++++++++++++++++++++++++++++++++++++++++++++++
 
 INSaFLU allows turning ON/OFF specific modules and user-defined configuration of key parameters for reads quality analysis, INSaFLU and TELEVIR projects. Settings can be user-defined for the whole user account (tab “Settings”), for each project (just after project creation) or for individual samples within a project (click in the "Magic wand" icon).
 
