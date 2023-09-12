@@ -107,7 +107,7 @@ This tab displays an interactive table with **summary statistics and visualizati
 .. image:: _static/30_TELEVIR_link_to_NCBI.gif
 
 .. note::
-   - The **Sample** reports have the same layout as this Workflow main report, but compile all viral hits identified accross all workflows that were run a given sample, in which redundant hits are excluded. 
+   - The **Sample** reports have the same layout as this Workflow main report, but compile all viral hits identified accross all workflows that were run a given sample, in which redundant hits are excluded. In summary, one mapping is selected by ACCID. For duplicate refs (the same ACCID) identified in different workflows, the one resulting in higher Cov (%) is presented
    - The **Project** reports are simple tables combining all top viral hits identified in the main reports of the several workflows that were run for all samples included in the project.
 - Both Sample and Project reports provide direct links to the detailed Workflow reports for an enhanced and advanced output interpretation 
 
