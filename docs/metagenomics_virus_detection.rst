@@ -131,9 +131,19 @@ Below, you can find a description of the main outputs and statistics.
 - **Windows Covered**: proportion of windows with mapped reads. Reference sequences are split into windows (x), with window size and number (x) being a function of sequence length, from a minimum of 3 up to a maximum of 10. Window number (x) is calculated as the equal division of sequence length by 2000 (without remainder), i.e., sequences <8KB and >20KB result in 3 and 10 windows, respectively.
 - **class. success**:  indication of whether the TAXID was selected for mapping after reads and/or contigs classification
 - **mapping success**: indication of whether reads/and contigs successfully mapped against the TAXID representative references sequence
-- **Warning**: 
-	- *"Likely False Positive"*: when most reads map in a very small region of the reference sequence, i.e., hits with high “DepthC" but low “Depth” and low "Cov (%)". Flagged for hits with DepthC / Depth > 10 and Cov (%) < 5%.
-	- *"Vestigial Mapping"*: when only a vestigial amount of reads (<= 2) mapped.
+
+- **Warnings**: 
+	
+Flag-type "viruses" (oriented to shotgun metagenomics)  (default)
+
+- *"Likely False Positive"*: when most reads map to a very small region of the reference sequence, i.e., hits with high “DepthC" but low “Depth” and low "Cov (%)". Flagged for hits with DepthC / Depth > 10 and Cov (%) < 5%.
+- *"Vestigial Mapping"*: when only a vestigial amount of reads (<= 2) mapped.
+
+
+Flag-type **"probes"** (oriented to probe-based NGS target panels)
+
+- *"Likely False Positive"*: when the reference genome is not sufficiently covered. Flagged for hits with Windows Covered  <= 50 %.
+- *"Vestigial Mapping"*: when only a vestigial amount of reads (<= 2) mapped.
 
 
 .. note::
