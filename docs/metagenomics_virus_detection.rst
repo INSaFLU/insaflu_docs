@@ -142,7 +142,7 @@ Flag-type "viruses" (oriented to shotgun metagenomics)  (default)
 
 Flag-type **"probes"** (oriented to probe-based NGS target panels)
 
-- *"Likely False Positive"*: when the reference genome is not sufficiently covered. Flagged for hits with Windows Covered  <= 50 %.
+- *"Likely False Positive"*: when the reference genome is not sufficiently covered as a function of the number of the proportion of Windows Covered, calculated as above. Flagged for hits with Windows Covered <= 50 % (calculated from the fraction presented)
 - *"Vestigial Mapping"*: when only a vestigial amount of reads (<= 2) mapped.
 
 
