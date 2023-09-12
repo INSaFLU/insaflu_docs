@@ -863,7 +863,7 @@ The workflows culminate in **user-oriented reports with a list of top viral hits
 
 See the description of the reports and outputs here: https://insaflu.readthedocs.io/en/latest/metagenomics_virus_detection.html#televir-output-visualization-and-download
 
-**- Sorting**
+*Sorting*
 
 In order to simplify the final reports (per **Sample** and per **Workflow**) and facilitate the identification of potential false positive hits (often arising from cross-mapping with true positive hits), **sample-specific viral references are grouped together by mapping affinity, as measured by shared mapped reads.**
 
@@ -875,7 +875,7 @@ In summary, reference hits selected for remapping are first pooled across sample
 Thresholds for these two statistics are defined beforehand: private_reads is set by the user through the parameter “--r-overlap” (defaults to 50 %); pairwise_min is a TELEVIR constant set to  5 %. After filtering, nodes are sorted by the total number of reads mapped to their descendents. Finally, references (tree leaves) are mapped to the filtered inner nodes and sorted accordingly. Orphaned leaves and references with no mapped reads are appended last. 
 
 
-**- Warnings and Flags**
+*Warnings and Flags*
 
 TELEVIR reports provide specific Warnings for  bioinformatics “artifacts” commonly yielding false-positive taxid assignments. Calculations depend on the flag-type, a user defined variable (TELEVIR Settings – Reporting – Final Report - Flagging and Sorting – --flag-type, default: viruses), and target broad characteristics of main input types. 
 
