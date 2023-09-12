@@ -879,9 +879,9 @@ Thresholds for these two statistics are defined beforehand: private_reads is set
 
 TELEVIR reports provide specific Warnings for  bioinformatics “artifacts” commonly yielding false-positive taxid assignments. Calculations depend on the flag-type, a user defined variable (TELEVIR Settings – Reporting – Final Report - Flagging and Sorting – --flag-type, default: viruses), and target broad characteristics of main input types. 
 
-Two flag-types currently exist for **viruses** (oriented for shotgun metagenomics) and **probes** (oriented for probe-based NGS target panels)
+Two flag-types currently exist for **viruses** (oriented to shotgun viral metagenomics) and **probes** (oriented for probe-based NGS target panels)
 
-## Flag-type **"viruses"** 
+## Flag-type **"viruses"** (default)
 
 - *"Likely False Positive"*: when most reads map to a very small region of the reference sequence, i.e., hits with high “DepthC" but low “Depth” and low "Cov (%)". Flagged for hits with DepthC / Depth > 10 and Cov (%) < 5%.
 	
