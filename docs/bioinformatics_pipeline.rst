@@ -286,8 +286,24 @@ This key module takes enables reference-based mapping, followed by SNP/indel cal
 
 .. note::
 
-**PRIMER CLIPPING:** An extra parameter to enable primer removal using iVar (https://genomebiology.biomedcentral.com/articles/10.1186/s13059-018-1618-7) is available within the settings “Mutation detection and consensus generation” section, for both Illumina and ONT. The procedure is an adaptation of the iVar CookBook (https://github.com/andersen-lab/paper_2018_primalseq-ivar/blob/master/cookbook/CookBook.ipynb). 
-	
+**PRIMER CLIPPING:** An extra parameter to enable primer removal using iVar (https://genomebiology.biomedcentral.com/articles/10.1186/s13059-018-1618-7) is available within the settings “Mutation detection and consensus generation” section, for both Illumina and ONT. The procedure is an adaptation of the iVar CookBook (https://github.com/andersen-lab/paper_2018_primalseq-ivar/blob/master/cookbook/CookBook.ipynb) and includes these consecutive steps:
+
+1. **Primmer trimming** (this adaptation excludes the quality trimming, as this step is done upstream in INSaFLU pipeline)
+
+	$ ivar trim -m 0 -q 0 -e -b primers.bed -p samplex.trimmed -i sample.bam
+
+2. **Removal of reads containing minor variants matching primer sequence**
+
+	$ samtools mpileup -A -d 0 -Q 0 sample.trimmed.sorted.bam | ivar consensus -m 0 -n N -p sample.ivar_consensus
+	$ bwa index -p sample.ivar_consensus sample.ivar_consensus.fa
+	$ bwa mem -k 5 -T 16 sample.ivar_consensus primer | 
+	$ samtools view -bS -F 4 | samtools sort -o primers_consensus.bam
+	$ samtools mpileup -A -d 0 --reference sample.ivar_consensus.fa -Q 0 primers_consensus.bam | ivar variants -p primers_consensus -t 0.03
+	$ bedtools bamtobed -i primers_consensus.bam > primers_consensus.bed
+	$ ivar getmasked -i primers_consensus.tsv -b primers_consensus.bed -f primer.pair_information.tsv -p primer_mismatchers_indices
+	$ ivar removereads -i sample.trimmed.sorted.bam -p sample.masked.bam -t primer_mismatchers_indices.txt -b primers.bed",
+
+
 		***Users can request  trimming of primer sequences of several predefined Primer pool sets:
 		
 			-- SARS-CoV-2 Primal Scheme V3 (https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V3/nCoV-2019.tsv)
