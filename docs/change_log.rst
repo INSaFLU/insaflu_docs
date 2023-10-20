@@ -12,9 +12,9 @@ READTHEDOCS
 October 20, 2023
 ..........................
 
- **TELEVIR Projects (virus detection):**
+ - **TELEVIR Projects (virus detection):**
 
-- New host/vector sequences available for HOST DEPLETION:
+New host/vector sequences available for HOST DEPLETION:
 
 **Host/vector name**  | **Common name** | **sequence** |
 
