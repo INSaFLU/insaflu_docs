@@ -16,7 +16,7 @@ October 20, 2023
 
 New host/vector sequences available for HOST DEPLETION:
 
-**Host/vector name**  | **Common name** | **sequence** |
+**Host/vector name**  | **Common name** | **sequence** 
 
 - aedes_albopictus	| **mosquito** |	GCF_006496715.2_Aalbo_primary.1_genomic.fna.gz
 - anas_platyrhynchos	| **duck** |	GCF_015476345.1_ZJU1.0_genomic.fna.gz
