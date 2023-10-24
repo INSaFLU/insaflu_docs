@@ -20,6 +20,10 @@ It is composed of these main steps (detailed in https://insaflu.readthedocs.io/e
 8. Remapping of the viral sequences against selected reference genomes. 
 9. Reporting.
 
+The following table provides an overview on all TELEVIR moules and outputs:
+
+:download:`TELEVIR_current_modules_and_outputs_2023-10-20.xlsx <_static/TELEVIR_current_modules_and_outputs_2023-10-20.xlsx>`
+
 Below, you can find instructions on how to create a TELEVIR project, run samples and visualize/intrepret the results.
 
 **TELEVIR Projects** - How to create and run a metagenomics virus detection project
