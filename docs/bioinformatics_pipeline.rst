@@ -9,6 +9,8 @@ As such, it integrates two main pipelines / components:
 	
 - a **Virus detection** pipeline (from NGS reads to quality control and metagenomics virus identification)
 
+.. image:: _static/INSaFLU_TELEVIR_WORKFLOW.tiff
+
 INSaFLU relies on a multi-software bioinformatics pipelines that will be under continuous development and improvement not only to enrich it with new features, but also to continuously shape the protocol to the best methodological advances in the field. 
 
 The current software and default settings, which were chosen upon intensive testing, are described below, together with the list of Steps and Settings that can be turned ON/OFF or configured by the user, respectively. For additional details about the bioinformatics pipeline, please visit the INSaFLU github account: https://github.com/INSaFLU/INSaFLU (more information for each software can also be found in the official repositories; links are also provided below). 
