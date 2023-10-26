@@ -9,7 +9,7 @@ As such, it integrates two main pipelines / components:
 	
 - a **Virus detection** pipeline (from NGS reads to quality control and metagenomics virus identification)
 
-.. image:: _static/INSaFLU_TELEVIR_WORKFLOW.tiff
+.. image:: _static/INSaFLU_TELEVIR_WORKFLOW.png
 
 INSaFLU relies on a multi-software bioinformatics pipelines that will be under continuous development and improvement not only to enrich it with new features, but also to continuously shape the protocol to the best methodological advances in the field. 
 
