@@ -4,8 +4,6 @@ Change log
 This tab includes a list (chronologically ordered) of notable changes in INSaFLU.
 
 
-READTHEDOCS
-
 2023
 -------
 
@@ -16,7 +14,23 @@ October 20, 2023
 
 New host/vector sequences available for HOST DEPLETION:
 
+**Host/vector name**  | **Common name** | **sequence** 
 
+- aedes_albopictus	| **mosquito** |	GCF_006496715.2_Aalbo_primary.1_genomic.fna.gz
+- anas_platyrhynchos	| **duck** |	GCF_015476345.1_ZJU1.0_genomic.fna.gz
+- bos_taurus	| **cow** |	GCF_002263795.3_ARS-UCD2.0_genomic.fna.gz
+- canis_lupus_familiaris	| **dog** |	GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna.gz
+- culex_pipiens	| **mosquito** |	GCF_016801865.2_TS_CPP_V2_genomic.fna.gz
+- cyprinus_carpio	| **carp** |	GCF_018340385.1_ASM1834038v1_genomic.fna.gz
+- felis_catus	| **cat** |	GCF_018350175.1_F.catus_Fca126_mat1.0_genomic.fna.gz
+- gallus_gallus	| **chicken** |	GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b_genomic.fna.gz
+- marmota_marmota	| **marmot** |	GCF_001458135.2_marMar_genomic.fna.gz
+- neogale_vison	| **mink** |	GCF_020171115.1_ASM_NN_V1_genomic.fna.gz
+- oncorhynchus_mykiss	| **rainbow_trout** |	GCF_013265735.2_USDA_OmykA_1.1_genomic.fna.gz
+- phlebotomus_papatasi	| **sandfly** |	GCF_000439695.1_Ppap_1.0_genomic.fna.gz
+- pipistrellus_kuhlii	| **bat** |	GCF_024763615.1_Ppap_2.1_genomic.fna.gz
+- salmo_salar	| **atlantic_salmon** |	GCF_905237065.1_Ssal_v3.1_genomic.fna.gz 
+- sus_scrofa	| **pig** |	GCF_000003025.6_Sscrofa11.1_genomic.fna.gz
 
 
 
