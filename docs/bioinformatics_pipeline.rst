@@ -612,8 +612,8 @@ It is composed of these main steps (detailed below):
 8. Remapping of the viral sequences against selected reference genome sequences.
 9. Reporting
 
-
 .. image:: _static/televir_workflow_update_20231110.png
+
 
 Simplified illustration of the main steps of the modular INSaFLU-TELEVIR bioinformatics pipeline for metagenomics virus diagnostics.
 
