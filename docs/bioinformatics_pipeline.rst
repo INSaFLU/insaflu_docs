@@ -613,7 +613,7 @@ It is composed of these main steps (detailed below):
 9. Reporting
 
 
-.. image:: _static/televir_workflow_update_20221219.png
+.. image:: _static/televir_workflow_update_20231110.png
 
 Simplified illustration of the main steps of the modular INSaFLU-TELEVIR bioinformatics pipeline for metagenomics virus diagnostics.
 
