@@ -59,7 +59,7 @@ Workflows and parameters can be changed at the global level, through the setting
 .. note::
    - The TELEVIR Settings page controls the bioinformatics workflows to be applied. Inside, software are organized by technology and pipeline. **Controlling workflows is done by selecting/deselecting which software are to run at each step of the pipeline, their parameters and/or databases when permitted.** Specific steps can be turned off by deselecting all software available for that step 
    - The default workflows are “well-performing” workflows (selected after multiple testing and benchmarking) that together can potentiate the detection of clinical relevant viruses.
- 
+	 
  **NOTE:** *Some pipeline steps cannot be turned off (e.g. Remapping). Other cases are context dependent: Assembly cannot be turned OFF if Contig Classification is turned ON; at least one classification step must be turned ON (Contig Classification may not be turned OFF if Read Classification is already OFF, and vice-versa).*
  
 
@@ -67,6 +67,9 @@ Workflows and parameters can be changed at the global level, through the setting
 ...........................................................
 
 Before running the added samples, please make sure that you have previously selected the bioinformatics workflows ("runs") to be applied to every sample added to the project using the "Magic wand"  (see previous step)
+
+.. note::
+   - At any time, **users can change parameters to run new workflows. Results will be integrated to the Combined Report cumulatively.**
 
 .. image:: _static/27_add_samples_TELEVIR_project.gif
 
