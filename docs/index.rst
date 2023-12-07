@@ -33,17 +33,16 @@ Overview
 How to Cite
 +++++++++++
 
-If you use INSaFLU in your work, please cite this publication:
+If you use INSaFLU in your work, please cite these publications:
 
-Borges V, Pinheiro M et al. Genome Medicine (2018) 10:46
-
-https://doi.org/10.1186/s13073-018-0555-0
+- Borges V, Pinheiro M et al. Genome Medicine (2018) 10:46 https://doi.org/10.1186/s13073-018-0555-0
+- Dourado Santos et al, pre-prrint (Research Square) https://doi.org/10.21203/rs.3.rs-3556988/v1
 
 
 Contact
 +++++++
 
-If you have any questions, comments or suggestions, please contact us: <vitor.borges@insa.min-saude.pt> or <j.paulo.gomes@insa.min-saude.pt>
+If you have any questions, comments or suggestions, please contact us: <vitor.borges@insa.min-saude.pt> or <insaflu@insa.min-saude.pt>
 
 *********
 Contents
