@@ -102,15 +102,15 @@ Within the *Datasets* menu:
 1. Go to *Datasets* menu and choose *New Dataset*
 ....................................................
 
-2. Choose a *Dataset Name* and *Save*
+2. Choose a *Dataset Name* and Nextstrain build and *Save*
 ......................................................................
 
-3. Choose the Nextstrain build
-...................................
+
+[Note: the following video displays a previous version where nextstrain build was chosen after dataset creation. Now, the build is chosen when the dataset is created.]
 
 .. image:: _static/36_create_nextstrain_dataset.gif
 
-After creating a Dataset, and before adding the first sample, you can clicking in the "Magic wand" to select the Nextstrain build that will be run.
+
 
 INSaFLU allows launching virus-specific Nextstrain builds (seasonal Influenza, SARS-CoV-2 and Monkeypox) as well as a "generic" build that can be used for any pathogen.
 
