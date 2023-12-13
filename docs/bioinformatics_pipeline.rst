@@ -562,8 +562,8 @@ This build is a simplified version of the RSV virus Nextstrain build available a
 
 The reference genome used for site (nucleotide  / amino acid) numbering and genome structure in the output JSON files is:
 
-- RSV A: RSV-A/US/BID-V8469/2001 (https://www.ncbi.nlm.nih.gov/nuccore/KJ627695.1/)
-- RSV B: RSVB/Homo sapiens/USA/MCRSV_208/1980 (https://www.ncbi.nlm.nih.gov/nuccore/MG642037.1/)
+- RSV A: A/England/397/2017 (GISAID ID EPI_ISL_412866)
+- RSV B: B/Australia/VIC-RCH056/2019 (GISAID ID EPI_ISL_1653999)
 
 
 **Generic**
