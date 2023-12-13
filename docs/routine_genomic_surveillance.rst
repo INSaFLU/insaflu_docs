@@ -164,8 +164,8 @@ This build is a simplified version of the RSV virus Nextstrain build available a
 
 The reference genomes used for site (nucleotide  / amino acid) numbering and genome structure in the output JSON files is:
 
-- **RSV A**: RSV-A/US/BID-V8469/2001 (https://www.ncbi.nlm.nih.gov/nuccore/KJ627695.1/)
-- **RSV B**: RSVB/Homo sapiens/USA/MCRSV_208/1980 (https://www.ncbi.nlm.nih.gov/nuccore/MG642037.1/)
+- **RSV A**: A/England/397/2017 (GISAID ID EPI_ISL_412866)
+- **RSV B**: B/Australia/VIC-RCH056/2019 (GISAID ID EPI_ISL_1653999)
 
 
 **Generic**
@@ -175,6 +175,12 @@ This build is a simplified version of the Nextstrain build available at https://
 This generic build uses as reference sequence (as tree root and for mutation annotation) one of the reference sequences of the projects included in the Nextstrain dataset.
 
 Currently, the generic build does not generate a Time-Resolved Tree (unlike the virus-specific builds).
+
+
+**Generic with Time Tree**
+
+This build is the same as the generic build but also runs a time tree. To make use of this build, samples need to have associated dates.
+
 
 
 4. Add the samples to be included in the *Dataset*
