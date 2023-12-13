@@ -8,6 +8,16 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2023
 -------
 
+December 13, 2023
+..........................
+
+- **Nextstrain DATASETS:** 
+
+- The RSV Nextstrain buils were updated to follow the more recent Nextstrain implementation, so that the new lineage classification [https://github.com/rsv-lineages] is automatically shown in the interactive trees.
+- The existing direct links for rapid RSV classification of consensus sequences already offer the new genotype nomenclature implemented by NextClade.
+- The assign2contigs database was updated with representative sequences of the RSV A [https://github.com/rsv-lineages/lineage-designation-A] and B lineages [https://github.com/rsv-lineages/lineage-designation-B] to facilitate the identification of closely related references sequences and improve the user selection of appropriate reference sequences for reads mapping.
+
+
 October 20, 2023
 ..........................
 
