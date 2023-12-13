@@ -11,7 +11,7 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 December 13, 2023
 ..........................
 
-- **Nextstrain DATASETS:** 
+**Nextstrain DATASETS:** 
 
 - The RSV Nextstrain buils were updated to follow the more recent Nextstrain implementation, so that the new lineage classification [https://github.com/rsv-lineages] is automatically shown in the interactive trees.
 - The existing direct links for rapid RSV classification of consensus sequences already offer the new genotype nomenclature implemented by NextClade.
