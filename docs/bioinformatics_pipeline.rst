@@ -99,7 +99,7 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 		
 		input: ONT reads (fastq.gz format) pre- and post- quality improvement with NanoFilt
 		
-		Files between 50 - 300 MB are downsized to ~50 MB before analysis by randomly sampling reads using fastq-sample from fastq-tools package https://github.com/dcjones/fastq-tools (developed by Daniel C. Jones dcjones@cs.washington.edu)
+		In the local installation, you can setup the env file to request that large files are downsized before analysis by randomly sampling reads. The tool fastq-sample from fastq-tools package https://github.com/dcjones/fastq-tools (developed by Daniel C. Jones dcjones@cs.washington.edu) is used for that purpose.
 
 
 .. note::
