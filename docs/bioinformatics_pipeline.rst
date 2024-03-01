@@ -116,7 +116,7 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 			
 			-- Monkeypox Primal Scheme from Chen et al. (https://www.protocols.io/view/monkeypox-virus-multiplexed-pcr-amplicon-sequencin-5qpvob1nbl4o/v2)
 			
-		Please contact us if you want to add new Primer pools to the online tool
+		Please contact us if you want to add new Primer pools to the online tool or need assistance to integrate new schemes in locally-installed INSaFLU systems.
 
 .. important::
 	INSaFLU allows users to configure key parameters for reads quality analysis in the tab **“Settings”**. 
