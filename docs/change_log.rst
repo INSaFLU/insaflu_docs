@@ -3,6 +3,16 @@ Change log
 
 This tab includes a list (chronologically ordered) of notable changes in INSaFLU.
 
+2024
+-------
+
+April 25, 2024
+..........................
+
+**The upgraded INSaFLU-TELEVIR is now published at Genome Medicine** https://doi.org/10.1186/s13073-024-01334-3. This article describes the extensions of INSaFLU since its first release in 2018, highlighting the development and implementation of a new module for metagenomic virus detection (TELEVIR), the incorporatioon of Nextstrain, the release of findONTime (https://github.com/INSaFLU/findONTime) and algn2pheno (https://github.com/insapathogenomics/algn2pheno), among other multiple features.
+
+If you use INSaFLU-TELEVIR, please cite:
+- Santos, J. D., Sobral, D., Pinheiro, M., Isidro, J., Bogaardt, C., Pinto, M., Eusébio, R., Santos, A., Mamede, R., Horton, D. L., Gomes, J. P., TELEVIR Consortium, & Borges, V. (2024). INSaFLU-TELEVIR: an open web-based bioinformatics suite for viral metagenomic detection and routine genomic surveillance. Genome medicine, 16(1), 61. https://doi.org/10.1186/s13073-024-01334-3
 
 
 2023
