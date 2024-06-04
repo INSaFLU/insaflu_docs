@@ -6,6 +6,22 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2024
 -------
 
+June 4, 2024
+..........................
+
+New updates regarding influenza A/H5Nx:
+
+- Added Nextclade links for A-H5Nx-2.3.4.4, A-H5Nx-2.3.2.1 and A-H5Nx;
+
+- New Nextstrain builds are available for A/H5N1:  PB1, PA, NP, MP and NS segments. So, the 8 segments are now covered
+
+ABRIcate rapid identification and/or (sub)typing is now also performed on the consensus sequences obtained in the reference-based projects (to refine the rapid classification obtained from draft contigs just after reads upload). In the case of SARS-CoV-2 projects, the pangolin-based lineage is displayed in the Classification column instead.
+
+Clade information was updated for the SARS-CoV-2 nextstrain build to include the 24A and 24B clades.
+
+Primer cleaning for ONT samples in reference-based projects was refined to avoid excessive read filtering, particularly in samples with higher diversity relative to the chosen reference.
+
+
 April 25, 2024
 ..........................
 
