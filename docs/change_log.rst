@@ -6,6 +6,15 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2024
 -------
 
+June 21, 2024
+..........................
+
+Representative sequences of the **ongoing A/H5N1 cattle outbreak** were included in the defalut Reference database:
+
+- **A_H5N1_A_cattle_Texas_24_008749_002_2024** (downloaded from GenBank: **A/cattle/Texas/24-008749-002/2024(H5N1)** https://www.ncbi.nlm.nih.gov/nuccore/?term=A%2Fcattle%2FTexas%2F24-008749-002%2F2024(H5N1) ). It corresponds to same reference used for genome assembly by https://github.com/andersen-lab/avian-influenza.
+
+- **A_H5N1_A_cattle_Texas_56283_2024** (downloaded from GenBank: **A/cattle/Texas/56283/2024(H5N1)** https://www.ncbi.nlm.nih.gov/nuccore/?term=A%2Fcattle%2FTexas%2F56283%2F2024(H5N1) ). This sequence was first described by Oguzie JU et al, Emerg Infect Dis. 2024 https://doi.org/10.3201/eid3007.240717
+
 June 4, 2024
 ..........................
 
