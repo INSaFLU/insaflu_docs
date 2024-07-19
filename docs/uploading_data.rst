@@ -68,8 +68,11 @@ B. Go to *Samples* menu and choose *Add Fastq Files*
 Go to your fastq.gz directory and **simultaneously upload multiple fastq.gz files**, which are automatically linked to the corresponding samples.
 
 Reads (fastq.gz)  can be selected from the multi-select dialog box or just DRAG & DROPPED.
- 
+
 .. image:: _static/06_upload_batch_FASTQ.gif
+
+.. important::
+   **Please confirm in the "Home / Samples / Add Multiple Samples" page whether all uploaded samples ((#Samples Processed) have been processed (#Samples Processed)**, i.e., if all samples in the metadata table were attached to the respective reads. if not, go to the "Home / Samples / Add Fastq" page, delete the files not attached and upload them again. 
 
 Fastq.gz files that are not attached to any sample can be deleted by clicking in "Remove all files not processed".
 
