@@ -227,7 +227,7 @@ You can eitheir:
    
    2. Each individual sequence of the multi-FASTA file should ideally have the size of each “intra-amplicon” target sequence that you capture by each one of the RT-PCR amplicons. Otherwise, you will get regions with no or low coverage (these will be masked with undefined bases NNN according to the user-defined coverage thresholds).
    
-   3. INSaFLU automatically annotates the uploaded multi-FASTA sequences upon submission, but, if you prefer, you can also upload (optionally) the respective multi-GenBank file.   
+   3. INSaFLU automatically provide a draft annotation of the uploaded multi-FASTA sequences upon submission, but you can also upload (preferentially) a respective multi-GenBank file, e.g., downloaded from GenBank or generated with tools like https://www.ncbi.nlm.nih.gov/genomes/FLU/annotation/. In both case, please be aware that the GenBank file should be modified if you intend to have the annotation compatible with the "HA1 numbering" (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4229193/) commonly applied for seasonal influenza (see instructions below).
    
    ## See below a GUIDE to generate additional reference sequences
 
@@ -248,7 +248,7 @@ Please take this guide into account when generating additional reference sequenc
 			example:  :download:`A_H3N2_A_Perth_16_2009.fasta <_static/A_H3N2_A_Perth_16_2009.fasta>`
 
 
-4. INSaFLU automatically annotates uploaded (multi-)FASTA sequences upon submission, but, if you prefer, you can also upload (optionally) the respective multi-GenBank file. **If you upload FASTA and respective GenBank files that have been downloaded from NCBI, please make sure that FASTA ID(s) (after the '>' character) match the name/number that appears in the LOCUS and ACCESSION lines of the GenBank file.**. 
+4. INSaFLU automatically provide a draft annotation of the uploaded multi-FASTA sequences upon submission, but you can also upload (preferentially) a respective multi-GenBank file, e.g., downloaded from GenBank or generated with tools like https://www.ncbi.nlm.nih.gov/genomes/FLU/annotation/. **If you upload FASTA and respective GenBank files that have been downloaded from NCBI, please make sure that FASTA ID(s) (after the '>' character) match the name/number that appears in the LOCUS and ACCESSION lines of the GenBank file.**. Be also aware that the GenBank file should be modified if you intend to have the annotation compatible with the "HA1 numbering" (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4229193/) commonly applied for seasonal influenza (see instructions below). 
 
 5. **INSaFLU requires reference sequences exclusively composed by non-degenerate bases (i.e. A, T, C, or G)**. As such, please ensure that all degenerated bases (e.g., R, Y, M, K, S and W) are replaced by non-degenerate sequences before uploading. The choice of the base used in the replacement (e.g., “A” or “G” when replacing an “R”) has no impact on the analysis. It simply means that mutations falling in the replaced nucleotide position will be reported taking into account the reference base selected.
 
