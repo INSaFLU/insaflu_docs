@@ -128,9 +128,10 @@ In INSaFLU-TELEVIR 2.0.0, the presence of multiple active software in any single
 # Other changes #
 ##################
 
+	- When uploading a sample, you can now specify its technology (Illumina or ONT). This can be done when uploading a single sample, or when uploading in batch by adding an optional column 'technology' in the input metadata file. This is reflected in the example input tsv metadata file.  
+	- For single-end reads that for some reason fail the preprocessing, you can also swap the technology (it will rerun the preprocessing for the new technology)
+	- In the samples page, we added a button that allows a user to batch delete all samples not associated to projects.
 	- The clades for the Monkeypox nextclade build were updated to include the C.1.1 clade
-	- When uploading a sample, you can now specify its technology (Illumina or ONT). Moreover, for single-end reads that for some reason fail the preprocessing, you can also swap the technology (it will rerun the preprocessing for the new technology)
-
 
 
 
