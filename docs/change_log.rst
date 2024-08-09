@@ -5,6 +5,134 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 
 2024
 -------
+August, 2024
+.............
+
+**INSaFLU-TELEVIR update - version 2.1.0**
+
+# TELEVIR module #
+##################
+
+The new update aims at facilitating confirmatory mapping against specific references, beyond the hypothesis-free and automatic confirmatory mapping of classic TELEVIR workflows.
+
+For this purpose, Update 2.1.0 introduces several new features:
+
+**Global References Management**
+
+INSaFLU-TELEVIR "Reference" menu now has two sections: 
+
+- INSaFLU (for reference-based genome assembly) (kept unchanged)
+- TELEVIR (for Virus detection) - **new** section to support targeted reference mapping within TELEVIR projects
+
+The **new** TELEVIR Reference path makes available three pages:
+
+	i. **Files**, where the user can upload references to INSaFLU-TELEVIR and view existing, global databases. Uploaded references become availble for use as targets in TELEVIR mapping workflows, individually, or as part of Reference Panels. 
+	
+	ii. **References**, where the user can search references in the TELEVIR databases (global and personally uploaded), and select them for transfer to the INSaFLU reference database for deeper investigation. 
+	
+	iii. **Panel**. In this section the user is able to build mapping panels of existing (global or personal) TELEVIR references for mapping in TELEVIR projects.
+
+**TELEVIR References Management**
+
+A **new** column "References" was added to the sample table of TELEVIR projects, linking to the Sample Reference Management page. This page is composed of four sections:
+
+	i. “Workflow” : a graphical display of classification workflows deployed on this sample.
+	ii. “Added References”: displays references that were manually added to a sample.
+	iii. “Added Panels”: section displays reference panels that were attached to this sample.
+	iv. **Actions** sidebar and **References table**.
+
+The **References table** displays Viral hits (description, taxid, accid) attached to this sample, either as a result of a classification workflow, or through manual addition and mapping. Additionally, the References table comports three summary columns:
+
+	- “Runs”: indicates the Classification workflows that reference was identified in.
+	- **“Global Ranking”**: sorts references by applying the TELEVIR sorting algorithm to the aggregate number of read and contig hits obtained by classification software across Classification Workflows.
+	- **“Ensemble Ranking”**: sorts references according to their average TELEVIR sorting rankings across workflows they were identified in.
+	- “Best Mapping”: indicates whether a reference was mapped against, and whether mapping was successful, providing a link to the workflow with the best mapping statistics.
+
+The **Actions** sidebar enables to deploy mapping workflows against Added References, Added Panels, Selected References or Combined.
+
+	-  **Map Added**: Map sample against all manually added references as well as references selected in the select column of the main reference table.
+	- **Map Panels**: Map sample against all references within each panel added to the respective Reference Management Panel Section. Note: Panel mapping workflows deployed as part of Map Panels request are deployed independently.
+	- **Map Combined**: maps the sample against the top reference hits as sorted across workflows using the Ensemble Ranking described above. The number of top references is defined in the Settings under the heading Global, and is the same as for individual workflows.
+	
+	Note: All Mapping workflows use parameters: i) from Workflows for Pre-processing; and ii) from Validation for Request Mapping and Filtering (see below).
+
+
+**TELEVIR-Focus**
+
+This update introduces the concept **“TELEVIR-Focus”**: a reference specific project to monitor and **deploy Mapping workflows against a single reference across several samples**.
+
+Through the **Actions** button in the TELEVIR Project Page, the user is able to select a reference from among references attached to any project sample (either manually or as a result of a Classification Workflow) to create TELEVIR-Focus Projects, which are displayed in the Project page, below the samples table. Samples Selected through the Sample Select column will automatically be added to that project.
+
+Within the Focus page, the user is able to add mapping workflows available from combinations of currently active software in the projects (or, if those are not set, global) settings. Mapping workflows are displayed separately and permit the display of mapping statistics against the Focus reference across Samples added to the project. If not yet deployed the user can choose to deploy new mappings. After completion, stacked IGV displays are availble, as well as the possibility to generate stacked a VCF and variant-specific igv-reports.
+
+Finally, the **TELEVIR-Focus project also bears an INSaFLU connect button**: the reference in focus is automatically transfered to the INSaFLU reference database and to an INSaFLU project using that reference and including all samples in the Focus project. The new INSaFLU project and its status are displayed within the TELEVIR-Focus project.
+
+**TELEVIR Settings and New Software**
+
+INSaFLU-TELEVIR Update 2.1.0 introduces a new settings configuration, whereby settings are now grouped as "Workflows", "Validation" and "Global". This expanded configuration reflects the focus of this update on confirmatory mapping.
+
+	- **"Workflow"** settings: These parameters control the combinations of workflows deployed classicaly, and require at least one classifier to be turned ON. However, one important development relative to version 2.0.0 is that software in the Remapping step can now be turned OFF. In practice, this will run the workflows as usual, but produce no detailed report of mapping statistics against top hits at the end of the run. However, raw hits (classically displayed beneath the mapping report section), are still collected, and will appear in the Sample Reference Management page as unmapped. This allows the user to delay confirmatory mapping until evidence from several workflows has been gathered, at which point one of the Validation Workflows can be deployed.
+	
+	- **"Validation"** Workflows: These settings control the Request Mapping and Map filtering deployed specifically as part of "Mapping Only" requests: Map Combined, Map Added and Map Panels, described above. Of Note, Mapping requests incorporate any of the three pre-processing steps in the Workflow section (Extra Filtering, Enrichment and Host Depletion), and will deploy active software in those sections. This will result in more than one workflow being deployed if more than one software is active.
+	
+	- **"Global"** settings: This single step section controls Final Reporting and Remap Management across all workflows (flag type, overlap threshold for report grouping, max taxid and accids for inclusion in single workflow remapping and Combined Mapping requests).
+
+	Note: This flexibility allow running Classic workflows (including Mapping), Classification-only (with the mapping being deployed later on taking advantage of the new "Combined Deployment" (see below)
+
+Other updates in TELEVIR Settings:
+
+	- Added a new “Remapping filtering” option called “dustmasker - low complexity filtering”. This option  will mask low-complexity regions (e.g., homopolymeric tracts) in the references in order to reduce false positives caused by cross-mapping exclusively in these regions.
+	- Remapping can be turned OFF (specially useful when using “Map Combined”, which reduces analysis time by avoiding the repetition of mappings against references that have been identified in multiple individual workflows)
+
+
+New software:
+
+- **Host depletion**
+	- Added **Bowtie2 for Illumina**
+
+- **Viral Enrichment**
+	- Added **Kraken2 for Illumina**
+
+- **Read / Contig Classification**
+	- Added **Diamond** for Read CLassification (**Illumina & ONT**)
+	- Added **Kraken2 for ONT Read Classification**
+	- Added **Kraken2 for Contig Classification (Illumina & ONT)**
+
+- **Remapping**
+	- Added **Bowtie2 for Illumina**
+
+- **Remap filtering**
+	- Added **“Dustmasker*** for filtering  low complexity regions in References
+
+- **Remapping - Management**
+	- Default number of Accids to map lowered to 4, applied to new accounts.
+
+**TELEVIR Combined Deployment**
+
+Classic Classification Workflows receive a new deployment architecture in Update 2.1.0: Tree Deployment.
+
+In INSaFLU-TELEVIR 2.0.0, the presence of multiple active software in any single parameter section resulted in the deployment of multiple workflows, corresponding to every possible combination from the available set of software / pipeline steps. This feature remains one of the important developments of INSaFLU-TELEVIR in terms of promoting cross-validation and robust identification. However, different workflow combinations were deployed independently, possibly resulting in the repeat computation of redundant pipeline steps. Update 2.1.0 introduces a deployment architecture that branches in line with the configuration steps. Pipeline steps are then deployed sequentially, by branch. The end results are a faster overall runtime and a reduction in storage requirements.
+
+
+**TELEVIR - Reporting**
+
+	- Interative workflow diagrams are now coloured according to the step
+	- Simplified display of reports with collapsed reporting groups. Within group hits are sorted by "Cov (%), with the top hit always shown (group secondary hits hide and toggle - left indicator row)
+	- Interactive Heatmaps for Cross-mapping inspection are provided, both across all groups (“Read Overlap Summary”) and within groups (”Reads Overlap)
+	- Added 2 new columns to the Report: Private reads and Mismatch rate 
+	- Sample workflow page separates "Classic workflows" (with classification) from Mapping workflows (upon request).
+
+
+
+
+# Other changes #
+##################
+
+	- The clades for the Monkeypox nextclade build were updated to include the C.1.1 clade
+	- When uploading a sample, you can now specify its technology (Illumina or ONT). Moreover, for single-end reads that for some reason fail the preprocessing, you can also swap the technology (it will rerun the preprocessing for the new technology)
+
+
+
 
 June 21, 2024
 ..........................
