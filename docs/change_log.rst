@@ -5,7 +5,7 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 
 2024
 -------
-August, 2024
+August 9, 2024
 .............
 
 **INSaFLU-TELEVIR update - version 2.1.0**
