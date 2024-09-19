@@ -26,12 +26,13 @@
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
-needs_sphinx = '2.5.0'
+# needs_sphinx = '2.5.0'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.imgmath', 'sphinx_rtd_theme', 'sphinx_toolbox.collapse']
+#extensions = ['sphinx.ext.imgmath', 'sphinx_rtd_theme', 'sphinx_toolbox.collapse']
+extensions = ['sphinx.ext.imgmath', 'sphinx_rtd_theme']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
