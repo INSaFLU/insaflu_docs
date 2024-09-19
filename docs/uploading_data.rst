@@ -29,14 +29,6 @@ A. Go to *Samples* menu and choose *Add Multiple Samples / Load new file*.
 
 .. image:: _static/05_upload_batch.gif
 
-.. collapse:: *Click here to see how to upload the metadata table:*
-
-	.. image:: _static/05_upload_batch.gif
-
-.. collapse:: Testing
-
-	This is a test
-
 
 .. important::
    Sample metadata should be a comma-separated value (.csv) or tab-separated value (.tsv or .txt) table containing the columns **“sample name”**, **“fastq1”** and **“fastq2”** (**mandatory columns to fulfill**; NOTE: fastq2 is exceptionally not fulfilled only for single-end data) as well these additional variables (that may not be fulfilled): **“data set”**, **”vaccine status”**, **”week”**, **”onset date”**, **”collection date”**, **”lab reception date”**, **”latitude”**, **”longitude”**. If you include data for **latitude/longitude** and/or **country, region, division and/or location**, these will be used to geographically locate your samples in the **Nextstrain Datasets**
