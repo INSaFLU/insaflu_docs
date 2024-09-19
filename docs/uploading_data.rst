@@ -25,9 +25,18 @@ A. Go to *Samples* menu and choose *Add Multiple Samples / Load new file*.
 
 .. image:: _static/upload_samplemetadata_batch_3.png
 
+
 *See here how to upload the metadata table:*
+.. raw:: html
+
+    <details><summary>Click Here to see the answer</summary>
 
 .. image:: _static/05_upload_batch.gif
+
+.. raw:: html
+
+    </details>
+
 
 
 .. important::
