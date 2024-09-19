@@ -27,6 +27,7 @@ A. Go to *Samples* menu and choose *Add Multiple Samples / Load new file*.
 
 
 *See here how to upload the metadata table:*
+
 .. raw:: html
 
     <details><summary>Click Here to see the answer</summary>
