@@ -294,16 +294,23 @@ This key module takes enables reference-based mapping, followed by SNP/indel cal
 
 	$ ivar trim -m 0 -q 0 -e -b primers.bed -p samplex.trimmed -i sample.bam
 
-2. **Removal of reads containing minor variants matching primer sequence**
+2. **Removal of reads containing minor variants matching primer sequence (only for illumina data)**
 
 	$ samtools mpileup -A -d 0 -Q 0 sample.trimmed.sorted.bam | ivar consensus -m 0 -n N -p sample.ivar_consensus
+
 	$ bwa index -p sample.ivar_consensus sample.ivar_consensus.fa
-	$ bwa mem -k 5 -T 16 sample.ivar_consensus primer | 
+
+	$ bwa mem -k 5 -T 16 sample.ivar_consensus primer.fasta 
+
 	$ samtools view -bS -F 4 | samtools sort -o primers_consensus.bam
+
 	$ samtools mpileup -A -d 0 --reference sample.ivar_consensus.fa -Q 0 primers_consensus.bam | ivar variants -p primers_consensus -t 0.03
+
 	$ bedtools bamtobed -i primers_consensus.bam > primers_consensus.bed
+
 	$ ivar getmasked -i primers_consensus.tsv -b primers_consensus.bed -f primer.pair_information.tsv -p primer_mismatchers_indices
-	$ ivar removereads -i sample.trimmed.sorted.bam -p sample.masked.bam -t primer_mismatchers_indices.txt -b primers.bed",
+
+	$ ivar removereads -i sample.trimmed.sorted.bam -p sample.masked.bam -t primer_mismatchers_indices.txt -b primers.bed
 
 
 		***Users can request  trimming of primer sequences of several predefined Primer pool sets:
