@@ -534,16 +534,23 @@ So far, influenza analyses are restricted to the Hemagglutinn (HA) coding gene. 
 - VIC: Influenza B virus (B/Hong Kong/02/1993) (https://www.ncbi.nlm.nih.gov/nuccore/CY018813.1/)
 - YAM: Influenza B virus (B/Singapore/11/1994) (https://www.ncbi.nlm.nih.gov/nuccore/CY019707.1/)
 
-**Avian influenza** (under construction)
+This build uses the following software versions: nextstrain-cli (3.2.4), augur (15.0.2), nextalign (1.11.0), nextclade (1.11.0)
+
+**Avian influenza**
 
 INSaFLU allows running Nexstrain builds for the avian influenza (A/H5N1), which are a simplified version of the Nextstrain builds available at https://github.com/nextstrain/avian-flu
 
-So far, Nextstrain avian influenza can be launched for the Hemagglutinn (HA), Neuraminidase (NA) and polymerase protein PB2 (PB2) coding genes. The reference sequences used for site (nucleotide  / amino acid) numbering in the output JSON files are:
+Nextstrain avian influenza can be launched for each of the 8 segments. The reference sequences used for site (nucleotide  / amino acid) numbering in the output JSON files are:
 
 - HA: Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) hemagglutinin (HA) (https://www.ncbi.nlm.nih.gov/nuccore/AF144305.1/)
 - NA: Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) neuraminidase (NA) (https://www.ncbi.nlm.nih.gov/nuccore/AF144304.1)
-- PB2: Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) polymerase (PB2)(https://www.ncbi.nlm.nih.gov/nuccore/AF144300.1)
+- PB2: Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) polymerase (PB2) (https://www.ncbi.nlm.nih.gov/nuccore/AF144300.1)
+- PB1: Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) polymerase (PB1) (https://www.ncbi.nlm.nih.gov/nuccore/AF144301.1)
+- PA: Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) polymerase (PA) (https://www.ncbi.nlm.nih.gov/nuccore/AF144302.1)
+- MP: Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) matrix proteins M1 and M2 (M) gene (https://www.ncbi.nlm.nih.gov/nuccore/AF144306.1)
+- NS: Influenza A virus (A/Goose/Guangdong/1/96(H5N1)) nonstructural proteins NS1 and NS2 (NS) gene (https://www.ncbi.nlm.nih.gov/nuccore/AF144307.1)
 
+This build uses the following software versions: nextstrain-cli (3.2.4), augur (15.0.2), nextalign (1.11.0), nextclade (1.11.0)
 
 **SARS-CoV-2**
 
@@ -552,6 +559,8 @@ This build is a simplified version of the SARS-CoV-2 Nextstrain build available 
 The reference genome used for site (nucleotide  / amino acid) numbering and genome structure in the output JSON files is:
 
 - Wuhan-Hu-1/2019 (https://www.ncbi.nlm.nih.gov/nuccore/MN908947)
+
+This build uses the following software versions: nextstrain-cli (3.2.4), augur (15.0.2), nextalign (1.11.0), nextclade (1.11.0)
 
 
 **Monkeypox virus**
@@ -562,6 +571,7 @@ The reference genome used for site (nucleotide  / amino acid) numbering and geno
 
 - MPXV-M5312_HM12_Rivers (https://www.ncbi.nlm.nih.gov/nuccore/NC_063383)
 
+This build uses the following software versions: biopython (1.74), nextstrain-cli (4.2.0), augur (17.1.0), auspice (2.38.0), nextalign (2.5.0), nextclade (2.5.0), epiweeks (2.1.4), pangolin (2.4.2), pangolearn (2021.05.27), seqkit (2.3.0), tsv-utils (v2.2.0).
 
 **Respiratory Syncytial Virus (RSV)**
 
@@ -572,6 +582,8 @@ The reference genome used for site (nucleotide  / amino acid) numbering and geno
 - RSV A: A/England/397/2017 (GISAID ID EPI_ISL_412866)
 - RSV B: B/Australia/VIC-RCH056/2019 (GISAID ID EPI_ISL_1653999)
 
+This build uses the following software versions: augur (20.0), auspice (2.42), nextalign (2.9.1), nextclade (2.9.1), epiweeks (2.1.4).
+
 
 **Generic**
 
@@ -581,6 +593,7 @@ This generic build uses as reference sequence (as tree root and for mutation ann
 
 Currently, the generic build does not generate a Time-Resolved Tree. To do this you need to select the Generic with TimeTree option.
 
+This build uses the following software versions: nextstrain-cli (3.2.4), augur (15.0.2), nextalign (1.11.0), nextclade (1.11.0)
 
 **Generic with TimeTree**
 
