@@ -5,6 +5,25 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 
 2024
 -------
+
+October 18, 2024
+.............
+
+New updates regarding monkeypox virus:
+
+- INSaFLU rapid sample classification can now distinguish the different Monkeypox clades (Clade Ia, Ib, IIa and IIb). 
+
+- The assign2contigs database was updated with representative sequences of the Monkeypox Clade Ia, Ib, IIa and IIb.
+
+- Added Nextclade link to Monkeypox Clade I;
+
+Televir:
+
+- fix TELEVIR reference panels load bug
+
+- filter panel suggestions of existing accids
+
+
 August 9, 2024
 .............
 
