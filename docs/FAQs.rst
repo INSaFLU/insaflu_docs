@@ -2,7 +2,23 @@
 ======================================
 FAQs
 ....
-Under construction
+
+**UPLOAD (Input, Classification, Settings, etc)**
+-------------------------------------------------
+
+**INSaFLU module** 
+------------------
+
+
+**Nextstrain module** 
+----------------------
+
+
+**TELEVIR module** 
+----------------------
+
+
+
 
 Guide for pre-NGS steps
 ........................
