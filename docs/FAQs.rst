@@ -6,17 +6,71 @@ FAQs
 **UPLOAD (Input, Classification, Settings, etc)**
 -------------------------------------------------
 
+- **Which sequencing technologies are compatible with the platform?**
+The platform supports second- and third-generation sequencing technologies, including Illumina (single-end and paired-end), Ion Torrent, and Oxford Nanopore Technologies (ONT).
+
+- **What file types can be used as input?**
+The platform only accepts gzipped FASTQ files with the extension “.fastq.gz”.
+
+- **How can I convert files to GZIP on Windows?**
+You can use third-party tools like 7-Zip. Here's a simple guide: https://www.freecodecamp.org/news/how-to-convert-files-to-gzip-on-windows/
+
+- **How many “.fastq.gz” files can be uploaded per sample?**
+You can upload 1 file for ONT and Illumina single-end, or 2 files for Illumina paired-end.
+
+- **ONT technology generates several files per sample. Is there an easy way to merge them on Windows or Mac?**
+Yes, you can find executable files to merge “fastq” or “fastq.gz” files with a simple double-click at this link: https://github.com/INSaFLU/INSaFLU/tree/master/files_helpful. Available both for Windows and Mac.
+
+- **What are the upload options?**
+You can either:
+1. Add One Sample (upload reads and metadata simultaneously)
+2. Add Multiple Samples (upload metadata.tsv first, then DRAG&DROP reads under “Add fastq files”)
+
+- **What fields are mandatory in the metadata input table?**
+The mandatory columns are “sample name,” “fastq1” (and “fastq2”, if paired-end Illumina).
+
+- **What is the purpose of the “data set” column?**
+The “data set” column allows you to assign a unique ID to a batch of samples, facilitating joint selection and analysis. It also helps organize files by criteria such as sequencing date or run.
+
+- **What about the other columns? Can I add more?**
+
+Yes, users are encouraged to fill in the existing columns or include additional columns with metadata variables related to their samples. For example, including latitude/longitude or country, region, division, and location data will allow geographic placement of samples in Nextstrain Datasets.
+
+- **I’ve uploaded the table (but not the reads) and realized I made a mistake in the metadata. How can I delete it?**
+> Samples > Add Multiple Samples > Unlock last file
+
+- **I’ve uploaded both the table and reads but need to delete everything due to a major error (e.g., incorrect “sample-fastq” correspondence). What should I do?**
+> Samples > Remove ALL samples (CAUTION: This action will delete ALL samples that have not been added to INSaFLU and TELEVIR projects. )
+
+- **I’ve uploaded a sample but want to change the settings. Do I need to delete everything and start again?**
+No. Click in the button next to the “More info” to change the sample-specific settings. 
+
+- **I’ve uploaded everything successfully, but some reads are not attached to their respective samples. What should I do?**
+> Samples > Add Fastq files > Try to relink unattached files 
+
+- **Are the draft contigs the final curated genome sequences?**
+No, the draft contigs are not the final curated genome sequences. However, they can be highly useful for identifying closely related references (e.g., using BLAST) for INSaFLU mapping, especially for highly diverse viruses like influenza A/H5N1.
+
+- **Does the Classification result provided just after upload reflects the metagenomic identification of any virus present in the sample?**
+No. This output is based on a rapid screening of draft contigs (generated right after upload) to identify/classify specific viruses of interest. Currently, it identifies influenza types A and B, all known influenza A subtypes (18 hemagglutinin and 11 neuraminidase subtypes), the two influenza B lineages (Yamagata and Victoria), five human Betacoronaviruses, RSV A/B, and the four clades of MPXV (Ia, Ib, IIa, and IIb). This classification helps in selecting the appropriate references for the INSaFLU module. For actual virus metagenomic detection, run a TELEVIR project instead.
+
+
+
+
 **INSaFLU module** 
 ------------------
 
+*Under construction*
 
 **Nextstrain module** 
 ----------------------
 
+*Under construction*
 
 **TELEVIR module** 
 ----------------------
 
+*Under construction*
 
 
 
