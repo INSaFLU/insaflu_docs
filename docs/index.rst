@@ -55,6 +55,6 @@ Contents
    routine_genomic_surveillance.rst
    metagenomics_virus_detection.rst
    bioinformatics_pipeline.rst
-   guide_pre_ngs.rst
+   FAQs.rst
    change_log.rst
 
