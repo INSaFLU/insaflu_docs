@@ -1,5 +1,11 @@
+Frequently Asked Questions (FAQs)
+=================================
+FAQs
+....
+Under construction
+
 Guide for pre-NGS steps
-=======================
+........................
 
 Suggested pre-NGS wet-lab protocol for influenza
 -------------------------------------------------
