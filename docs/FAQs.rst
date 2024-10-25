@@ -9,7 +9,7 @@ FAQs
 - **Which sequencing technologies are compatible with the platform?**
 The platform supports second- and third-generation sequencing technologies, including Illumina (single-end and paired-end), Ion Torrent, and Oxford Nanopore Technologies (ONT).
 
-- **What file types can be used as input?**
+- **What read file types can be used as input?**
 The platform only accepts gzipped FASTQ files with the extension “.fastq.gz”.
 
 - **How can I convert files to GZIP on Windows?**
