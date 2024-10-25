@@ -205,7 +205,7 @@ This can happen due to segmented viruses (where each segment has a different acc
 Cross-mapping of reads across genomes with high nucleotide homology, such as viruses from the same family, can lead to multiple hits. Interactive Heatmaps for Cross-mapping inspection allow users to easily inspect these situations.
 
 - **What if my suspected virus isn't listed in the Main report?**
-Check the Reference Management panel. If the virus is flagged as "Unmapped," request confirmatory mapping or adjust filtering steps like Viral enrichment. You can also map directly against the suspected virus, either through Map Added or Map Paneç
+Check the Reference Management panel. If the virus is flagged as "Unmapped," request confirmatory mapping or adjust filtering steps like Viral enrichment. You can also map directly against the suspected virus, either through Map Added or Map Panel.
 
 - **Can I manually inspect viral hits flagged by TELEVIR?** 
 Yes, flagged hits can be further examined using internal tools like Integrative Genomics Viewer (IGV) or external resources, like BLAST.
