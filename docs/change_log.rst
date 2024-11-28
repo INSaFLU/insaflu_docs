@@ -3,8 +3,25 @@ Change log
 
 This tab includes a list (chronologically ordered) of notable changes in INSaFLU.
 
-2024
+November 28, 2024
 -------
+
+New update for the reference-based genome assembly projects:
+
+- Small modification to the snippy used by INSaFLU to enable variants being called in duplicated regions, such as the monkeypox inverted terminal repeats. Users wanting to enable variant calling in duplicated regions using snippy should set to **0** the `--mapqual` parameter in the "mutation detection and consensus generation" section.
+
+New updates regarding monkeypox virus:
+
+- Added new monkeypox virus references, such as the clade Ia Zaire_1979-005 (DQ011155.1)
+
+INSaFLU-TELEVIR updates:
+
+- Downloadable mapping files in TELEVIR Reference Focus projects.
+
+- Add Windows Covered statistic to Reference Focus Mapping; Add Reference Accid and Description to downloaded TSV.
+
+- Improved reporting of running reference mapping processes.
+
 
 October 18, 2024
 .............
