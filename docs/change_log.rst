@@ -14,6 +14,8 @@ New updates regarding monkeypox virus:
 
 - Added new monkeypox virus references, such as the clade Ia Zaire_1979-005 (DQ011155.1)
 
+- Updated lineage information for the Monkeypox clade IIb Nextstrain build
+
 INSaFLU-TELEVIR updates:
 
 - Downloadable mapping files in TELEVIR Reference Focus projects.
