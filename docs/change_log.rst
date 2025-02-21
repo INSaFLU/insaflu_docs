@@ -4,7 +4,7 @@ Change log
 This tab includes a list (chronologically ordered) of notable changes in INSaFLU.
 
 January 20, 2025
-..................
+..........................
 
 - Updated LABEL version (from v0.6.4 to v0.6.5) and database (H5v2015 to H5v2023) for clade inference in the H5N1 (HA) Avian Influenza Nextstrain build
 
@@ -12,7 +12,7 @@ January 20, 2025
 -------
 
 November 28, 2024
-..................
+..........................
 
 New update for the reference-based genome assembly projects:
 
