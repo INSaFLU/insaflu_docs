@@ -6,6 +6,57 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2025
 -------
 
+
+March 27, 2025
+..........................
+
+INSaFLU-TELEVIR update - version 2.2.0
+
+# INSaFLU module #
+##################
+
+1. **Two new workflows are now available for the Consensus Generation**:
+
+	- **iVar** (v1.4.2) (https://github.com/andersen-lab/ivar) 
+	- **IRMA** (v1.2.0) (https://wonder.cdc.gov/amd/flu/irma/).
+
+*Implementation considerations:*
+
+	- **Only one workflow can be active per project**, being determined upon project creation and frozen thereafter;
+	- New **IRMA** and **iVar** projects are available for **Illumina** technology **only**. 
+	- Alongside IVAR/IRMA consensus sequences, the new workflows will additionally offer the typical INSaFLU outputs (e.g., coverage analysis, alignments, phylogenetic trees, minor variant analysis, etc) provided by the existing classic INSaFLU workflow.
+	- While IRMA does not require a specific reference genome to run, its initial implementation into the platform does require selecting a reference. This choice is essential for guiding horizontal coverage analysis, mutation reporting, and alignments. Therefore, selecting a closely related reference sequence is highly recommended for optimal performance and benefitting from extra INSaFLU features (e.g, masking consensus) and outputs (e.g, list of mutations, alignments). Still, IRMA workflow also reports the original IRMA consensus (i.e, pre-masking and filtering by horizontal coverage) and mixed positions, both available for download in “Download - irma_output.zip)
+	- The "Intra-host minor variant detection step" (via Freebayes) is not compatible with IRMA (disabled automatically if IRMA is selected).
+	
+2. **FluMut** integration 
+
+	- For influenza A/H5Nx projects, FluMut (v0.6.3) (https://izsvenezie-virology.github.io/FluMut/) is now applied to automated screening of mutations with potential biological significance. More info about this tool is available in original repository (https://izsvenezie-virology.github.io/FluMut/; https://github.com/izsvenezie-virology/FluMut) and original publication (Giussani et al, 2025; https://doi.org/10.1093/ve/veaf011)
+
+
+# Nextstrain module #
+##################
+
+1. New Nextstrain builds are available for:
+
+	- Dengue (DENV) virus serotypes 1 to 4 (DENV-1 to DENV-4)
+	- mpox virus (MPXV) clade I
+
+2. Updated Nextstrain build for SARS-CoV-2
+
+# TELEVIR module #
+##################
+
+1. Update read mapping overlap heatmap display to side bar to promote comparison with reported hits. 
+2. Fix bug in msamtools mapping filter.
+
+
+January 20, 2025
+..........................
+
+- Updated LABEL version (from v0.6.4 to v0.6.5) and database (H5v2015 to H5v2023) for clade inference in the H5N1 (HA) Avian Influenza Nextstrain build
+
+
+
 January 20, 2025
 ..........................
 
