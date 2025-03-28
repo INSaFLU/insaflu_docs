@@ -25,8 +25,8 @@ INSaFLU-TELEVIR update - version 2.2.0
 	- **Only one workflow can be active per project**, being determined upon project creation and frozen thereafter;
 	- New **IRMA** and **iVar** projects are available for **Illumina** technology **only**. 
 	- Alongside IVAR/IRMA consensus sequences, the new workflows will additionally offer the typical INSaFLU outputs (e.g., coverage analysis, alignments, phylogenetic trees, minor variant analysis, etc) provided by the existing classic INSaFLU workflow.
-	- While IRMA does not require a specific reference genome to run, its initial implementation into the platform does require selecting a reference. This choice is essential for guiding horizontal coverage analysis, mutation reporting, and alignments. Therefore, selecting a closely related reference sequence is highly recommended for optimal performance and benefitting from extra INSaFLU features (e.g, masking consensus) and outputs (e.g, list of mutations, alignments). Still, IRMA workflow also reports the original IRMA consensus (i.e, pre-masking and filtering by horizontal coverage) and mixed positions, both available for download in “Download - irma_output.zip)
-	- The "Intra-host minor variant detection step" (via Freebayes) is not compatible with IRMA (disabled automatically if IRMA is selected).
+	- While IRMA does not require a specific reference genome to run, its initial implementation (exclusively for influenza) into the platform does require selecting a reference. This choice is essential for guiding horizontal coverage analysis, mutation reporting, and alignments. Therefore, selecting a closely related reference sequence is highly recommended for optimal performance and for benefitting from extra INSaFLU features (e.g, masking regions/sites in consensus according to user settings) and outputs (e.g, list of mutations, alignments). Still, IRMA workflow also reports the original IRMA consensus (i.e, pre-masking and filtering by horizontal coverage) and mixed positions, both available for download in “Download - irma_output.zip)
+	- The "Intra-host minor variant detection step" (via Freebayes) is not compatible with IRMA (disabled automatically if IRMA is selected). For iVar, this option step is available, using the same software (freebayes) as in the classical INSaFLU workflow (https://insaflu.readthedocs.io/en/latest/bioinformatics_pipeline.html#intra-host-minor-variant-detection-and-uncovering-of-putative-mixed-infections).
 	
 2. **FluMut** integration 
 
@@ -48,13 +48,6 @@ INSaFLU-TELEVIR update - version 2.2.0
 
 1. Update read mapping overlap heatmap display to side bar to promote comparison with reported hits. 
 2. Fix bug in msamtools mapping filter.
-
-
-January 20, 2025
-..........................
-
-- Updated LABEL version (from v0.6.4 to v0.6.5) and database (H5v2015 to H5v2023) for clade inference in the H5N1 (HA) Avian Influenza Nextstrain build
-
 
 
 January 20, 2025
