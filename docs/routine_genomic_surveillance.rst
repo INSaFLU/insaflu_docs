@@ -33,8 +33,20 @@ You can designate the projects so that the name easily indicates the combination
    You should select a reference sequence (e.g., the vaccine strain from the current influenza season) that fits both your amplicon design (i.e., a multi-fasta file containing the set of reference sequences with the precise size of each “intra-amplicon” target sequence that you capture by each one of the RT-PCR amplicons) and the set of samples that will be compared (e.g., same sub-type viruses from the same season to be compared with the vaccine reference virus).
 
 
-3. Choose the software parameters to be applied to the project.
-.................................................................
+3. Chose the Type of Project 
+
+Chose betweeen the pipeline for Mutation Detection and Consensus Generation. The three pipelines available are: 
+
+- **INSaFLU Full Pipeline (with optional iVar primmer clipping)** - The default pipeline for the INSaFLU project. Snippy is used for consensus generation and mutation detection. 
+
+- **iVar Full Pipeline** - The iVar pipeline for the INSaFLU project. iVar is used for consensus generation and mutation detection.
+
+- **IRMA Full Pipeline** - The IRMA pipeline for the INSaFLU project. IRMA is used for consensus generation and mutation detection.
+
+
+
+4. Choose the software parameters to be applied to the project.
+................................................................
 
 After creating a project, and before adding the first sample, you can clicking in the "Magic wand" to select the parameters to be applied by default to every sample added to the project. 
 
@@ -43,7 +55,7 @@ After creating a project, and before adding the first sample, you can clicking i
 Note: Please set the parameters before assigning the first sample to the project. After that, you are still allowed to change the parameters for individual samples within the Project. Updated samples are automatically re-analysed using the novel parameters and re-inserted in the Project. 
 
 
-4. Add the **samples** to be included in the **project**
+5. Add the **samples** to be included in the **project**
 ........................................................
 
 *Example - Add a few samples*
@@ -56,7 +68,7 @@ Note: Please set the parameters before assigning the first sample to the project
 
 
 
-5. Monitoring Projects' progress
+6. Monitoring Projects' progress
 .................................
 
 INSaFLU projects are automatically run upon creation. So, at this time, users may start monitoring the Project progress by checking the number of samples in the following status: Processed (P); Waiting (W) and Error (E).
@@ -64,7 +76,7 @@ INSaFLU projects are automatically run upon creation. So, at this time, users ma
 
 .. image:: _static/monitoring_project_status.png
 
-6. Scale-up your **project**. 
+7. Scale-up your **project**. 
 .............................
 
 You may add more samples to your **Project** project at any time.
@@ -72,7 +84,7 @@ You may add more samples to your **Project** project at any time.
 .. image:: _static/create_project_4_scale_up.png
 
 
-7. Modify software parameters for a given sample within a Project
+8. Modify software parameters for a given sample within a Project
 ..................................................................
 
 Users can change the mapping parameters for individual samples within a Project. The sample is automatically re-analysed using the novel parameters and re-inserted in the Project (outputs are automatically re-calculated to integrate the “updated” sample). For instance, if the updated sample fulfill the criteria for consensus generation with the novel settings, it will be automatically integrated in the alignments and trees.
@@ -81,7 +93,7 @@ NOTE: Users can also re-run samples (with user-selected parameters) included in 
 
 
 
-8. Remove samples from your **project**. 
+9. Remove samples from your **project**. 
 ........................................
 
 You may want to remove some samples from your project (e.g., for exclusively keeping influenza samples with success for all 8 segments) 

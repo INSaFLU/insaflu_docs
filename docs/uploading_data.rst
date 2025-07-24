@@ -182,6 +182,10 @@ Notes:
 Uploading Reference data
 ++++++++++++++++++++++++
 
+
+INSAFLU References
+------------------
+
 INSaFLU needs reference sequence files to be used for reference-based mapping. 
 
 In *References* menu, **INSaFLU provides a set of ready-to-use reference sequences**, all publicly available at NCBI (or made available under permission of authors), currently including:
@@ -241,6 +245,46 @@ You can eitheir:
    ## See below a GUIDE to generate additional reference sequences
 
 
+TELEVIR References
+------------------
+
+The TELEVIR module relies on reference databases, or their indices, for metagenomics analysis. Validation of metagenomics hits in turn consists in analysing and comparing the alignment of 
+reads and contigs to the reference sequences.
+
+In this context, the INSaFLU TELEVIR provides the utilities to allow the following:
+- Explore the TELEVIR reference data base - e.g. to confirm that references of interest are available.
+- Upload new references to the TELEVIR reference database - Note: these references will only be availble for Investigatory Mapping (see TELEVIR documentation for more details).
+- Create Reference Panels - to help allow streamlined analysis of specific viruses or virus families.
+
+
+TELEVIR Reference utilities are accessed via the TELEVIR References menu.
+
+**Upload new reference sequences**
+
+The TELEVIR Reference Files page displays the current reference databases available for use in the TELEVIR module, both provided and user-uploaded. 
+
+To upload new reference sequences, click on the **Upload Reference Panel** button. This will require two files: 
+
+- A FASTA.GZ file containing reference sequences, multiple sequences allowed - limited in size Max total sequence length: 5242800 bp. Max FASTA file size: 100.0 MB.
+- A metadata .tsv file containing accession ID, Taxon ID and Description columns, with specific column names. A template is provided.
+
+
+**References Search**
+
+The TELEVIR Reference Files page also provides a search function to allow users to search the reference database for specific sequences. 
+
+By default this page displays user submitted references. It is possible to create an INSaFLU reference from TELEVIR references. Genbank files will be automatically generated.
+
+
+**Panels**
+
+The panels page displays the current reference panels available for use in the TELEVIR module, both provided and user-uploaded. 
+
+To create a new reference panel, click on the **Create Reference Panel** button. References to include in a panel can be selected from the reference databases. Alternatively, the user
+can select a user-uploaded reference panel to add references in bulk. 
+
+
+
 GUIDE TO GENERATE ADDITIONAL REFERENCE SEQUENCES
 ----------------------------------------------------------
 
@@ -281,6 +325,8 @@ Explore your Sample and Reference databases
 *Samples* menu displays all information for all loaded samples (Samples’ names in your account must be unique). 
 
 Upon submission, INSaFLU automatically updates samples’ information with reads quality and typing data (automate bioinformatics pipeline modules “Read quality analysis and improvement” and Type and sub-type detection”; see Data analysis in the Documentation). 
+
+Upon deployment of TELEVIR workflows on any sample, any additionally processed data (i.e. Entropy filterered, Enriched, Host depleted, see Metagenomics virus detection section) will be automatically added to the sample database. 
 
 Just explore the “More info” icon next to each sample.
 

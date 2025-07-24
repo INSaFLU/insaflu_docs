@@ -844,16 +844,21 @@ Selection of viral TAXID and representative genome sequences for confirmatory re
 
 *Description*
 
-In this step, the previously identified viral hits (TAXID) are selected for confirmatory mapping against reference viral genome(s) present in the available databases. Viral TAXIDs are selected, up to a maximum number of hits*, as follows:
+In this step, the previously identified viral hits, aggregated by TAXID, are selected for confirmatory mapping against reference viral genome(s) present in the available databases.
 
 Viral TAXIDs are selected, up to a maximum of number of hits, as follows:
 
 - 1º - Viral hits corresponding to phages are removed from classification reports.
-- 2º - TAXIDs present in both intermediate classification reports (reads and contigs) are selected;
-- 3º - additional TAXIDs are selected across the read classification report (by number of hits, in decreasing order) and contigs classification report (by number of hits and total length of matching sequences, from top-down) until reaching the defined maximum number of hits to be selected
+- 2º - TAXIDs pdresent in both intermediate classification reports (reads and contigs) gathered:
+    - if protein accession IDs are present, they are matched to their corresponding TAXID. 	
+    - if accession IDs are present, they are matched to their corresponding TAXID. Accession IDs present in classification reports are recorded and matched to their corresponding TAXID.
+- 3º - TAXIDs are selected across the read classification report (by number of hits, in decreasing order) and contigs classification report (by number of hits and total length of matching sequences, from top-down) until reaching the defined maximum number of hits to be selected.
 - 4º - Representative sequences (accession ID) of the selected TAXID are queried from internal collection of databases (see next step).
+    - Up to `--max-accids` representative accession IDs are selected per TAXID. This number is set by the user through the parameter “--max-accids” (default: 12) in the TELEVIR Settings - Global - Reporting section.
+    - If accession IDs were present in classification reports, they are included as representative sequences.
+    - Representative accession IDs are selected at random from the available accession IDs for each TAXID, up to the maximum number of accession IDs defined by the user.
+    - If a given representative TAXID/sequence is present in more than one database, priority is given to NCBI refseq viral genomes and Virosaurus.
 
-*currently, this number is set as 15 as default, but it is to be user-defined
 
 *Databases*
 

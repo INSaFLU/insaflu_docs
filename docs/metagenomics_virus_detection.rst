@@ -32,11 +32,11 @@ The following table provides an overview on all TELEVIR modules and outputs:
 
 :download:`TELEVIR_current_modules_and_outputs_2023-10-20.xlsx <_static/TELEVIR_current_modules_and_outputs_2023-10-20.xlsx>`
 
-**TELEVIR Validation** - Evaluating a candidate viral Hit.
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+**TELEVIR Reporting** 
+++++++++++++++++++++++
 
 Despite the use of multiple classification algorithms and reference databases, our analyses show that even in combination the user can expect a rate of false positives
-of 20 % (depending on sample and virus). This is why the TELEVIR module places special emphasis on the validation of results and the exclusion of False Positives. 
+of 20 % (depending on sample and virus). TELEVIR module places special emphasis on the evaluation of results and the exclusion of False Positives. 
 
 Validation is done through mapping the original reads onto the genomes of candidate viruses. The first layer consists in analysing the metrics and visualizations obtained. 
 The second layer consists in comparing results between samples and controls. 
@@ -166,7 +166,7 @@ For further recommendations for interpretation of  metagenomics virus detection 
 Below, you can find instructions on how to create a TELEVIR project, run samples and visualize/intrepret the results.
 
 
-**COMPARATIVE MAPPING**
+**Comparative Mapping - Identification of Cross-hit False Positives**
 -----------------------
 
 One important aspect of the TELEVIR module is the ability to compare the mapping of reads against different reference genomes. This is particularly useful when the user is trying to identify the most closely related reference genome to the virus present in the sample.
@@ -180,15 +180,16 @@ The grouping parameter (`--r-overlap`) is modifiable in the "Global" section (so
 
 **“Sort sample report” should be deployed everytime the grouping parameter is changed for existing projects.**
 
-Grouped reference genomes:
-
 Grouping is based on the pairwise similarity in reads mapped against every genome. The respective proportinos of mapped reads can be viewd through the heatmap in the Read Overlap Summary. 
 
 .. image:: _static/45_TELEVIR_sort_heatmap.gif
 
+|
+|
+|
 
 **TELEVIR Projects** - How to create and run a metagenomics virus detection project
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
    
 Within the *TELEVIR Projects* menu:
 
@@ -244,14 +245,165 @@ By clicking in *Run panel*, users can get an overview of the workflows run.
 5. *Select a Control* to the TELEVIR project
 .............................................
 
-The inclusion of **negative controls** (e.g. pathogen-negative samples, library preparation buffers, etc) during metagenomic sequencing in clinical virology is highly recommended to identify sources of potential contamination and detect false positive hits. In addition, the inclusion of **positive controls** (e.g., samples spiked with RNA or DNA viruses that do not infect humans) is also commonly performed to control for the success of nucleic acids extraction, preparation and sequencing.
+The inclusion of **negative controls** (e.g. pathogen-negative samples, library preparation buffers, etc) during metagenomic sequencing in clinical virology is highly recommended to identify sources of potential contamination and detect false positive hits. In addition, the inclusion of **positive controls** (e.g., samples spiked with RNA or DNA viruses that do not infect humans) is also commonly performed to control for the success of nucleic acids extraction, preparation and sequencing. 
 
-In TELEVIR projects, **user can select “control” sample(s) at any time (before and after data analysis)**. Viral TAXID detected in the Main report of the user-selected “control” sample(s) will be flagged in the reports of samples in the same project as “Taxid found in control” in a new “Control” column. This functionality is designed to facilitate the background subtraction of viral hits also found in controls. Multiple controls are possible.
+In TELEVIR projects, **user can select “control” sample(s) at any time (before and after data analysis)**. Viral TAXID detected in the Main report of the user-selected “control” sample(s) will be flagged in the reports of samples in the same project as “Taxid found in control” in a new “Control” column. 
+
+To help with interpretation, the ratio of the proportion of mapped (start prop %) reads against the reference genome of the control sample to the proportion of mapped reads against the reference genome of the test sample is also provided. 
+
+This functionality is designed to facilitate the background subtraction of viral hits also found in controls. Multiple controls are possible.
 
 .. image:: _static/televir_control_selection.png
 
 
-**TELEVIR Workflow - Output Visualization and Download**
+|
+|
+|
+
+**TELEVIR Investigatory Mapping**
+++++++++++++++++++++++++++++++++++
+
+The TELEVIR module allows users to perform an investigatory mapping of reads against one or multiple references, within a framework that facilitates the comparison of mapping metrics and visualizations for each reference. 
+
+A framework for investigatory mapping relies on:
+
+- **TELEVIR References**: Either available from the TELEVIR reference database, or uploaded by the user.
+- **Defining the Input for Mappping**: a robust mapping workflow that includes the generation of mapping statistics, visualizations and downloadable files for each reference selected.
+- **Investigatory Analysis**: The capacity to streamline mappings of multiple samples against multiple references, facilitating the identification of potential cross-hits, or contamination events.
+
+
+
+TELEVIR Reference Management
+----------------------------
+
+In the References section, the user can Upload References, search the TELEVIR reference data base, and create **Reference Panels**. The latter allows the user to streamline mappings by grouping references together.
+
+.. image:: _static/televir_references.png
+
+|
+
+Defining the Input for Mappping
+-------------------------------
+
+The validation workflow retains the pre-processing steps used in the pathogen identification workflow, but allows the user to select which steps to apply (for example,
+extra filtering, viral enrichment and host depletion can be turned off to maximize the number of mapped reads).
+
+
+The valitation workflow includes the following steps:
+
+1. **Extra Quality Control** [optional]: Filtering reads based on complexity.
+
+2. **Viral Enrichment** [optional]:  Retaining potential viral reads based on a rapid and permissive classification of the reads against a viral sequence database.
+
+3. **Host Depletion** [optional]:  Removing potential host reads based on reference-based mapping against host genome sequence(s).
+
+4. **Request Mapping** : Reads are mapped against representative genome sequences of the top viral hits identified in the previous step.
+
+5. **Map filtering** [optional]: Filtering mapped reads based on length, identity and coverage.
+
+
+Steps 1-3  will use the same settings as defined for metagenomics workflows. Steps 4-5 can be defined independently, in the Validation section of the TELEVIR Settings menu.
+
+|
+
+Investigatory Analysis
+------------------------
+
+Investigatory Mapping can be deployed at several levels:
+
+1. Through the Actions button in the TELEVIR Project Page, the user is able to attach individual references or Reference Panels to selected or all samples in the project. Through the Run button, the user can then select to:
+
+- **Map Added**: Map sample against all manually added references as well as references selected in the select column of the main reference table.
+
+- **Map Panels**: Map sample against all references within each panel added to the respective Reference Management Panel Section. Note: Panel mapping workflows deployed as part of Map Panels request are deployed independently.
+
+- **Map Combined**: maps the sample against the top reference hits as sorted across workflows using the Ensemble Ranking described above. The number of top references is defined in the Settings under the heading Global, and is the same as for individual workflows.
+
+2. Through the Sample Reference Dashboard (see bellow), which offers the same options as in `1.` for individual samples.
+
+3. Through the Reference Focus tool (see bellow), where individual Mappings to a single reference can also be deployed and compared between samples.
+
+
+The Sample References Dashboard
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+This panel allows users to quickly survey all reference genomes attributed to a sample, their mapping status, and to deploy mappings against selected references or groups of references (see "Reference Panels").
+
+This page is composed of four sections:
+
+	i. “Workflow” : a graphical display of classification workflows deployed on this sample.
+	ii. “Added References”: displays references that were manually added to a sample.
+	iii. “Added Panels”: section displays reference panels that were attached to this sample.
+	iv. **Actions** sidebar and **References table**.
+
+
+Reference genomes are attributed to a sample in the following ways:
+
+- **Automatically**:  The result of metagenomics classification software deployed in the course of a TELEVIR workflow. Any reference Taxid clasification at the reads / contigs level will have a corresponding accession attributed to the sample.
+
+- **Manually**:  The user can select any reference genome from the TELEVIR reference database (original or uploaded). The user can also select a group of references (Reference Panel), to be mapped together. 
+
+Mapped or Automatically attributed references are shown in the Sample Reference Table, sorted by ensemble ranking - a combination of the ranks after combined sort (reads and contigs) across metagenomics workflows. 
+
+
+The **References table** displays Viral hits (description, taxid, accid) attached to this sample, either as a result of a classification workflow, or through manual addition and mapping. Additionally, the References table comports three summary columns:
+
+	- “Runs”: indicates the Classification workflows that reference was identified in.
+	- **“Global Ranking”**: sorts references by applying the TELEVIR sorting algorithm to the aggregate number of read and contig hits obtained by classification software across Classification Workflows.
+	- **“Ensemble Ranking”**: sorts references according to their average TELEVIR sorting rankings across workflows they were identified in.
+	- “Best Mapping”: indicates whether a reference was mapped against, and whether mapping was successful, providing a link to the workflow with the best mapping statistics.
+
+The **Actions** sidebar enables to deploy mapping workflows against Added References, Added Panels, Selected References or Combined.
+
+	-  **Map Added**: Map sample against all manually added references as well as references selected in the select column of the main reference table.
+	- **Map Panels**: Map sample against all references within each panel added to the respective Reference Management Panel Section. Note: Panel mapping workflows deployed as part of Map Panels request are deployed independently.
+	- **Map Combined**: maps the sample against the top reference hits as sorted across workflows using the Ensemble Ranking described above. The number of top references is defined in the Settings under the heading Global, and is the same as for individual workflows.
+	
+	Note: All Mapping workflows use parameters: i) from Workflows for Pre-processing; and ii) from Validation for Request Mapping and Filtering (see below).
+
+
+.. image:: _static/44_ReferencesDashboard_TELEVIR.gif
+
+|
+
+
+TELEVIR Reference Focus
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Reference Focus is a tool designed to facilitate the comparative analysis of mappings and mapping statistics of multiple samples against a single reference genome.
+
+**Use**:
+
+
+**Create a Reference Focus project**:
+
+Through the **Actions** button in the TELEVIR Project Page, the user first selects a reference genome from among references attributed to any sample in a project. This creates a Reference Focus project, displayed below the project samples table. 
+Samples are added using "Add Samples" button and selected using the Sample Select column of the samples table, either on creation or later. 
+
+.. image:: _static/46_create_teleflu.gif
+
+
+**Setup Settings and Workflows**:
+
+Within the reference project, the user can then setup multiple workflows to be deployed against the selected reference genome. Workflows available are determined
+by the combination of active software in the TELEVIR Settings menu.
+
+.. image:: _static/47_setup_teleflu.gif
+
+|
+
+**Deploy Reference Focus Workflows**:
+
+For each workflow, mapping statisics are made availble in table format for all samples in the project, and succesful mappings can be inspected as stacked IGV plots. Reference Focus can also be linked to INSaFLU projects. 
+
+
+.. image:: _static/48_deploy_teleflu.gif
+
+|
+|
+
+**TELEVIR Additional Outputs**
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 The INSaFLU-TELEVIR bioinformatics pipeline for metagenomics virus diagnostic generates multiple outputs, reflecting the multiple steps of the pipeline (detailed here: https://insaflu.readthedocs.io/en/latest/bioinformatics_pipeline.html#metagenomics-virus-detection). The main report lists the top viral hits, each accompanied by several robust and **diagnostic-oriented metrics, statistics and visualizations**, provided as (interactive) tables (intermediate and final reports), graphs (e.g., coverage plots, Integrative Genomics Viewer visualization, Assembly to reference dotplot) and multiple downloadable output files (e.g., list of the software parameters, reads/contigs classification reports, mapped reads/contigs identified per each virus; reference sequences, etc)
@@ -262,10 +414,11 @@ TELEVIR reports are generated per **Workflow**, per **Sample** (combining non-re
 
 .. image:: _static/29_TELEVIR_panels_results_overview.gif
 
+|
 
 Pathogen identification (**Main report**)
-...........................................
-   
+---------------------------------------------
+
 This tab displays an interactive table with **summary statistics and visualizations of the end-point results of the TELEVIR metagenomic virus detection pipeline**. In summary, through this pipeline, reads and contigs (if available) are classified independently, then viral hits (TAXID) detected in both intermediate classification reports (reads and contigs) and/or within the top list from each side are selected for reference-based mapping against viral genome sequences present in the available databases. **This main report (interactive table) only includes viral hits that were classified at reads and/or contig (“class. success”) level AND that had mapped reads or contigs (“mapping success)** 
 
 
@@ -274,6 +427,8 @@ This tab displays an interactive table with **summary statistics and visualizati
 
 
 .. image:: _static/30_TELEVIR_link_to_NCBI.gif
+
+|
 
 .. note::
    - The **Sample** reports have the same layout as this Workflow main report, but compile all viral hits identified accross all workflows that were run a given sample, in which redundant hits are excluded. In summary, one mapping is selected by ACCID. For duplicate refs (the same ACCID) identified in different workflows, the one resulting in higher Cov (%) is presented
@@ -285,10 +440,13 @@ This tab displays an interactive table with **summary statistics and visualizati
 	- Viral hits (reference accession IDs) in the main reports (at both “Workflow” and “Sample” levels) can be grouped and sorted by the **degree of overlap of cross-mapped reads.** This grouping intends to place together true positive hits with their corresponding cross-mapped potential false positives, allowing for the easy identification of the latter. It can be also useful to join same-segment references (for segmented virus) and to help identifying reference sequences most closely related to the virus present in the sample. The grouping parameter (--r-overlap) is modifiable in a new “Reporting” section of the TELEVIR Settings Menu for both technologies. **“Sort sample report” should be deployed everytime the grouping parameter is changed for existing projects.**
 
 
+|
+
 Intermediate outputs 
-...........................................
+-------------------------------------------------------------
 
 Multiple intermediate outputs and statistics are available by clicking in the following 'expand-and-collapse' panels:
+
 
 Pre-processing: **Extra filtering**, **Viral Enrichment** and/or **Host depletion**
 --------------------------------------------------------------------------------------
@@ -340,76 +498,3 @@ TAXIDs that were not automatically selected for confirmatory re-mapping step (fl
 
 
 .. image:: _static/35_TELEVIR_mapping_raw_report.gif
-
-
-**TELEVIR Investigatory Mapping**
-++++++++++++++++++++++++++++++++++
-
-The TELEVIR module allows users to perform an investigatory mapping of reads against one or multiple references, within a framework that facilitates the comparison of mapping metrics and visualizations for each reference. 
-
-A framework for investigatory mapping relies on the following services:
-- **Reference Selection**: users can select one or multiple references from the TELEVIR reference database, or upload their own references.
-- **Mapping Workflow**: a robust mapping workflow that includes the generation of mapping statistics, visualizations and downloadable files for each reference selected.
-- **Comparative Analysis**: The capacity to streamline mappings of multiple samples against multiple references, facilitating the identification of potential cross-hits, or contamination events.
-
-
-TELEVIR Reference Management
-----------------------------
-
-In the References section, the user can Upload References, search the TELEVIR reference data base, and create Reference Panels. The latter allows the user to streamline mappings by grouping references together.
-
-.. image:: _static/televir_references.png
-
-
-The Validation Workflow
-----------------------------
-
-The valitation workflow includes the following steps:
-
-1. **Extra Quality Control** (optional): Filtering reads based on complexity.
-
-2. **Viral Enrichment** (optional):  Retaining potential viral reads based on a rapid and permissive classification of the reads against a viral sequence database.
-
-3. **Host Depletion** (optional):  Removing potential host reads based on reference-based mapping against host genome sequence(s).
-
-4. **Request Mapping** : Reads are mapped against representative genome sequences of the top viral hits identified in the previous step.
-
-5. **Map filtering** (optional) : Filtering mapped reads based on length, identity and coverage.
-
-
-Steps 1-3  will use the same settings as defined for metagenomics workflows. steps 4-5 can be defined independently, in the Validation section of the TELEVIR Settings menu.
-
-The Sample References Dashboard
--------------------------------
-
-This panel allows users to quickly survey all reference genomes attributed to a sample, their mapping status, and to deploy mappings against selected references or groups of references (see "Reference Panels").
-
-Reference genomes are attributed to a sample in the following ways:
-
-- **Automatically**:  The result of metagenomics classification software deployed in the course of a TELEVIR workflow. Any reference Taxid clasification at the reads / contigs level will have a corresponding accession attributed to the sample.
-
-- **Manually**:  The user can select any reference genome from the TELEVIR reference database (original or uploaded). The user can also select a group of references (Reference Panel), to be mapped together. 
-
-Mapped or Automatically attributed references are shown in the Sample Reference Table, sorted by ensemble ranking - a combination of the ranks after combined sort (reads and contigs) across metagenomics workflows. 
-
-The Sample Reference Panel allows three types of actions: 
-- **Individual Mappings**: Select references to be mapped (these will be mapped alongside any manually added references).  
-- **Panel Mapping**: Map against panels of references.
-- **Combined Mapping**: Map the top references as sorted by the ensemble ranking. The number of references to be mapped is set in the TELEVIR Settings menu.
-
-.. image:: _static/44_ReferencesDashboard_TELEVIR.gif
-
-TELEVIR Reference Focus
------------------------
-
-Reference Focus is a tool designed to facilitate the comparative analysis of mappings and mapping statistics of multiple samples against a single reference genome.
-
-**Use**:
-The user fist selects a reference genome from among references attributed to any sample in a project. This creates a Reference Focus project, displayed below the project samples table. 
-
-Samples are added using "Add Samples" button and selected using the Sample Select column of the samples table, either on creation or later. 
-
-Within the reference project, the user can then setup multiple workflows to be deployed against the selected reference genome. For each workflow, mapping statisics are made availble in table format
-for all samples in the project, and succesful mappings can be inspected as stacked IGV plots.
-
-Reference Focus can also be linked to INSaFLU projects. 
