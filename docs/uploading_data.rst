@@ -328,6 +328,8 @@ There are some pre-loaded primer panels available in INSaFLU, but users can uplo
 
 .. image:: _static/primer_mainpage.jpg
 
+To upload a primer panel, click on the Add Primer, and provide a fasta and primer pair files, as indicated:
+
 .. image:: _static/primer_addprimer.jpg
 
 You can see examples of files in the INSaFLU db: https://github.com/INSaFLU/INSaFLU/tree/master/static/db/primers 
