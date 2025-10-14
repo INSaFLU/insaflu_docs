@@ -319,6 +319,20 @@ The influenza GenBank files available at NCBI are not compatible with the "HA1 n
 .. image:: _static/lines_gbk_HA1_numbering.PNG
 
 
+Uploading Primer Panels
+++++++++++++++++++++++++
+
+INSaFLU enables the use of Primer Panels for read filtering in the preprocessing phase (see https://insaflu.readthedocs.io/en/latest/bioinformatics_pipeline.html#read-quality-analysis-and-improvement), or for filtering in the variant detection and consensus generation phase(see the Primer Clipping in https://insaflu.readthedocs.io/en/latest/bioinformatics_pipeline.html#variant-detection-and-consensus-generation).
+
+There are some pre-loaded primer panels available in INSaFLU, but users can upload their own.
+
+.. image:: _static/primer_mainpage.jpg
+
+.. image:: _static/primer_addprimer.jpg
+
+You can see examples of files in the INSaFLU db: https://github.com/INSaFLU/INSaFLU/tree/master/static/db/primers 
+
+
 Explore your Sample and Reference databases
 +++++++++++++++++++++++++++++++++++++++++++
 
