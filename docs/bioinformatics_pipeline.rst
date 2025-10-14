@@ -106,7 +106,7 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 
 	**## ILLUMINA data only ##**
 	
-		***Users can also use trimmomatic to perform trimming of primer sequences of several predefined Primer pool sets:
+		***Users can also use trimmomatic to perform trimming of primer sequences of several predefined Primer pool sets, including:
 		
 			-- SARS-CoV-2 Primal Scheme V3 (https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V3/nCoV-2019.tsv)
 			
@@ -116,7 +116,7 @@ This step takes the input single- or paired-end reads (fastq.gz format) and prod
 			
 			-- Monkeypox Primal Scheme from Chen et al. (https://www.protocols.io/view/monkeypox-virus-multiplexed-pcr-amplicon-sequencin-5qpvob1nbl4o/v2)
 			
-		Please contact us if you want to add new Primer pools to the online tool or need assistance to integrate new schemes in locally-installed INSaFLU systems.
+		Users can upload their own Primer sets (see https://insaflu.readthedocs.io/en/latest/uploading_data.html#uploading-primer-panels)
 
 .. important::
 	INSaFLU allows users to configure key parameters for reads quality analysis in the tab **“Settings”**. 
@@ -313,7 +313,7 @@ This key module takes enables reference-based mapping, followed by SNP/indel cal
 	$ ivar removereads -i sample.trimmed.sorted.bam -p sample.masked.bam -t primer_mismatchers_indices.txt -b primers.bed
 
 
-		***Users can request  trimming of primer sequences of several predefined Primer pool sets:
+		***Users can request  trimming of primer sequences of several predefined Primer pool sets, including:
 		
 			-- SARS-CoV-2 Primal Scheme V3 (https://github.com/artic-network/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V3/nCoV-2019.tsv)
 			
@@ -323,7 +323,7 @@ This key module takes enables reference-based mapping, followed by SNP/indel cal
 			
 			-- Monkeypox Primal Scheme from Chen et al. (https://www.protocols.io/view/monkeypox-virus-multiplexed-pcr-amplicon-sequencin-5qpvob1nbl4o/v2)
 			
-		Please contact us if you want to add new Primer pools to the online tool
+		Users can upload their own Primer sets (see https://insaflu.readthedocs.io/en/latest/uploading_data.html#uploading-primer-panels)
 
 
 
