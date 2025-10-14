@@ -6,6 +6,69 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2025
 -------
 
+October 14, 2025
+..........................
+
+INSaFLU-TELEVIR update - version 2.2.2 
+
+# INSaFLU module #
+
+•	Primer Management panel: users can now upload their own primer sets to use in projects
+
+•	We added HCoV primer sets from McClure et al.
+
+•	For Influenza, there is a new Nextclade link “Automatic” that automatically sends different segments to appropriate builds if available
+
+•	When uploading a reference, if you also include a genbank, your fasta file can now include ambiguous characters
+
+# Nextstrain module #
+
+•	Nextstrain logs are now more complete, which can be useful when the build fails
+
+•	New MPXV All clades nextstrain build
+
+•	Updated clade information for hMPXV-1 and SARS-CoV-2 builds
+
+# TELEVIR module #
+
+•	Improve Remap Validation - Store classifier accids when available and include in selection for remap validation.
+
+•	Extended with random selection up to user-requested accid number.
+
+•	Currently only available in full deployment. For validation, a single accid is selected per taxid, mixing classifier sourced and randomly selected.
+
+•	For Kraken2 and Centrifuge: add Minimum Unique Read filter for reference selection based on software output reports.
+
+•	Improve Kraken2 output parsing.
+
+•	Added mismatch rate to sample and project full reports
+
+•	Fixed bug in control ratios.
+
+•	Improved read clustering algorithm.
+
+•	Added read filter pre-processing step, available upon activation during local install (see Docker installation update below).
+
+•	Added Metaphlan and Voyager classifiers (Beta), available upon activation during local install.
+
+•	Other small fixes and updates.
+
+Docker installation
+
+•	Update TELEVIR database install links.
+
+•	Match TELEVIR installation code with production reference registration.
+
+•	Extend local TELEVIR installation possibilities:
+
+	•	METAPHLAN - Beta, read classification step.
+
+	•	Voyager - Beta, read classification step.
+
+	•	Silva 16 ribossomal database - Extra Pre-processing step.
+
+	•	NCBI refseq 16srRNA - Extra Pre-processing step.
+
 
 March 27, 2025
 ..........................
