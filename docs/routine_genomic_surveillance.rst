@@ -134,11 +134,17 @@ More details here: https://github.com/INSaFLU/nextstrain_builds
 
 INSaFLU allows running four Nexstrain builds for the seasonal influenza (A/H3N2, A/H1N1/, B/Victoria and B/Yamagata), which are simplified versions of the Influenza Nextstrain builds available at https://github.com/nextstrain/seasonal-flu
 
-So far, influenza analyses are restricted to the Hemagglutinn (HA) coding gene. The reference HA sequences used for site (nucleotide  / amino acid) numbering in the output JSON files are:
+An updated version of the build (since December 19, 2025) for H3N2, H1N1 e B/Vic is now available at https://github.com/INSaFLU/seasonal-flu
+The specific configuration for the build used in INSaFLU can be seen here:
+- H1N1PDM: https://github.com/INSaFLU/seasonal-flu/blob/master/profiles/insaflu_h1n1pdm_ha.yaml
+- H3N2: https://github.com/INSaFLU/seasonal-flu/blob/master/profiles/insaflu_h3n2_ha.yaml 
+- B/Vic: https://github.com/INSaFLU/seasonal-flu/blob/master/profiles/insaflu_vic_ha.yaml
 
-- H1N1PDM: A/California/07/2009(H1N1) (https://www.ncbi.nlm.nih.gov/nuccore/CY121680.1/)
-- H3N2: A/Beijing/32/1992 (https://www.ncbi.nlm.nih.gov/nuccore/U26830.1/)
-- VIC: Influenza B virus (B/Hong Kong/02/1993) (https://www.ncbi.nlm.nih.gov/nuccore/CY018813.1/)
+So far, influenza analyses are restricted to the Hemagglutinn (HA) coding gene. The reference HA sequences used for site (nucleotide  / amino acid) numbering in the output JSON files are here:
+
+- H1N1PDM: https://github.com/INSaFLU/seasonal-flu/blob/master/config/h1n1pdm/ha/reference.fasta
+- H3N2: https://github.com/INSaFLU/seasonal-flu/blob/master/config/h3n2/ha/reference.fasta
+- VIC: https://github.com/INSaFLU/seasonal-flu/blob/master/config/vic/ha/reference.fasta
 - YAM: Influenza B virus (B/Singapore/11/1994) (https://www.ncbi.nlm.nih.gov/nuccore/CY019707.1/)
 
 **Avian influenza** (under construction)
