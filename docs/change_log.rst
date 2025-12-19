@@ -6,6 +6,16 @@ This tab includes a list (chronologically ordered) of notable changes in INSaFLU
 2025
 -------
 
+December 19, 2025
+..........................
+
+# Nextstrain module #
+##################
+
+1. Updated (NEW) Nextstrain builds for Influenza H3N2, H1N1 and B/Vic
+	- Old builds are not available anymore, but pre-existing datasets will work normally.
+
+
 October 14, 2025
 ..........................
 
