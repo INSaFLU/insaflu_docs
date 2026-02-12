@@ -185,6 +185,16 @@ The reference genomes used for site (nucleotide  / amino acid) numbering and gen
 - **RSV A**: A/England/397/2017 (GISAID ID EPI_ISL_412866)
 - **RSV B**: B/Australia/VIC-RCH056/2019 (GISAID ID EPI_ISL_1653999)
 
+**West Nile Virus (WNV)**
+
+This build is a simple adaptation of the WNV virus Nextstrain build available at https://github.com/nextstrain/WNV
+
+The reference genomes used for site (nucleotide  / amino acid) numbering and genome structure in the output JSON files is:
+
+- **All lineages**: West Nile virus strain Eg101 (https://www.ncbi.nlm.nih.gov/nuccore/AF260968.1) 
+- **Lineage 1A**: West Nile virus lineage 1 (https://www.ncbi.nlm.nih.gov/nuccore/NC_009942.1)
+- **Lineage 2**: West Nile virus lineage 2 (https://www.ncbi.nlm.nih.gov/nuccore/NC_001563.2)
+
 
 **Generic**
 
