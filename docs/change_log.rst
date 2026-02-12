@@ -3,6 +3,18 @@ Change log
 
 This tab includes a list (chronologically ordered) of notable changes in INSaFLU.
 
+2026
+-------
+
+February 12, 2026
+..........................
+
+# Nextstrain module #
+##################
+
+1. New Nextstrain builds for WNV
+
+
 2025
 -------
 
